@@ -2,6 +2,8 @@ $(function () {
    $.scrollify({
      section: ".panel",
      scrollSpeed: 800,
+     updateHash: false,
+
    });
   //NAV效果
   $(window).on('scroll resize', function (e) {

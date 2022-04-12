@@ -373,14 +373,14 @@ nav {
     }
 
     .dropdown-menu {
-      // background-color: #000;
+      background-color: #000;
       position: absolute;
-      top: 58px;
+      bottom: -90px;
       display: flex;
       flex-direction: column;
       display: none;
       z-index: 99;
-      padding-left: 20px;
+      padding: 10px;
       @include v.phone-width {
         position: static;
         display: block;
@@ -388,7 +388,7 @@ nav {
       li{
         padding-bottom: 5px;
       }
-    }
+    } 
   }
 } 
 
