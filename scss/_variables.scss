@@ -1,0 +1,31 @@
+$primary: #ec20c0;
+$secondary:#000;
+
+$link:#549140;
+$font-primary:#ff0000;
+
+$pc-media:960px;
+$pcs-media:959px;
+$phone-media:769px;
+$phones-media:768px;
+
+//電腦
+@mixin pc-width() {
+  @media all and (min-width: $pc-media) {
+    @content;
+  }
+}
+
+//平板
+@mixin pad-width() {
+  @media all and (min-width:$phones-media) and (max-width: $pcs-media) {
+    @content;
+  }
+}
+
+//手機
+@mixin phone-width() {
+  @media all and (max-width: $phone-media) {
+    @content;
+  }
+}
