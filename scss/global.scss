@@ -2,21 +2,18 @@
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 html {
-  line-height: 1.15;
+  // line-height: 1.15;
   -webkit-text-size-adjust: 100%;
+  letter-spacing: 2px;
 }
 
 body {
   margin: 0;
+  padding: 0;
 }
 
 main {
   display: block;
-}
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
 }
 
 hr {
@@ -33,6 +30,7 @@ pre {
 a {
   color: v.$link;
   background-color: transparent;
+  text-decoration: none;
 }
 
 abbr[title] {
@@ -216,26 +214,36 @@ li {
   list-style: none;
 }
 
-a {
-  text-decoration: none;
+/* other share */
+a.event-disable {
+  pointer-events: none;
+  cursor: default;
 }
 
-/* VARIABLE */
+/* gobal */
+#wrapper {
+  position: relative;
+}
 
-/* WRAPPER */
-#wrapper {position: relative;}
-
-/* NAV */
-nav { 
+/* nav */
+nav {
   position: fixed;
   width: 100%;
   top: 0;
-  background: rgba(0, 0, 0, 0.8);
+  left: 0;
   padding: 20px 0;
   transition: all .5s;
-  z-index: 1; 
-  &.mini{ 
-    padding: 0;
+  z-index: 1;
+  background-color: #000;
+  opacity: 1;
+
+  &.mini {
+    padding: 10px 0;
+  }
+
+  &.nav-hide {
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
   }
 
   .input-toggler {
@@ -296,7 +304,7 @@ nav {
     &:checked {
       &~.menu-toggler .menu-toggler-line {
         top: 5px;
-        transform:translateY(100px);
+        transform: translateY(100px);
         transform: rotate(45deg);
       }
 
@@ -306,7 +314,7 @@ nav {
 
       &~.menu-toggler .menu-toggler-line:nth-child(3) {
         top: -5px;
-        transform:translateY(10);
+        transform: translateY(10);
         transform: rotate(135deg);
       }
 
@@ -323,17 +331,20 @@ nav {
 }
 
 .sidebar {
-  max-width: 1200px;
+  // max-width: 1200px;
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
+  align-items: center;
   padding: 0 10px;
   margin: 0 auto;
 
   .nav-brand {
     padding: 20px;
+    flex: 1;
   }
 
   .menu {
+    flex: auto;
     // background-color: #000;
     transition: all .35s ease-out;
 
@@ -342,7 +353,7 @@ nav {
       justify-content: space-between;
 
       &:hover {
-        & .dropdown-menu{
+        & .dropdown-menu {
           display: flex;
         }
       }
@@ -381,23 +392,92 @@ nav {
       display: none;
       z-index: 99;
       padding: 10px;
+
       @include v.phone-width {
         position: static;
         display: block;
       }
-      li{
+
+      li {
         padding-bottom: 5px;
       }
-    } 
+    }
   }
-} 
 
-#main-content{
-  max-width: 1250px;
-   margin: 0 auto;
-  section{
-    &:first-of-type{
-      margin-top: 120px;
-    }  
+  .user-account {
+    border: 1px solid #B9373C;
+    border-left: 0;
+    border-radius: 18px;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    transition: all 0.35s ease-in;
+
+    &>div {
+      display: inline-block;
+
+      a {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #B9373C;
+        color: #fff;
+        border-radius: 18px;
+      }
+
+      &:first-of-type {
+        a {
+          padding: 10px 25px;
+        }
+      }
+
+      &:nth-of-type(2) {
+        a {
+          background-color: transparent;
+        }
+      }
+
+      &.account-sub {
+        display: block;
+        text-align: center;
+        height: 0;
+        overflow: hidden;
+        transition: all 0.5s ease-in;
+        // position: absolute;
+        // right: 0;
+        width: 100%;
+
+        a {
+          display: block;
+          background-color: transparent;
+          opacity: 0;
+          transform: translate(0px, -10px);
+          transition: all 0.35s ease-in 0.3s;
+        }
+      }
+    }
+
+    &:hover {
+      background-color: #B9373C;
+
+      .account-sub {
+        height: 123px;
+
+        a {
+          opacity: 1;
+          transform: translate(0px, 0px);
+        }
+      }
+    }
   }
-} 
+}
+
+#main-content {
+  max-width: 1250px;
+  margin: 0 auto;
+
+  section {
+    &:first-of-type {
+      margin-top: 120px;
+    }
+  }
+}

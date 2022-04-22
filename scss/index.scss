@@ -1,0 +1,9 @@
+@use 'variables'as v;
+
+section{
+  &.panel{}
+  &.s1{
+    background: #000;
+  }
+
+}

@@ -6,546 +6,294 @@
   <title>document</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
   <link rel="stylesheet" href="css/global.min.css">
-  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/index.min.css">
   <style>
   </style>
 </head>
 
 <body>
   <div id="wrapper">
-  <nav id="nav">
-    <input type="checkbox" id="toggle" class="input-toggler">
-    <div class="sidebar-overlay"></div>
-    <label for="toggle" class="menu-toggler">
-      <span class="menu-toggler-line"></span>
-      <span class="menu-toggler-line"></span>
-      <span class="menu-toggler-line"></span>
-    </label>
-    <div class="sidebar">
-      <a class="nav-brand" href="#">Navbar</a>
-      <ul class="menu">
-        <li><a class="menu-link" href="#">Home</a></li>
-        <li>
-          <a class="menu-link" href="#">Blog</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li><a class="menu-link" href="#">Portfolio</a></li>
-        <li><a class="menu-link" href="#">About</a></li>
-        <li><a class="menu-link" href="#">Contact</a></li>
-      </ul>
+    <nav id="nav">
+      <input type="checkbox" id="toggle" class="input-toggler">
+      <div class="sidebar-overlay"></div>
+      <label for="toggle" class="menu-toggler">
+        <span class="menu-toggler-line"></span>
+        <span class="menu-toggler-line"></span>
+        <span class="menu-toggler-line"></span>
+      </label>
+      <div class="sidebar">
+        <a class="nav-brand" href="#">Navbar</a>
+        <ul class="menu">
+          <li><a class="menu-link" href="#">線上訂票</a></li>
+          <li>
+            <a class="menu-link" href="#">電影介紹</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">最新消息</a></li>
+              <li><a class="dropdown-item" href="#">業務專區</a></li>
+              <li><a class="dropdown-item" href="#">關於影城</a></li>
+            </ul>
+          </li>
+          <li><a class="menu-link" href="#">最新消息</a></li>
+          <li><a class="menu-link" href="#">業務專區</a></li>
+          <li><a class="menu-link" href="#">關於影城</a></li>
+        </ul>
+        <div class="user-account">
+          <div>
+            <a href="">會員登入</a>
+          </div>
+          <div>
+            <a href="">加入會員</a>
+          </div>
+          <div class="account-sub">
+            <a href="">訂票查詢與取消</a>
+            <a href="">編輯會員系統</a>
+            <a href="">會員優惠PLUS</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="panel s1" data-section-name="s1">
+      <div class="inner">
+
+      </div>
+    </section>
+    <div id="main-content">
+      <section class="panel s2" data-section-name="s2">
+        <div class="inner">
+          <h2>Options</h2>
+          <dl>
+            <dt>section</dt>
+            <dd>A CSS selector for the sections of the page.</dd>
+            <dt>sectionName</dt>
+            <dd>
+              Scrollify lets you define a hash value for each section. This makes
+              it possible to permalink to particular sections. This is set as a
+              data attribute on the sections. The name of the data attribute is
+              defined by 'sectionName'.
+            </dd>
+            <dt>interstitialSection</dt>
+            <dd>
+              A CSS selector for non-full-height sections, such as a header and
+              footer.
+            </dd>
+            <dt>easing</dt>
+            <dd>Define the easing method.</dd>
+            <dt>offset</dt>
+            <dd>A distance in pixels to offset each sections position by.</dd>
+            <dt>scrollbars</dt>
+            <dd>A boolean to define whether scroll bars are visible or not.</dd>
+            <dt>standardScrollElements</dt>
+            <dd>
+              A CSS selector for elements within sections that require standard
+              scrolling behaviour.
+            </dd>
+            <dt>setHeights</dt>
+            <dd>
+              A boolean to define whether Scollify assigns a height to the
+              sections. True by default.
+            </dd>
+            <dt>overflowScroll</dt>
+            <dd>
+              A boolean to define whether Scrollify will allow scrolling over
+              overflowing content within sections. True by default.
+            </dd>
+            <dt>updateHash</dt>
+            <dd>
+              A boolean to define whether Scrollify updates the browser location
+              hash when scrolling through sections. True by default.
+            </dd>
+            <dt>touchScroll</dt>
+            <dd>
+              A boolean to define whether Scrollify handles touch scroll events.
+              True by default.
+            </dd>
+            <dt>before</dt>
+            <dd>
+              A callback that is fired before a section is scrolled to via the
+              move method. Arguments include the index of the section and an array
+              of all section elements.
+            </dd>
+            <dt>after</dt>
+            <dd>
+              A callback that is fired after a new section is scrolled to.
+              Arguments include the index of the section and an array of all
+              section elements.
+            </dd>
+            <dt>afterResize</dt>
+            <dd>A callback that is fired after the window is resized.</dd>
+            <dt>afterRender</dt>
+            <dd>A callback that is fired after Scrollify's initialisation.</dd>
+          </dl>
+        </div>
+      </section>
+      <section class="panel s3" data-section-name="s3">
+        <div class="inner">
+          <h2>Options</h2>
+          <dl>
+            <dt>section</dt>
+            <dd>A CSS selector for the sections of the page.</dd>
+            <dt>sectionName</dt>
+            <dd>
+              Scrollify lets you define a hash value for each section. This makes
+              it possible to permalink to particular sections. This is set as a
+              data attribute on the sections. The name of the data attribute is
+              defined by 'sectionName'.
+            </dd>
+            <dt>interstitialSection</dt>
+            <dd>
+              A CSS selector for non-full-height sections, such as a header and
+              footer.
+            </dd>
+            <dt>easing</dt>
+            <dd>Define the easing method.</dd>
+            <dt>offset</dt>
+            <dd>A distance in pixels to offset each sections position by.</dd>
+            <dt>scrollbars</dt>
+            <dd>A boolean to define whether scroll bars are visible or not.</dd>
+            <dt>standardScrollElements</dt>
+            <dd>
+              A CSS selector for elements within sections that require standard
+              scrolling behaviour.
+            </dd>
+            <dt>setHeights</dt>
+            <dd>
+              A boolean to define whether Scollify assigns a height to the
+              sections. True by default.
+            </dd>
+            <dt>overflowScroll</dt>
+            <dd>
+              A boolean to define whether Scrollify will allow scrolling over
+              overflowing content within sections. True by default.
+            </dd>
+            <dt>updateHash</dt>
+            <dd>
+              A boolean to define whether Scrollify updates the browser location
+              hash when scrolling through sections. True by default.
+            </dd>
+            <dt>touchScroll</dt>
+            <dd>
+              A boolean to define whether Scrollify handles touch scroll events.
+              True by default.
+            </dd>
+            <dt>before</dt>
+            <dd>
+              A callback that is fired before a section is scrolled to via the
+              move method. Arguments include the index of the section and an array
+              of all section elements.
+            </dd>
+            <dt>after</dt>
+            <dd>
+              A callback that is fired after a new section is scrolled to.
+              Arguments include the index of the section and an array of all
+              section elements.
+            </dd>
+            <dt>afterResize</dt>
+            <dd>A callback that is fired after the window is resized.</dd>
+            <dt>afterRender</dt>
+            <dd>A callback that is fired after Scrollify's initialisation.</dd>
+          </dl>
+        </div>
+      </section>
+      <section class="panel s4" data-section-name="s4">
+        <div class="inner">
+          <h2>Options</h2>
+          <dl>
+            <dt>section</dt>
+            <dd>A CSS selector for the sections of the page.</dd>
+            <dt>sectionName</dt>
+            <dd>
+              Scrollify lets you define a hash value for each section. This makes
+              it possible to permalink to particular sections. This is set as a
+              data attribute on the sections. The name of the data attribute is
+              defined by 'sectionName'.
+            </dd>
+            <dt>interstitialSection</dt>
+            <dd>
+              A CSS selector for non-full-height sections, such as a header and
+              footer.
+            </dd>
+            <dt>easing</dt>
+            <dd>Define the easing method.</dd>
+            <dt>offset</dt>
+            <dd>A distance in pixels to offset each sections position by.</dd>
+            <dt>scrollbars</dt>
+            <dd>A boolean to define whether scroll bars are visible or not.</dd>
+            <dt>standardScrollElements</dt>
+            <dd>
+              A CSS selector for elements within sections that require standard
+              scrolling behaviour.
+            </dd>
+            <dt>setHeights</dt>
+            <dd>
+              A boolean to define whether Scollify assigns a height to the
+              sections. True by default.
+            </dd>
+            <dt>overflowScroll</dt>
+            <dd>
+              A boolean to define whether Scrollify will allow scrolling over
+              overflowing content within sections. True by default.
+            </dd>
+            <dt>updateHash</dt>
+            <dd>
+              A boolean to define whether Scrollify updates the browser location
+              hash when scrolling through sections. True by default.
+            </dd>
+            <dt>touchScroll</dt>
+            <dd>
+              A boolean to define whether Scrollify handles touch scroll events.
+              True by default.
+            </dd>
+            <dt>before</dt>
+            <dd>
+              A callback that is fired before a section is scrolled to via the
+              move method. Arguments include the index of the section and an array
+              of all section elements.
+            </dd>
+            <dt>after</dt>
+            <dd>
+              A callback that is fired after a new section is scrolled to.
+              Arguments include the index of the section and an array of all
+              section elements.
+            </dd>
+            <dt>afterResize</dt>
+            <dd>A callback that is fired after the window is resized.</dd>
+            <dt>afterRender</dt>
+            <dd>A callback that is fired after Scrollify's initialisation.</dd>
+          </dl>
+        </div>
+      </section>
     </div>
-  </nav>
-  <main id="main-content">
-  <section class="panel options" data-section-name="options">
-    <div class="inner">
-      <h2>Options</h2>
-      <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta laboriosam vel quisquam numquam asperiores doloremque error odit dolorum a, neque in consectetur mollitia, repellat ipsa corrupti cumque molestiae doloribus porro placeat molestias nihil. Sit itaque dolor doloribus ratione placeat nisi totam, saepe dolore, aliquid repellat nemo explicabo delectus iure quisquam quod molestiae, voluptatum tenetur vero voluptates esse beatae alias. Tempora dolorum illo, quidem aut veritatis rerum unde deserunt maxime cum perspiciatis error? Ipsum iure odio aut doloremque, officiis assumenda, magni reiciendis vitae facere nam necessitatibus quae. Aut dolores nemo expedita, distinctio architecto at laboriosam, similique facilis obcaecati mollitia eligendi earum? Similique, perspiciatis minus ducimus debitis voluptatibus consequuntur accusantium a, at quam, id perferendis esse? Nihil similique molestias animi asperiores qui soluta non accusamus reiciendis, autem corrupti. Id, ipsum delectus omnis quibusdam sequi perspiciatis sapiente aliquid ratione alias nesciunt soluta ex voluptatum velit minima blanditiis vel fugit assumenda culpa repellendus. Odio placeat ea, laboriosam eligendi dolor facere quam voluptatem alias reprehenderit libero quasi necessitatibus ullam vero officiis non corrupti vel excepturi praesentium itaque autem minus consequatur beatae. Dignissimos culpa nemo rem corporis quidem molestiae neque laborum esse perferendis quo qui voluptas illum obcaecati, dolores cum magnam? Nemo repudiandae facilis deleniti dolores praesentium optio at delectus, in nisi ex, maxime aspernatur iusto laudantium, pariatur ipsa! Debitis quod quam aperiam minus non, assumenda recusandae animi dignissimos eos suscipit officia voluptas blanditiis neque magnam deserunt eveniet quisquam nostrum unde quo architecto doloribus autem cupiditate maxime esse. Quidem quo eos explicabo consequuntur facilis tempore alias saepe deleniti quam quia, eaque veritatis vel iusto atque accusamus. Minus odio perspiciatis voluptas commodi modi optio corrupti quaerat provident hic nulla quo laboriosam, dolorem explicabo, pariatur id eligendi sint consequuntur quisquam veniam saepe! Et, consectetur dignissimos ullam inventore veritatis esse pariatur dolores ea? Iste incidunt tenetur perferendis numquam corporis. Quis neque, enim magnam, impedit autem quas, accusamus cum dolorem repellat amet ab exercitationem! Praesentium quisquam provident doloremque fugiat in. Placeat, ratione ut. Nihil aut consequatur enim praesentium, at in recusandae optio ipsa cupiditate cumque quos, modi nam eius eaque distinctio tempora, culpa sunt totam velit tenetur perferendis voluptatibus repellat. Eligendi, vitae beatae reprehenderit, tempora minus sequi iusto deserunt amet eius dolorem laboriosam distinctio quis velit sit ab, atque neque inventore doloribus omnis? Reprehenderit aspernatur suscipit possimus vero, laboriosam odio, eligendi id nostrum sunt beatae nam quia molestias fugiat corporis voluptatem at natus officia. Odio libero voluptatibus veritatis? Porro quasi ab suscipit beatae placeat soluta consequuntur. At officia voluptates maiores accusamus dolores et labore dolorum quidem consequuntur dicta dignissimos reiciendis aperiam, velit quia totam corrupti alias quisquam dolorem ea, quam ipsum ut? Ea incidunt vitae delectus vel a esse in eveniet, tempore cum dolores necessitatibus minus voluptate tenetur ipsam consequuntur, distinctio blanditiis veniam. Dolorum impedit aperiam placeat earum ut soluta rem natus. Qui, consequatur velit enim, dolores, reprehenderit quos non repudiandae veritatis deleniti quis cupiditate aperiam molestiae in. Id eligendi aut beatae recusandae sit delectus, numquam accusamus alias corrupti asperiores nulla, impedit ullam fugit magni? Deleniti ratione saepe nisi sed.
-      </div>
-      <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta laboriosam vel quisquam numquam asperiores doloremque
-        error odit dolorum a, neque in consectetur mollitia, repellat ipsa corrupti cumque molestiae doloribus porro placeat
-        molestias nihil. Sit itaque dolor doloribus ratione placeat nisi totam, saepe dolore, aliquid repellat nemo explicabo
-        delectus iure quisquam quod molestiae, voluptatum tenetur vero voluptates esse beatae alias. Tempora dolorum illo,
-        quidem aut veritatis rerum unde deserunt maxime cum perspiciatis error? Ipsum iure odio aut doloremque, officiis
-        assumenda, magni reiciendis vitae facere nam necessitatibus quae. Aut dolores nemo expedita, distinctio architecto at
-        laboriosam, similique facilis obcaecati mollitia eligendi earum? Similique, perspiciatis minus ducimus debitis
-        voluptatibus consequuntur accusantium a, at quam, id perferendis esse? Nihil similique molestias animi asperiores qui
-        soluta non accusamus reiciendis, autem corrupti. Id, ipsum delectus omnis quibusdam sequi perspiciatis sapiente
-        aliquid ratione alias nesciunt soluta ex voluptatum velit minima blanditiis vel fugit assumenda culpa repellendus.
-        Odio placeat ea, laboriosam eligendi dolor facere quam voluptatem alias reprehenderit libero quasi necessitatibus
-        ullam vero officiis non corrupti vel excepturi praesentium itaque autem minus consequatur beatae. Dignissimos culpa
-        nemo rem corporis quidem molestiae neque laborum esse perferendis quo qui voluptas illum obcaecati, dolores cum
-        magnam? Nemo repudiandae facilis deleniti dolores praesentium optio at delectus, in nisi ex, maxime aspernatur iusto
-        laudantium, pariatur ipsa! Debitis quod quam aperiam minus non, assumenda recusandae animi dignissimos eos suscipit
-        officia voluptas blanditiis neque magnam deserunt eveniet quisquam nostrum unde quo architecto doloribus autem
-        cupiditate maxime esse. Quidem quo eos explicabo consequuntur facilis tempore alias saepe deleniti quam quia, eaque
-        veritatis vel iusto atque accusamus. Minus odio perspiciatis voluptas commodi modi optio corrupti quaerat provident
-        hic nulla quo laboriosam, dolorem explicabo, pariatur id eligendi sint consequuntur quisquam veniam saepe! Et,
-        consectetur dignissimos ullam inventore veritatis esse pariatur dolores ea? Iste incidunt tenetur perferendis numquam
-        corporis. Quis neque, enim magnam, impedit autem quas, accusamus cum dolorem repellat amet ab exercitationem!
-        Praesentium quisquam provident doloremque fugiat in. Placeat, ratione ut. Nihil aut consequatur enim praesentium, at
-        in recusandae optio ipsa cupiditate cumque quos, modi nam eius eaque distinctio tempora, culpa sunt totam velit
-        tenetur perferendis voluptatibus repellat. Eligendi, vitae beatae reprehenderit, tempora minus sequi iusto deserunt
-        amet eius dolorem laboriosam distinctio quis velit sit ab, atque neque inventore doloribus omnis? Reprehenderit
-        aspernatur suscipit possimus vero, laboriosam odio, eligendi id nostrum sunt beatae nam quia molestias fugiat corporis
-        voluptatem at natus officia. Odio libero voluptatibus veritatis? Porro quasi ab suscipit beatae placeat soluta
-        consequuntur. At officia voluptates maiores accusamus dolores et labore dolorum quidem consequuntur dicta dignissimos
-        reiciendis aperiam, velit quia totam corrupti alias quisquam dolorem ea, quam ipsum ut? Ea incidunt vitae delectus vel
-        a esse in eveniet, tempore cum dolores necessitatibus minus voluptate tenetur ipsam consequuntur, distinctio
-        blanditiis veniam. Dolorum impedit aperiam placeat earum ut soluta rem natus. Qui, consequatur velit enim, dolores,
-        reprehenderit quos non repudiandae veritatis deleniti quis cupiditate aperiam molestiae in. Id eligendi aut beatae
-        recusandae sit delectus, numquam accusamus alias corrupti asperiores nulla, impedit ullam fugit magni? Deleniti
-        ratione saepe nisi sed.
-      </div>
-      <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta laboriosam vel quisquam numquam asperiores doloremque
-        error odit dolorum a, neque in consectetur mollitia, repellat ipsa corrupti cumque molestiae doloribus porro placeat
-        molestias nihil. Sit itaque dolor doloribus ratione placeat nisi totam, saepe dolore, aliquid repellat nemo explicabo
-        delectus iure quisquam quod molestiae, voluptatum tenetur vero voluptates esse beatae alias. Tempora dolorum illo,
-        quidem aut veritatis rerum unde deserunt maxime cum perspiciatis error? Ipsum iure odio aut doloremque, officiis
-        assumenda, magni reiciendis vitae facere nam necessitatibus quae. Aut dolores nemo expedita, distinctio architecto at
-        laboriosam, similique facilis obcaecati mollitia eligendi earum? Similique, perspiciatis minus ducimus debitis
-        voluptatibus consequuntur accusantium a, at quam, id perferendis esse? Nihil similique molestias animi asperiores qui
-        soluta non accusamus reiciendis, autem corrupti. Id, ipsum delectus omnis quibusdam sequi perspiciatis sapiente
-        aliquid ratione alias nesciunt soluta ex voluptatum velit minima blanditiis vel fugit assumenda culpa repellendus.
-        Odio placeat ea, laboriosam eligendi dolor facere quam voluptatem alias reprehenderit libero quasi necessitatibus
-        ullam vero officiis non corrupti vel excepturi praesentium itaque autem minus consequatur beatae. Dignissimos culpa
-        nemo rem corporis quidem molestiae neque laborum esse perferendis quo qui voluptas illum obcaecati, dolores cum
-        magnam? Nemo repudiandae facilis deleniti dolores praesentium optio at delectus, in nisi ex, maxime aspernatur iusto
-        laudantium, pariatur ipsa! Debitis quod quam aperiam minus non, assumenda recusandae animi dignissimos eos suscipit
-        officia voluptas blanditiis neque magnam deserunt eveniet quisquam nostrum unde quo architecto doloribus autem
-        cupiditate maxime esse. Quidem quo eos explicabo consequuntur facilis tempore alias saepe deleniti quam quia, eaque
-        veritatis vel iusto atque accusamus. Minus odio perspiciatis voluptas commodi modi optio corrupti quaerat provident
-        hic nulla quo laboriosam, dolorem explicabo, pariatur id eligendi sint consequuntur quisquam veniam saepe! Et,
-        consectetur dignissimos ullam inventore veritatis esse pariatur dolores ea? Iste incidunt tenetur perferendis numquam
-        corporis. Quis neque, enim magnam, impedit autem quas, accusamus cum dolorem repellat amet ab exercitationem!
-        Praesentium quisquam provident doloremque fugiat in. Placeat, ratione ut. Nihil aut consequatur enim praesentium, at
-        in recusandae optio ipsa cupiditate cumque quos, modi nam eius eaque distinctio tempora, culpa sunt totam velit
-        tenetur perferendis voluptatibus repellat. Eligendi, vitae beatae reprehenderit, tempora minus sequi iusto deserunt
-        amet eius dolorem laboriosam distinctio quis velit sit ab, atque neque inventore doloribus omnis? Reprehenderit
-        aspernatur suscipit possimus vero, laboriosam odio, eligendi id nostrum sunt beatae nam quia molestias fugiat corporis
-        voluptatem at natus officia. Odio libero voluptatibus veritatis? Porro quasi ab suscipit beatae placeat soluta
-        consequuntur. At officia voluptates maiores accusamus dolores et labore dolorum quidem consequuntur dicta dignissimos
-        reiciendis aperiam, velit quia totam corrupti alias quisquam dolorem ea, quam ipsum ut? Ea incidunt vitae delectus vel
-        a esse in eveniet, tempore cum dolores necessitatibus minus voluptate tenetur ipsam consequuntur, distinctio
-        blanditiis veniam. Dolorum impedit aperiam placeat earum ut soluta rem natus. Qui, consequatur velit enim, dolores,
-        reprehenderit quos non repudiandae veritatis deleniti quis cupiditate aperiam molestiae in. Id eligendi aut beatae
-        recusandae sit delectus, numquam accusamus alias corrupti asperiores nulla, impedit ullam fugit magni? Deleniti
-        ratione saepe nisi sed.
-      </div>
-      <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta laboriosam vel quisquam numquam asperiores doloremque
-        error odit dolorum a, neque in consectetur mollitia, repellat ipsa corrupti cumque molestiae doloribus porro placeat
-        molestias nihil. Sit itaque dolor doloribus ratione placeat nisi totam, saepe dolore, aliquid repellat nemo explicabo
-        delectus iure quisquam quod molestiae, voluptatum tenetur vero voluptates esse beatae alias. Tempora dolorum illo,
-        quidem aut veritatis rerum unde deserunt maxime cum perspiciatis error? Ipsum iure odio aut doloremque, officiis
-        assumenda, magni reiciendis vitae facere nam necessitatibus quae. Aut dolores nemo expedita, distinctio architecto at
-        laboriosam, similique facilis obcaecati mollitia eligendi earum? Similique, perspiciatis minus ducimus debitis
-        voluptatibus consequuntur accusantium a, at quam, id perferendis esse? Nihil similique molestias animi asperiores qui
-        soluta non accusamus reiciendis, autem corrupti. Id, ipsum delectus omnis quibusdam sequi perspiciatis sapiente
-        aliquid ratione alias nesciunt soluta ex voluptatum velit minima blanditiis vel fugit assumenda culpa repellendus.
-        Odio placeat ea, laboriosam eligendi dolor facere quam voluptatem alias reprehenderit libero quasi necessitatibus
-        ullam vero officiis non corrupti vel excepturi praesentium itaque autem minus consequatur beatae. Dignissimos culpa
-        nemo rem corporis quidem molestiae neque laborum esse perferendis quo qui voluptas illum obcaecati, dolores cum
-        magnam? Nemo repudiandae facilis deleniti dolores praesentium optio at delectus, in nisi ex, maxime aspernatur iusto
-        laudantium, pariatur ipsa! Debitis quod quam aperiam minus non, assumenda recusandae animi dignissimos eos suscipit
-        officia voluptas blanditiis neque magnam deserunt eveniet quisquam nostrum unde quo architecto doloribus autem
-        cupiditate maxime esse. Quidem quo eos explicabo consequuntur facilis tempore alias saepe deleniti quam quia, eaque
-        veritatis vel iusto atque accusamus. Minus odio perspiciatis voluptas commodi modi optio corrupti quaerat provident
-        hic nulla quo laboriosam, dolorem explicabo, pariatur id eligendi sint consequuntur quisquam veniam saepe! Et,
-        consectetur dignissimos ullam inventore veritatis esse pariatur dolores ea? Iste incidunt tenetur perferendis numquam
-        corporis. Quis neque, enim magnam, impedit autem quas, accusamus cum dolorem repellat amet ab exercitationem!
-        Praesentium quisquam provident doloremque fugiat in. Placeat, ratione ut. Nihil aut consequatur enim praesentium, at
-        in recusandae optio ipsa cupiditate cumque quos, modi nam eius eaque distinctio tempora, culpa sunt totam velit
-        tenetur perferendis voluptatibus repellat. Eligendi, vitae beatae reprehenderit, tempora minus sequi iusto deserunt
-        amet eius dolorem laboriosam distinctio quis velit sit ab, atque neque inventore doloribus omnis? Reprehenderit
-        aspernatur suscipit possimus vero, laboriosam odio, eligendi id nostrum sunt beatae nam quia molestias fugiat corporis
-        voluptatem at natus officia. Odio libero voluptatibus veritatis? Porro quasi ab suscipit beatae placeat soluta
-        consequuntur. At officia voluptates maiores accusamus dolores et labore dolorum quidem consequuntur dicta dignissimos
-        reiciendis aperiam, velit quia totam corrupti alias quisquam dolorem ea, quam ipsum ut? Ea incidunt vitae delectus vel
-        a esse in eveniet, tempore cum dolores necessitatibus minus voluptate tenetur ipsam consequuntur, distinctio
-        blanditiis veniam. Dolorum impedit aperiam placeat earum ut soluta rem natus. Qui, consequatur velit enim, dolores,
-        reprehenderit quos non repudiandae veritatis deleniti quis cupiditate aperiam molestiae in. Id eligendi aut beatae
-        recusandae sit delectus, numquam accusamus alias corrupti asperiores nulla, impedit ullam fugit magni? Deleniti
-        ratione saepe nisi sed.
-      </div>
-      <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta laboriosam vel quisquam numquam asperiores doloremque
-        error odit dolorum a, neque in consectetur mollitia, repellat ipsa corrupti cumque molestiae doloribus porro placeat
-        molestias nihil. Sit itaque dolor doloribus ratione placeat nisi totam, saepe dolore, aliquid repellat nemo explicabo
-        delectus iure quisquam quod molestiae, voluptatum tenetur vero voluptates esse beatae alias. Tempora dolorum illo,
-        quidem aut veritatis rerum unde deserunt maxime cum perspiciatis error? Ipsum iure odio aut doloremque, officiis
-        assumenda, magni reiciendis vitae facere nam necessitatibus quae. Aut dolores nemo expedita, distinctio architecto at
-        laboriosam, similique facilis obcaecati mollitia eligendi earum? Similique, perspiciatis minus ducimus debitis
-        voluptatibus consequuntur accusantium a, at quam, id perferendis esse? Nihil similique molestias animi asperiores qui
-        soluta non accusamus reiciendis, autem corrupti. Id, ipsum delectus omnis quibusdam sequi perspiciatis sapiente
-        aliquid ratione alias nesciunt soluta ex voluptatum velit minima blanditiis vel fugit assumenda culpa repellendus.
-        Odio placeat ea, laboriosam eligendi dolor facere quam voluptatem alias reprehenderit libero quasi necessitatibus
-        ullam vero officiis non corrupti vel excepturi praesentium itaque autem minus consequatur beatae. Dignissimos culpa
-        nemo rem corporis quidem molestiae neque laborum esse perferendis quo qui voluptas illum obcaecati, dolores cum
-        magnam? Nemo repudiandae facilis deleniti dolores praesentium optio at delectus, in nisi ex, maxime aspernatur iusto
-        laudantium, pariatur ipsa! Debitis quod quam aperiam minus non, assumenda recusandae animi dignissimos eos suscipit
-        officia voluptas blanditiis neque magnam deserunt eveniet quisquam nostrum unde quo architecto doloribus autem
-        cupiditate maxime esse. Quidem quo eos explicabo consequuntur facilis tempore alias saepe deleniti quam quia, eaque
-        veritatis vel iusto atque accusamus. Minus odio perspiciatis voluptas commodi modi optio corrupti quaerat provident
-        hic nulla quo laboriosam, dolorem explicabo, pariatur id eligendi sint consequuntur quisquam veniam saepe! Et,
-        consectetur dignissimos ullam inventore veritatis esse pariatur dolores ea? Iste incidunt tenetur perferendis numquam
-        corporis. Quis neque, enim magnam, impedit autem quas, accusamus cum dolorem repellat amet ab exercitationem!
-        Praesentium quisquam provident doloremque fugiat in. Placeat, ratione ut. Nihil aut consequatur enim praesentium, at
-        in recusandae optio ipsa cupiditate cumque quos, modi nam eius eaque distinctio tempora, culpa sunt totam velit
-        tenetur perferendis voluptatibus repellat. Eligendi, vitae beatae reprehenderit, tempora minus sequi iusto deserunt
-        amet eius dolorem laboriosam distinctio quis velit sit ab, atque neque inventore doloribus omnis? Reprehenderit
-        aspernatur suscipit possimus vero, laboriosam odio, eligendi id nostrum sunt beatae nam quia molestias fugiat corporis
-        voluptatem at natus officia. Odio libero voluptatibus veritatis? Porro quasi ab suscipit beatae placeat soluta
-        consequuntur. At officia voluptates maiores accusamus dolores et labore dolorum quidem consequuntur dicta dignissimos
-        reiciendis aperiam, velit quia totam corrupti alias quisquam dolorem ea, quam ipsum ut? Ea incidunt vitae delectus vel
-        a esse in eveniet, tempore cum dolores necessitatibus minus voluptate tenetur ipsam consequuntur, distinctio
-        blanditiis veniam. Dolorum impedit aperiam placeat earum ut soluta rem natus. Qui, consequatur velit enim, dolores,
-        reprehenderit quos non repudiandae veritatis deleniti quis cupiditate aperiam molestiae in. Id eligendi aut beatae
-        recusandae sit delectus, numquam accusamus alias corrupti asperiores nulla, impedit ullam fugit magni? Deleniti
-        ratione saepe nisi sed.
-      </div>
-      <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta laboriosam vel quisquam numquam asperiores doloremque
-        error odit dolorum a, neque in consectetur mollitia, repellat ipsa corrupti cumque molestiae doloribus porro placeat
-        molestias nihil. Sit itaque dolor doloribus ratione placeat nisi totam, saepe dolore, aliquid repellat nemo explicabo
-        delectus iure quisquam quod molestiae, voluptatum tenetur vero voluptates esse beatae alias. Tempora dolorum illo,
-        quidem aut veritatis rerum unde deserunt maxime cum perspiciatis error? Ipsum iure odio aut doloremque, officiis
-        assumenda, magni reiciendis vitae facere nam necessitatibus quae. Aut dolores nemo expedita, distinctio architecto at
-        laboriosam, similique facilis obcaecati mollitia eligendi earum? Similique, perspiciatis minus ducimus debitis
-        voluptatibus consequuntur accusantium a, at quam, id perferendis esse? Nihil similique molestias animi asperiores qui
-        soluta non accusamus reiciendis, autem corrupti. Id, ipsum delectus omnis quibusdam sequi perspiciatis sapiente
-        aliquid ratione alias nesciunt soluta ex voluptatum velit minima blanditiis vel fugit assumenda culpa repellendus.
-        Odio placeat ea, laboriosam eligendi dolor facere quam voluptatem alias reprehenderit libero quasi necessitatibus
-        ullam vero officiis non corrupti vel excepturi praesentium itaque autem minus consequatur beatae. Dignissimos culpa
-        nemo rem corporis quidem molestiae neque laborum esse perferendis quo qui voluptas illum obcaecati, dolores cum
-        magnam? Nemo repudiandae facilis deleniti dolores praesentium optio at delectus, in nisi ex, maxime aspernatur iusto
-        laudantium, pariatur ipsa! Debitis quod quam aperiam minus non, assumenda recusandae animi dignissimos eos suscipit
-        officia voluptas blanditiis neque magnam deserunt eveniet quisquam nostrum unde quo architecto doloribus autem
-        cupiditate maxime esse. Quidem quo eos explicabo consequuntur facilis tempore alias saepe deleniti quam quia, eaque
-        veritatis vel iusto atque accusamus. Minus odio perspiciatis voluptas commodi modi optio corrupti quaerat provident
-        hic nulla quo laboriosam, dolorem explicabo, pariatur id eligendi sint consequuntur quisquam veniam saepe! Et,
-        consectetur dignissimos ullam inventore veritatis esse pariatur dolores ea? Iste incidunt tenetur perferendis numquam
-        corporis. Quis neque, enim magnam, impedit autem quas, accusamus cum dolorem repellat amet ab exercitationem!
-        Praesentium quisquam provident doloremque fugiat in. Placeat, ratione ut. Nihil aut consequatur enim praesentium, at
-        in recusandae optio ipsa cupiditate cumque quos, modi nam eius eaque distinctio tempora, culpa sunt totam velit
-        tenetur perferendis voluptatibus repellat. Eligendi, vitae beatae reprehenderit, tempora minus sequi iusto deserunt
-        amet eius dolorem laboriosam distinctio quis velit sit ab, atque neque inventore doloribus omnis? Reprehenderit
-        aspernatur suscipit possimus vero, laboriosam odio, eligendi id nostrum sunt beatae nam quia molestias fugiat corporis
-        voluptatem at natus officia. Odio libero voluptatibus veritatis? Porro quasi ab suscipit beatae placeat soluta
-        consequuntur. At officia voluptates maiores accusamus dolores et labore dolorum quidem consequuntur dicta dignissimos
-        reiciendis aperiam, velit quia totam corrupti alias quisquam dolorem ea, quam ipsum ut? Ea incidunt vitae delectus vel
-        a esse in eveniet, tempore cum dolores necessitatibus minus voluptate tenetur ipsam consequuntur, distinctio
-        blanditiis veniam. Dolorum impedit aperiam placeat earum ut soluta rem natus. Qui, consequatur velit enim, dolores,
-        reprehenderit quos non repudiandae veritatis deleniti quis cupiditate aperiam molestiae in. Id eligendi aut beatae
-        recusandae sit delectus, numquam accusamus alias corrupti asperiores nulla, impedit ullam fugit magni? Deleniti
-        ratione saepe nisi sed.
-      </div>
-      <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta laboriosam vel quisquam numquam asperiores doloremque
-        error odit dolorum a, neque in consectetur mollitia, repellat ipsa corrupti cumque molestiae doloribus porro placeat
-        molestias nihil. Sit itaque dolor doloribus ratione placeat nisi totam, saepe dolore, aliquid repellat nemo explicabo
-        delectus iure quisquam quod molestiae, voluptatum tenetur vero voluptates esse beatae alias. Tempora dolorum illo,
-        quidem aut veritatis rerum unde deserunt maxime cum perspiciatis error? Ipsum iure odio aut doloremque, officiis
-        assumenda, magni reiciendis vitae facere nam necessitatibus quae. Aut dolores nemo expedita, distinctio architecto at
-        laboriosam, similique facilis obcaecati mollitia eligendi earum? Similique, perspiciatis minus ducimus debitis
-        voluptatibus consequuntur accusantium a, at quam, id perferendis esse? Nihil similique molestias animi asperiores qui
-        soluta non accusamus reiciendis, autem corrupti. Id, ipsum delectus omnis quibusdam sequi perspiciatis sapiente
-        aliquid ratione alias nesciunt soluta ex voluptatum velit minima blanditiis vel fugit assumenda culpa repellendus.
-        Odio placeat ea, laboriosam eligendi dolor facere quam voluptatem alias reprehenderit libero quasi necessitatibus
-        ullam vero officiis non corrupti vel excepturi praesentium itaque autem minus consequatur beatae. Dignissimos culpa
-        nemo rem corporis quidem molestiae neque laborum esse perferendis quo qui voluptas illum obcaecati, dolores cum
-        magnam? Nemo repudiandae facilis deleniti dolores praesentium optio at delectus, in nisi ex, maxime aspernatur iusto
-        laudantium, pariatur ipsa! Debitis quod quam aperiam minus non, assumenda recusandae animi dignissimos eos suscipit
-        officia voluptas blanditiis neque magnam deserunt eveniet quisquam nostrum unde quo architecto doloribus autem
-        cupiditate maxime esse. Quidem quo eos explicabo consequuntur facilis tempore alias saepe deleniti quam quia, eaque
-        veritatis vel iusto atque accusamus. Minus odio perspiciatis voluptas commodi modi optio corrupti quaerat provident
-        hic nulla quo laboriosam, dolorem explicabo, pariatur id eligendi sint consequuntur quisquam veniam saepe! Et,
-        consectetur dignissimos ullam inventore veritatis esse pariatur dolores ea? Iste incidunt tenetur perferendis numquam
-        corporis. Quis neque, enim magnam, impedit autem quas, accusamus cum dolorem repellat amet ab exercitationem!
-        Praesentium quisquam provident doloremque fugiat in. Placeat, ratione ut. Nihil aut consequatur enim praesentium, at
-        in recusandae optio ipsa cupiditate cumque quos, modi nam eius eaque distinctio tempora, culpa sunt totam velit
-        tenetur perferendis voluptatibus repellat. Eligendi, vitae beatae reprehenderit, tempora minus sequi iusto deserunt
-        amet eius dolorem laboriosam distinctio quis velit sit ab, atque neque inventore doloribus omnis? Reprehenderit
-        aspernatur suscipit possimus vero, laboriosam odio, eligendi id nostrum sunt beatae nam quia molestias fugiat corporis
-        voluptatem at natus officia. Odio libero voluptatibus veritatis? Porro quasi ab suscipit beatae placeat soluta
-        consequuntur. At officia voluptates maiores accusamus dolores et labore dolorum quidem consequuntur dicta dignissimos
-        reiciendis aperiam, velit quia totam corrupti alias quisquam dolorem ea, quam ipsum ut? Ea incidunt vitae delectus vel
-        a esse in eveniet, tempore cum dolores necessitatibus minus voluptate tenetur ipsam consequuntur, distinctio
-        blanditiis veniam. Dolorum impedit aperiam placeat earum ut soluta rem natus. Qui, consequatur velit enim, dolores,
-        reprehenderit quos non repudiandae veritatis deleniti quis cupiditate aperiam molestiae in. Id eligendi aut beatae
-        recusandae sit delectus, numquam accusamus alias corrupti asperiores nulla, impedit ullam fugit magni? Deleniti
-        ratione saepe nisi sed.
-      </div>
-      <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta laboriosam vel quisquam numquam asperiores doloremque
-        error odit dolorum a, neque in consectetur mollitia, repellat ipsa corrupti cumque molestiae doloribus porro placeat
-        molestias nihil. Sit itaque dolor doloribus ratione placeat nisi totam, saepe dolore, aliquid repellat nemo explicabo
-        delectus iure quisquam quod molestiae, voluptatum tenetur vero voluptates esse beatae alias. Tempora dolorum illo,
-        quidem aut veritatis rerum unde deserunt maxime cum perspiciatis error? Ipsum iure odio aut doloremque, officiis
-        assumenda, magni reiciendis vitae facere nam necessitatibus quae. Aut dolores nemo expedita, distinctio architecto at
-        laboriosam, similique facilis obcaecati mollitia eligendi earum? Similique, perspiciatis minus ducimus debitis
-        voluptatibus consequuntur accusantium a, at quam, id perferendis esse? Nihil similique molestias animi asperiores qui
-        soluta non accusamus reiciendis, autem corrupti. Id, ipsum delectus omnis quibusdam sequi perspiciatis sapiente
-        aliquid ratione alias nesciunt soluta ex voluptatum velit minima blanditiis vel fugit assumenda culpa repellendus.
-        Odio placeat ea, laboriosam eligendi dolor facere quam voluptatem alias reprehenderit libero quasi necessitatibus
-        ullam vero officiis non corrupti vel excepturi praesentium itaque autem minus consequatur beatae. Dignissimos culpa
-        nemo rem corporis quidem molestiae neque laborum esse perferendis quo qui voluptas illum obcaecati, dolores cum
-        magnam? Nemo repudiandae facilis deleniti dolores praesentium optio at delectus, in nisi ex, maxime aspernatur iusto
-        laudantium, pariatur ipsa! Debitis quod quam aperiam minus non, assumenda recusandae animi dignissimos eos suscipit
-        officia voluptas blanditiis neque magnam deserunt eveniet quisquam nostrum unde quo architecto doloribus autem
-        cupiditate maxime esse. Quidem quo eos explicabo consequuntur facilis tempore alias saepe deleniti quam quia, eaque
-        veritatis vel iusto atque accusamus. Minus odio perspiciatis voluptas commodi modi optio corrupti quaerat provident
-        hic nulla quo laboriosam, dolorem explicabo, pariatur id eligendi sint consequuntur quisquam veniam saepe! Et,
-        consectetur dignissimos ullam inventore veritatis esse pariatur dolores ea? Iste incidunt tenetur perferendis numquam
-        corporis. Quis neque, enim magnam, impedit autem quas, accusamus cum dolorem repellat amet ab exercitationem!
-        Praesentium quisquam provident doloremque fugiat in. Placeat, ratione ut. Nihil aut consequatur enim praesentium, at
-        in recusandae optio ipsa cupiditate cumque quos, modi nam eius eaque distinctio tempora, culpa sunt totam velit
-        tenetur perferendis voluptatibus repellat. Eligendi, vitae beatae reprehenderit, tempora minus sequi iusto deserunt
-        amet eius dolorem laboriosam distinctio quis velit sit ab, atque neque inventore doloribus omnis? Reprehenderit
-        aspernatur suscipit possimus vero, laboriosam odio, eligendi id nostrum sunt beatae nam quia molestias fugiat corporis
-        voluptatem at natus officia. Odio libero voluptatibus veritatis? Porro quasi ab suscipit beatae placeat soluta
-        consequuntur. At officia voluptates maiores accusamus dolores et labore dolorum quidem consequuntur dicta dignissimos
-        reiciendis aperiam, velit quia totam corrupti alias quisquam dolorem ea, quam ipsum ut? Ea incidunt vitae delectus vel
-        a esse in eveniet, tempore cum dolores necessitatibus minus voluptate tenetur ipsam consequuntur, distinctio
-        blanditiis veniam. Dolorum impedit aperiam placeat earum ut soluta rem natus. Qui, consequatur velit enim, dolores,
-        reprehenderit quos non repudiandae veritatis deleniti quis cupiditate aperiam molestiae in. Id eligendi aut beatae
-        recusandae sit delectus, numquam accusamus alias corrupti asperiores nulla, impedit ullam fugit magni? Deleniti
-        ratione saepe nisi sed.
-      </div>
-      <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta laboriosam vel quisquam numquam asperiores doloremque
-        error odit dolorum a, neque in consectetur mollitia, repellat ipsa corrupti cumque molestiae doloribus porro placeat
-        molestias nihil. Sit itaque dolor doloribus ratione placeat nisi totam, saepe dolore, aliquid repellat nemo explicabo
-        delectus iure quisquam quod molestiae, voluptatum tenetur vero voluptates esse beatae alias. Tempora dolorum illo,
-        quidem aut veritatis rerum unde deserunt maxime cum perspiciatis error? Ipsum iure odio aut doloremque, officiis
-        assumenda, magni reiciendis vitae facere nam necessitatibus quae. Aut dolores nemo expedita, distinctio architecto at
-        laboriosam, similique facilis obcaecati mollitia eligendi earum? Similique, perspiciatis minus ducimus debitis
-        voluptatibus consequuntur accusantium a, at quam, id perferendis esse? Nihil similique molestias animi asperiores qui
-        soluta non accusamus reiciendis, autem corrupti. Id, ipsum delectus omnis quibusdam sequi perspiciatis sapiente
-        aliquid ratione alias nesciunt soluta ex voluptatum velit minima blanditiis vel fugit assumenda culpa repellendus.
-        Odio placeat ea, laboriosam eligendi dolor facere quam voluptatem alias reprehenderit libero quasi necessitatibus
-        ullam vero officiis non corrupti vel excepturi praesentium itaque autem minus consequatur beatae. Dignissimos culpa
-        nemo rem corporis quidem molestiae neque laborum esse perferendis quo qui voluptas illum obcaecati, dolores cum
-        magnam? Nemo repudiandae facilis deleniti dolores praesentium optio at delectus, in nisi ex, maxime aspernatur iusto
-        laudantium, pariatur ipsa! Debitis quod quam aperiam minus non, assumenda recusandae animi dignissimos eos suscipit
-        officia voluptas blanditiis neque magnam deserunt eveniet quisquam nostrum unde quo architecto doloribus autem
-        cupiditate maxime esse. Quidem quo eos explicabo consequuntur facilis tempore alias saepe deleniti quam quia, eaque
-        veritatis vel iusto atque accusamus. Minus odio perspiciatis voluptas commodi modi optio corrupti quaerat provident
-        hic nulla quo laboriosam, dolorem explicabo, pariatur id eligendi sint consequuntur quisquam veniam saepe! Et,
-        consectetur dignissimos ullam inventore veritatis esse pariatur dolores ea? Iste incidunt tenetur perferendis numquam
-        corporis. Quis neque, enim magnam, impedit autem quas, accusamus cum dolorem repellat amet ab exercitationem!
-        Praesentium quisquam provident doloremque fugiat in. Placeat, ratione ut. Nihil aut consequatur enim praesentium, at
-        in recusandae optio ipsa cupiditate cumque quos, modi nam eius eaque distinctio tempora, culpa sunt totam velit
-        tenetur perferendis voluptatibus repellat. Eligendi, vitae beatae reprehenderit, tempora minus sequi iusto deserunt
-        amet eius dolorem laboriosam distinctio quis velit sit ab, atque neque inventore doloribus omnis? Reprehenderit
-        aspernatur suscipit possimus vero, laboriosam odio, eligendi id nostrum sunt beatae nam quia molestias fugiat corporis
-        voluptatem at natus officia. Odio libero voluptatibus veritatis? Porro quasi ab suscipit beatae placeat soluta
-        consequuntur. At officia voluptates maiores accusamus dolores et labore dolorum quidem consequuntur dicta dignissimos
-        reiciendis aperiam, velit quia totam corrupti alias quisquam dolorem ea, quam ipsum ut? Ea incidunt vitae delectus vel
-        a esse in eveniet, tempore cum dolores necessitatibus minus voluptate tenetur ipsam consequuntur, distinctio
-        blanditiis veniam. Dolorum impedit aperiam placeat earum ut soluta rem natus. Qui, consequatur velit enim, dolores,
-        reprehenderit quos non repudiandae veritatis deleniti quis cupiditate aperiam molestiae in. Id eligendi aut beatae
-        recusandae sit delectus, numquam accusamus alias corrupti asperiores nulla, impedit ullam fugit magni? Deleniti
-        ratione saepe nisi sed.
-      </div>
-    </div>
-  </section>
-  <section class="panel 2" data-section-name="2">
-    <div class="inner">
-      <h2>Options</h2>
-      <dl>
-        <dt>section</dt>
-        <dd>A CSS selector for the sections of the page.</dd>
-        <dt>sectionName</dt>
-        <dd>
-          Scrollify lets you define a hash value for each section. This makes
-          it possible to permalink to particular sections. This is set as a
-          data attribute on the sections. The name of the data attribute is
-          defined by 'sectionName'.
-        </dd>
-        <dt>interstitialSection</dt>
-        <dd>
-          A CSS selector for non-full-height sections, such as a header and
-          footer.
-        </dd>
-        <dt>easing</dt>
-        <dd>Define the easing method.</dd>
-        <dt>offset</dt>
-        <dd>A distance in pixels to offset each sections position by.</dd>
-        <dt>scrollbars</dt>
-        <dd>A boolean to define whether scroll bars are visible or not.</dd>
-        <dt>standardScrollElements</dt>
-        <dd>
-          A CSS selector for elements within sections that require standard
-          scrolling behaviour.
-        </dd>
-        <dt>setHeights</dt>
-        <dd>
-          A boolean to define whether Scollify assigns a height to the
-          sections. True by default.
-        </dd>
-        <dt>overflowScroll</dt>
-        <dd>
-          A boolean to define whether Scrollify will allow scrolling over
-          overflowing content within sections. True by default.
-        </dd>
-        <dt>updateHash</dt>
-        <dd>
-          A boolean to define whether Scrollify updates the browser location
-          hash when scrolling through sections. True by default.
-        </dd>
-        <dt>touchScroll</dt>
-        <dd>
-          A boolean to define whether Scrollify handles touch scroll events.
-          True by default.
-        </dd>
-        <dt>before</dt>
-        <dd>
-          A callback that is fired before a section is scrolled to via the
-          move method. Arguments include the index of the section and an array
-          of all section elements.
-        </dd>
-        <dt>after</dt>
-        <dd>
-          A callback that is fired after a new section is scrolled to.
-          Arguments include the index of the section and an array of all
-          section elements.
-        </dd>
-        <dt>afterResize</dt>
-        <dd>A callback that is fired after the window is resized.</dd>
-        <dt>afterRender</dt>
-        <dd>A callback that is fired after Scrollify's initialisation.</dd>
-      </dl>
-    </div>
-  </section>
-  <section class="panel 33" data-section-name="33">
-    <div class="inner">
-      <h2>Options</h2>
-      <dl>
-        <dt>section</dt>
-        <dd>A CSS selector for the sections of the page.</dd>
-        <dt>sectionName</dt>
-        <dd>
-          Scrollify lets you define a hash value for each section. This makes
-          it possible to permalink to particular sections. This is set as a
-          data attribute on the sections. The name of the data attribute is
-          defined by 'sectionName'.
-        </dd>
-        <dt>interstitialSection</dt>
-        <dd>
-          A CSS selector for non-full-height sections, such as a header and
-          footer.
-        </dd>
-        <dt>easing</dt>
-        <dd>Define the easing method.</dd>
-        <dt>offset</dt>
-        <dd>A distance in pixels to offset each sections position by.</dd>
-        <dt>scrollbars</dt>
-        <dd>A boolean to define whether scroll bars are visible or not.</dd>
-        <dt>standardScrollElements</dt>
-        <dd>
-          A CSS selector for elements within sections that require standard
-          scrolling behaviour.
-        </dd>
-        <dt>setHeights</dt>
-        <dd>
-          A boolean to define whether Scollify assigns a height to the
-          sections. True by default.
-        </dd>
-        <dt>overflowScroll</dt>
-        <dd>
-          A boolean to define whether Scrollify will allow scrolling over
-          overflowing content within sections. True by default.
-        </dd>
-        <dt>updateHash</dt>
-        <dd>
-          A boolean to define whether Scrollify updates the browser location
-          hash when scrolling through sections. True by default.
-        </dd>
-        <dt>touchScroll</dt>
-        <dd>
-          A boolean to define whether Scrollify handles touch scroll events.
-          True by default.
-        </dd>
-        <dt>before</dt>
-        <dd>
-          A callback that is fired before a section is scrolled to via the
-          move method. Arguments include the index of the section and an array
-          of all section elements.
-        </dd>
-        <dt>after</dt>
-        <dd>
-          A callback that is fired after a new section is scrolled to.
-          Arguments include the index of the section and an array of all
-          section elements.
-        </dd>
-        <dt>afterResize</dt>
-        <dd>A callback that is fired after the window is resized.</dd>
-        <dt>afterRender</dt>
-        <dd>A callback that is fired after Scrollify's initialisation.</dd>
-      </dl>
-    </div>
-  </section>
-  <section class="panel 55" data-section-name="55">
-    <div class="inner">
-      <h2>Options</h2>
-      <dl>
-        <dt>section</dt>
-        <dd>A CSS selector for the sections of the page.</dd>
-        <dt>sectionName</dt>
-        <dd>
-          Scrollify lets you define a hash value for each section. This makes
-          it possible to permalink to particular sections. This is set as a
-          data attribute on the sections. The name of the data attribute is
-          defined by 'sectionName'.
-        </dd>
-        <dt>interstitialSection</dt>
-        <dd>
-          A CSS selector for non-full-height sections, such as a header and
-          footer.
-        </dd>
-        <dt>easing</dt>
-        <dd>Define the easing method.</dd>
-        <dt>offset</dt>
-        <dd>A distance in pixels to offset each sections position by.</dd>
-        <dt>scrollbars</dt>
-        <dd>A boolean to define whether scroll bars are visible or not.</dd>
-        <dt>standardScrollElements</dt>
-        <dd>
-          A CSS selector for elements within sections that require standard
-          scrolling behaviour.
-        </dd>
-        <dt>setHeights</dt>
-        <dd>
-          A boolean to define whether Scollify assigns a height to the
-          sections. True by default.
-        </dd>
-        <dt>overflowScroll</dt>
-        <dd>
-          A boolean to define whether Scrollify will allow scrolling over
-          overflowing content within sections. True by default.
-        </dd>
-        <dt>updateHash</dt>
-        <dd>
-          A boolean to define whether Scrollify updates the browser location
-          hash when scrolling through sections. True by default.
-        </dd>
-        <dt>touchScroll</dt>
-        <dd>
-          A boolean to define whether Scrollify handles touch scroll events.
-          True by default.
-        </dd>
-        <dt>before</dt>
-        <dd>
-          A callback that is fired before a section is scrolled to via the
-          move method. Arguments include the index of the section and an array
-          of all section elements.
-        </dd>
-        <dt>after</dt>
-        <dd>
-          A callback that is fired after a new section is scrolled to.
-          Arguments include the index of the section and an array of all
-          section elements.
-        </dd>
-        <dt>afterResize</dt>
-        <dd>A callback that is fired after the window is resized.</dd>
-        <dt>afterRender</dt>
-        <dd>A callback that is fired after Scrollify's initialisation.</dd>
-      </dl>
-    </div>
-  </section>
-  </main>
+  </div>
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery.scrollify.js"></script>
   <script src="js/index.js"></script>
-  </div>
+  <script>
+    $.scrollify({
+      before: function (index) {
+        if (index === 0) {
+          $('#nav').addClass('nav-hide');
+          $('#nav a').addClass('event-disable')
+        } else {
+          $('#nav').removeClass('nav-hide')
+          $('#nav a').removeClass('event-disable')
+        }
+      },
+      afterRender: function () {
+        let current = $.scrollify.current()
+        console.log(current)
+        if (current[0].dataset.sectionName === 's1') {
+          $('#nav').addClass('nav-hide')
+          $('#nav a').addClass('event-disable')
+        }
+
+      }
+    })
+  </script>
+  <script>
+
+  </script>
+
 </body>
 
 </html>

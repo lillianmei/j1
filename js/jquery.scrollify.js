@@ -24,11 +24,7 @@
  * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
  * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-
 if touchScroll is false - update index
-
  */
 (function (global, factory) {
   "use strict";
@@ -58,7 +54,6 @@ if touchScroll is false - update index
     timeoutId2,
     $window = $(window),
     portHeight,
-    top = $window.scrollTop(),
     scrollable = false,
     locked = false,
     scrolled = false,
@@ -94,10 +89,11 @@ if touchScroll is false - update index
       after: function () {},
       afterResize: function () {},
       afterRender: function () {}
-    };
+    },
+    top = $(settings.target).scrollTop();
 
   function getportHeight() {
-    return (window.innerHeight + settings.offset);
+    return ($(settings.target).innerHeight() + settings.offset);
   }
 
   function animateScroll(index, instant, callbacks, toTop) {
@@ -252,7 +248,7 @@ if touchScroll is false - update index
         }, 200);
       },
       calculateNearest: function (instant, callbacks) {
-        top = $window.scrollTop();
+        top = $(settings.target).scrollTop();
         var i = 1,
           max = heights.length,
           closest = 0,
@@ -611,7 +607,7 @@ if touchScroll is false - update index
 
     function sizePanels(keepPosition) {
       if (keepPosition) {
-        top = $window.scrollTop();
+        top = $(settings.target).scrollTop();
       }
 
       var selector = settings.section;
@@ -661,7 +657,7 @@ if touchScroll is false - update index
         }
       });
       if (keepPosition) {
-        $window.scrollTop(top);
+        $(settings.target).scrollTop(top);
       }
     }
 
@@ -716,7 +712,7 @@ if touchScroll is false - update index
       if (!overflow[index]) {
         return true;
       }
-      top = $window.scrollTop();
+      top = $(settings.target).scrollTop();
       if (top > parseInt(heights[index])) {
         return false;
       } else {
@@ -728,7 +724,7 @@ if touchScroll is false - update index
       if (!overflow[index]) {
         return true;
       }
-      top = $window.scrollTop();
+      top = $(settings.target).scrollTop();
       portHeight = getportHeight();
 
       if (top < parseInt(heights[index]) + (elements[index].outerHeight() - portHeight) - 28) {
