@@ -2,15 +2,30 @@
 html {
   -webkit-text-size-adjust: 100%;
   letter-spacing: 2px;
+  font-size: 16px;
+  position: relative;
+  background-color: #000;
 }
 
 body {
   margin: 0;
   padding: 0;
+  font-size: 16px;
+  position: relative;
+  background-color: #000;
 }
 
 main {
   display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
 
 hr {
@@ -213,15 +228,55 @@ li {
   list-style: none;
 }
 
-/* other share */
-a.event-disable {
-  pointer-events: none;
-  cursor: default;
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes boxHeight {
+  from {
+    opacity: 0;
+    height: 0;
+  }
+  to {
+    opacity: 1;
+    height: 123px;
+  }
+}
+@keyframes boxHeight {
+  from {
+    opacity: 0;
+    height: 0;
+  }
+  to {
+    opacity: 1;
+    height: 123px;
+  }
+}
 /* gobal */
-#wrapper {
+#app {
   position: relative;
+  background-color: #000;
 }
 
 /* nav */
@@ -233,7 +288,7 @@ nav {
   padding: 20px 0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  z-index: 1;
+  z-index: 10;
   background-color: #000;
   opacity: 1;
 }
@@ -348,9 +403,9 @@ nav .input-toggler:checked ~ .sidebar-overlay {
           flex: 1;
 }
 .sidebar .menu {
-  -webkit-box-flex: 1;
-      -ms-flex: auto;
-          flex: auto;
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
   -webkit-transition: all 0.35s ease-out;
   transition: all 0.35s ease-out;
 }
@@ -419,16 +474,19 @@ nav .input-toggler:checked ~ .sidebar-overlay {
 }
 .sidebar .user-account {
   border: 1px solid #B9373C;
-  border-left: 0;
-  border-radius: 18px;
+  border-radius: 20px;
   position: absolute;
   right: 30px;
-  top: 20px;
+  top: 30px;
   -webkit-transition: all 0.35s ease-in;
   transition: all 0.35s ease-in;
 }
 .sidebar .user-account > div {
   display: inline-block;
+}
+.sidebar .user-account > div.user {
+  padding: 10px 20px;
+  color: #fff;
 }
 .sidebar .user-account > div a {
   display: inline-block;
@@ -448,35 +506,50 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   text-align: center;
   height: 0;
   overflow: hidden;
-  -webkit-transition: all 0.5s ease-in;
-  transition: all 0.5s ease-in;
   width: 100%;
+  -webkit-transition: all 0.35s ease-in;
+  transition: all 0.35s ease-in;
+}
+.sidebar .user-account > div.account-sub.animate-delay {
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+.sidebar .user-account > div.account-sub hr {
+  width: 0;
+  opacity: 0;
+  margin: 5px auto 10px auto;
+  -webkit-transition: all 0.35s ease-in;
+  transition: all 0.35s ease-in;
+}
+.sidebar .user-account > div.account-sub hr.animate-delay-1-5 {
+  -webkit-transition-delay: 1.5s;
+          transition-delay: 1.5s;
 }
 .sidebar .user-account > div.account-sub a {
   display: block;
   background-color: transparent;
-  opacity: 0;
-  -webkit-transform: translate(0px, -10px);
-          transform: translate(0px, -10px);
-  -webkit-transition: all 0.35s ease-in 0.3s;
-  transition: all 0.35s ease-in 0.3s;
 }
 .sidebar .user-account:hover {
   background-color: #B9373C;
 }
-.sidebar .user-account:hover .account-sub {
-  height: 123px;
-}
-.sidebar .user-account:hover .account-sub a {
-  opacity: 1;
-  -webkit-transform: translate(0px, 0px);
-          transform: translate(0px, 0px);
+
+/* other share */
+a.event-disable {
+  pointer-events: none;
+  cursor: default;
 }
 
-#main-content {
-  max-width: 1250px;
-  margin: 0 auto;
+.animate-delay-0-5 {
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
 }
-#main-content section:first-of-type {
-  margin-top: 120px;
+
+.animate-delay {
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+.animate-delay-1-5 {
+  -webkit-transition-delay: 1.5s;
+          transition-delay: 1.5s;
 }

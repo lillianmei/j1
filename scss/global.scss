@@ -5,15 +5,30 @@ html {
   // line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   letter-spacing: 2px;
+  font-size: 16px;
+  position: relative;
+  background-color: v.$bg-color;
 }
 
 body {
   margin: 0;
   padding: 0;
+  font-size: 16px;
+  position: relative;
+  background-color: v.$bg-color;
 }
 
 main {
   display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
 
 hr {
@@ -214,15 +229,35 @@ li {
   list-style: none;
 }
 
-/* other share */
-a.event-disable {
-  pointer-events: none;
-  cursor: default;
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes boxHeight {
+  from {
+    opacity: 0;
+    height: 0;
+  }
+
+  to {
+    opacity: 1;
+    height: 123px;
+  }
 }
 
 /* gobal */
-#wrapper {
+#app {
   position: relative;
+  background-color: v.$bg-color;
 }
 
 /* nav */
@@ -233,7 +268,7 @@ nav {
   left: 0;
   padding: 20px 0;
   transition: all .5s;
-  z-index: 1;
+  z-index: 10;
   background-color: #000;
   opacity: 1;
 
@@ -344,7 +379,7 @@ nav {
   }
 
   .menu {
-    flex: auto;
+    flex: 5;
     // background-color: #000;
     transition: all .35s ease-out;
 
@@ -406,15 +441,19 @@ nav {
 
   .user-account {
     border: 1px solid #B9373C;
-    border-left: 0;
-    border-radius: 18px;
+    border-radius: 20px;
     position: absolute;
     right: 30px;
-    top: 20px;
+    top: 30px;
     transition: all 0.35s ease-in;
 
     &>div {
       display: inline-block;
+
+      &.user {
+        padding: 10px 20px;
+        color: #fff;
+      }
 
       a {
         display: inline-block;
@@ -441,43 +480,53 @@ nav {
         text-align: center;
         height: 0;
         overflow: hidden;
-        transition: all 0.5s ease-in;
-        // position: absolute;
-        // right: 0;
         width: 100%;
+        transition: all 0.35s ease-in;
+
+        &.animate-delay {
+          transition-delay: 1s;
+        }
+
+        hr {
+          width: 0;
+          opacity: 0;
+          margin: 5px auto 10px auto;
+          transition: all 0.35s ease-in;
+
+          &.animate-delay-1-5 {
+            transition-delay: 1.5s;
+          }
+        }
 
         a {
           display: block;
           background-color: transparent;
-          opacity: 0;
-          transform: translate(0px, -10px);
-          transition: all 0.35s ease-in 0.3s;
+          // transform: translate(0px, -10px);
+          // transition: all 0.35s ease-in 0.3s; 
         }
       }
     }
 
     &:hover {
       background-color: #B9373C;
-
-      .account-sub {
-        height: 123px;
-
-        a {
-          opacity: 1;
-          transform: translate(0px, 0px);
-        }
-      }
     }
   }
 }
 
-#main-content {
-  max-width: 1250px;
-  margin: 0 auto;
+/* other share */
+a.event-disable {
+  pointer-events: none;
+  cursor: default;
+}
 
-  section {
-    &:first-of-type {
-      margin-top: 120px;
-    }
-  }
+.animate-delay-0-5 {
+  transition-delay: .5s;
+}
+
+.animate-delay {
+  transition-delay: 1s;
+}
+
+.animate-delay-1-5 {
+  transition-delay: 1.5s;
 }
