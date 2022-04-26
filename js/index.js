@@ -1,40 +1,59 @@
 $(function () {
-  // $.scrollify({
-  //   section: ".panel",
-  //   scrollSpeed: 2000,
-  //   sectionName:false,
-  //   updateHash: true,
-  //   easing: "easeOutCubic",
-  //   setHeights: false,
-  // });
- 
+
+  //啟動滑動效果
+  AOS.init({
+    mirror:true,
+    // easing: 'ease-out-back',
+  });
+    // $.scrollify({
+    //   section: ".panel",
+    //   scrollSpeed: 2000,
+    //   sectionName: false,
+    //   updateHash: true,
+    //   easing: "easeOutCubic",
+    //   setHeights: false,
+    // });
+
   //NAV效果
   $(window).on('scroll resize', function (e) {
-    let scrollHeight = 800,
+    let scrollHeight = 600
+    let sectionY = $('section[data-id]').offset().top;
       $nav = $('#nav');
     if ($(window).scrollTop() > scrollHeight) {
-      $nav.addClass('mini');
+      // $nav.addClass('mini');
+      $nav.css('z-index','2')
+      $nav.css('opacity', '1')
+      $('html,body').animate({
+        scrollTop: div
+      }, 500);
     } else {
-      $nav.removeClass('mini');
+      $nav.css('z-index', '0')
+      $nav.css('opacity', '0')
+      // $nav.removeClass('mini');
     }
   })
+  //scroll滑動效果
+   $(window).on('scroll resize', function (e) {
+     let sectionY = $('section[data-id]').offset().top;
+     let scrollHeight = sectionY/2
+
+     if ($(window).scrollTop() > scrollHeight) {
+       $('html,body').animate({
+         scrollTop: sectionY
+       }, 500);
+     }
+   })
   //account hover效果
   const account = document.querySelector('.user-account')
-  const subaccount = document.querySelector('.account-sub')
-  const line = document.querySelector('.account-sub hr')
   account.addEventListener('mouseenter', e => {
-    subaccount.style.opacity = 1;
-    subaccount.style.height = '145px';
-    subaccount.classList.remove('animate-delay')
-    line.style.opacity = 1;
-    line.style.width = '80%'
+    account.classList.add('-active')
+    account.classList.remove('-leave')
   })
   account.addEventListener('mouseleave', e => {
-    subaccount.style.opacity = 0;
-    subaccount.style.height = '0';
-    subaccount.classList.add('animate-delay')
-    line.style.opacity = 0;
-    line.style.width = 0;
-    line.classList.add('animate-delay')
-  })
+    account.classList.remove('-active')
+    account.classList.add('-leave')
+  });
+
+  //
+
 });

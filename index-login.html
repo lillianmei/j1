@@ -35,14 +35,8 @@
         <li><a class="menu-link" href="#">業務專區</a></li>
         <li><a class="menu-link" href="#">關於影城</a></li>
       </ul>
-      <div class="user-account">
+      <div class="user-account isUser">
         <div class="user">HELLO! Yick Shun</div>
-        <div v-if="!isLogin" @click="login">
-          <a href="">會員登入</a>
-        </div>
-        <div v-if="!isLogin" @click="login">
-          <a href="">加入會員</a>
-        </div>
         <div class="account-sub">
           <hr>
           <a href="">訂票查詢與取消</a>
@@ -51,7 +45,7 @@
         </div>
       </div>
     </div>
-  </nav>
+  </nav> 
 </div>
 
 <script src="js/jquery.min.js"></script>

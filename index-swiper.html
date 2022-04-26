@@ -6,8 +6,9 @@
   <title>document</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
   <link rel="stylesheet" href="css/global.min.css">
-  <link rel="stylesheet" href="css/index.min.css">
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/aos.min.css">
+  <link rel="stylesheet" href="css/index.min.css">
 
   <style>
     html,
@@ -16,34 +17,37 @@
       height: 100%;
     }
 
-    .swiper {
-      width: 100%;
-      height: 100%;
-    }
+   .swiper {
+        width: 100%;
+        height: 100%;
+      }
 
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
 
-    }
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
 
-    .swiper-slide img {
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      background: #ccc;
-    }
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
   </style>
 </head>
 
@@ -59,28 +63,35 @@
     <div class="sidebar">
       <a class="nav-brand" href="#">Navbar</a>
       <ul class="menu">
-        <li><a class="menu-link" href="#">線上訂票</a></li>
+        <li>
+          <a class="menu-link" href="#">線上訂票</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">公館場次查詢</a></li>
+            <li><a class="dropdown-item" href="#">新竹場次查詢</a></li>
+          </ul>
+        </li>
         <li>
           <a class="menu-link" href="#">電影介紹</a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">最新消息</a></li>
-            <li><a class="dropdown-item" href="#">業務專區</a></li>
-            <li><a class="dropdown-item" href="#">關於影城</a></li>
+            <li><a class="dropdown-item" href="#">現正熱映</a></li>
+            <li><a class="dropdown-item" href="#">即將上映</a></li>
           </ul>
         </li>
         <li><a class="menu-link" href="#">最新消息</a></li>
         <li><a class="menu-link" href="#">業務專區</a></li>
         <li><a class="menu-link" href="#">關於影城</a></li>
       </ul>
-      <div class="user-account">
-        <span v-if="isLogin">HELLO! Yick Shun</span>
-        <div v-if="!isLogin" @click="login">
+      <!-- isUser DEMO用 -->
+      <div class="user-account isUser">
+        <div class="user">HELLO! Yick Shun</div>
+        <div class="user-login">
           <a href="">會員登入</a>
         </div>
-        <div v-if="!isLogin" @click="login">
+        <div class="user-regist">
           <a href="">加入會員</a>
         </div>
         <div class="account-sub">
+          <hr>
           <a href="">訂票查詢與取消</a>
           <a href="">編輯會員系統</a>
           <a href="">會員優惠PLUS</a>
@@ -91,10 +102,10 @@
   <section id="landing" class="panel">
     <div class="landing-page">
       <h1>
-        <div data-aos="fade-up" data-aos-duration="1200">BROADWAY<span data-aos="fade-up" data-aos-duration="1200"
+        <div data-aos="fade-down" data-aos-duration="1200">BROADWAY<span data-aos="fade-down" data-aos-duration="1300"
             data-aos-delay="800">CINEMAS</span></div>
       </h1>
-      <div class="welcome" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="1500">
+      <div class="welcome" data-aos="fade-in" data-aos-duration="1200" data-aos-delay="1400">
         <div class="text-round"></div>
         <div class="mouse">
           <div class="scroller"></div>
@@ -102,39 +113,25 @@
       </div>
     </div>
   </section>
-  <div class="">
-    <div class="">
-      <div class="">
-        
-      </div>
-      <div class="">
+  <section data-aos="fade-in" data-aos-duration="1400" class="panel section-box" data-id="1">
       <div class="swiper s-swiper">
-        <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide"><img src="https://fakeimg.pl/1920x500/"></div>
-          <div class="swiper-slide"><img src="https://fakeimg.pl/1920x500/"></div>
-          <div class="swiper-slide"><img src="https://fakeimg.pl/1920x500/"></div>
-          ...
+          <div class="swiper-slide"><img src="https://picsum.photos/g/1920/700?random=2"></div>
+          <div class="swiper-slide"><img src="https://picsum.photos/g/1920/700?random=2"></div>
+          <div class="swiper-slide"><img src="https://picsum.photos/g/1920/700?random=2"></div>
         </div>
-        <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
-      
-        <!-- If we need navigation buttons -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
-      
-        <!-- If we need scrollbar -->
-        <div class="swiper-scrollbar"></div>
       </div>
-        <div>
-          123456789
-        </div>
-                   
-      </div>
-     
-    </div>
-  </div>
+  </section>
+  <section class="section-box">123456</section>
+  <section class="section-box">123456</section>
+  <section class="section-box">123456</section>
+  <section class="section-box">123456</section>
+  <section class="section-box">123456</section>
+  <section class="section-box">123456</section>
+  <footer></footer>
   <script src="js/jquery.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
   <script>
@@ -142,7 +139,6 @@
       lazy: true,
       slidesPerView: 1,
       spaceBetween: 0,
-      loop: true,
       centeredSlides: true,
       pagination: {
         el: ".swiper-pagination",
@@ -160,22 +156,8 @@
       },
     });
   </script>
-  <script>
-    const  verticalSwiper = new Swiper(".v-swiper", {
-      direction: "vertical",
-      slidesPerView: 1,
-      mousewheel: true,
-      spaceBetween: 0,
-      freeMode: {
-        enabled: true,
-        sticky:true,
-        minimumVelocity:1,
-        momentumBounce:false,
-        momentumBounceRatio:5,
-        momentumRatio:10
-      },
-    });
-  </script>
+  <script src="js/aos.min.js"></script>
+  <!-- <script src="js/jquery.scrollify.js"></script> -->
   <script src="js/index.js"></script>
 
 </body>

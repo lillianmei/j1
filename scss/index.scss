@@ -1,23 +1,27 @@
 @use "variables" as v;
 #landing {
   position: relative;
-  z-index: 200;
   width: 100%;
+
   .landing-page {
     height: 100vh;
     width: 100%;
     background-color: #000;
+    background-image: url(https://picsum.photos/1920/500);
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
 
     h1 {
       display: flex;
       width: 100%;
-      color: #fff;
-      font-size: 7rem;
+      color: v.$white;
+      font-size: 8rem;
       justify-content: center;
       text-align: right;
       height: 100%;
       align-items: center;
+    
       span {
         display: block;
       }
@@ -28,7 +32,7 @@
       cursor: pointer;
       position: absolute;
       bottom: 150px;
-      left: 15%;
+      left: 15vw;
 
       .text-round {
         width: 100%;
@@ -37,7 +41,7 @@
         background-repeat: no-repeat;
         background-size: contain;
         animation: rotate 10s infinite linear;
-      }
+      } 
       .mouse {
         position: absolute;
         top: 50%;
@@ -51,7 +55,7 @@
         .scroller{
           width: 3px;
           height: 8px;
-          border: 1px solid #fff;
+          border: 1px solid v.$font-primary;
           border-radius: 25%;
           position: absolute;
           top: 13px;
@@ -62,27 +66,9 @@
     }
   }
 }
-//only for index-scroll.html
-#main-content {
-  .s1,.s2,.s3 {
-    background: #fff;
-    padding-top: 80px;
-  }
-}
-
-//for swpier
-.v-swiper{
-  background-color: v.$bg-color;
-  .swiper-wrapper{
-    .swiper-slide:nth-of-type(2){
-      flex-direction: inherit;
-      justify-content:flex-start
-    }
-    .s-swiper{
-      max-height: 500px;
-    }
-  }
-   
+.section-box{
+  padding: 50px 0;
+  margin-top: 80px;
 }
 
 

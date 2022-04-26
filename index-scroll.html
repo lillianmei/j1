@@ -72,8 +72,15 @@
         <li><a class="menu-link" href="#">關於影城</a></li>
       </ul>
       <div class="user-account">
-        <span v-if="isLogin">HELLO! Yick Shun</span>
+        <div class="user">HELLO! Yick Shun</div>
+        <!-- <div>
+          <a href="">會員登入</a>
+        </div>
+        <div >
+          <a href="">加入會員</a>
+        </div> -->
         <div class="account-sub">
+          <hr>
           <a href="">訂票查詢與取消</a>
           <a href="">編輯會員系統</a>
           <a href="">會員優惠PLUS</a>
@@ -342,36 +349,10 @@
       $.scrollify.move('#3')
     });
 </script>
-<script src="js/vue.js"></script>
 <script src="js/aos.min.js"></script>
 <script src="js/swiper-bundle.min.js"></script>
 <script src="js/index.js"></script>
-<script>
-   Vue.createApp({
-      data() {
-        return {
-          isLogin: false,
-        }
-      },
-      methods: {
-       login: function () {
-          this.isLogin = true;
-        },
-     },
-      mounted() {
-         AOS.init();
-         const swiper = new Swiper(".mySwiper", {
-          pagination: {
-            el: ".swiper-pagination",
-          },
-           navigation: {
-             nextEl: ".swiper-button-next",
-             prevEl: ".swiper-button-prev",
-           },
-        });
-     }
-    }).mount('#app')
-</script>
+
 </body>
 
 </html>
