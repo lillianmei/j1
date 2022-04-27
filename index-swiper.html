@@ -99,11 +99,11 @@
       </div>
     </div>
   </nav>
-  <section id="landing" class="panel">
-    <div class="landing-page">
+  <section id="landing" class="panel" data-id="1">
+    <div class="landing-page"></div>
       <h1>
-        <div data-aos="fade-down" data-aos-duration="1200">BROADWAY<span data-aos="fade-down" data-aos-duration="1300"
-            data-aos-delay="800">CINEMAS</span></div>
+        <div data-aos="fade-down" data-aos-duration="1200">BROADWAY</div>
+        <div data-aos="fade-down" data-aos-duration="1300" data-aos-delay="800">CINEMAS</div>
       </h1>
       <div class="welcome" data-aos="fade-in" data-aos-duration="1200" data-aos-delay="1400">
         <div class="text-round"></div>
@@ -111,9 +111,8 @@
           <div class="scroller"></div>
         </div>
       </div>
-    </div>
   </section>
-  <section data-aos="fade-in" data-aos-duration="1400" class="panel section-box" data-id="1">
+  <section data-aos="fade" data-aos-duration="1400" class="panel section-box" data-id="2">
       <div class="swiper s-swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide"><img src="https://picsum.photos/g/1920/700?random=2"></div>
@@ -132,6 +131,13 @@
   <section class="section-box">123456</section>
   <section class="section-box">123456</section>
   <footer></footer>
+
+  <script src="js/aos.min.js"></script>
+  <script>
+    AOS.init({
+      mirror: true,
+    });
+  </script>
   <script src="js/jquery.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
   <script>
@@ -156,8 +162,8 @@
       },
     });
   </script>
-  <script src="js/aos.min.js"></script>
-  <!-- <script src="js/jquery.scrollify.js"></script> -->
+  
+  <script src="js/jquery.scrollify.js"></script>
   <script src="js/index.js"></script>
 
 </body>

@@ -16,6 +16,9 @@ body {
   font-size: 17px;
   position: relative;
   background-color: v.$bg-color;
+  &.no-scroll{
+    overflow: hidden;
+  }
 }
 
 main {
@@ -260,22 +263,17 @@ li {
   }
 }
 
-/* gobal */
-#app {
-  position: relative;
-  background-color: v.$bg-color;
-}
 
 /* nav */
 nav {
-  position: fixed;
+  // position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   padding: 20px 0;
   transition: all .5s;
-  z-index: 0;
-  background-color: #000;
+  z-index: 5;
+  // background-color: #000;
   opacity: 1;
 
   &.mini {
@@ -370,6 +368,7 @@ nav {
     }
   }
 }
+
 
 .sidebar {
   // max-width: 1200px;
@@ -467,6 +466,7 @@ nav {
     position: absolute;
     right: 30px;
     top:30px;
+    z-index: 2;
     background-color: transparent;
     transition:background-color 0.4s ease;
 
