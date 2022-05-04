@@ -75,13 +75,80 @@
   -webkit-transform-origin: top center;
           transform-origin: top center;
 }
-.start-scroll #landing h1, .start-scroll #landing .welcome {
+.start-scroll #landing h1,
+.start-scroll #landing .welcome {
   display: none;
 }
 .start-scroll nav {
   opacity: 1;
   -webkit-transition: opacity 0.5s cubic-bezier(0.76, -0.24, 0.55, 0.91) 0.8s;
   transition: opacity 0.5s cubic-bezier(0.76, -0.24, 0.55, 0.91) 0.8s;
+}
+
+.showing-list {
+  text-align: center;
+}
+.showing-list .poster {
+  padding-right: 30px;
+}
+.showing-list .poster img {
+  border-radius: 10px;
+  width: 100%;
+}
+.showing-list .movie-title {
+  margin-top: 10px;
+  font-weight: bold;
+}
+.showing-list .movie-title span {
+  font-weight: 500;
+  display: block;
+  margin-top: 5px;
+}
+.showing-list .movie-level {
+  margin: 15px 0;
+  padding: 5px 10px;
+  display: inline-block;
+  color: #000;
+}
+.showing-list .y12 {
+  background-color: yellow;
+}
+.showing-list .y6 {
+  background-color: rgb(35, 162, 247);
+}
+
+.onlinebook .select-box {
+  width: 100%;
+}
+.onlinebook .select-box select {
+  width: 90%;
+  height: 70px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #fff;
+}
+.onlinebook .select-box select option {
+  background-color: #000;
+  color: #fff;
+}
+
+.lastestnew .news-box > a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+.lastestnew .news-box > a .new-info {
+  margin-left: 20px;
+  text-align: left;
+}
+.lastestnew .news-box > a .new-info hr {
+  width: 60px;
+  margin-left: 0;
+  height: 1px;
+  background-color: #b9373b;
+  border: none;
 }
 
 @-webkit-keyframes rotate {

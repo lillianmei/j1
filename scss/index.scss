@@ -1,4 +1,4 @@
-@use "variables"as v;
+@use "variables" as v;
 
 #landing {
   //position: relative; //for swiper
@@ -16,7 +16,7 @@
     animation: blur 2s ease-out;
   }
 
-  h1 {
+  h1 { 
     display: block;
     color: v.$white;
     font-size: 8rem;
@@ -77,22 +77,78 @@
   #landing {
     .landing-page {
       height: 0;
-      transition: height 1s cubic-bezier(.76, -0.24, .55, .91);
+      transition: height 1s cubic-bezier(0.76, -0.24, 0.55, 0.91);
       transform-origin: top center;
     }
-    h1,.welcome{display: none;}
+    h1,
+    .welcome {
+      display: none;
+    }
   }
-  nav{
+  nav {
     opacity: 1;
-    transition: opacity .5s cubic-bezier(.76, -0.24, .55, .91) .8s;
-
+    transition: opacity 0.5s cubic-bezier(0.76, -0.24, 0.55, 0.91) 0.8s;
   }
 }
 
-.section-box {
-  // margin-top: 100px;
+.showing-list {
+  text-align: center;
+  .poster{
+    padding-right: 30px;
+    img{border-radius: 10px;width: 100%;}
+  }
+  .movie-title{
+    margin-top: 10px;
+    font-weight: bold;
+    span{
+      font-weight: 500;
+      display: block;
+      margin-top: 5px;
+    }
+  }
+  .movie-level{
+    margin: 15px 0;
+    padding: 5px 10px;
+    display: inline-block;
+    color: #000;
+  }
+  .y12{background-color: yellow;}
+  .y6{background-color: rgb(35, 162, 247);}
 }
 
+.onlinebook{
+  .select-box{
+    width: 100%;
+    select{
+      width: 90%;
+      height: 70px;
+      margin-bottom: 40px;
+      border-radius: 10px;
+      background-color: transparent;
+      color: v.$white;
+      option{
+        background-color: #000;
+        color: v.$white;
+      }
+    }
+  }
+}
+.lastestnew{
+  .news-box{
+    &>a{
+      display: flex;
+      margin-bottom: 20px;
+      .new-info{
+        margin-left: 20px;
+        text-align: left;
+        hr{width: 60px;margin-left: 0; height: 1px;
+        background-color: v.$primary;
+        border: none;}
+      }
+    }
+  }
+
+}
 
 
 //animate
