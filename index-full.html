@@ -25,9 +25,9 @@
     <div class="landing-page"></div>
     <h1>
       <div data-aos="fade-down" data-aos-duration="1200">BROADWAY</div>
-      <div data-aos="fade-down" data-aos-duration="1200" data-aos-delay="800">CINEMAS</div>
+      <div data-aos="fade-down" data-aos-duration="1200" data-aos-delay="400">CINEMAS</div>
     </h1>
-    <div class="welcome" data-aos="fade-in" data-aos-duration="1200" data-aos-delay="1400">
+    <div class="welcome" data-aos="fade-in" data-aos-duration="1200" data-aos-delay="1000">
       <div class="text-round"></div>
       <div class="mouse">
         <div class="scroller"></div>
@@ -322,6 +322,14 @@
     $('#landing').on('click', function () {
       $('body').addClass('start-scroll')
       $('body').removeClass('no-scroll')
+    });
+  </script>
+  <script>
+    $(window).on('mousewheel', function (e) {
+      if(e){
+        $('body').addClass('start-scroll')
+        $('body').removeClass('no-scroll')
+      }
     });
   </script>
 

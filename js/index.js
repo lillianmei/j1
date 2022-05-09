@@ -1,6 +1,5 @@
 $(function () {
   //啟動滑動效果
-
   // $.scrollify({
   //     section: ".panel",
   //     scrollSpeed: 2000,
