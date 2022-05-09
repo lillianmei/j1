@@ -89,7 +89,7 @@
   text-align: center;
   margin-bottom: 20px;
 }
-.showing-list a .poster {
+.showing-list a > div {
   padding-right: 10px;
 }
 .showing-list a .poster img {
@@ -97,7 +97,6 @@
   width: 100%;
 }
 .showing-list a .movie-title {
-  padding-right: 10px;
   margin-top: 10px;
   font-weight: bold;
 }
@@ -120,19 +119,35 @@
 }
 
 .onlinebook .select-box {
-  width: 100%;
+  padding-right: 40px;
+}
+.onlinebook .select-box div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
 }
 .onlinebook .select-box select {
-  width: 90%;
+  width: 100%;
   height: 70px;
-  margin-bottom: 40px;
-  border-radius: 10px;
+  border-radius: 5px;
+  padding: 0 10px;
   background-color: transparent;
   color: #fff;
+  border: 1px solid rgb(190, 190, 190);
+  margin-left: 10px;
 }
 .onlinebook .select-box select option {
   background-color: #000;
   color: #fff;
+}
+@media all and (max-width: 769px) {
+  .onlinebook .select-box {
+    padding-right: 0;
+  }
 }
 
 .lastestnew .news-box > a {
@@ -141,16 +156,44 @@
   display: flex;
   margin-bottom: 20px;
 }
-.lastestnew .news-box > a .new-info {
+@media all and (max-width: 769px) {
+  .lastestnew .news-box > a {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.lastestnew .news-box .new-info {
   margin-left: 20px;
   text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.lastestnew .news-box > a .new-info hr {
+@media all and (max-width: 769px) {
+  .lastestnew .news-box .new-info {
+    margin-left: 0px;
+    margin-top: 15px;
+  }
+}
+.lastestnew .news-box .new-info hr {
   width: 60px;
   margin-left: 0;
   height: 1px;
   background-color: #b9373b;
   border: none;
+  margin-bottom: 15px;
+}
+.lastestnew .news-box p {
+  margin-bottom: 15px;
 }
 
 @-webkit-keyframes rotate {

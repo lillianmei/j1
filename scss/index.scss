@@ -16,7 +16,7 @@
     animation: blur 2s ease-out;
   }
 
-  h1 { 
+  h1 {
     display: block;
     color: v.$white;
     font-size: 8rem;
@@ -94,66 +94,113 @@
 .showing-list {
   text-align: center;
   margin-bottom: 20px;
-  a{
-    .poster{
+  a {
+    > div {
       padding-right: 10px;
-    img{border-radius: 10px;width: 100%;}
-  }
-  .movie-title{
-    padding-right: 10px;
-    margin-top: 10px;
-    font-weight: bold;
-    span{
-      font-weight: 500;
-      display: block;
-      margin-top: 5px;
+    }
+    .poster {
+      img {
+        border-radius: 10px;
+        width: 100%;
+      }
+    }
+    .movie-title {
+      margin-top: 10px;
+      font-weight: bold;
+      span {
+        font-weight: 500;
+        display: block;
+        margin-top: 5px;
+      }
+    }
+    .movie-level {
+      margin: 15px 0;
+      padding: 5px 10px;
+      display: inline-block;
+      color: #000;
     }
   }
-  .movie-level{
-    margin: 15px 0;
-    padding: 5px 10px;
-    display: inline-block;
-    color: #000;
+  .y12 {
+    background-color: yellow;
   }
+  .y6 {
+    background-color: rgb(35, 162, 247);
   }
-  .y12{background-color: yellow;}
-  .y6{background-color: rgb(35, 162, 247);}
 }
 
-.onlinebook{
-  .select-box{
-    width: 100%;
-    select{
-      width: 90%;
+.onlinebook {
+  .select-box {
+    padding-right: 40px;
+    div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    select {
+      width: 100%;
       height: 70px;
-      margin-bottom: 40px;
-      border-radius: 10px;
+      border-radius: 5px;
+      padding: 0 10px;
       background-color: transparent;
       color: v.$white;
-      option{
+      border: 1px solid rgb(190, 190, 190);
+      margin-left: 10px;
+
+      option {
         background-color: #000;
         color: v.$white;
       }
     }
-  }
-}
-.lastestnew{
-  .news-box{
-    &>a{
-      display: flex;
-      margin-bottom: 20px;
-      .new-info{
-        margin-left: 20px;
-        text-align: left;
-        hr{width: 60px;margin-left: 0; height: 1px;
-        background-color: v.$primary;
-        border: none;}
-      }
+    // .movie-date {
+    //   width: 100%;
+    //   height: 70px;
+    //   border: 1px solid rgb(190, 190, 190);
+    //   border-radius: 5px;
+    //   background-color: #000;
+    //   color: v.$white;
+    //   padding-left: 10px;
+    //   margin-left: 10px;
+    // }
+    @include v.phone-width {
+      padding-right: 0;
     }
   }
-
 }
+.lastestnew {
+  .news-box {
+    & > a {
+      display: flex;
+      margin-bottom: 20px;
 
+      @include v.phone-width {
+        flex-direction: column;
+      }
+    }
+    .new-info {
+        margin-left: 20px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @include v.phone-width {
+          margin-left: 0px;
+          margin-top: 15px;
+        }
+        hr {
+          width: 60px;
+          margin-left: 0;
+          height: 1px;
+          background-color: v.$primary;
+          border: none;
+          margin-bottom: 15px;
+        }
+      }
+     
+      p{
+        margin-bottom: 15px;
+      }
+  }
+}
 
 //animate
 @keyframes rotate {

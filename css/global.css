@@ -32,7 +32,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   margin: 0;
 }
 
@@ -721,6 +722,16 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   margin: 80px auto 50px auto;
   padding: 0 30px;
 }
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .section-box .section {
+    padding: 0 15px;
+  }
+}
+@media all and (max-width: 769px) {
+  .section-box .section {
+    padding: 0 15px;
+  }
+}
 .section-box .section .content-row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -780,7 +791,7 @@ footer > div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px;
+  padding: 20px 30px;
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
   footer > div {
@@ -813,6 +824,10 @@ footer > div div {
 }
 
 /* other share */
+:focus {
+  outline-width: 0px;
+}
+
 a.event-disable {
   pointer-events: none;
   cursor: default;
