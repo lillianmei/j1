@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" href="css/global.min.css">
+  <link rel="stylesheet" href="css/aos.min.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/index.min.css">
+  <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  <style>
+    .swiper-slide img{
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body class="no-scroll">
+  <nav id="nav">
+    <input type="checkbox" id="toggle" class="input-toggler" />
+    <div class="sidebar-overlay"></div>
+    <label for="toggle" class="menu-toggler">
+      <span class="menu-toggler-line"></span>
+      <span class="menu-toggler-line"></span>
+      <span class="menu-toggler-line"></span>
+    </label>
+    <div class="sidebar">
+      <a class="nav-brand" href="#">Navbar</a>
+      <!-- navbar for pc  -->
+      <div class="forpc">
+        <ul class="menu">
+          <li class="user-mobile"></li>
+          <li>
+            <a class="menu-link" href="#">線上訂票</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">公館場次查詢</a></li>
+              <li><a class="dropdown-item" href="#">新竹場次查詢</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="menu-link" href="#">電影介紹</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">現正熱映</a></li>
+              <li><a class="dropdown-item" href="#">即將上映</a></li>
+            </ul>
+          </li>
+          <li><a class="menu-link" href="#">最新消息</a></li>
+          <li><a class="menu-link" href="#">業務專區</a></li>
+          <li><a class="menu-link" href="#">關於影城</a></li>
+        </ul>
+        <!-- isUser DEMO用 -->
+        <div class="user-account isUser">
+          <div class="user">HELLO! Yick Shun</div>
+          <div class="user-login">
+            <a href="">會員登入</a>
+          </div>
+          <div class="user-regist">
+            <a href="">加入會員</a>
+          </div>
+          <div class="account-sub">
+            <hr>
+            <a href="">訂票查詢與取消</a>
+            <a href="">編輯會員系統</a>
+            <a href="">會員優惠PLUS</a>
+          </div>
+        </div>
+      </div>
+      <!-- navbar for mobile  -->
+      <div class="formobile">
+        <!-- isUser DEMO用 -->
+        <div class="user-account isUser">
+          <div class="user">HELLO! Yick Shun</div>
+          <div class="user-login">
+            <a href="">會員登入</a>
+          </div>
+          <div class="user-regist">
+            <a href="">加入會員</a>
+          </div>
+          <div class="account-sub">
+            <hr>
+            <a href="">訂票查詢與取消</a>
+            <a href="">編輯會員系統</a>
+            <a href="">會員優惠PLUS</a>
+          </div>
+        </div>
+        <ul class="menu">
+          <li>
+            <a class="menu-link" href="#">線上訂票</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">公館場次查詢</a></li>
+              <li><a class="dropdown-item" href="#">新竹場次查詢</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="menu-link" href="#">電影介紹</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">現正熱映</a></li>
+              <li><a class="dropdown-item" href="#">即將上映</a></li>
+            </ul>
+          </li>
+          <li><a class="menu-link" href="#">最新消息</a></li>
+          <li><a class="menu-link" href="#">業務專區</a></li>
+          <li><a class="menu-link" href="#">關於影城</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="section-box">
+    <section class="section">
+      <div class="content content-row">
+        <div class="showing-list row-2">
+          <a href="">
+            <div class="poster">
+              <img src="https://fakeimg.pl/250x350/" alt="" />
+            </div>
+            <div class="movie-title bigger-font">劫命救護<span class="small-font">AMBULANCE</span></div>
+            <div class="movie-level y12">輔12級</div>
+            <div class="small-font">上映日期 2022-03-25</div>
+          </a>
+        </div>
+        <div class="showing-list row-3">
+          <a href="">
+            <div class="poster">
+              <img src="https://fakeimg.pl/250x350/" alt="" />
+            </div>
+            <div class="movie-title bigger-font">劫命救護<span class="small-font">AMBULANCE</span></div>
+            <div class="movie-level y6">護6級</div>
+            <div class="small-font">上映日期 2022-03-25</div>
+          </a>
+        </div>
+      </div>
+    </section>
+  
+  </div>
+  <footer>
+    <div>
+      <img src="https://fakeimg.pl/250x100/" />
+      <div>
+        <a href=""><img src="https://fakeimg.pl/25x25/" /></a>
+        <a href=""><img src="https://fakeimg.pl/25x25/" /></a>
+        <a href=""><img src="https://fakeimg.pl/25x25/" /></a>
+        <a href=""><img src="https://fakeimg.pl/25x25/" /></a>
+        <div class="small-font">
+          公館百老匯影城 02-8663-6128 | 新竹百老匯影城 02-86636128
+        </div>
+        <div class="small-font">
+          Copyright© 2022 Broadway Cinemas All Rights Reserved.
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/aos.min.js"></script>
+  <script>
+    AOS.init({
+      mirror: true,
+      // easing: 'ease-out-back',
+    });
+  </script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/index.js"></script>
+
+
+</body>
+
+</html>
