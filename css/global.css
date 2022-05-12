@@ -300,7 +300,6 @@ nav {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   z-index: 5;
-  opacity: 0;
 }
 nav.mini {
   padding: 10px 0;
@@ -754,6 +753,14 @@ nav .input-toggler:checked ~ .sidebar-overlay {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
+}
+.section-box .section .content-row .row-2-1 {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+.section-box .section .content-row .row-2-auto {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
 }
 .section-box .section .content-row .row-5 {
   -ms-flex-preferred-size: 20%;
