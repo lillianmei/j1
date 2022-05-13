@@ -1,4 +1,5 @@
 $(function () {
+  const landing = document.querySelector('#landing')
   //啟動滑動效果
   // $.scrollify({
   //     section: ".panel",
@@ -14,6 +15,22 @@ $(function () {
   //       }
   //     },
   //   });
+  if(landing){
+     $(window).on('mousewheel', function (e) {
+       if (e) {
+         $('body').addClass('start-scroll')
+         $('body').removeClass('no-scroll')
+       }
+     });
+     $('#landing').on('click', function () {
+       $('body').addClass('start-scroll')
+       $('body').removeClass('no-scroll')
+     });
+     
+  }else{
+     $('body').removeClass('no-scroll')
+  }
+  
 
   //NAV效果
   $(window).on('scroll resize', function (e) {

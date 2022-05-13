@@ -5,7 +5,6 @@
 .movie-title span {
   font-weight: 500;
   display: block;
-  margin-top: 5px;
 }
 
 .movie-level {
@@ -20,7 +19,7 @@
 }
 
 .y6 {
-  background-color: rgb(35, 162, 247);
+  background-color: #5A98C0;
 }
 
 #landing {
@@ -40,7 +39,7 @@
 }
 #landing h1 {
   display: block;
-  color: #fff;
+  color: #C7C7C7;
   font-size: 8rem;
   position: absolute;
   top: 50%;
@@ -185,13 +184,13 @@
   border-radius: 5px;
   padding: 0 10px;
   background-color: transparent;
-  color: #fff;
+  color: #C7C7C7;
   border: 1px solid rgb(190, 190, 190);
   margin-left: 10px;
 }
 .onlinebook .select-box select option {
   background-color: #000;
-  color: #fff;
+  color: #C7C7C7;
 }
 @media all and (max-width: 769px) {
   .onlinebook .select-box {
@@ -237,12 +236,66 @@
   width: 60px;
   margin-left: 0;
   height: 1px;
-  background-color: #b9373b;
+  background-color: #B9373C;
   border: none;
   margin-bottom: 15px;
 }
 .lastestnew .news-box p {
   margin-bottom: 15px;
+}
+
+.movie-item:first-of-type {
+  margin-right: 50px;
+}
+@media all and (max-width: 769px) {
+  .movie-item:first-of-type {
+    margin-right: 0;
+  }
+}
+.movie-item img {
+  width: 100%;
+}
+.movie-item .up-date {
+  margin: 10px 0 30px 0;
+  color: #B9373C;
+  font-weight: bold;
+}
+.movie-item .movie-level {
+  margin-top: 0;
+}
+.movie-item .book-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #5A98C0;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+}
+.movie-item .list-item > div {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.movie-item .list-item > div span {
+  font-weight: normal;
+  border-left: 1px solid #fff;
+  padding-left: 10px;
+  margin-left: 10px;
+}
+.movie-item .list-item .list-2 {
+  width: 100%;
+  display: -webkit-inline-box;
+}
+.movie-item .list-item .list-2 div {
+  max-width: 95%;
+}
+
+.trailer {
+  background-color: rgba(73, 73, 73, 0.596);
+  padding: 2rem;
+  text-align: center;
+  margin-top: 50px;
 }
 
 @-webkit-keyframes rotate {
