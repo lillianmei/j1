@@ -1,4 +1,4 @@
-@use "variables"as v;
+@use "variables" as v;
 
 //share
 .movie-title {
@@ -23,7 +23,7 @@
 }
 
 .y6 {
-  background-color: #5A98C0;
+  background-color: #5a98c0;
 }
 
 //landing for index
@@ -36,33 +36,32 @@
   .landing-page {
     height: 100vh;
     width: 100%;
+    display: flex;
+    align-items: center;
     background-color: #000;
     background-image: url(https://picsum.photos/1920/500);
     background-repeat: no-repeat;
     background-size: cover;
-    animation: blur 2s ease-out;
+    animation: blur 1s ease-out;
   }
 
   h1 {
-    display: block;
-    color: v.$white;
+    color: v.$font-primary;
     font-size: 8rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    div {
-      display: block;
-      text-align: right;
-    }
+    text-align: right;
+    width: min-content;
+    line-height: 1.2;
+    margin: 0 auto;
 
     @include v.pad-width {
       font-size: 6rem;
     }
 
     @include v.phone-width {
-      font-size: 3rem;
+      font-size: 4rem;
+    }
+    @include v.mini-width {
+      font-size: 2rem;
     }
   }
 
@@ -71,7 +70,7 @@
     height: 224px;
     cursor: pointer;
     position: absolute;
-    bottom: 115px;
+    bottom: 10vh;
     left: 14vw;
 
     @include v.pad-width {
@@ -144,13 +143,15 @@
   #landing {
     .landing-page {
       height: 0;
-      transition: height 1s cubic-bezier(0.76, -0.24, 0.55, 0.91);
+      transition: height 0.8s cubic-bezier(0.76, -0.24, 0.55, 0.91);
       transform-origin: top center;
+      transition-delay: 0.3s;
     }
 
     h1,
     .welcome {
-      display: none;
+      opacity: 0;
+      transition: opacity 0.5s cubic-bezier(0.76, -0.24, 0.55, 0.91);
     }
   }
 
@@ -166,7 +167,7 @@
   margin-bottom: 20px;
 
   a {
-    >div {
+    > div {
       padding-right: 10px;
     }
   }
@@ -176,6 +177,9 @@
       border-radius: 10px;
       width: 100%;
     }
+  }
+  .movie-level {
+    margin-right: 10px;
   }
 }
 
@@ -195,26 +199,15 @@
       border-radius: 5px;
       padding: 0 10px;
       background-color: transparent;
-      color: v.$white;
+      color: v.$font-primary;
       border: 1px solid rgb(190, 190, 190);
       margin-left: 10px;
 
       option {
         background-color: #000;
-        color: v.$white;
+        color: v.$font-primary;
       }
     }
-
-    // .movie-date {
-    //   width: 100%;
-    //   height: 70px;
-    //   border: 1px solid rgb(190, 190, 190);
-    //   border-radius: 5px;
-    //   background-color: #000;
-    //   color: v.$white;
-    //   padding-left: 10px;
-    //   margin-left: 10px;
-    // }
     @include v.phone-width {
       padding-right: 0;
     }
@@ -223,7 +216,7 @@
 
 .lastestnew {
   .news-box {
-    &>a {
+    & > a {
       display: flex;
       margin-bottom: 20px;
 
@@ -266,6 +259,7 @@
 
     @include v.phone-width {
       margin-right: 0;
+      margin-bottom: 15px;
     }
   }
 
@@ -286,7 +280,7 @@
   .book-btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #5A98C0;
+    background-color: #5a98c0;
     border-radius: 5px;
     margin-bottom: 30px;
     color: #000;
@@ -295,7 +289,7 @@
   }
 
   .list-item {
-    >div {
+    > div {
       font-weight: bold;
       margin-bottom: 10px;
 
@@ -323,11 +317,10 @@
   padding: 2rem;
   text-align: center;
   margin-top: 50px;
+  @include v.phone-width {
+    padding: 10px;
+  }
 }
-
-
-
-
 
 //animate
 @keyframes rotate {

@@ -1,17 +1,19 @@
-$primary: #B9373C;
+$primary: #b9373c;
 $primary-opacity: #b9373bbb;
-$secondary:#000;
+$secondary: #000;
 
-$white:#C7C7C7;
-$font-primary:rgb(233, 233, 233);
-$bg-color:#191919;
+$white: #c7c7c7;
+$font-primary: #fff;
+$bg-color: #191919;
 
-$max-width:1400px;
+$max-width: 1400px;
 
-$pc-media:992px;
-$pcs-media:991px;
-$phone-media:769px;
-$phones-media:768px;
+$pc-media: 992px;
+$pcs-media: 991px;
+$phone-media: 768px;
+$phones-media: 769px;
+$mini-media: 414px;
+$other-media: 1200px;
 
 //電腦
 @mixin pc-width() {
@@ -22,7 +24,7 @@ $phones-media:768px;
 
 //平板
 @mixin pad-width() {
-  @media all and (min-width:$phones-media) and (max-width: $pcs-media) {
+  @media all and (min-width: $phones-media) and (max-width: $pcs-media) {
     @content;
   }
 }
@@ -30,6 +32,18 @@ $phones-media:768px;
 //手機
 @mixin phone-width() {
   @media all and (max-width: $phone-media) {
+    @content;
+  }
+}
+//最小
+@mixin mini-width() {
+  @media all and (max-width: $mini-media) {
+    @content;
+  }
+}
+//其他
+@mixin other-width() {
+  @media all and (max-width: $other-media) {
     @content;
   }
 }

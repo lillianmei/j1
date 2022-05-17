@@ -1,4 +1,4 @@
-@use "variables"as v;
+@use "variables" as v;
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 body,
@@ -18,7 +18,10 @@ html {
   }
 
   @include v.pc-width {
-    font-size: 18px;
+    font-size: 17px;
+  }
+  @include v.pad-width {
+    display: 16px;
   }
 }
 
@@ -55,7 +58,7 @@ a {
   transition: color 0.3s ease, font-weight 0.4s ease;
 
   &:hover {
-    color: v.$white;
+    color: v.$font-primary;
     font-weight: bolder;
   }
 }
@@ -287,7 +290,7 @@ nav {
   .menu-toggler {
     position: absolute;
     right: 30px;
-    top: 6px;
+    top: 29px;
     width: 35px;
     height: 50px;
     z-index: 1000;
@@ -316,7 +319,7 @@ nav {
   }
 
   .input-toggler {
-    &~.sidebar .menu {
+    & ~ .sidebar .menu {
       @include v.pad-width {
         position: absolute;
         top: 0;
@@ -336,12 +339,12 @@ nav {
       }
     }
 
-    &~.sidebar-overlay {
+    & ~ .sidebar-overlay {
       position: absolute;
       background-color: #000;
       width: 100%;
-      height: 100vh;
       top: 0;
+      bottom: 0;
       opacity: 0;
       display: none;
       transition: all 0.45s ease-out;
@@ -349,27 +352,27 @@ nav {
     }
 
     &:checked {
-      &~.menu-toggler .menu-toggler-line {
+      & ~ .menu-toggler .menu-toggler-line {
         top: 5px;
         transform: translateY(100px);
         transform: rotate(45deg);
       }
 
-      &~.menu-toggler .menu-toggler-line:nth-child(2) {
+      & ~ .menu-toggler .menu-toggler-line:nth-child(2) {
         display: none;
       }
 
-      &~.menu-toggler .menu-toggler-line:nth-child(3) {
+      & ~ .menu-toggler .menu-toggler-line:nth-child(3) {
         top: -5px;
         transform: translateY(10);
         transform: rotate(135deg);
       }
 
-      &~.sidebar .menu {
+      & ~ .sidebar .menu {
         left: 0;
       }
 
-      &~.sidebar-overlay {
+      & ~ .sidebar-overlay {
         display: block;
         opacity: 0.9;
       }
@@ -407,17 +410,23 @@ nav {
 
   .nav-brand {
     padding: 20px;
-    flex: none;
   }
 
   .menu {
     transition: all 0.35s ease-out;
+    text-align: center;
+    @include v.other-width {
+      text-align: left;
+    }
 
-    >li {
+    > li {
       display: inline-block;
-      width: 12.5%;
+      width: 12%;
       text-align: center;
       position: relative;
+      @include v.other-width {
+        width: 14%;
+      }
 
       &:hover {
         & .dropdown-menu {
@@ -436,17 +445,12 @@ nav {
       transition: color 0.4s ease, font-weight 0.4s ease;
 
       &:hover {
-        color: v.$white;
-        font-weight: bolder;
-      }
-
-      &:focus {
-        color: v.$white;
+        color: v.$font-primary;
         font-weight: bold;
       }
 
-      &:active {
-        color: v.$white;
+      &:focus {
+        color: v.$font-primary;
         font-weight: bold;
       }
     }
@@ -485,11 +489,12 @@ nav {
   }
 
   .user-account {
+    cursor: pointer;
     border: 1px solid v.$primary-opacity;
     border-radius: 20px;
     position: absolute;
     right: 30px;
-    top: 30px;
+    top: 27px;
     z-index: 2;
     background-color: transparent;
     transition: background-color 0.4s ease;
@@ -530,7 +535,7 @@ nav {
 
       a {
         display: inline-block;
-        padding: 8px 20px;
+        padding: 6px 20px;
         background-color: v.$primary-opacity;
         border-radius: 18px;
       }
@@ -567,7 +572,7 @@ nav {
       transition-delay: 0.2s;
 
       .account-sub {
-        height: 140px;
+        height: 150px;
         transition-delay: 0.1s;
 
         hr {
@@ -700,7 +705,7 @@ nav {
   }
 
   .section {
-    color: v.$white;
+    color: v.$font-primary;
     max-width: v.$max-width;
     margin: 50px auto 50px auto;
     padding: 0 30px;
@@ -715,6 +720,7 @@ nav {
 
     @include v.phone-width {
       padding: 0 15px;
+      margin-top: 30px;
     }
 
     .content {
@@ -771,15 +777,18 @@ nav {
         @include v.phone-width {
           flex-basis: 50%;
         }
+        @include v.mini-width {
+          flex-basis: 100%;
+        }
       }
     }
   }
 }
 
 footer {
-  background-color: #0F0F0F;
-  color: v.$white;
-  &>div {
+  background-color: #0f0f0f;
+  color: v.$font-primary;
+  & > div {
     max-width: v.$max-width;
     margin: 0 auto;
     display: flex;
@@ -806,11 +815,11 @@ footer {
         text-align: center;
       }
     }
-    a{
+    a {
       display: inline-block;
       width: 30px;
       height: 30px;
-      background-color:#C7C7C7;
+      background-color: #c7c7c7;
       border-radius: 50%;
       text-align: center;
       margin-bottom: 10px;
@@ -823,23 +832,16 @@ footer {
   outline-width: 0px;
 }
 
-a.event-disable {
-  pointer-events: none;
-  cursor: default;
-}
-
 .small-font {
   font-size: 0.9rem;
 }
 
 .bigger-font {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 .material-icons {
-  margin-right: 10px;
   vertical-align: sub;
-  line-height: 1.6;
 }
 
 .mul-ellipsis-4 {

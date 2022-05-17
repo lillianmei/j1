@@ -18,7 +18,13 @@ html.no-scroll {
 @media all and (min-width: 992px) {
   body,
 html {
-    font-size: 18px;
+    font-size: 17px;
+  }
+}
+@media all and (min-width: 769px) and (max-width: 991px) {
+  body,
+html {
+    display: 16px;
   }
 }
 
@@ -51,13 +57,13 @@ pre {
 a {
   background-color: transparent;
   text-decoration: none;
-  color: rgb(233, 233, 233);
+  color: #fff;
   font-weight: normal;
   -webkit-transition: color 0.3s ease, font-weight 0.4s ease;
   transition: color 0.3s ease, font-weight 0.4s ease;
 }
 a:hover {
-  color: #C7C7C7;
+  color: #fff;
   font-weight: bolder;
 }
 
@@ -310,7 +316,7 @@ nav .input-toggler {
 nav .menu-toggler {
   position: absolute;
   right: 30px;
-  top: 6px;
+  top: 29px;
   width: 35px;
   height: 50px;
   z-index: 1000;
@@ -327,14 +333,14 @@ nav .menu-toggler {
           flex-direction: column;
   cursor: pointer;
 }
-@media all and (min-width: 768px) and (max-width: 991px) {
+@media all and (min-width: 769px) and (max-width: 991px) {
   nav .menu-toggler {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 }
-@media all and (max-width: 769px) {
+@media all and (max-width: 768px) {
   nav .menu-toggler {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -350,7 +356,7 @@ nav .menu-toggler .menu-toggler-line {
   -webkit-transition: all 0.35s ease-out;
   transition: all 0.35s ease-out;
 }
-@media all and (min-width: 768px) and (max-width: 991px) {
+@media all and (min-width: 769px) and (max-width: 991px) {
   nav .input-toggler ~ .sidebar .menu {
     position: absolute;
     top: 0;
@@ -360,7 +366,7 @@ nav .menu-toggler .menu-toggler-line {
     z-index: 999;
   }
 }
-@media all and (max-width: 769px) {
+@media all and (max-width: 768px) {
   nav .input-toggler ~ .sidebar .menu {
     position: absolute;
     top: 0;
@@ -374,8 +380,8 @@ nav .input-toggler ~ .sidebar-overlay {
   position: absolute;
   background-color: #000;
   width: 100%;
-  height: 100vh;
   top: 0;
+  bottom: 0;
   opacity: 0;
   display: none;
   -webkit-transition: all 0.45s ease-out;
@@ -420,12 +426,12 @@ nav .input-toggler:checked ~ .sidebar-overlay {
 .sidebar .forpc {
   width: 85%;
 }
-@media all and (min-width: 768px) and (max-width: 991px) {
+@media all and (min-width: 769px) and (max-width: 991px) {
   .sidebar .forpc {
     display: none;
   }
 }
-@media all and (max-width: 769px) {
+@media all and (max-width: 768px) {
   .sidebar .forpc {
     display: none;
   }
@@ -440,19 +446,27 @@ nav .input-toggler:checked ~ .sidebar-overlay {
 }
 .sidebar .nav-brand {
   padding: 20px;
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
 }
 .sidebar .menu {
   -webkit-transition: all 0.35s ease-out;
   transition: all 0.35s ease-out;
+  text-align: center;
+}
+@media all and (max-width: 1200px) {
+  .sidebar .menu {
+    text-align: left;
+  }
 }
 .sidebar .menu > li {
   display: inline-block;
-  width: 12.5%;
+  width: 12%;
   text-align: center;
   position: relative;
+}
+@media all and (max-width: 1200px) {
+  .sidebar .menu > li {
+    width: 14%;
+  }
 }
 .sidebar .menu > li:hover .dropdown-menu {
   width: 100%;
@@ -465,20 +479,16 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   display: inline-block;
   text-align: center;
   padding: 10px;
-  color: rgb(233, 233, 233);
+  color: #fff;
   -webkit-transition: color 0.4s ease, font-weight 0.4s ease;
   transition: color 0.4s ease, font-weight 0.4s ease;
 }
 .sidebar .menu .menu-link:hover {
-  color: #C7C7C7;
-  font-weight: bolder;
-}
-.sidebar .menu .menu-link:focus {
-  color: #C7C7C7;
+  color: #fff;
   font-weight: bold;
 }
-.sidebar .menu .menu-link:active {
-  color: #C7C7C7;
+.sidebar .menu .menu-link:focus {
+  color: #fff;
   font-weight: bold;
 }
 .sidebar .menu .dropdown-menu {
@@ -495,7 +505,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   z-index: 99;
   padding-top: 10px;
 }
-@media all and (max-width: 769px) {
+@media all and (max-width: 768px) {
   .sidebar .menu .dropdown-menu {
     position: static;
     display: block;
@@ -512,25 +522,26 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   background-color: rgba(151, 151, 151, 0.6431372549);
 }
 .sidebar .menu .dropdown-menu li a {
-  color: rgb(233, 233, 233);
+  color: #fff;
 }
 .sidebar .user-account {
+  cursor: pointer;
   border: 1px solid rgba(185, 55, 59, 0.7333333333);
   border-radius: 20px;
   position: absolute;
   right: 30px;
-  top: 30px;
+  top: 27px;
   z-index: 2;
   background-color: transparent;
   -webkit-transition: background-color 0.4s ease;
   transition: background-color 0.4s ease;
 }
-@media all and (min-width: 768px) and (max-width: 991px) {
+@media all and (min-width: 769px) and (max-width: 991px) {
   .sidebar .user-account {
     display: none;
   }
 }
-@media all and (max-width: 769px) {
+@media all and (max-width: 768px) {
   .sidebar .user-account {
     display: none;
   }
@@ -541,7 +552,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
 .sidebar .user-account div.user {
   padding: 10px 20px;
   border-radius: 18px;
-  color: rgb(233, 233, 233);
+  color: #fff;
   display: none;
 }
 .sidebar .user-account div.user-login {
@@ -558,7 +569,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
 }
 .sidebar .user-account div a {
   display: inline-block;
-  padding: 8px 20px;
+  padding: 6px 20px;
   background-color: rgba(185, 55, 59, 0.7333333333);
   border-radius: 18px;
 }
@@ -599,7 +610,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
           transition-delay: 0.2s;
 }
 .sidebar .user-account.-active .account-sub {
-  height: 140px;
+  height: 150px;
   -webkit-transition-delay: 0.1s;
           transition-delay: 0.1s;
 }
@@ -706,12 +717,12 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background-color: #B9373C;
+  background-color: #b9373c;
   margin-right: 5px;
   margin-bottom: 2px;
 }
 .section-box .main-title div:nth-of-type(2) {
-  color: #B9373C;
+  color: #b9373c;
   font-weight: 600;
   margin-left: 10px;
 }
@@ -724,7 +735,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   top: -2px;
 }
 .section-box .section {
-  color: #C7C7C7;
+  color: #fff;
   max-width: 1400px;
   margin: 50px auto 50px auto;
   padding: 0 30px;
@@ -732,14 +743,15 @@ nav .input-toggler:checked ~ .sidebar-overlay {
 .section-box .section:last-of-type {
   margin-bottom: 150px;
 }
-@media all and (min-width: 768px) and (max-width: 991px) {
+@media all and (min-width: 769px) and (max-width: 991px) {
   .section-box .section {
     padding: 0 15px;
   }
 }
-@media all and (max-width: 769px) {
+@media all and (max-width: 768px) {
   .section-box .section {
     padding: 0 15px;
+    margin-top: 30px;
   }
 }
 .section-box .section .content {
@@ -756,13 +768,13 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
 }
-@media all and (min-width: 768px) and (max-width: 991px) {
+@media all and (min-width: 769px) and (max-width: 991px) {
   .section-box .section .content-row .row-2 {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
 }
-@media all and (max-width: 769px) {
+@media all and (max-width: 768px) {
   .section-box .section .content-row .row-2 {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
@@ -772,13 +784,13 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   -ms-flex-preferred-size: 25%;
       flex-basis: 25%;
 }
-@media all and (min-width: 768px) and (max-width: 991px) {
+@media all and (min-width: 769px) and (max-width: 991px) {
   .section-box .section .content-row .row-2-1 {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
   }
 }
-@media all and (max-width: 769px) {
+@media all and (max-width: 768px) {
   .section-box .section .content-row .row-2-1 {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
@@ -788,13 +800,13 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   -ms-flex-preferred-size: 70%;
       flex-basis: 70%;
 }
-@media all and (min-width: 768px) and (max-width: 991px) {
+@media all and (min-width: 769px) and (max-width: 991px) {
   .section-box .section .content-row .row-2-9 {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
 }
-@media all and (max-width: 769px) {
+@media all and (max-width: 768px) {
   .section-box .section .content-row .row-2-9 {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
@@ -804,22 +816,28 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   -ms-flex-preferred-size: 20%;
       flex-basis: 20%;
 }
-@media all and (min-width: 768px) and (max-width: 991px) {
+@media all and (min-width: 769px) and (max-width: 991px) {
   .section-box .section .content-row .row-5 {
     -ms-flex-preferred-size: 25%;
         flex-basis: 25%;
   }
 }
-@media all and (max-width: 769px) {
+@media all and (max-width: 768px) {
   .section-box .section .content-row .row-5 {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
   }
 }
+@media all and (max-width: 414px) {
+  .section-box .section .content-row .row-5 {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
 
 footer {
-  background-color: #0F0F0F;
-  color: #C7C7C7;
+  background-color: #0f0f0f;
+  color: #fff;
 }
 footer > div {
   max-width: 1400px;
@@ -839,7 +857,7 @@ footer > div {
           align-items: center;
   padding: 40px 30px;
 }
-@media all and (min-width: 768px) and (max-width: 991px) {
+@media all and (min-width: 769px) and (max-width: 991px) {
   footer > div {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -847,7 +865,7 @@ footer > div {
             flex-direction: column;
   }
 }
-@media all and (max-width: 769px) {
+@media all and (max-width: 768px) {
   footer > div {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -858,12 +876,12 @@ footer > div {
 footer > div div {
   text-align: left;
 }
-@media all and (min-width: 768px) and (max-width: 991px) {
+@media all and (min-width: 769px) and (max-width: 991px) {
   footer > div div {
     text-align: center;
   }
 }
-@media all and (max-width: 769px) {
+@media all and (max-width: 768px) {
   footer > div div {
     text-align: center;
   }
@@ -872,7 +890,7 @@ footer > div a {
   display: inline-block;
   width: 30px;
   height: 30px;
-  background-color: #C7C7C7;
+  background-color: #c7c7c7;
   border-radius: 50%;
   text-align: center;
   margin-bottom: 10px;
@@ -883,23 +901,16 @@ footer > div a {
   outline-width: 0px;
 }
 
-a.event-disable {
-  pointer-events: none;
-  cursor: default;
-}
-
 .small-font {
   font-size: 0.9rem;
 }
 
 .bigger-font {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 .material-icons {
-  margin-right: 10px;
   vertical-align: sub;
-  line-height: 1.6;
 }
 
 .mul-ellipsis-4 {
@@ -910,7 +921,7 @@ a.event-disable {
   -webkit-box-orient: vertical;
 }
 
-@media all and (min-width: 768px) and (max-width: 991px) {
+@media all and (min-width: 769px) and (max-width: 991px) {
   .video-container {
     position: relative;
     padding-bottom: 56.25%;
@@ -929,7 +940,7 @@ a.event-disable {
     height: 100%;
   }
 }
-@media all and (max-width: 769px) {
+@media all and (max-width: 768px) {
   .video-container {
     position: relative;
     padding-bottom: 56.25%;
