@@ -11,7 +11,7 @@ $(function () {
         }, 800);
       }
     });
-    $(landing).on('click', function () {
+    $('#landing').on('click', function () {
         $('body').addClass('start-scroll')
         setTimeout(function () {
           $('body').removeClass('no-scroll')
