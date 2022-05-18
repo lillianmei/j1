@@ -6,19 +6,18 @@ $(function () {
         $('body').addClass('start-scroll')
         setTimeout(function () {
           $('body').removeClass('no-scroll')
-          $('#landing h1').css('display', 'none')
-          $('#landing .welcome').css('display', 'none')
-        }, 800);
+          $('#landing .landing-page').css('display', 'none')
+        }, 1500);
       }
     });
-    $('#landing').on('click', function () {
-        $('body').addClass('start-scroll')
-        setTimeout(function () {
-          $('body').removeClass('no-scroll')
-          $('#landing h1').css('display', 'none')
-          $('#landing .welcome').css('display', 'none')
-        }, 800);
-    })
+    // $('#landing').on('click', function () {
+    //     $('body').addClass('start-scroll')
+    //     setTimeout(function () {
+    //       $('body').removeClass('no-scroll')
+    //       $('#landing h1').css('display', 'none')
+    //       $('#landing .welcome').css('display', 'none')
+    //     }, 800);
+    // })
   } else {
     $('body').removeClass('no-scroll')
   }

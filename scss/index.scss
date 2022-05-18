@@ -141,9 +141,9 @@
   #landing {
     .landing-page {
       transform:translate3d(0,-100%,0);
-      transition: transform 1s cubic-bezier(.87,-0.01,.68,.85);
+      opacity: 0;
+      transition: transform 1s cubic-bezier(.87,-0.01,.68,.85) 0.3s,opacity 0.5s linear 1.2s;
       transform-origin: top center;
-      transition-delay: 0.3s;
     }
 
     h1,
