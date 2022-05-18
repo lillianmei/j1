@@ -58,7 +58,7 @@
 }
 @media all and (max-width: 768px) {
   #landing h1 {
-    font-size: 5rem;
+    font-size: 3rem;
   }
 }
 @media all and (max-width: 320px) {
