@@ -140,8 +140,8 @@
 .start-scroll {
   #landing {
     .landing-page {
-      height: 0;
-      transition: height 1s cubic-bezier(.73,-0.17,.68,.85);
+      transform:translate3d(0,-100%,0);
+      transition: transform 1s cubic-bezier(.87,-0.01,.68,.85);
       transform-origin: top center;
       transition-delay: 0.3s;
     }
@@ -149,14 +149,13 @@
     h1,
     .welcome {
       opacity: 0;
-      transition: opacity .5s cubic-bezier(.73,-0.17,.68,.85);
+      transition: opacity .5s cubic-bezier(.87,-0.01,.68,.85);
     }
   }
 
   nav {
     opacity: 1;
     // transition: opacity 0.5s cubic-bezier(0.76, -0.24, 0.55, 0.91);
-
   }
 }
 

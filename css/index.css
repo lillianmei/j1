@@ -143,9 +143,12 @@
 }
 
 .start-scroll #landing .landing-page {
-  height: 0;
-  -webkit-transition: height 1s cubic-bezier(0.73, -0.17, 0.68, 0.85);
-  transition: height 1s cubic-bezier(0.73, -0.17, 0.68, 0.85);
+  -webkit-transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0);
+  -webkit-transition: -webkit-transform 1s cubic-bezier(0.87, -0.01, 0.68, 0.85);
+  transition: -webkit-transform 1s cubic-bezier(0.87, -0.01, 0.68, 0.85);
+  transition: transform 1s cubic-bezier(0.87, -0.01, 0.68, 0.85);
+  transition: transform 1s cubic-bezier(0.87, -0.01, 0.68, 0.85), -webkit-transform 1s cubic-bezier(0.87, -0.01, 0.68, 0.85);
   -webkit-transform-origin: top center;
           transform-origin: top center;
   -webkit-transition-delay: 0.3s;
@@ -154,8 +157,8 @@
 .start-scroll #landing h1,
 .start-scroll #landing .welcome {
   opacity: 0;
-  -webkit-transition: opacity 0.5s cubic-bezier(0.73, -0.17, 0.68, 0.85);
-  transition: opacity 0.5s cubic-bezier(0.73, -0.17, 0.68, 0.85);
+  -webkit-transition: opacity 0.5s cubic-bezier(0.87, -0.01, 0.68, 0.85);
+  transition: opacity 0.5s cubic-bezier(0.87, -0.01, 0.68, 0.85);
 }
 .start-scroll nav {
   opacity: 1;
