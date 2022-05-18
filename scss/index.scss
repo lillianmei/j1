@@ -142,15 +142,15 @@
   #landing {
     .landing-page {
       height: 0;
-      transition: height 1s cubic-bezier(.78,-0.15,.68,.85);
+      transition: height 1s cubic-bezier(.73,-0.17,.68,.85);
       transform-origin: top center;
-      transition-delay: 0.5s;
+      transition-delay: 0.3s;
     }
 
     h1,
     .welcome {
       opacity: 0;
-      transition: opacity .8s cubic-bezier(.78,-0.15,.68,.85);
+      transition: opacity .5s cubic-bezier(.73,-0.17,.68,.85);
     }
   }
 
