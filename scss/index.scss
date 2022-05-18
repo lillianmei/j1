@@ -60,7 +60,7 @@
       font-size: 3rem;
     }
     @include v.mini-width {
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
   }
 
@@ -168,6 +168,9 @@
   a {
     > div {
       padding-right: 10px;
+      @include v.mini-width {
+      padding-right: 0;
+    }
     }
   }
 

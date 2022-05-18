@@ -63,7 +63,7 @@
 }
 @media all and (max-width: 320px) {
   #landing h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 #landing .welcome {
@@ -167,6 +167,11 @@
 }
 .showing-list a > div {
   padding-right: 10px;
+}
+@media all and (max-width: 320px) {
+  .showing-list a > div {
+    padding-right: 0;
+  }
 }
 .showing-list .poster img {
   border-radius: 10px;
