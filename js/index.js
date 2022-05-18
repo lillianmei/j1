@@ -1,7 +1,7 @@
 $(function () {
   const landing = document.querySelector('#landing')
   if (landing) {
-    $(window).on('mousewheel click', function (e) {
+    $(window).on('mousewheel', function (e) {
       if (e) {
         $('body').addClass('start-scroll')
         setTimeout(function () {
@@ -11,6 +11,14 @@ $(function () {
         }, 800);
       }
     });
+    $(landing).on('click', function () {
+        $('body').addClass('start-scroll')
+        setTimeout(function () {
+          $('body').removeClass('no-scroll')
+          $('#landing h1').css('display', 'none')
+          $('#landing .welcome').css('display', 'none')
+        }, 800);
+    })
   } else {
     $('body').removeClass('no-scroll')
   }
