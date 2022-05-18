@@ -40,8 +40,6 @@
   background-image: url(https://picsum.photos/1920/500);
   background-repeat: no-repeat;
   background-size: cover;
-  -webkit-animation: blur 1s ease-out;
-          animation: blur 1s ease-out;
 }
 #landing h1 {
   color: #fff;
@@ -50,7 +48,7 @@
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
-  line-height: 1.2;
+  line-height: 1.4;
   margin: 0 auto;
 }
 @media all and (min-width: 769px) and (max-width: 991px) {

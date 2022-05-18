@@ -42,7 +42,7 @@
     background-image: url(https://picsum.photos/1920/500);
     background-repeat: no-repeat;
     background-size: cover;
-    animation: blur 1s ease-out;
+    // animation: blur 1s ease-out;
   }
 
   h1 {
@@ -50,13 +50,12 @@
     font-size: 8rem;
     text-align: right;
     width: min-content;
-    line-height: 1.2;
+    line-height: 1.4;
     margin: 0 auto;
 
     @include v.pad-width {
       font-size: 6rem;
     }
-
     @include v.phone-width {
       font-size: 5rem;
     }
