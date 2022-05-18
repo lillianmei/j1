@@ -828,7 +828,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
         flex-basis: 50%;
   }
 }
-@media all and (max-width: 414px) {
+@media all and (max-width: 320px) {
   .section-box .section .content-row .row-5 {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
