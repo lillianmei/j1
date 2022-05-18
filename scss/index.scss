@@ -70,20 +70,20 @@
     height: 224px;
     cursor: pointer;
     position: absolute;
-    top: 60%;
+    bottom: 130px;
     left: 14vw;
 
     @include v.pad-width {
       width: 180px;
       height: 180px;
-      bottom: 80px;
+      bottom: 150px;
       left: 10vw;
     }
 
     @include v.phone-width {
       width: 150px;
       height: 150px;
-      bottom: 50px;
+      bottom: 200px;
     }
 
     .text-round {
@@ -124,7 +124,7 @@
         position: absolute;
         top: 13px;
         left: 14px;
-        animation: scroll 1.3s ease-in infinite;
+        // animation: scroll 1.3s ease-in infinite;
         @include v.pad-width {
           left: 12px;
         } 

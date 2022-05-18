@@ -73,14 +73,14 @@
   height: 224px;
   cursor: pointer;
   position: absolute;
-  top: 60%;
+  bottom: 130px;
   left: 14vw;
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
   #landing .welcome {
     width: 180px;
     height: 180px;
-    bottom: 80px;
+    bottom: 150px;
     left: 10vw;
   }
 }
@@ -88,7 +88,7 @@
   #landing .welcome {
     width: 150px;
     height: 150px;
-    bottom: 50px;
+    bottom: 200px;
   }
 }
 #landing .welcome .text-round {
@@ -132,8 +132,6 @@
   position: absolute;
   top: 13px;
   left: 14px;
-  -webkit-animation: scroll 1.3s ease-in infinite;
-          animation: scroll 1.3s ease-in infinite;
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
   #landing .welcome .mouse .scroller {
