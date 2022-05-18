@@ -1,7 +1,7 @@
 $(function () {
   const landing = document.querySelector('#landing')
   if (landing) {
-    $(window).on('mousewheel', function (e) {
+    $(window).on('mousewheel click', function (e) {
       if (e) {
         $('body').addClass('start-scroll')
         setTimeout(function () {
