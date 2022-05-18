@@ -132,6 +132,8 @@
   position: absolute;
   top: 13px;
   left: 14px;
+  -webkit-animation: scroll 1.3s ease-in infinite;
+          animation: scroll 1.3s ease-in infinite;
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
   #landing .welcome .mouse .scroller {
@@ -146,23 +148,21 @@
 
 .start-scroll #landing .landing-page {
   height: 0;
-  -webkit-transition: height 0.8s cubic-bezier(0.76, -0.24, 0.55, 0.91);
-  transition: height 0.8s cubic-bezier(0.76, -0.24, 0.55, 0.91);
+  -webkit-transition: height 1s cubic-bezier(0.78, -0.15, 0.68, 0.85);
+  transition: height 1s cubic-bezier(0.78, -0.15, 0.68, 0.85);
   -webkit-transform-origin: top center;
           transform-origin: top center;
-  -webkit-transition-delay: 0.3s;
-          transition-delay: 0.3s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
 }
 .start-scroll #landing h1,
 .start-scroll #landing .welcome {
   opacity: 0;
-  -webkit-transition: opacity 0.5s cubic-bezier(0.76, -0.24, 0.55, 0.91);
-  transition: opacity 0.5s cubic-bezier(0.76, -0.24, 0.55, 0.91);
+  -webkit-transition: opacity 0.8s cubic-bezier(0.78, -0.15, 0.68, 0.85);
+  transition: opacity 0.8s cubic-bezier(0.78, -0.15, 0.68, 0.85);
 }
 .start-scroll nav {
   opacity: 1;
-  -webkit-transition: opacity 0.5s cubic-bezier(0.76, -0.24, 0.55, 0.91) 0.8s;
-  transition: opacity 0.5s cubic-bezier(0.76, -0.24, 0.55, 0.91) 0.8s;
 }
 
 .showing-list {
@@ -199,12 +199,13 @@
   padding: 0 10px;
   background-color: transparent;
   color: #fff;
-  border: 1px solid rgb(190, 190, 190);
+  border: 1px solid #c7c7c7;
   margin-left: 10px;
 }
 .onlinebook .select-box select option {
-  background-color: #000;
+  background-color: #191919;
   color: #fff;
+  border: 1px solid #c7c7c7;
 }
 @media all and (max-width: 768px) {
   .onlinebook .select-box {
@@ -348,7 +349,7 @@
   100% {
     -webkit-transform: translateY(8px);
             transform: translateY(8px);
-    opacity: 0;
+    opacity: 0.3;
   }
 }
 @keyframes scroll {
@@ -360,7 +361,7 @@
   100% {
     -webkit-transform: translateY(8px);
             transform: translateY(8px);
-    opacity: 0;
+    opacity: 0.3;
   }
 }
 @-webkit-keyframes blur {

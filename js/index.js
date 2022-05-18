@@ -8,7 +8,6 @@ $(function () {
           $('body').removeClass('no-scroll')
           $('#landing h1').css('display', 'none')
           $('#landing .welcome').css('display', 'none')
-
         }, 800);
       }
     });

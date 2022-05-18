@@ -124,11 +124,10 @@
         position: absolute;
         top: 13px;
         left: 14px;
-
-        // animation: scroll 1s ease-in infinite;
+        animation: scroll 1.3s ease-in infinite;
         @include v.pad-width {
           left: 12px;
-        }
+        } 
 
         @include v.phone-width {
           left: 11px;
@@ -143,21 +142,22 @@
   #landing {
     .landing-page {
       height: 0;
-      transition: height 0.8s cubic-bezier(0.76, -0.24, 0.55, 0.91);
+      transition: height 1s cubic-bezier(.78,-0.15,.68,.85);
       transform-origin: top center;
-      transition-delay: 0.3s;
+      transition-delay: 0.5s;
     }
 
     h1,
     .welcome {
       opacity: 0;
-      transition: opacity 0.5s cubic-bezier(0.76, -0.24, 0.55, 0.91);
+      transition: opacity .8s cubic-bezier(.78,-0.15,.68,.85);
     }
   }
 
   nav {
     opacity: 1;
-    transition: opacity 0.5s cubic-bezier(0.76, -0.24, 0.55, 0.91) 0.8s;
+    // transition: opacity 0.5s cubic-bezier(0.76, -0.24, 0.55, 0.91);
+
   }
 }
 
@@ -200,12 +200,13 @@
       padding: 0 10px;
       background-color: transparent;
       color: v.$font-primary;
-      border: 1px solid rgb(190, 190, 190);
+      border: 1px solid v.$white;
       margin-left: 10px;
 
       option {
-        background-color: #000;
+        background-color: v.$bg-color;
         color: v.$font-primary;
+        border: 1px solid v.$white;
       }
     }
     @include v.phone-width {
@@ -341,7 +342,7 @@
 
   100% {
     transform: translateY(8px);
-    opacity: 0;
+    opacity: 0.3;
   }
 }
 
