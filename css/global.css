@@ -62,10 +62,6 @@ a {
   -webkit-transition: color 0.3s ease, font-weight 0.4s ease;
   transition: color 0.3s ease, font-weight 0.4s ease;
 }
-a:hover {
-  color: #fff;
-  font-weight: bolder;
-}
 
 abbr[title] {
   border-bottom: none;
@@ -302,7 +298,7 @@ nav {
   margin: 0 auto;
   top: 0;
   left: 0;
-  padding: 20px 0;
+  padding: 40px 0 40px 0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   z-index: 5;
@@ -516,21 +512,21 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   margin-bottom: 5px;
 }
 .sidebar .menu .dropdown-menu li:nth-of-type(1) {
-  background-color: rgba(185, 55, 59, 0.7333333333);
+  background-color: #C53932;
 }
 .sidebar .menu .dropdown-menu li:nth-of-type(2) {
-  background-color: rgba(151, 151, 151, 0.6431372549);
+  background-color: #c7c7c7;
 }
 .sidebar .menu .dropdown-menu li a {
   color: #fff;
+  font-size: 0.9rem;
 }
 .sidebar .user-account {
   cursor: pointer;
-  border: 1px solid rgba(185, 55, 59, 0.7333333333);
   border-radius: 20px;
   position: absolute;
   right: 30px;
-  top: 27px;
+  top: 50px;
   z-index: 2;
   background-color: transparent;
   -webkit-transition: background-color 0.4s ease;
@@ -570,7 +566,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
 .sidebar .user-account div a {
   display: inline-block;
   padding: 6px 20px;
-  background-color: rgba(185, 55, 59, 0.7333333333);
+  background-color: #C53932;
   border-radius: 18px;
 }
 .sidebar .user-account div.account-sub {
@@ -605,7 +601,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   transition: transform 0.4s cubic-bezier(0.56, 0, 0, 1), opacity 0.6s ease, -webkit-transform 0.4s cubic-bezier(0.56, 0, 0, 1);
 }
 .sidebar .user-account.-active {
-  background-color: rgba(185, 55, 59, 0.7333333333);
+  background-color: #C53932;
   -webkit-transition-delay: 0.2s;
           transition-delay: 0.2s;
 }
@@ -681,7 +677,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
           transition-delay: 0.2s;
 }
 .sidebar .user-account.isUser {
-  background-color: rgba(185, 55, 59, 0.7333333333);
+  background-color: #C53932;
 }
 .sidebar .user-account.isUser .account-sub {
   display: block;
@@ -694,7 +690,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   display: none;
 }
 .sidebar .user-account.isUser:hover {
-  background-color: rgba(185, 55, 59, 0.7333333333);
+  background-color: #C53932;
 }
 .sidebar .user-account:hover {
   background-color: transparent;
@@ -707,24 +703,21 @@ nav .input-toggler:checked ~ .sidebar-overlay {
 .section-box .main-title div {
   margin: 0;
 }
-.section-box .main-title div:nth-of-type(1) {
-  font-weight: 100;
-  font-size: 0.9rem;
-}
 .section-box .main-title div:nth-of-type(1)::before {
   content: "";
   display: inline-block;
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background-color: #b9373c;
+  background-color: #C53932;
   margin-right: 5px;
   margin-bottom: 2px;
 }
 .section-box .main-title div:nth-of-type(2) {
-  color: #b9373c;
+  color: #C53932;
   font-weight: 600;
   margin-left: 10px;
+  font-size: 1.1em;
 }
 .section-box .primary-title {
   margin-bottom: 30px;
@@ -767,17 +760,20 @@ nav .input-toggler:checked ~ .sidebar-overlay {
 .section-box .section .content-row .row-2 {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
+  width: 50%;
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
   .section-box .section .content-row .row-2 {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+    width: 100%;
   }
 }
 @media all and (max-width: 768px) {
   .section-box .section .content-row .row-2 {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+    width: 100%;
   }
 }
 .section-box .section .content-row .row-2-1 {
@@ -799,39 +795,46 @@ nav .input-toggler:checked ~ .sidebar-overlay {
 .section-box .section .content-row .row-2-9 {
   -ms-flex-preferred-size: 70%;
       flex-basis: 70%;
+  width: 70%;
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
   .section-box .section .content-row .row-2-9 {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+    width: 100%;
   }
 }
 @media all and (max-width: 768px) {
   .section-box .section .content-row .row-2-9 {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+    width: 100%;
   }
 }
 .section-box .section .content-row .row-5 {
   -ms-flex-preferred-size: 20%;
       flex-basis: 20%;
+  width: 20%;
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
   .section-box .section .content-row .row-5 {
     -ms-flex-preferred-size: 25%;
         flex-basis: 25%;
+    width: 25%;
   }
 }
 @media all and (max-width: 768px) {
   .section-box .section .content-row .row-5 {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
+    width: 50%;
   }
 }
 @media all and (max-width: 320px) {
   .section-box .section .content-row .row-5 {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+    width: 100%;
   }
 }
 
@@ -888,12 +891,22 @@ footer > div div {
 }
 footer > div a {
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   background-color: #c7c7c7;
   border-radius: 50%;
   text-align: center;
   margin-bottom: 10px;
+  margin-right: 5px;
+}
+footer > div a img {
+  width: 25px;
+  height: 25px;
+  margin-top: 7px;
+}
+footer > div a img.ig {
+  width: 20px;
+  height: 20px;
 }
 
 /* other share */
@@ -901,12 +914,21 @@ footer > div a {
   outline-width: 0px;
 }
 
-.small-font {
+:active,
+.active {
+  font-weight: bolder;
+}
+
+.s-font {
   font-size: 0.9rem;
 }
 
-.bigger-font {
-  font-size: 1.4rem;
+.l-font {
+  font-size: 1.2rem;
+}
+
+.thin-weight {
+  font-weight: 100;
 }
 
 .material-icons {
@@ -919,6 +941,40 @@ footer > div a {
   display: -webkit-inline-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
+}
+
+.mul-ellipsis-3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.y12 {
+  background-color: #F3C833;
+}
+
+.y15 {
+  background-color: #E56F28;
+}
+
+.R {
+  background-color: #DD362B;
+}
+
+.yp {
+  background-color: #5a98c0;
+}
+
+.yn {
+  background-color: #73C044;
 }
 
 @media all and (min-width: 769px) and (max-width: 991px) {

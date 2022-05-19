@@ -1,4 +1,4 @@
-@use "variables" as v;
+@use "variables"as v;
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 body,
@@ -20,6 +20,7 @@ html {
   @include v.pc-width {
     font-size: 17px;
   }
+
   @include v.pad-width {
     display: 16px;
   }
@@ -57,10 +58,10 @@ a {
   font-weight: normal;
   transition: color 0.3s ease, font-weight 0.4s ease;
 
-  &:hover {
-    color: v.$font-primary;
-    font-weight: bolder;
-  }
+  // &:hover {
+  //   color: v.$font-primary;
+  //   font-weight: bolder;
+  // }
 }
 
 abbr[title] {
@@ -275,7 +276,7 @@ nav {
   margin: 0 auto;
   top: 0;
   left: 0;
-  padding: 20px 0;
+  padding: 40px 0 40px 0;
   transition: all 0.5s;
   z-index: 5;
 
@@ -319,7 +320,7 @@ nav {
   }
 
   .input-toggler {
-    & ~ .sidebar .menu {
+    &~.sidebar .menu {
       @include v.pad-width {
         position: absolute;
         top: 0;
@@ -339,7 +340,7 @@ nav {
       }
     }
 
-    & ~ .sidebar-overlay {
+    &~.sidebar-overlay {
       position: absolute;
       background-color: #000;
       width: 100%;
@@ -352,27 +353,27 @@ nav {
     }
 
     &:checked {
-      & ~ .menu-toggler .menu-toggler-line {
+      &~.menu-toggler .menu-toggler-line {
         top: 5px;
         transform: translateY(100px);
         transform: rotate(45deg);
       }
 
-      & ~ .menu-toggler .menu-toggler-line:nth-child(2) {
+      &~.menu-toggler .menu-toggler-line:nth-child(2) {
         display: none;
       }
 
-      & ~ .menu-toggler .menu-toggler-line:nth-child(3) {
+      &~.menu-toggler .menu-toggler-line:nth-child(3) {
         top: -5px;
         transform: translateY(10);
         transform: rotate(135deg);
       }
 
-      & ~ .sidebar .menu {
+      &~.sidebar .menu {
         left: 0;
       }
 
-      & ~ .sidebar-overlay {
+      &~.sidebar-overlay {
         display: block;
         opacity: 0.9;
       }
@@ -415,15 +416,17 @@ nav {
   .menu {
     transition: all 0.35s ease-out;
     text-align: center;
+
     @include v.other-width {
       text-align: left;
     }
 
-    > li {
+    >li {
       display: inline-block;
       width: 12%;
       text-align: center;
       position: relative;
+
       @include v.other-width {
         width: 14%;
       }
@@ -474,15 +477,16 @@ nav {
         margin-bottom: 5px;
 
         &:nth-of-type(1) {
-          background-color: v.$primary-opacity;
+          background-color: v.$primary;
         }
 
         &:nth-of-type(2) {
-          background-color: #979797a4;
+          background-color: v.$font-secondary;
         }
 
         a {
           color: v.$font-primary;
+          font-size: 0.9rem;
         }
       }
     }
@@ -490,11 +494,11 @@ nav {
 
   .user-account {
     cursor: pointer;
-    border: 1px solid v.$primary-opacity;
+    // border: 1px solid v.$primary-opacity;
     border-radius: 20px;
     position: absolute;
     right: 30px;
-    top: 27px;
+    top: 50px;
     z-index: 2;
     background-color: transparent;
     transition: background-color 0.4s ease;
@@ -536,7 +540,7 @@ nav {
       a {
         display: inline-block;
         padding: 6px 20px;
-        background-color: v.$primary-opacity;
+        background-color: v.$primary;
         border-radius: 18px;
       }
 
@@ -568,7 +572,7 @@ nav {
     }
 
     &.-active {
-      background-color: v.$primary-opacity;
+      background-color: v.$primary;
       transition-delay: 0.2s;
 
       .account-sub {
@@ -636,7 +640,7 @@ nav {
     }
 
     &.isUser {
-      background-color: v.$primary-opacity;
+      background-color: v.$primary;
 
       .account-sub {
         display: block;
@@ -652,7 +656,7 @@ nav {
       }
 
       &:hover {
-        background-color: v.$primary-opacity;
+        background-color: v.$primary;
       }
     }
 
@@ -671,8 +675,6 @@ nav {
       margin: 0;
 
       &:nth-of-type(1) {
-        font-weight: 100;
-        font-size: 0.9rem;
 
         &::before {
           content: "";
@@ -690,6 +692,7 @@ nav {
         color: v.$primary;
         font-weight: 600;
         margin-left: 10px;
+        font-size: 1.1em;
       }
     }
   }
@@ -733,13 +736,16 @@ nav {
 
       .row-2 {
         flex-basis: 50%;
+        width: 50%;
 
         @include v.pad-width {
           flex-basis: 100%;
+          width: 100%;
         }
 
         @include v.phone-width {
           flex-basis: 100%;
+          width: 100%;
         }
       }
 
@@ -757,28 +763,36 @@ nav {
 
       .row-2-9 {
         flex-basis: 70%;
+        width: 70%;
 
         @include v.pad-width {
           flex-basis: 100%;
+          width: 100%;
         }
 
         @include v.phone-width {
           flex-basis: 100%;
+          width: 100%;
         }
       }
 
       .row-5 {
         flex-basis: 20%;
+        width: 20%;
 
         @include v.pad-width {
           flex-basis: 25%;
+          width: 25%;
         }
 
         @include v.phone-width {
           flex-basis: 50%;
+          width: 50%;
         }
+
         @include v.mini-width {
           flex-basis: 100%;
+          width: 100%;
         }
       }
     }
@@ -788,7 +802,8 @@ nav {
 footer {
   background-color: #0f0f0f;
   color: v.$font-primary;
-  & > div {
+
+  &>div {
     max-width: v.$max-width;
     margin: 0 auto;
     display: flex;
@@ -807,6 +822,7 @@ footer {
 
     div {
       text-align: left;
+
       @include v.pad-width {
         text-align: center;
       }
@@ -815,14 +831,25 @@ footer {
         text-align: center;
       }
     }
+
     a {
       display: inline-block;
-      width: 30px;
-      height: 30px;
+      width: 40px;
+      height: 40px;
       background-color: #c7c7c7;
       border-radius: 50%;
       text-align: center;
       margin-bottom: 10px;
+      margin-right: 5px;
+      img{
+        width: 25px;
+        height: 25px;
+        margin-top: 7px;
+        &.ig{
+          width: 20px;
+          height: 20px;
+        }
+      }
     }
   }
 }
@@ -832,12 +859,21 @@ footer {
   outline-width: 0px;
 }
 
-.small-font {
+:active,
+.active {
+  font-weight: bolder;
+}
+
+.s-font {
   font-size: 0.9rem;
 }
 
-.bigger-font {
-  font-size: 1.4rem;
+.l-font {
+  font-size: 1.2rem;
+}
+
+.thin-weight {
+  font-weight: 100;
 }
 
 .material-icons {
@@ -850,6 +886,39 @@ footer {
   display: -webkit-inline-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
+}
+.mul-ellipsis-3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.y12 {
+  background-color: v.$yellow-bg-color;
+}
+
+.y15 {
+  background-color: v.$orange-bg-color;
+}
+
+.R {
+  background-color: v.$red-bg-color;
+}
+
+.yp {
+  background-color: v.$blue-bg-color;
+}
+
+.yn {
+  background-color: v.$green-bg-color;
 }
 
 //for youtube rwd

@@ -13,12 +13,13 @@
   <style>
     .swiper-slide img {
       width: 100%;
+      max-height: 720px;
     }
   </style>
 </head>
 
 <body class="no-scroll">
-  <div id="landing">
+  <!-- <div id="landing">
     <div class="landing-page">
       <h1>
         BROADWAY
@@ -32,7 +33,7 @@
         <div class="scroller"></div>
       </div>
     </div>
-  </div>
+  </div> -->
   <nav id="nav">
     <input type="checkbox" id="toggle" class="input-toggler" />
     <div class="sidebar-overlay"></div>
@@ -60,7 +61,7 @@
               <li><a class="dropdown-item" href="#">即將上映</a></li>
             </ul>
           </li>
-          <li><a class="menu-link" href="#">最新消息</a></li>
+          <li><a class="menu-link -active" href="#">最新消息</a></li>
           <li><a class="menu-link" href="#">業務專區</a></li>
           <li><a class="menu-link" href="#">關於影城</a></li>
         </ul>
@@ -88,13 +89,13 @@
   <div class="swiper s-swiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <img src="https://picsum.photos/g/1920/700?random=2" />
+        <img src="https://picsum.photos/g/1920/740?random=2" />
       </div>
       <div class="swiper-slide">
-        <img src="https://picsum.photos/g/1920/700?random=2" />
+        <img src="https://picsum.photos/g/1920/740?random=2" />
       </div>
       <div class="swiper-slide">
-        <img src="https://picsum.photos/g/1920/700?random=2" />
+        <img src="https://picsum.photos/g/1920/740?random=2" />
       </div>
     </div>
     <div class="swiper-pagination"></div>
@@ -103,21 +104,48 @@
   </div>
   <div class="section-box">
     <section class="section">
-      <div class="main-title">
+      <div class="main-title l-font">
         <div>NOW SHOWING</div>
         <div>現正熱映</div>
       </div>
       <div class="content content-row">
         <div class="showing-list row-5">
-          <a href="movie-info.html">
+          <div class="state s-font recommand">影城推薦</div>
+          <a href="">
             <div class="poster">
               <img src="https://fakeimg.pl/250x350/" alt="" />
             </div>
-            <div class="movie-title bigger-font">
-              劫命救護<span class="small-font">AMBULANCE</span>
+            <div class="movie-title l-font mul-ellipsis-1">
+              劫命救護<span class="s-font ellipsis">AMBULANCE</span>
             </div>
-            <div class="movie-level y12">輔12級</div>
-            <div class="small-font">上映日期 2022-03-25</div>
+            <div class="movie-level s-font y12">輔12級</div>
+            <div class="s-font">上映日期 2022-03-25</div>
+          </a>
+        </div>
+        <div class="showing-list row-5">
+          <div class="state s-font newin">最新上映</div>
+          <a href="">
+            <div class="poster">
+              <img src="https://fakeimg.pl/250x350/" alt="" />
+            </div>
+            <div class="movie-title l-font mul-ellipsis-1">
+              劫命救護<span class="s-font ellipsis">AMBULANCE</span>
+            </div>
+            <div class="movie-level s-font y15">輔15級</div>
+            <div class="s-font">上映日期 2022-03-25</div>
+          </a>
+        </div>
+        <div class="showing-list row-5">
+          <div class="state s-font hottest">票房第一</div>
+          <a href="">
+            <div class="poster">
+              <img src="https://fakeimg.pl/250x350/" alt="" />
+            </div>
+            <div class="movie-title l-font mul-ellipsis-1">
+              劫命救護<span class="s-font ellipsis">AMBULANCE</span>
+            </div>
+            <div class="movie-level s-font yp">保護級</div>
+            <div class="s-font">上映日期 2022-03-25</div>
           </a>
         </div>
         <div class="showing-list row-5">
@@ -125,11 +153,11 @@
             <div class="poster">
               <img src="https://fakeimg.pl/250x350/" alt="" />
             </div>
-            <div class="movie-title bigger-font">
-              劫命救護<span class="small-font">AMBULANCE</span>
+            <div class="movie-title l-font mul-ellipsis-1">
+              劫命救護<span class="s-font ellipsis">AMBULANCE</span>
             </div>
-            <div class="movie-level y6">護6級</div>
-            <div class="small-font">上映日期 2022-03-25</div>
+            <div class="movie-level s-font yn">普通級</div>
+            <div class="s-font">上映日期 2022-03-25</div>
           </a>
         </div>
         <div class="showing-list row-5">
@@ -137,35 +165,11 @@
             <div class="poster">
               <img src="https://fakeimg.pl/250x350/" alt="" />
             </div>
-            <div class="movie-title bigger-font">
-              劫命救護<span class="small-font">AMBULANCE</span>
+            <div class="movie-title l-font mul-ellipsis-1">
+              劫命救護<span class="s-font ellipsis">AMBULANCE</span>
             </div>
-            <div class="movie-level y6">護6級</div>
-            <div class="small-font">上映日期 2022-03-25</div>
-          </a>
-        </div>
-        <div class="showing-list row-5">
-          <a href="">
-            <div class="poster">
-              <img src="https://fakeimg.pl/250x350/" alt="" />
-            </div>
-            <div class="movie-title bigger-font">
-              劫命救護<span class="small-font">AMBULANCE</span>
-            </div>
-            <div class="movie-level y6">護6級</div>
-            <div class="small-font">上映日期 2022-03-25</div>
-          </a>
-        </div>
-        <div class="showing-list row-5">
-          <a href="">
-            <div class="poster">
-              <img src="https://fakeimg.pl/250x350/" alt="" />
-            </div>
-            <div class="movie-title bigger-font">
-              劫命救護<span class="small-font">AMBULANCE</span>
-            </div>
-            <div class="movie-level y6">護6級</div>
-            <div class="small-font">上映日期 2022-03-25</div>
+            <div class="movie-level s-font R">限制級</div>
+            <div class="s-font">上映日期 2022-03-25</div>
           </a>
         </div>
       </div>
@@ -173,7 +177,7 @@
     <section class="section">
       <div class="content content-row">
         <div class="onlinebook row-2">
-          <div class="main-title">
+          <div class="main-title l-font">
             <div>ONLINE BOOK</div>
             <div>快速訂票</div>
           </div>
@@ -213,33 +217,34 @@
           </div>
         </div>
         <div class="lastestnew row-2">
-          <div class="main-title">
+          <div class="main-title l-font">
             <div>LATEST NEWS</div>
             <div>最新消息</div>
           </div>
           <div class="news-box">
-            <a href="#">
-              <img src="https://fakeimg.pl/250x200/" />
-              <div class="new-info">
-                <p class="bigger-font">看指定電影送限定海報</p>
-                <p>
-                  訂票觀看蝙蝠俠電影，就能獲的限定套組海報，數量有限請手刀前往。
-                </p>
-                <hr />
-                <p>2022.08.13</p>
-              </div>
-            </a>
-            <a href="#">
-              <img src="https://fakeimg.pl/250x200/" />
-              <div class="new-info">
-                <p class="bigger-font">看指定電影送限定海報</p>
-                <p>
-                  訂票觀看蝙蝠俠電影，就能獲的限定套組海報，數量有限請手刀前往。
-                </p>
-                <hr />
-                <p>2022.08.13</p>
-              </div>
-            </a>
+              <a href="#">
+                <img src="https://fakeimg.pl/250x200/" />
+                <div class="new-info">
+                  <p class="l-font">看指定電影送限定海報看指定電影送限定海報看指定電影送限定海報看指定電影送限定海報</p>
+                  <p class="s-font">
+                    訂票觀看蝙蝠俠電影，就能獲的限定套組海報，數量有限請手刀前往。訂票觀看蝙蝠俠電影，就能獲的限定套組海報，數量有限請手刀前往。訂票觀看蝙蝠俠電影，就能獲的限定套組海報，數量有限請手刀前往。訂票觀看蝙蝠俠電影，就能獲的限定套組海報，數量有限請手刀前往。
+                  </p>
+                  <hr />
+                  <p>2022.08.13</p>
+                </div>
+              </a>
+         
+              <a href="#">
+                <img src="https://fakeimg.pl/250x200/" />
+                <div class="new-info">
+                  <p class="l-font ">看指定電影送限定海報看指定電影送限定海報看指定電影送限定海報看指定電影送限定海報</p>
+                  <p class="s-font">
+                    訂票觀看蝙蝠俠電影，就能獲的限定套組海報，數量有限請手刀前往。訂票觀看蝙蝠俠電影，就能獲的限定套組海報，數量有限請手刀前往。訂票觀看蝙蝠俠電影，就能獲的限定套組海報，數量有限請手刀前往。訂票觀看蝙蝠俠電影，就能獲的限定套組海報，數量有限請手刀前往。
+                  </p>
+                  <hr />
+                  <p>2022.08.13</p>
+                </div>
+              </a>
           </div>
         </div>
       </div>
@@ -249,14 +254,14 @@
     <div>
       <img src="https://fakeimg.pl/250x100/" />
       <div>
-        <a href=""><img src="image/svg/dashicons_facebook-alt.svg" /></a>
-        <a href=""><img src="image/svg/simple-line-icons_social-instagram.svg" /></a>
-        <a href=""><img src="image/svg/typcn_social-youtube.svg" /></a>
-        <a href=""><img src="image/svg/dashicons_email-alt.svg" /></a>
-        <div class="small-font">
+        <a href=""><img class="fb" src="image/svg/dashicons_facebook-alt.svg" /></a>
+        <a href=""><img class="ig" src="image/svg/simple-line-icons_social-instagram.svg" /></a>
+        <a href=""><img class="yt" src="image/svg/typcn_social-youtube.svg" /></a>
+        <a href=""><img class="email" src="image/svg/dashicons_email-alt.svg" /></a>
+        <div class="s-font">
           公館百老匯影城 02-8663-6128 | 新竹百老匯影城 02-86636128
         </div>
-        <div class="small-font">
+        <div class="s-font">
           Copyright© 2022 Broadway Cinemas All Rights Reserved.
         </div>
       </div>

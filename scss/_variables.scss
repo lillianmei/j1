@@ -1,12 +1,23 @@
-$primary: #b9373c;
-$primary-opacity: #b9373bbb;
+$primary: #C53932;
 $secondary: #000;
 
-$white: #c7c7c7;
 $font-primary: #fff;
+$font-secondary: #c7c7c7;
 $bg-color: #191919;
+$yellow-bg-color:#F3C833;
+$orange-bg-color:#E56F28;
+$red-bg-color:#DD362B;
+$blue-bg-color:#5a98c0;
+$green-bg-color:#73C044;
 
 $max-width: 1400px;
+
+@mixin bg-opacity($color, $opacity) {
+  background-color: $color;
+  background-color: rgba($color, $opacity);
+}
+
+
 
 $pc-media: 992px;
 $pcs-media: 991px;
