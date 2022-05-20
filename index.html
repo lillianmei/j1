@@ -11,10 +11,47 @@
   <link rel="stylesheet" href="css/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/index.min.css" />
   <style>
+    .swiper {
+      min-height: 740px;
+    }
+
     .swiper-slide img {
       width: 100%;
       max-height: 720px;
     }
+
+    .swiper-pagination {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+      width: auto;
+    }
+
+    .swiper-pagination-bullet {
+      border: 1px solid #fff;
+      width: 10px;
+      height: 10px;
+      opacity: 1;
+      margin: 0 3px;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: #fff;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      position: static;
+      height: auto;
+    }
+    .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{content: url('data:image/svg+xml;utf8,<svg width="10" height="13" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.286023 7.03462L8.95386 12.8845C9.05389 12.952 9.17095 12.9915 9.29236 12.9988C9.41377 13.006 9.53492 12.9808 9.64267 12.9258C9.75042 12.8707 9.84067 12.788 9.90365 12.6866C9.96664 12.5851 9.99996 12.4688 10 12.3502V0.65042C10.0001 0.531782 9.96685 0.415385 9.90391 0.313844C9.84098 0.212302 9.75073 0.12949 9.64296 0.074381C9.53519 0.019272 9.414 -0.00603138 9.29253 0.00121319C9.17106 0.00845776 9.05394 0.0479739 8.95386 0.115479L0.286023 5.96538C0.197717 6.02546 0.125599 6.10544 0.0758019 6.19852C0.0260045 6.2916 0 6.39502 0 6.5C0 6.60498 0.0260045 6.7084 0.0758019 6.80148C0.125599 6.89456 0.197717 6.97454 0.286023 7.03462V7.03462Z" fill="white"/></svg>');height: auto;}
+    .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{content: url('data:image/svg+xml;utf8,<svg width="10" height="13" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.71398 5.96538L1.04614 0.115477C0.946112 0.0480033 0.829053 0.00849185 0.70764 0.00122107C0.586227 -0.00604972 0.465086 0.019197 0.357336 0.0742278C0.249586 0.129259 0.159332 0.211977 0.0963461 0.313425C0.0333602 0.414873 4.29002e-05 0.531186 1.83781e-06 0.649769L8.14978e-07 12.3496C-7.98365e-05 12.4682 0.0331485 12.5846 0.0960856 12.6862C0.159023 12.7877 0.249268 12.8705 0.35704 12.9256C0.464812 12.9807 0.586001 13.006 0.707472 12.9988C0.828943 12.9915 0.946065 12.952 1.04614 12.8845L9.71398 7.03462C9.80228 6.97454 9.8744 6.89456 9.9242 6.80148C9.974 6.7084 10 6.60498 10 6.5C10 6.39502 9.974 6.2916 9.9242 6.19852C9.8744 6.10544 9.80228 6.02546 9.71398 5.96538V5.96538Z" fill="white"/></svg>');height: auto;}
+    .swiper-button-next.swiper-button-disabled{content: url('data:image/svg+xml;utf8,<svg width="10" height="13" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.43325 6.37914C9.43307 6.37902 9.4329 6.3789 9.43272 6.37878L0.766541 0.529991L9.43325 6.37914ZM9.43325 6.37914C9.45535 6.3943 9.47217 6.41354 9.48333 6.43439C9.49453 6.45533 9.5 6.47779 9.5 6.5C9.5 6.52221 9.49453 6.54467 9.48333 6.56561C9.47217 6.58646 9.45535 6.6057 9.43324 6.62087C9.43307 6.62098 9.4329 6.6211 9.43272 6.62122L0.76654 12.47L9.43325 6.37914ZM0.500001 12.3496L0.500001 12.3499C0.499984 12.3747 0.506868 12.3998 0.521071 12.4227C0.535348 12.4458 0.556888 12.4662 0.584679 12.4804C0.612557 12.4947 0.644814 12.5016 0.677705 12.4997C0.710539 12.4977 0.741209 12.4871 0.766435 12.4701L0.500001 12.3496ZM0.500001 12.3496L0.500002 0.649942C0.500011 0.62519 0.506914 0.600062 0.521133 0.577161C0.535424 0.554141 0.556971 0.533705 0.584755 0.519514C0.612629 0.505279 0.644875 0.498358 0.677751 0.500327C0.710568 0.502292 0.741222 0.512941 0.766436 0.529921L0.500001 12.3496Z" stroke="white"/></svg>');}
+    .swiper-button-prev.swiper-button-disabled{}
   </style>
 </head>
 
@@ -86,22 +123,27 @@
       </div>
     </div>
   </nav>
-  <div class="swiper s-swiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="https://picsum.photos/g/1920/740?random=2" />
+  <div class="carousel">
+    <div class="swiper s-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/g/1920/740?random=2" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/g/1920/740?random=2" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/g/1920/740?random=2" />
+        </div>
       </div>
-      <div class="swiper-slide">
-        <img src="https://picsum.photos/g/1920/740?random=2" />
-      </div>
-      <div class="swiper-slide">
-        <img src="https://picsum.photos/g/1920/740?random=2" />
+      <div class="swiper-pagination">
+        <div class="swiper-button-prev"></div>
+        <div class="dot"></div>
+        <div class="swiper-button-next"></div>
       </div>
     </div>
-    <div class="swiper-pagination"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
   </div>
+
   <div class="section-box">
     <section class="section">
       <div class="main-title l-font">
@@ -222,29 +264,29 @@
             <div>最新消息</div>
           </div>
           <div class="news-box">
-              <a href="#">
-                <img src="https://fakeimg.pl/250x200/" />
-                <div class="new-info">
-                  <p class="l-font">看指定電影送限定海報看指定電影送限定海報看指定電影送限定海報看指定電影送限定海報</p>
-                  <p class="s-font">
-                    訂票觀看蝙蝠俠電影，就能獲的限定套組海報，數量有限請手刀前往。訂票觀看蝙蝠俠電影，就能獲的限定套組海報，數量有限請手刀前往。訂票觀看蝙蝠俠電影，就能獲的限定套組海報，數量有限請手刀前往。訂票觀看蝙蝠俠電影，就能獲的限定套組海報，數量有限請手刀前往。
-                  </p>
-                  <hr />
-                  <p>2022.08.13</p>
-                </div>
-              </a>
-         
-              <a href="#">
-                <img src="https://fakeimg.pl/250x200/" />
-                <div class="new-info">
-                  <p class="l-font ">看指定電影送限定海報看指定電影送限定海報看指定電影送限定海報看指定電影送限定海報</p>
-                  <p class="s-font">
-                    訂票觀看蝙蝠俠電影，就能獲的限定套組海報，數量有限請手刀前往。訂票觀看蝙蝠俠電影，就能獲的限定套組海報，數量有限請手刀前往。訂票觀看蝙蝠俠電影，就能獲的限定套組海報，數量有限請手刀前往。訂票觀看蝙蝠俠電影，就能獲的限定套組海報，數量有限請手刀前往。
-                  </p>
-                  <hr />
-                  <p>2022.08.13</p>
-                </div>
-              </a>
+            <a href="#">
+              <img src="https://fakeimg.pl/250x200/" />
+              <div class="new-info">
+                <p class="l-font">看指定電影送限定海報看指定電影送限定海報看指定電影送限定海報看指定電影送限定海報</p>
+                <p class="s-font">
+                  訂票觀看蝙蝠俠電影，就能獲的限定套組海報，數量有限請手刀前往。訂票觀看蝙蝠俠電影，就能獲的限定套組海報，數量有限請手刀前往。訂票觀看蝙蝠俠電影，就能獲的限定套組海報，數量有限請手刀前往。訂票觀看蝙蝠俠電影，就能獲的限定套組海報，數量有限請手刀前往。
+                </p>
+                <hr />
+                <p>2022.08.13</p>
+              </div>
+            </a>
+
+            <a href="#">
+              <img src="https://fakeimg.pl/250x200/" />
+              <div class="new-info">
+                <p class="l-font ">看指定電影送限定海報看指定電影送限定海報看指定電影送限定海報看指定電影送限定海報</p>
+                <p class="s-font">
+                  訂票觀看蝙蝠俠電影，就能獲的限定套組海報，數量有限請手刀前往。訂票觀看蝙蝠俠電影，就能獲的限定套組海報，數量有限請手刀前往。訂票觀看蝙蝠俠電影，就能獲的限定套組海報，數量有限請手刀前往。訂票觀看蝙蝠俠電影，就能獲的限定套組海報，數量有限請手刀前往。
+                </p>
+                <hr />
+                <p>2022.08.13</p>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -280,7 +322,7 @@
     const slideSwiper = new Swiper(".s-swiper", {
       lazy: true,
       pagination: {
-        el: ".swiper-pagination",
+        el: ".dot",
         clickable: true,
       },
       navigation: {

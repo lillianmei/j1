@@ -1,5 +1,9 @@
 @use "variables"as v;
 
+.carousel{
+  position: relative;
+  min-height: 740px;
+}
 //share
 .movie-title {
   margin-top: 15px;

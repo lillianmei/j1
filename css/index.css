@@ -1,3 +1,8 @@
+.carousel {
+  position: relative;
+  min-height: 740px;
+}
+
 .movie-title {
   margin-top: 15px;
   font-weight: bold;
