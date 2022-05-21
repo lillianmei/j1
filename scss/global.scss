@@ -662,7 +662,7 @@ nav {
 
     &.isUser {
       background-color: v.$primary;
-
+ 
       .account-sub {
         display: block;
       }
@@ -673,7 +673,7 @@ nav {
 
       .user-login,
       .user-regist {
-        display: none;
+        display: none; 
       }
 
       &:hover {

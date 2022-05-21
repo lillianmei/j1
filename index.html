@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="css/global.min.css" />
   <link rel="stylesheet" href="css/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/index.min.css" />
+  <script src="js/jquery.min.js"></script>
+
   <style>
     .carousel {
       position: relative;
@@ -96,7 +98,60 @@
       </div>
     </div>
   </div> -->
-  <header></header>
+  <header>
+    <nav id="nav">
+      <input type="checkbox" id="toggle" class="input-toggler" />
+      <div class="sidebar-overlay"></div>
+      <label for="toggle" class="menu-toggler">
+        <span class="menu-toggler-line"></span>
+        <span class="menu-toggler-line"></span>
+        <span class="menu-toggler-line"></span>
+      </label>
+      <div class="sidebar">
+        <a class="nav-brand" href="index.html">Navbar</a>
+        <!-- navbar for pc  -->
+        <div class="forpc">
+          <ul class="menu">
+            <li>
+              <a class="menu-link" href="#">線上訂票</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">公館場次查詢</a></li>
+                <li><a class="dropdown-item" href="#">新竹場次查詢</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="menu-link" href="#">電影介紹</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">現正熱映</a></li>
+                <li><a class="dropdown-item" href="#">即將上映</a></li>
+              </ul>
+            </li>
+            <li><a class="menu-link -active" href="#">最新消息</a></li>
+            <li><a class="menu-link" href="#">業務專區</a></li>
+            <li><a class="menu-link" href="#">關於影城</a></li>
+          </ul>
+          <!-- isUser DEMO用 -->
+          <div class="user-account isUser">
+            <div class="user">
+              HELLO! <span class="user-name">Yick Shun</span><span class="material-icons"> person </span><span class="material-icons"> menu </span>
+            </div>
+            <div class="user-login">
+              <a href="">會員登入</a>
+            </div>
+            <div class="user-regist">
+              <a href="">加入會員</a>
+            </div>
+            <div class="account-sub">
+              <hr />
+              <a href="">訂票查詢與取消</a>
+              <a href="">編輯會員系統</a>
+              <a href="">會員優惠PLUS</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
   <div class="carousel">
     <div class="swiper s-swiper">
       <div class="swiper-wrapper">
@@ -289,7 +344,6 @@
     <div class="footer"></div>
   </footer>
 
-  <script src="js/jquery.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
   <script>
     const slideSwiper = new Swiper(".s-swiper", {
