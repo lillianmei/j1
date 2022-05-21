@@ -541,6 +541,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
 }
 .sidebar .user-account {
   cursor: pointer;
+  border: 1px solid #C53932;
   border-radius: 20px;
   position: absolute;
   right: 30px;
@@ -706,6 +707,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
 }
 .sidebar .user-account.isUser {
   background-color: #C53932;
+  border: none;
 }
 .sidebar .user-account.isUser .account-sub {
   display: block;

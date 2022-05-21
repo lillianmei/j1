@@ -507,7 +507,7 @@ nav {
 
   .user-account {
     cursor: pointer;
-    // border: 1px solid v.$primary-opacity;
+    border: 1px solid v.$primary;
     border-radius: 20px;
     position: absolute;
     right: 30px;
@@ -662,6 +662,8 @@ nav {
 
     &.isUser {
       background-color: v.$primary;
+      border: none;
+
  
       .account-sub {
         display: block;

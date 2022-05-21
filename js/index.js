@@ -33,10 +33,11 @@ $(function () {
       // $nav.removeClass('mini');
     }
   })
-  // $("header").load("header.html");
-  $(".footer").load("footer.html");
+
   //account hover效果
   const account = document.querySelector('.user-account')
+  if(!account)return;
+
     account.addEventListener('mouseenter', e => {
       account.classList.add('-active')
       account.classList.remove('-leave')
@@ -45,6 +46,5 @@ $(function () {
       account.classList.remove('-active')
       account.classList.add('-leave')
     });
-    if(!account)return;
 
 });
