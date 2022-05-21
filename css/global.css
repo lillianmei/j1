@@ -1,4 +1,9 @@
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body,
 html {
   -webkit-text-size-adjust: 100%;
@@ -120,6 +125,19 @@ textarea {
   /* 1 */
   margin: 0;
   /* 2 */
+}
+
+select {
+  -moz-appearance: none;
+  /* Firefox */
+  -webkit-appearance: none;
+  /* Safari and Chrome */
+  appearance: none;
+  background: transparent;
+  background-image: url('data:image/svg+xml;utf8,<svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.3315 0.284188C11.5154 0.102129 11.7637 0 12.0224 0C12.2812 0 12.5295 0.102129 12.7134 0.284188C12.8041 0.373589 12.8762 0.480154 12.9255 0.597679C12.9747 0.715204 13 0.841342 13 0.968754C13 1.09617 12.9747 1.2223 12.9255 1.33983C12.8762 1.45735 12.8041 1.56392 12.7134 1.65332L7.19163 7.06485C7.00734 7.24666 6.75888 7.34859 6.5 7.34859C6.24112 7.34859 5.99266 7.24666 5.80837 7.06485L0.286631 1.65332C0.195851 1.56392 0.123758 1.45735 0.0745498 1.33983C0.0253414 1.2223 0 1.09617 0 0.968754C0 0.841342 0.0253414 0.715204 0.0745498 0.597679C0.123758 0.480154 0.195851 0.373589 0.286631 0.284188C0.470502 0.102129 0.718801 0 0.977555 0C1.23631 0 1.48461 0.102129 1.66848 0.284188L6.50212 4.72221L11.3315 0.284188Z" fill="white"/></svg>');
+  background-repeat: no-repeat;
+  background-position: 95% center;
+  cursor: pointer;
 }
 
 button,
@@ -298,7 +316,7 @@ nav {
   margin: 0 auto;
   top: 0;
   left: 0;
-  padding: 40px 0 40px 0;
+  padding: 70px 0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   z-index: 5;
@@ -346,7 +364,7 @@ nav .menu-toggler {
 nav .menu-toggler .menu-toggler-line {
   width: 100%;
   height: 2px;
-  background: rgba(185, 55, 59, 0.7333333333);
+  background: #C53932;
   margin: 0 0 8px 0px;
   position: relative;
   -webkit-transition: all 0.35s ease-out;
@@ -420,11 +438,16 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   margin: 0 auto;
 }
 .sidebar .forpc {
-  width: 85%;
+  width: calc(100% - 278px);
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
   .sidebar .forpc {
     display: none;
+  }
+}
+@media all and (max-width: 1200px) {
+  .sidebar .forpc {
+    width: calc(100% - 348px);
   }
 }
 @media all and (max-width: 768px) {
@@ -448,11 +471,6 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   transition: all 0.35s ease-out;
   text-align: center;
 }
-@media all and (max-width: 1200px) {
-  .sidebar .menu {
-    text-align: left;
-  }
-}
 .sidebar .menu > li {
   display: inline-block;
   width: 12%;
@@ -461,7 +479,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
 }
 @media all and (max-width: 1200px) {
   .sidebar .menu > li {
-    width: 14%;
+    width: 17%;
   }
 }
 .sidebar .menu > li:hover .dropdown-menu {
@@ -474,7 +492,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   position: relative;
   display: inline-block;
   text-align: center;
-  padding: 10px;
+  padding: 10px 0;
   color: #fff;
   -webkit-transition: color 0.4s ease, font-weight 0.4s ease;
   transition: color 0.4s ease, font-weight 0.4s ease;
@@ -526,7 +544,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   border-radius: 20px;
   position: absolute;
   right: 30px;
-  top: 50px;
+  top: 80px;
   z-index: 2;
   background-color: transparent;
   -webkit-transition: background-color 0.4s ease;
@@ -546,10 +564,20 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   display: inline-block;
 }
 .sidebar .user-account div.user {
-  padding: 10px 20px;
+  padding: 0.5em 0.8em;
   border-radius: 18px;
   color: #fff;
   display: none;
+}
+.sidebar .user-account div.user .user-name {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  max-width: 100px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: clip;
+  margin-right: 2px;
 }
 .sidebar .user-account div.user-login {
   display: inline-block;
@@ -706,8 +734,8 @@ nav .input-toggler:checked ~ .sidebar-overlay {
 .section-box .main-title div:nth-of-type(1)::before {
   content: "";
   display: inline-block;
-  width: 5px;
-  height: 5px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background-color: #C53932;
   margin-right: 5px;

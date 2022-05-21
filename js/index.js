@@ -33,15 +33,18 @@ $(function () {
       // $nav.removeClass('mini');
     }
   })
+  $("header").load("header.html");
+  $(".footer").load("footer.html");
   //account hover效果
   const account = document.querySelector('.user-account')
-  account.addEventListener('mouseenter', e => {
-    account.classList.add('-active')
-    account.classList.remove('-leave')
-  })
-  account.addEventListener('mouseleave', e => {
-    account.classList.remove('-active')
-    account.classList.add('-leave')
-  });
-
+  if(account){
+    account.addEventListener('mouseenter', e => {
+      account.classList.add('-active')
+      account.classList.remove('-leave')
+    })
+    account.addEventListener('mouseleave', e => {
+      account.classList.remove('-active')
+      account.classList.add('-leave')
+    });
+  }
 });

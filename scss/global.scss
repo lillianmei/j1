@@ -1,6 +1,7 @@
-@use "variables"as v;
+@use "variables" as v;
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+*{box-sizing: border-box;}
 body,
 html {
   -webkit-text-size-adjust: 100%;
@@ -120,6 +121,16 @@ textarea {
   /* 1 */
   margin: 0;
   /* 2 */
+}
+select {
+  -moz-appearance:none; /* Firefox */
+  -webkit-appearance:none; /* Safari and Chrome */
+  appearance:none;
+  background: transparent;
+  background-image: url('data:image/svg+xml;utf8,<svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.3315 0.284188C11.5154 0.102129 11.7637 0 12.0224 0C12.2812 0 12.5295 0.102129 12.7134 0.284188C12.8041 0.373589 12.8762 0.480154 12.9255 0.597679C12.9747 0.715204 13 0.841342 13 0.968754C13 1.09617 12.9747 1.2223 12.9255 1.33983C12.8762 1.45735 12.8041 1.56392 12.7134 1.65332L7.19163 7.06485C7.00734 7.24666 6.75888 7.34859 6.5 7.34859C6.24112 7.34859 5.99266 7.24666 5.80837 7.06485L0.286631 1.65332C0.195851 1.56392 0.123758 1.45735 0.0745498 1.33983C0.0253414 1.2223 0 1.09617 0 0.968754C0 0.841342 0.0253414 0.715204 0.0745498 0.597679C0.123758 0.480154 0.195851 0.373589 0.286631 0.284188C0.470502 0.102129 0.718801 0 0.977555 0C1.23631 0 1.48461 0.102129 1.66848 0.284188L6.50212 4.72221L11.3315 0.284188Z" fill="white"/></svg>');
+  background-repeat: no-repeat;
+  background-position: 95% center;
+  cursor: pointer;
 }
 
 button,
@@ -276,7 +287,7 @@ nav {
   margin: 0 auto;
   top: 0;
   left: 0;
-  padding: 40px 0 40px 0;
+  padding: 70px 0;
   transition: all 0.5s;
   z-index: 5;
 
@@ -312,7 +323,7 @@ nav {
     .menu-toggler-line {
       width: 100%;
       height: 2px;
-      background: v.$primary-opacity;
+      background: v.$primary;
       margin: 0 0 8px 0px;
       position: relative;
       transition: all 0.35s ease-out;
@@ -320,7 +331,7 @@ nav {
   }
 
   .input-toggler {
-    &~.sidebar .menu {
+    & ~ .sidebar .menu {
       @include v.pad-width {
         position: absolute;
         top: 0;
@@ -340,7 +351,7 @@ nav {
       }
     }
 
-    &~.sidebar-overlay {
+    & ~ .sidebar-overlay {
       position: absolute;
       background-color: #000;
       width: 100%;
@@ -353,27 +364,27 @@ nav {
     }
 
     &:checked {
-      &~.menu-toggler .menu-toggler-line {
+      & ~ .menu-toggler .menu-toggler-line {
         top: 5px;
         transform: translateY(100px);
         transform: rotate(45deg);
       }
 
-      &~.menu-toggler .menu-toggler-line:nth-child(2) {
+      & ~ .menu-toggler .menu-toggler-line:nth-child(2) {
         display: none;
       }
 
-      &~.menu-toggler .menu-toggler-line:nth-child(3) {
+      & ~ .menu-toggler .menu-toggler-line:nth-child(3) {
         top: -5px;
         transform: translateY(10);
         transform: rotate(135deg);
       }
 
-      &~.sidebar .menu {
+      & ~ .sidebar .menu {
         left: 0;
       }
 
-      &~.sidebar-overlay {
+      & ~ .sidebar-overlay {
         display: block;
         opacity: 0.9;
       }
@@ -390,11 +401,17 @@ nav {
   margin: 0 auto;
 
   .forpc {
-    width: 85%;
+    width: calc(100% - 278px);
 
     @include v.pad-width {
       display: none;
     }
+
+    @include v.other-width {
+      width: calc(100% - 348px);
+
+    }
+
 
     @include v.phone-width {
       display: none;
@@ -417,18 +434,14 @@ nav {
     transition: all 0.35s ease-out;
     text-align: center;
 
-    @include v.other-width {
-      text-align: left;
-    }
-
-    >li {
+    > li {
       display: inline-block;
       width: 12%;
       text-align: center;
       position: relative;
 
       @include v.other-width {
-        width: 14%;
+        width: 17%;
       }
 
       &:hover {
@@ -443,7 +456,7 @@ nav {
       position: relative;
       display: inline-block;
       text-align: center;
-      padding: 10px;
+      padding: 10px 0;
       color: v.$font-primary;
       transition: color 0.4s ease, font-weight 0.4s ease;
 
@@ -498,7 +511,7 @@ nav {
     border-radius: 20px;
     position: absolute;
     right: 30px;
-    top: 50px;
+    top: 80px;
     z-index: 2;
     background-color: transparent;
     transition: background-color 0.4s ease;
@@ -515,10 +528,18 @@ nav {
       display: inline-block;
 
       &.user {
-        padding: 10px 20px;
+        padding: 0.5em .8em;
         border-radius: 18px;
         color: v.$font-primary;
         display: none;
+        .user-name {
+          display: inline-flex;
+          max-width: 100px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: clip;
+          margin-right: 2px;
+        }
       }
 
       &.user-login {
@@ -675,12 +696,11 @@ nav {
       margin: 0;
 
       &:nth-of-type(1) {
-
         &::before {
           content: "";
           display: inline-block;
-          width: 5px;
-          height: 5px;
+          width: 8px;
+          height: 8px;
           border-radius: 50%;
           background-color: v.$primary;
           margin-right: 5px;
@@ -803,7 +823,7 @@ footer {
   background-color: #0f0f0f;
   color: v.$font-primary;
 
-  &>div {
+  & > div {
     max-width: v.$max-width;
     margin: 0 auto;
     display: flex;
@@ -841,11 +861,11 @@ footer {
       text-align: center;
       margin-bottom: 10px;
       margin-right: 5px;
-      img{
+      img {
         width: 25px;
         height: 25px;
         margin-top: 7px;
-        &.ig{
+        &.ig {
           width: 20px;
           height: 20px;
         }

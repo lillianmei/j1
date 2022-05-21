@@ -1,8 +1,3 @@
-.carousel {
-  position: relative;
-  min-height: 740px;
-}
-
 .movie-title {
   margin-top: 15px;
   font-weight: bold;
@@ -216,11 +211,14 @@
           align-items: center;
   margin-bottom: 30px;
 }
+.onlinebook .select-box .material-icons {
+  color: #C53932;
+}
 .onlinebook .select-box select {
   width: 100%;
   height: 60px;
   border-radius: 5px;
-  padding: 0 10px;
+  padding: 0 15px;
   background-color: transparent;
   color: #fff;
   border: 1px solid #c7c7c7;
