@@ -71,11 +71,6 @@ abbr[title] {
   text-decoration: underline dotted;
 }
 
-b,
-strong {
-  font-weight: bolder;
-}
-
 code,
 kbd,
 samp {
@@ -715,6 +710,8 @@ nav {
         font-weight: 600;
         margin-left: 10px;
         font-size: 1.1em;
+        @extend %weight400;
+
       }
     }
   }
@@ -891,11 +888,7 @@ footer {
 }
 
 .l-font {
-  font-size: 1.2rem;
-}
-
-.thin-weight {
-  font-weight: 100;
+  font-size: 1.4rem;
 }
 
 .material-icons {

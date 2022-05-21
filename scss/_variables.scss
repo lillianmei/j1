@@ -12,6 +12,13 @@ $green-bg-color:#73C044;
 
 $max-width: 1400px;
 
+%weight300{
+  font-weight: 300;
+}
+%weight400{
+  font-weight: 400;
+}
+
 @mixin bg-opacity($color, $opacity) {
   background-color: $color;
   background-color: rgba($color, $opacity);

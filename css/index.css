@@ -1,10 +1,17 @@
+.movie-title span, .movie-item .up-date, .movie-item .list-item > div span, .introduction {
+  font-weight: 300;
+}
+
+.movie-level, .showing-list .state, .movie-item .book-btn, .movie-item .list-item > div {
+  font-weight: 400;
+}
+
 .movie-title {
   margin-top: 15px;
   font-weight: bold;
   width: 100%;
 }
 .movie-title span {
-  font-weight: lighter;
   display: block;
   color: #c7c7c7;
 }
@@ -14,7 +21,6 @@
   padding: 2px 10px;
   display: inline-block;
   color: #000;
-  font-weight: 900;
 }
 
 #landing {
@@ -184,7 +190,6 @@
   padding: 5px 10px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  font-weight: bolder;
 }
 .showing-list .state.recommand {
   background-color: #73C044;
@@ -200,7 +205,7 @@
 }
 
 .onlinebook .select-box {
-  padding-right: 40px;
+  padding-right: 7vw;
 }
 .onlinebook .select-box div {
   display: -webkit-box;
@@ -213,6 +218,7 @@
 }
 .onlinebook .select-box .material-icons {
   color: #C53932;
+  font-size: 30px;
 }
 .onlinebook .select-box select {
   width: 100%;
@@ -264,6 +270,7 @@
   max-width: 60%;
   width: 60%;
   margin-left: 20px;
+  padding-right: 15px;
   text-align: left;
 }
 @media all and (max-width: 768px) {
@@ -303,27 +310,26 @@
 .movie-item .up-date {
   margin: 10px 0 30px 0;
   color: #C53932;
-  font-weight: bold;
 }
 .movie-item .movie-level {
   margin-top: 0;
 }
 .movie-item .book-btn {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 5px 20px;
   background-color: #5a98c0;
   border-radius: 5px;
   margin-bottom: 30px;
-  color: #000;
+  color: #fff;
   cursor: pointer;
-  font-weight: bold;
+}
+.movie-item .book-btn .material-icons {
+  margin-right: 10px;
 }
 .movie-item .list-item > div {
-  font-weight: bold;
   margin-bottom: 10px;
 }
 .movie-item .list-item > div span {
-  font-weight: normal;
   border-left: 1px solid #fff;
   padding-left: 10px;
   margin-left: 10px;
@@ -334,6 +340,10 @@
 }
 .movie-item .list-item .list-2 div {
   max-width: 95%;
+}
+
+.introduction {
+  line-height: 1.8;
 }
 
 .trailer {
