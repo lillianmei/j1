@@ -33,7 +33,7 @@ $(function () {
       // $nav.removeClass('mini');
     }
   })
-
+ $('.footer').load('footer.html')
   //account hover效果
   const account = document.querySelector('.user-account')
   if(!account)return;
