@@ -1,4 +1,4 @@
-.section-box .main-title div:nth-of-type(1), .modal-content .modal-info .info:not(:last-of-type) .forgetpwd, .modal-content .modal-info .info:not(:last-of-type) .lockpwd {
+.section-box .main-title div:nth-of-type(1), .modal-content .modal-info .info:not(:last-of-type) .forgetpwd, .modal-content .modal-info .info:not(:last-of-type) .lockpwd, #regist label[for=confirmrule] {
   font-weight: 300;
 }
 
@@ -139,7 +139,7 @@ textarea {
   /* 2 */
 }
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=number] {
   width: 100%;
   height: 40px;
   padding: 0 10px;
@@ -168,7 +168,7 @@ input[type=text], input[type=password] {
 
 .container-checkbox .checkmark {
   position: absolute;
-  top: 3px;
+  top: 0;
   left: 0;
   height: 16px;
   width: 16px;
@@ -620,7 +620,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
 .sidebar .user-account {
   cursor: pointer;
   border: 1px solid #C53932;
-  border-radius: 20px;
+  border-radius: 25px;
   position: absolute;
   right: 30px;
   top: 77px;
@@ -644,7 +644,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
 }
 .sidebar .user-account div.user {
   padding: 0.5em 0.8em;
-  border-radius: 18px;
+  border-radius: 22px;
   color: #fff;
   display: none;
 }
@@ -672,9 +672,9 @@ nav .input-toggler:checked ~ .sidebar-overlay {
 }
 .sidebar .user-account div a {
   display: inline-block;
-  padding: 6px 20px;
+  padding: 10px 15px 10px 10px;
   background-color: #C53932;
-  border-radius: 18px;
+  border-radius: 22px;
 }
 .sidebar .user-account div.account-sub {
   display: none;
@@ -1047,8 +1047,9 @@ footer > div a img.ig {
 /*content :D*/
 .modal-content {
   position: fixed;
-  top: 15%;
-  width: 45%;
+  top: 10%;
+  width: 550px;
+  max-width: 550px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -1070,7 +1071,7 @@ footer > div a img.ig {
   padding: 20px 4vw;
 }
 .modal-content .modal-info .info:not(:last-of-type) {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .modal-content .modal-info .info:not(:last-of-type) .forgetpwd {
   font-size: 0.5em;
@@ -1110,7 +1111,7 @@ footer > div a img.ig {
 #login .nobr {
   display: inline-block;
 }
-#login label[for=password] {
+#login label[for=loginpassword] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1121,7 +1122,7 @@ footer > div a img.ig {
       -ms-flex-align: center;
           align-items: center;
 }
-#login label[for=password] .material-icons {
+#login label[for=loginpassword] .material-icons {
   font-size: 15px;
 }
 #login .safeverify > div {
@@ -1161,6 +1162,10 @@ footer > div a img.ig {
   font-size: 16px;
 }
 
+#regist .required-icon {
+  color: #C53932;
+}
+
 /* other share */
 :focus {
   outline-width: 0px;
@@ -1173,6 +1178,10 @@ footer > div a img.ig {
 
 .s-font {
   font-size: 0.9rem;
+}
+
+.xs-font {
+  font-size: 0.7rem;
 }
 
 .l-font {

@@ -121,7 +121,7 @@ textarea {
   margin: 0;
   /* 2 */
 }
-input[type='text'],input[type='password']{
+input[type='text'],input[type='password'],input[type='number']{
   width: 100%;
   height: 40px;
   padding: 0 10px;
@@ -147,7 +147,7 @@ input[type='text'],input[type='password']{
 }
 .container-checkbox .checkmark {
   position: absolute;
-  top: 3px;
+  top: 0;
   left: 0;
   height: 16px;
   width: 16px;
@@ -569,7 +569,7 @@ nav {
   .user-account {
     cursor: pointer;
     border: 1px solid v.$primary;
-    border-radius: 20px;
+    border-radius: 25px;
     position: absolute;
     right: 30px;
     top: 77px;
@@ -590,7 +590,7 @@ nav {
 
       &.user {
         padding: 0.5em .8em;
-        border-radius: 18px;
+        border-radius: 22px;
         color: v.$font-primary;
         display: none;
         .user-name {
@@ -621,9 +621,9 @@ nav {
 
       a {
         display: inline-block;
-        padding: 6px 20px;
+        padding: 10px 15px 10px 10px;
         background-color: v.$primary;
-        border-radius: 18px;
+        border-radius: 22px;
       }
 
       &.account-sub {
@@ -962,8 +962,9 @@ footer {
 /*content :D*/
 .modal-content {
   position: fixed;
-  top: 15%;
-  width: 45%;
+  top: 10%;
+  width: 550px;
+  max-width: 550px;
   height: fit-content;
   border-radius: 10px;
   color: black;
@@ -983,7 +984,7 @@ footer {
   .modal-info{
     padding:20px 4vw;
     .info:not(:last-of-type){
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       .forgetpwd{
         font-size: .5em;
         color: v.$font-secondary;
@@ -1028,7 +1029,7 @@ footer {
       display: inline-block;
       @extend %weight400;
     }
-    label[for="password"]{
+    label[for="loginpassword"]{
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -1064,6 +1065,14 @@ footer {
     }
 
 }
+#regist{
+  label[for="confirmrule"]{
+    @extend %weight300;
+  }
+  .required-icon{
+    color: v.$primary;
+  }
+}
 
 /* other share */
 :focus {
@@ -1078,7 +1087,9 @@ footer {
 .s-font {
   font-size: 0.9rem;
 }
-
+.xs-font {
+  font-size: 0.7rem;
+}
 .l-font {
   font-size: 1.3rem;
 }
