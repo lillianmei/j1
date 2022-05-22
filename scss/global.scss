@@ -2,6 +2,9 @@
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 *{box-sizing: border-box;}
+:root{
+  --swiper-theme-color:#fff!important;
+}
 body,
 html {
   -webkit-text-size-adjust: 100%;
@@ -39,6 +42,7 @@ h5,
 h6,
 p {
   margin: 0;
+  padding: 0;
 }
 
 hr {
@@ -117,6 +121,63 @@ textarea {
   margin: 0;
   /* 2 */
 }
+input[type='text'],input[type='password']{
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid v.$font-secondary;
+  background: #EBEBEB;
+}
+/* The container */
+.container-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 20px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.container-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.container-checkbox .checkmark {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  border-radius: 3px;
+  background-color: #ccc;
+}
+.container-checkbox input:checked ~ .checkmark {
+  background-color: v.$primary;
+}
+.container-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container-checkbox .checkmark:after {
+  left: 5px;
+  top: 1px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
 select {
   -moz-appearance:none; /* Firefox */
   -webkit-appearance:none; /* Safari and Chrome */
@@ -126,6 +187,10 @@ select {
   background-repeat: no-repeat;
   background-position: 95% center;
   cursor: pointer;
+  border-radius: 5px;
+  padding: 0 15px;
+  border: 1px solid v.$font-secondary;
+
 }
 
 button,
@@ -145,6 +210,7 @@ button,
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button;
+  cursor: pointer;
 }
 
 button::-moz-focus-inner,
@@ -506,7 +572,7 @@ nav {
     border-radius: 20px;
     position: absolute;
     right: 30px;
-    top: 80px;
+    top: 77px;
     z-index: 2;
     background-color: transparent;
     transition: background-color 0.4s ease;
@@ -691,27 +757,23 @@ nav {
 
     div {
       margin: 0;
-
       &:nth-of-type(1) {
+        @extend %weight300;
         &::before {
           content: "";
           display: inline-block;
-          width: 8px;
-          height: 8px;
+          width: 6px;
+          height: 6px;
           border-radius: 50%;
           background-color: v.$primary;
           margin-right: 5px;
           margin-bottom: 2px;
         }
       }
-
       &:nth-of-type(2) {
         color: v.$primary;
-        font-weight: 600;
         margin-left: 10px;
-        font-size: 1.1em;
         @extend %weight400;
-
       }
     }
   }
@@ -873,6 +935,136 @@ footer {
   }
 }
 
+/*modal*/
+/*ok actual modal now*/
+.modal {
+  visibility: hidden;
+  z-index: 20;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  transition: all 0.4s;
+}
+
+/*opening it*/
+.modal:target {
+  visibility: visible;
+  opacity: 1;
+  z-index: 20;
+}
+
+/*content :D*/
+.modal-content {
+  position: fixed;
+  top: 15%;
+  width: 45%;
+  height: fit-content;
+  border-radius: 10px;
+  color: black;
+  background: #EBEBEB;
+  p{
+    background-color: v.$yellow-bg-color;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding:10px 10px 10px 20px;
+    @extend %weight600; 
+  }
+  label{
+    display: block;
+    margin-bottom: 3px;
+    @extend %weight600; 
+  }
+  .modal-info{
+    padding:20px 4vw;
+    .info:not(:last-of-type){
+      margin-bottom: 20px;
+      .forgetpwd{
+        font-size: .5em;
+        color: v.$font-secondary;
+        @extend %weight300;
+        letter-spacing: 0px;
+      }
+      .lockpwd{
+        @extend %weight300;
+        margin-top: 5px;
+      }
+    }
+    .submmitbtn{
+      text-align: center;
+      margin-top: 80px;
+      button{
+        width: 100%;
+        padding: 10px 0;
+        background-color: #006EBD;
+        color: #fff;
+        @extend %weight600;
+        border: 1px solid #125578;
+        border-radius: 5px;
+      }
+      a{color: v.$primary;}
+    }
+  }
+
+}
+/*closing*/
+.close-modal {
+  position: absolute;
+  top: -0.2em;
+  right: 0.4em;
+  text-decoration: none;
+  color: black;
+  font-weight: 800;
+  font-size: 1.7em;
+}
+
+#login{
+  .nobr{
+      display: inline-block;
+      @extend %weight400;
+    }
+    label[for="password"]{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .material-icons{
+        font-size: 15px;
+      }
+    }
+    .safeverify{
+      >div{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        input{width: 50%;max-width: 50%;}
+        .imgsafe{    
+          display: flex;
+          align-items: flex-end;
+        a{
+          background-color: v.$bg-color;
+          width: 30px;
+          height: 30px;
+          text-align: center;
+          border-radius: 100%;
+          margin-left: 5px;
+
+          .material-icons{
+            font-size: 16px;
+          }
+
+        }
+        }
+      }
+    }
+
+}
+
 /* other share */
 :focus {
   outline-width: 0px;
@@ -888,7 +1080,7 @@ footer {
 }
 
 .l-font {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 .material-icons {

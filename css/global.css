@@ -1,11 +1,23 @@
-.section-box .main-title div:nth-of-type(2) {
+.section-box .main-title div:nth-of-type(1), .modal-content .modal-info .info:not(:last-of-type) .forgetpwd, .modal-content .modal-info .info:not(:last-of-type) .lockpwd {
+  font-weight: 300;
+}
+
+.section-box .main-title div:nth-of-type(2), #login .nobr {
   font-weight: 400;
+}
+
+.modal-content p, .modal-content label, .modal-content .modal-info .submmitbtn button {
+  font-weight: 600;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+:root {
+  --swiper-theme-color:#fff!important;
 }
 
 body,
@@ -49,6 +61,7 @@ h5,
 h6,
 p {
   margin: 0;
+  padding: 0;
 }
 
 hr {
@@ -126,6 +139,68 @@ textarea {
   /* 2 */
 }
 
+input[type=text], input[type=password] {
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid #818181;
+  background: #EBEBEB;
+}
+
+/* The container */
+.container-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 20px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.container-checkbox .checkmark {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  border-radius: 3px;
+  background-color: #ccc;
+}
+
+.container-checkbox input:checked ~ .checkmark {
+  background-color: #C53932;
+}
+
+.container-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container-checkbox .checkmark:after {
+  left: 5px;
+  top: 1px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
 select {
   -moz-appearance: none;
   /* Firefox */
@@ -137,6 +212,9 @@ select {
   background-repeat: no-repeat;
   background-position: 95% center;
   cursor: pointer;
+  border-radius: 5px;
+  padding: 0 15px;
+  border: 1px solid #818181;
 }
 
 button,
@@ -156,6 +234,7 @@ button,
 [type=reset],
 [type=submit] {
   -webkit-appearance: button;
+  cursor: pointer;
 }
 
 button::-moz-focus-inner,
@@ -532,7 +611,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   background-color: #C53932;
 }
 .sidebar .menu .dropdown-menu li:nth-of-type(2) {
-  background-color: #c7c7c7;
+  background-color: #818181;
 }
 .sidebar .menu .dropdown-menu li a {
   color: #fff;
@@ -544,7 +623,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   border-radius: 20px;
   position: absolute;
   right: 30px;
-  top: 80px;
+  top: 77px;
   z-index: 2;
   background-color: transparent;
   -webkit-transition: background-color 0.4s ease;
@@ -735,8 +814,8 @@ nav .input-toggler:checked ~ .sidebar-overlay {
 .section-box .main-title div:nth-of-type(1)::before {
   content: "";
   display: inline-block;
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background-color: #C53932;
   margin-right: 5px;
@@ -744,9 +823,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
 }
 .section-box .main-title div:nth-of-type(2) {
   color: #C53932;
-  font-weight: 600;
   margin-left: 10px;
-  font-size: 1.1em;
 }
 .section-box .primary-title {
   margin-bottom: 30px;
@@ -938,6 +1015,152 @@ footer > div a img.ig {
   height: 20px;
 }
 
+/*modal*/
+/*ok actual modal now*/
+.modal {
+  visibility: hidden;
+  z-index: 20;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+/*opening it*/
+.modal:target {
+  visibility: visible;
+  opacity: 1;
+  z-index: 20;
+}
+
+/*content :D*/
+.modal-content {
+  position: fixed;
+  top: 15%;
+  width: 45%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 10px;
+  color: black;
+  background: #EBEBEB;
+}
+.modal-content p {
+  background-color: #FCC900;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 10px 10px 10px 20px;
+}
+.modal-content label {
+  display: block;
+  margin-bottom: 3px;
+}
+.modal-content .modal-info {
+  padding: 20px 4vw;
+}
+.modal-content .modal-info .info:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+.modal-content .modal-info .info:not(:last-of-type) .forgetpwd {
+  font-size: 0.5em;
+  color: #818181;
+  letter-spacing: 0px;
+}
+.modal-content .modal-info .info:not(:last-of-type) .lockpwd {
+  margin-top: 5px;
+}
+.modal-content .modal-info .submmitbtn {
+  text-align: center;
+  margin-top: 80px;
+}
+.modal-content .modal-info .submmitbtn button {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #006EBD;
+  color: #fff;
+  border: 1px solid #125578;
+  border-radius: 5px;
+}
+.modal-content .modal-info .submmitbtn a {
+  color: #C53932;
+}
+
+/*closing*/
+.close-modal {
+  position: absolute;
+  top: -0.2em;
+  right: 0.4em;
+  text-decoration: none;
+  color: black;
+  font-weight: 800;
+  font-size: 1.7em;
+}
+
+#login .nobr {
+  display: inline-block;
+}
+#login label[for=password] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#login label[for=password] .material-icons {
+  font-size: 15px;
+}
+#login .safeverify > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#login .safeverify > div input {
+  width: 50%;
+  max-width: 50%;
+}
+#login .safeverify > div .imgsafe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+#login .safeverify > div .imgsafe a {
+  background-color: #191919;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border-radius: 100%;
+  margin-left: 5px;
+}
+#login .safeverify > div .imgsafe a .material-icons {
+  font-size: 16px;
+}
+
 /* other share */
 :focus {
   outline-width: 0px;
@@ -953,7 +1176,7 @@ footer > div a img.ig {
 }
 
 .l-font {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 .material-icons {
@@ -983,7 +1206,7 @@ footer > div a img.ig {
 }
 
 .y12 {
-  background-color: #F3C833;
+  background-color: #FCC900;
 }
 
 .y15 {
@@ -995,7 +1218,7 @@ footer > div a img.ig {
 }
 
 .yp {
-  background-color: #5a98c0;
+  background-color: #00ABF2;
 }
 
 .yn {

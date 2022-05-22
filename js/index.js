@@ -34,10 +34,10 @@ $(function () {
     }
   })
  $('.footer').load('footer.html')
+
   //account hover效果
   const account = document.querySelector('.user-account')
   if(!account)return;
-
     account.addEventListener('mouseenter', e => {
       account.classList.add('-active')
       account.classList.remove('-leave')

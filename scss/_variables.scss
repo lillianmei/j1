@@ -2,12 +2,12 @@ $primary: #C53932;
 $secondary: #000;
 
 $font-primary: #fff;
-$font-secondary: #c7c7c7;
+$font-secondary: #818181;
 $bg-color: #191919;
-$yellow-bg-color:#F3C833;
+$yellow-bg-color:#FCC900;
 $orange-bg-color:#E56F28;
 $red-bg-color:#DD362B;
-$blue-bg-color:#5a98c0;
+$blue-bg-color:#00ABF2;
 $green-bg-color:#73C044;
 
 $max-width: 1400px;
@@ -18,7 +18,9 @@ $max-width: 1400px;
 %weight400{
   font-weight: 400;
 }
-
+%weight600{
+  font-weight: 600;
+}
 @mixin bg-opacity($color, $opacity) {
   background-color: $color;
   background-color: rgba($color, $opacity);

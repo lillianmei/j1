@@ -132,7 +132,7 @@ font-size: initial;
             <li><a class="menu-link" href="#">關於影城</a></li>
           </ul>
           <!-- isUser DEMO用 -->
-          <div class="user-account isUser">
+          <div class="user-account">
             <div class="user">
               HELLO! <span class="user-name">Yick Shun</span><span class="material-icons"> person </span><span class="material-icons"> menu </span>
             </div>
@@ -143,16 +143,94 @@ font-size: initial;
               <a href="">會員優惠PLUS</a>
             </div>
             <div class="user-login">
-              <a href="">會員登入</a>
+              <a href="#login">會員登入</a>
             </div>
             <div class="user-regist">
-              <a href="">加入會員</a>
+              <a href="#regist">加入會員</a>
             </div>
            
           </div>
         </div>
       </div>
     </nav>
+    <!-- 登入modal -->
+    <div class="modal" id="login">
+      <div class="modal-content">
+        <p>WELCOME TO BROADWAY!</p>
+        <div class="modal-info">
+          <form action="">
+            <div class="info">
+              <label for="id">帳號（電子郵件信箱）</label>
+              <input type="text" id="id" placeholder="aaabbb@gmail.com">
+            </div>
+            <div class="info">
+              <label for="password">登入密碼 <a href="" class="forgetpwd">
+                <span class="material-icons">error</span> FORGOT PASSWORD</a></label>
+              <input type="password" id="password" placeholder="PASSWORD">
+              <label for="lockpwd" class="s-font container-checkbox lockpwd">
+                記住密碼
+                <input type="checkbox" name="lockpwd" id="lockpwd">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="info safeverify">
+              <label for="">安全驗證</label>
+              <div>
+              <input type="text" placeholder=" 請輸入右方驗證碼">
+              <div class="imgsafe">
+                <img src="https://picsum.photos/g/150/40" alt="">
+                <a href=""><span class="material-icons">sync</span></a>
+              </div>
+            </div>
+            </div>
+            <div class="info submmitbtn">
+              <button>LOGIN</button>
+              <a href="#regist" class="s-font">尚未申請帳號！馬上註冊!</a>
+            </div>
+          </form>
+        </div>
+        <a href="#" class="close-modal"><span class="material-icons">close</span></a>
+      </div>
+    </div>
+     <!-- 註冊modal -->
+     <div class="modal" id="regist">
+      <div class="modal-content">
+        <p>WELCOME TO BROADWAY!</p>
+        <div class="modal-info">
+          <form action="">
+            <div class="info">
+              <label for="id">帳號（電子郵件信箱）</label>
+              <input type="text" id="id" placeholder="aaabbb@gmail.com">
+            </div>
+            <div class="info">
+              <label for="password">登入密碼 <a href="" class="forgetpwd">
+                <span class="material-icons">error</span> FORGOT PASSWORD</a></label>
+              <input type="password" id="password" placeholder="PASSWORD">
+              <label for="lockpwd" class="s-font container-checkbox lockpwd">
+                記住密碼
+                <input type="checkbox" name="lockpwd" id="lockpwd">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="info safeverify">
+              <label for="">安全驗證</label>
+              <div>
+              <input type="text" placeholder=" 請輸入右方驗證碼">
+              <div class="imgsafe">
+                <img src="https://picsum.photos/g/150/40" alt="">
+                <a href=""><span class="material-icons">sync</span></a>
+              </div>
+            </div>
+            </div>
+            <div class="info submmitbtn">
+              <button>LOGIN</button>
+              <a href="#regist" class="s-font">尚未申請帳號！馬上註冊!</a>
+            </div>
+          </form>
+        </div>
+        <a href="#" class="close-modal"><span class="material-icons">close</span></a>
+      </div>
+    </div>
   </header>
   <div class="carousel">
     <div class="swiper s-swiper">
@@ -187,7 +265,7 @@ font-size: initial;
   <div class="section-box">
     <section class="section">
       <div class="main-title l-font">
-        <div>NOW SHOWING</div>
+        <div class="s-font">NOW SHOWING</div>
         <div>現正熱映</div>
       </div>
       <div class="content content-row">
@@ -265,7 +343,7 @@ font-size: initial;
       <div class="content content-row">
         <div class="onlinebook row-2">
           <div class="main-title l-font">
-            <div>ONLINE BOOK</div>
+            <div class="s-font">ONLINE BOOK</div>
             <div>快速訂票</div>
           </div>
           <div class="select-box">
@@ -305,7 +383,7 @@ font-size: initial;
         </div>
         <div class="lastestnew row-2">
           <div class="main-title l-font">
-            <div>LATEST NEWS</div>
+            <div class="s-font">LATEST NEWS</div>
             <div>最新消息</div>
           </div>
           <div class="news-box">
@@ -345,6 +423,7 @@ font-size: initial;
   <footer>
     <div class="footer"></div>
   </footer>
+
   <script src="js/jquery.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
   <script>
