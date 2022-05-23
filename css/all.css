@@ -2,8 +2,12 @@
   font-weight: 300;
 }
 
-.movie-level, .showing-list .state, .movie-item .book-btn, .movie-item .list-item > div {
+.movie-level, .showing-list .state, .movie-item .book-btn {
   font-weight: 400;
+}
+
+.movie-item .list-item > div {
+  font-weight: 600;
 }
 
 .movie-title {
@@ -131,6 +135,8 @@
   position: absolute;
   top: 13px;
   left: 14px;
+  -webkit-animation: scroll 1.3s ease-in infinite;
+          animation: scroll 1.3s ease-in infinite;
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
   #landing .welcome .mouse .scroller {
@@ -228,7 +234,7 @@
   margin-left: 10px;
 }
 .onlinebook .select-box select option {
-  background-color: #191919;
+  background-color: #282828;
   color: #fff;
   border: 1px solid #818181;
 }
@@ -398,25 +404,5 @@
     -webkit-transform: translateY(8px);
             transform: translateY(8px);
     opacity: 0.3;
-  }
-}
-@-webkit-keyframes blur {
-  0% {
-    filter: blur(5px);
-    -webkit-filter: blur(5px);
-  }
-  100% {
-    filter: blur(0px);
-    -webkit-filter: blur(0px);
-  }
-}
-@keyframes blur {
-  0% {
-    filter: blur(5px);
-    -webkit-filter: blur(5px);
-  }
-  100% {
-    filter: blur(0px);
-    -webkit-filter: blur(0px);
   }
 }

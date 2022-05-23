@@ -1,6 +1,7 @@
 $(function () {
-  const landing = document.querySelector('#landing')
-  if (landing) {
+  //ladnding page
+  const $landing = document.querySelector('#landing')
+  if ($landing) {
     $(window).on('mousewheel', function (e) {
       if (e) {
         $('body').addClass('start-scroll')
@@ -22,29 +23,38 @@ $(function () {
     $('body').removeClass('no-scroll')
   }
 
+  //account hover效果
+  const $account = document.querySelector('.user-account')
+  if (!$account) return;
+  $account.addEventListener('mouseenter', e => {
+    $account.classList.add('-active')
+    $account.classList.remove('-leave')
+  })
+  $account.addEventListener('mouseleave', e => {
+    $account.classList.remove('-active')
+    $account.classList.add('-leave')
+  });
 
-  //NAV效果
-  $(window).on('scroll resize', function (e) {
+  //顯示GO TO TOP
+  const $goup = $('.gotop');
+  $(window).on('scroll', function () {
     let scrollHeight = 300
-    $nav = $('#nav');
     if ($(window).scrollTop() > scrollHeight) {
+      $goup.addClass('show')
       // $nav.addClass('mini');
     } else {
+      $goup.removeClass('show')
       // $nav.removeClass('mini');
     }
   })
- $('.footer').load('footer.html')
+  //go top
+  $goup.on('click', function () {
+    $('html,body').animate({
+      scrollTop: 0
+    }, 500);
+  })
 
-  //account hover效果
-  const account = document.querySelector('.user-account')
-  if(!account)return;
-    account.addEventListener('mouseenter', e => {
-      account.classList.add('-active')
-      account.classList.remove('-leave')
-    })
-    account.addEventListener('mouseleave', e => {
-      account.classList.remove('-active')
-      account.classList.add('-leave')
-    });
+
+  $('.footer').load('footer.html')
 
 });

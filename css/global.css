@@ -17,7 +17,7 @@
 }
 
 :root {
-  --swiper-theme-color:#fff!important;
+  --swiper-theme-color: #fff !important;
 }
 
 body,
@@ -28,7 +28,7 @@ html {
   padding: 0;
   font-size: 15px;
   position: relative;
-  background-color: #191919;
+  background-color: #282828;
   line-height: 1.6;
   font-family: Microsoft JhengHei, Arial, sans-serif;
 }
@@ -139,7 +139,9 @@ textarea {
   /* 2 */
 }
 
-input[type=text], input[type=password], input[type=number] {
+input[type=text],
+input[type=password],
+input[type=number] {
   width: 100%;
   height: 40px;
   padding: 0 10px;
@@ -168,7 +170,7 @@ input[type=text], input[type=password], input[type=number] {
 
 .container-checkbox .checkmark {
   position: absolute;
-  top: 0;
+  top: 2px;
   left: 0;
   height: 16px;
   width: 16px;
@@ -395,8 +397,6 @@ nav {
   top: 0;
   left: 0;
   padding: 70px 0;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
   z-index: 5;
 }
 nav.mini {
@@ -516,16 +516,17 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   margin: 0 auto;
 }
 .sidebar .forpc {
-  width: calc(100% - 278px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
   .sidebar .forpc {
     display: none;
-  }
-}
-@media all and (max-width: 1200px) {
-  .sidebar .forpc {
-    width: calc(100% - 348px);
   }
 }
 @media all and (max-width: 768px) {
@@ -545,19 +546,30 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   padding: 20px;
 }
 .sidebar .menu {
-  -webkit-transition: all 0.35s ease-out;
-  transition: all 0.35s ease-out;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 .sidebar .menu > li {
-  display: inline-block;
-  width: 12%;
+  width: 15%;
   text-align: center;
   position: relative;
 }
 @media all and (max-width: 1200px) {
   .sidebar .menu > li {
-    width: 17%;
+    width: 18%;
   }
 }
 .sidebar .menu > li:hover .dropdown-menu {
@@ -621,13 +633,10 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   cursor: pointer;
   border: 1px solid #C53932;
   border-radius: 25px;
-  position: absolute;
-  right: 30px;
-  top: 77px;
   z-index: 2;
-  background-color: transparent;
-  -webkit-transition: background-color 0.4s ease;
-  transition: background-color 0.4s ease;
+  position: relative;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
   .sidebar .user-account {
@@ -643,7 +652,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   display: inline-block;
 }
 .sidebar .user-account div.user {
-  padding: 0.5em 0.8em;
+  padding: 0.8em 1.2em;
   border-radius: 22px;
   color: #fff;
   display: none;
@@ -652,7 +661,8 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  max-width: 100px;
+  max-width: 80px;
+  width: 80px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: clip;
@@ -661,18 +671,16 @@ nav .input-toggler:checked ~ .sidebar-overlay {
 .sidebar .user-account div.user-login {
   display: inline-block;
 }
-.sidebar .user-account div.user-login a {
-  padding: 10px 25px;
-}
 .sidebar .user-account div.user-regist {
   display: inline-block;
 }
 .sidebar .user-account div.user-regist a {
   background-color: transparent;
+  padding: 10px 20px 10px 10px;
 }
 .sidebar .user-account div a {
   display: inline-block;
-  padding: 10px 15px 10px 10px;
+  padding: 10px 25px;
   background-color: #C53932;
   border-radius: 22px;
 }
@@ -686,8 +694,8 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   transition: height 0.4s cubic-bezier(0.56, 0, 0, 1);
 }
 .sidebar .user-account div.account-sub hr {
-  width: 80%;
-  margin: 0 auto 10px auto;
+  width: 85%;
+  margin: 30px auto 20px auto;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.56, 0, 0, 1);
@@ -706,6 +714,20 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   transition: opacity 0.6s ease, -webkit-transform 0.4s cubic-bezier(0.56, 0, 0, 1);
   transition: transform 0.4s cubic-bezier(0.56, 0, 0, 1), opacity 0.6s ease;
   transition: transform 0.4s cubic-bezier(0.56, 0, 0, 1), opacity 0.6s ease, -webkit-transform 0.4s cubic-bezier(0.56, 0, 0, 1);
+  padding: 0 0 15px 0;
+}
+.sidebar .user-account div.account-sub a::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 5px;
+}
+.sidebar .user-account div.account-sub a:hover::before {
+  border-radius: 100%;
+  margin-right: 5px;
+  margin-bottom: 3px;
+  background-color: #00ABF2;
 }
 .sidebar .user-account.-active {
   background-color: #C53932;
@@ -713,7 +735,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
           transition-delay: 0.2s;
 }
 .sidebar .user-account.-active .account-sub {
-  height: 150px;
+  height: 190px;
   -webkit-transition-delay: 0.1s;
           transition-delay: 0.1s;
 }
@@ -788,7 +810,13 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   border: none;
 }
 .sidebar .user-account.isUser .account-sub {
+  position: absolute;
+  top: 25px;
   display: block;
+  z-index: -2;
+  background-color: #C53932;
+  border-bottom-left-radius: 22px;
+  border-bottom-right-radius: 22px;
 }
 .sidebar .user-account.isUser .user {
   display: block;
@@ -837,7 +865,6 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   color: #fff;
   max-width: 1400px;
   margin: 50px auto 50px auto;
-  padding: 0 30px;
 }
 .section-box .section:last-of-type {
   margin-bottom: 150px;
@@ -1048,8 +1075,8 @@ footer > div a img.ig {
 .modal-content {
   position: fixed;
   top: 10%;
-  width: 550px;
-  max-width: 550px;
+  width: 570px;
+  max-width: 570px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -1068,7 +1095,7 @@ footer > div a img.ig {
   margin-bottom: 3px;
 }
 .modal-content .modal-info {
-  padding: 20px 4vw;
+  padding: 25px 4vw;
 }
 .modal-content .modal-info .info:not(:last-of-type) {
   margin-bottom: 15px;
@@ -1151,7 +1178,7 @@ footer > div a img.ig {
           align-items: flex-end;
 }
 #login .safeverify > div .imgsafe a {
-  background-color: #191919;
+  background-color: #282828;
   width: 30px;
   height: 30px;
   text-align: center;
@@ -1164,6 +1191,37 @@ footer > div a img.ig {
 
 #regist .required-icon {
   color: #C53932;
+}
+
+.gotop {
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  background-color: #000;
+  position: fixed;
+  bottom: 160px;
+  right: 40px;
+  cursor: pointer;
+  visibility: hidden;
+  z-index: 1;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  opacity: 0;
+}
+.gotop.show {
+  visibility: visible;
+  opacity: 1;
 }
 
 /* other share */
@@ -1181,7 +1239,7 @@ footer > div a img.ig {
 }
 
 .xs-font {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 
 .l-font {

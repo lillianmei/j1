@@ -23,7 +23,6 @@
 
 //landing for index
 #landing {
-  //position: relative; //for swiper
   width: 100%;
   z-index: 10;
   position: fixed;
@@ -37,7 +36,6 @@
     background-image: url(https://picsum.photos/1920/500);
     background-repeat: no-repeat;
     background-size: cover;
-    // animation: blur 1s ease-out;
   }
 
   h1 {
@@ -120,8 +118,8 @@
         position: absolute;
         top: 13px;
         left: 14px;
-
-        // animation: scroll 1.3s ease-in infinite;
+        animation: scroll 1.3s ease-in infinite;
+        
         @include v.pad-width {
           left: 12px;
         }
@@ -163,11 +161,11 @@
   text-align: center;
   margin-bottom: 20px;
   position: relative;
+  
 
   a {
     > div {
       padding-right: 10px;
-
       @include v.mini-width {
         padding-right: 0;
       }
@@ -327,7 +325,7 @@
   .list-item {
     > div {
       margin-bottom: 10px;
-      @extend %weight400;
+      @extend %weight600;
 
       
       span {
@@ -336,7 +334,7 @@
         padding-left: 10px;
         margin-left: 10px;
       }
-    }
+    } 
 
     .list-2 {
       width: 100%;
@@ -387,14 +385,3 @@
   }
 }
 
-@keyframes blur {
-  0% {
-    filter: blur(5px);
-    -webkit-filter: blur(5px);
-  }
-
-  100% {
-    filter: blur(0px);
-    -webkit-filter: blur(0px);
-  }
-}
