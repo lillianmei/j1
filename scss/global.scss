@@ -19,11 +19,12 @@ html {
   position: relative;
   background-color: v.$bg-color;
   line-height: 1.6;
+  font-weight: normal;
   font-family: Microsoft JhengHei, Arial, sans-serif;
 
   &.no-scroll {
     overflow: hidden;
-  }
+  } 
 
   @include v.pc-width {
     font-size: 17px;
@@ -47,7 +48,9 @@ h6,
 p {
   margin: 0;
   padding: 0;
+  font-weight: normal;
 }
+div{font-weight: normal;}
 
 hr {
   box-sizing: content-box;
@@ -86,10 +89,6 @@ samp {
   font-size: 1em;
 }
 
-small {
-  font-size: 80%;
-}
-
 sub,
 sup {
   font-size: 75%;
@@ -117,13 +116,10 @@ optgroup,
 select,
 textarea {
   font-family: inherit;
-  /* 1 */
   font-size: 100%;
-  /* 1 */
   line-height: 1.15;
-  /* 1 */
+  font-weight: normal;
   margin: 0;
-  /* 2 */
 }
 
 input[type='text'],
@@ -135,6 +131,7 @@ input[type='number'] {
   border-radius: 5px;
   border: 1px solid v.$font-secondary;
   background: #EBEBEB;
+  font-weight: normal;
 }
 
 /* The container */
@@ -153,6 +150,7 @@ input[type='number'] {
   position: absolute;
   opacity: 0;
   cursor: pointer;
+  font-weight: normal;
 }
 
 .container-checkbox .checkmark {
@@ -226,6 +224,9 @@ button,
 [type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
+  background: transparent;
+  border: 1px solid transparent;
+  box-shadow: none;
 }
 
 button::-moz-focus-inner,
@@ -321,9 +322,12 @@ legend,
 label,
 input,
 ul,
-li {
+li,
+span {
   margin: 0;
   padding: 0;
+  font-weight: normal;
+  text-shadow: none;
 }
 
 ul,
@@ -527,6 +531,9 @@ nav {
           width: 100%;
           display: flex;
         }
+         .menu-link{
+           font-weight: 600;
+         }
       }
     }
 
@@ -537,16 +544,7 @@ nav {
       padding: 10px 0;
       color: v.$font-primary;
       transition: color 0.4s ease, font-weight 0.4s ease;
-
-      &:hover {
-        color: v.$font-primary;
-        font-weight: bold;
-      }
-
-      &:focus {
-        color: v.$font-primary;
-        font-weight: bold;
-      }
+      
     }
 
     .dropdown-menu {
@@ -820,7 +818,7 @@ nav {
       &:nth-of-type(2) {
         color: v.$primary;
         margin-left: 10px;
-        @extend %weight400;
+        @extend %weight600;
       }
     }
   }
@@ -962,6 +960,24 @@ nav {
         @include v.row-width(90%);
       }
 
+    }
+    .tab{
+      display: inline-flex;
+      margin-bottom: 30px;
+      .tab-list{
+        border: 1px solid v.$yellow-bg-color;
+        color: v.$yellow-bg-color;
+        padding: 5px 0;
+        text-align: center;
+        width: 8em;
+        margin-right: 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        &.active{
+          color: v.$secondary;
+          background-color: v.$yellow-bg-color;
+        }
+      }
     }
   }
 }

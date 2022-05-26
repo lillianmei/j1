@@ -342,15 +342,24 @@
   }
 }
 
-.booking-history {
+.booking-history .item {
   border-top: 1px solid #818181;
-  padding: 40px 20px 0 20px;
+  padding: 40px 5em 0 5em;
   margin-bottom: 40px;
 }
+@media all and (max-width: 1200px) {
+  .booking-history .item {
+    padding: 20px 0 0 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 .booking-history .row-left img {
-  width: 90%;
+  width: 100%;
 }
 .booking-history .row-right {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -395,6 +404,44 @@
   width: 90px;
   min-width: 90px;
   color: #818181;
+}
+.booking-history .ticket-state {
+  position: absolute;
+  right: 0;
+}
+.booking-history .ticket-state .state {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+  color: #fff;
+  padding: 5px 25px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.booking-history .ticket-state .state.paid {
+  background-color: #00ABF2;
+  background-color: rgba(0, 171, 242, 0.8);
+}
+.booking-history .ticket-state .state.getQR {
+  background-color: #00ABF2;
+}
+.booking-history .ticket-state .state.refund {
+  border: 1px solid #C53932;
+}
+.booking-history .ticket-state .state .material-icons {
+  margin-left: 3px;
+}
+
+.news .event {
+  padding-right: 20px;
+}
+.news .event img {
+  width: 100%;
+  border-radius: 5px;
 }
 
 @-webkit-keyframes rotate {
