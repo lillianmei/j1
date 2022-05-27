@@ -15,16 +15,16 @@ html {
   letter-spacing: 1.5px;
   margin: 0;
   padding: 0;
+  -webkit-font-smoothing:antialiased;
   font-size: 15px;
   position: relative;
   background-color: v.$bg-color;
   line-height: 1.6;
-  font-weight: normal;
   font-family: Microsoft JhengHei, Arial, sans-serif;
-
+  font-style: normal;
   &.no-scroll {
     overflow: hidden;
-  } 
+  }
 
   @include v.pc-width {
     font-size: 17px;
@@ -48,9 +48,7 @@ h6,
 p {
   margin: 0;
   padding: 0;
-  font-weight: normal;
 }
-div{font-weight: normal;}
 
 hr {
   box-sizing: content-box;
@@ -67,13 +65,6 @@ a {
   background-color: transparent;
   text-decoration: none;
   color: v.$font-primary;
-  font-weight: normal;
-  transition: color 0.3s ease, font-weight 0.4s ease;
-
-  // &:hover {
-  //   color: v.$font-primary;
-  //   font-weight: bolder;
-  // }
 }
 
 abbr[title] {
@@ -118,7 +109,6 @@ textarea {
   font-family: inherit;
   font-size: 100%;
   line-height: 1.15;
-  font-weight: normal;
   margin: 0;
 }
 
@@ -131,7 +121,6 @@ input[type='number'] {
   border-radius: 5px;
   border: 1px solid v.$font-secondary;
   background: #EBEBEB;
-  font-weight: normal;
 }
 
 /* The container */
@@ -150,7 +139,6 @@ input[type='number'] {
   position: absolute;
   opacity: 0;
   cursor: pointer;
-  font-weight: normal;
 }
 
 .container-checkbox .checkmark {
@@ -326,7 +314,6 @@ li,
 span {
   margin: 0;
   padding: 0;
-  font-weight: normal;
   text-shadow: none;
 }
 
@@ -531,9 +518,10 @@ nav {
           width: 100%;
           display: flex;
         }
-         .menu-link{
-           font-weight: 600;
-         }
+
+        .menu-link {
+          @extend %weight600;
+        }
       }
     }
 
@@ -544,7 +532,10 @@ nav {
       padding: 10px 0;
       color: v.$font-primary;
       transition: color 0.4s ease, font-weight 0.4s ease;
-      
+
+      &.active {
+        @extend %weight600;
+      }
     }
 
     .dropdown-menu {
@@ -836,7 +827,7 @@ nav {
 
   .movie-title {
     margin-top: 15px;
-    font-weight: bold;
+    @extend %weight600;
     width: 100%;
 
     span {
@@ -887,17 +878,17 @@ nav {
         @include v.row-width(20%);
 
         @include v.pad-width {
-          flex: 0 0 33.33%;
+          flex-basis: 0 0 33.33%;
           width: 33.33%;
         }
 
         @include v.phone-width {
-          flex: 50%;
+          flex-basis: 50%;
           width: 50%;
         }
 
         @include v.mini-width {
-          flex: 100%;
+          flex-basis: 100%;
           width: 100%;
         }
       }
@@ -961,19 +952,24 @@ nav {
       }
 
     }
-    .tab{
+
+    .actions {
       display: inline-flex;
       margin-bottom: 30px;
-      .tab-list{
+
+      .actions-btn{
+        border-radius: 5px;
+        cursor: pointer;
         border: 1px solid v.$yellow-bg-color;
         color: v.$yellow-bg-color;
         padding: 5px 0;
         text-align: center;
         width: 8em;
         margin-right: 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        &.active{
+        
+      
+        &.active {
+          @extend %weight600;
           color: v.$secondary;
           background-color: v.$yellow-bg-color;
         }
@@ -1068,11 +1064,12 @@ footer {
   color: black;
   background: #EBEBEB;
 
-  p {
+  h2 {
     background-color: v.$yellow-bg-color;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     padding: 10px 10px 10px 20px;
+    font-size: 1em;
     @extend %weight600;
   }
 
@@ -1130,7 +1127,6 @@ footer {
   right: 0.4em;
   text-decoration: none;
   color: black;
-  font-weight: 800;
   font-size: 1.7em;
 }
 
@@ -1175,7 +1171,7 @@ footer {
           margin-left: 5px;
 
           .material-icons {
-            font-size: 16px;
+            font-size: 17px;
           }
 
         }
@@ -1225,11 +1221,6 @@ footer {
   outline-width: 0px;
 }
 
-:active,
-.active {
-  font-weight: bolder;
-}
-
 .s-font {
   font-size: 0.9rem;
 }
@@ -1239,11 +1230,20 @@ footer {
 }
 
 .l-font {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
 .material-icons {
   vertical-align: sub;
+}
+
+.hr-line {
+  width: 50px;
+  margin-left: 0;
+  height: 1px;
+  background-color: v.$primary;
+  border: none;
+  margin: 1.8em 0;
 }
 
 .mul-ellipsis-4 {

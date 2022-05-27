@@ -111,7 +111,7 @@
   }
 }
 
-//landing animation
+//for index landing animation
 .start-scroll {
   #landing {
     .landing-page {
@@ -182,7 +182,6 @@
     }
   }
 }
-
 .onlinebook {
   .select-box {
     padding-right: 7vw;
@@ -217,7 +216,6 @@
     }
   }
 }
-
 .lastestnew {
   .news-box {
     width: 100%;
@@ -249,15 +247,6 @@
         margin-left: 0px;
         margin-top: 15px;
       }
-
-      hr {
-        width: 60px;
-        margin-left: 0;
-        height: 1px;
-        background-color: v.$primary;
-        border: none;
-        margin-bottom: 15px;
-      }
     }
 
     p {
@@ -269,7 +258,6 @@
     }
   }
 }
-
 .movie-item {
   &:first-of-type {
     padding-right: 40px;
@@ -333,12 +321,10 @@
     }
   }
 }
-
 .introduction {
   line-height: 1.8;
   @extend %weight300;
 }
-
 .trailer {
   background-color: rgba(73, 73, 73, 0.596);
   padding: 2rem;
@@ -349,7 +335,6 @@
     padding: 10px;
   }
 }
-
 .booking-history {
   .item {
     border-top: 1px solid v.$font-secondary;
@@ -453,13 +438,36 @@
 }
 .news{
   .event{
-    padding-right: 20px;
-   
+    padding: 0 10px;
+    margin-bottom: 40px;
+    .new-info{
+      p:first-of-type{
+        margin: 15px 0;
+      }
+    }
     img{
       width: 100%;
       border-radius: 5px;
 
     }
+  }
+}
+.news-info{
+  .actions{
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+    .back{
+      border-radius: 3px;
+      border: 1px solid v.$yellow-bg-color;
+      color: v.$yellow-bg-color;
+    }
+  }
+  .hr-line{
+    width: 100px;
+  }
+  .new-content{
+    p{margin-bottom: 20px;}
   }
 }
 
