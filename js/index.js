@@ -32,7 +32,7 @@ const app = Vue.createApp({
               </ul>
             </li>
             <li><a class="menu-link" href="news.html" title="最新消息">最新消息</a></li>
-            <li><a class="menu-link" href="#" title="業務專區">業務專區</a></li>
+            <li><a class="menu-link" href="group-ticket.html" title="業務專區">業務專區</a></li>
             <li><a class="menu-link" href="#" title="關於影城">關於影城</a></li>
           </ul>
           <!-- login/logout style user-account toggle class 'isUser'/none   -->

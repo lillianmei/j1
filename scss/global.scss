@@ -99,6 +99,7 @@ sup {
 img {
   border-style: none;
   vertical-align: middle;
+  width: 100%;
 }
 
 button,
@@ -825,6 +826,12 @@ nav {
     }
   }
 
+  .sub-title{
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    @extend %weight600;
+  }
+
   .movie-title {
     margin-top: 15px;
     @extend %weight600;
@@ -878,7 +885,7 @@ nav {
         @include v.row-width(20%);
 
         @include v.pad-width {
-          flex-basis: 0 0 33.33%;
+          flex-basis: 33.33%;
           width: 33.33%;
         }
 
@@ -895,6 +902,17 @@ nav {
 
       .row-3 {
         @include v.row-width(30%);
+
+        @include v.pad-width {
+          flex-basis: 50%;
+        }
+
+        @include v.phone-width {
+          flex-basis: 100%;
+        }
+      }
+      .row-3-1 {
+        @include v.row-width(33.33%);
 
         @include v.pad-width {
           flex-basis: 50%;
@@ -982,6 +1000,8 @@ footer {
   background-color: #0f0f0f;
   color: v.$font-primary;
 
+  img{flex: 0;}
+
   &>div {
     max-width: v.$max-width;
     margin: 0 auto;
@@ -1019,7 +1039,7 @@ footer {
       border-radius: 50%;
       text-align: center;
       margin-bottom: 10px;
-      margin-right: 5px;
+      margin-right: 10px;
 
       img {
         width: 20px;
@@ -1201,7 +1221,7 @@ footer {
   border: 1px solid v.$font-primary;
   border-radius: 100%;
   position: fixed;
-  bottom: 160px;
+  bottom: 80px;
   right: 40px;
   cursor: pointer;
   visibility: hidden;
@@ -1243,7 +1263,7 @@ footer {
   height: 1px;
   background-color: v.$primary;
   border: none;
-  margin: 1.8em 0;
+  margin: 1.3em 0;
 }
 
 .mul-ellipsis-4 {
