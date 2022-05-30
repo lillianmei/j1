@@ -1309,6 +1309,14 @@ footer > div a img {
   outline-width: 0px;
 }
 
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 .s-font {
   font-size: 0.9rem;
 }
