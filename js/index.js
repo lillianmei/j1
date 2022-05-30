@@ -36,15 +36,15 @@ const app = Vue.createApp({
             <li><a class="menu-link" href="#" title="關於影城">關於影城</a></li>
           </ul>
           <!-- login/logout style user-account toggle class 'isUser'/none   -->
-          <div class="user-account">
+          <div class="user-account isUser">
             <div class="user">
               HELLO! <span class="user-name">Yick</span><span class="material-icons"> person </span><span
                 class="material-icons"> menu </span>
             </div>
             <div class="account-sub">
               <hr />
-              <a href="" title="訂票查詢與取消">訂票查詢與取消</a>
-              <a href="" title="會員資料">會員資料</a>
+              <a href="book-history.html" title="訂票查詢與取消">訂票查詢與取消</a>
+              <a href="account.html" title="會員資料">會員資料</a>
               <a href="" title="會員優惠PLUS">會員優惠PLUS</a>
             </div>
             <div class="user-login">
@@ -114,7 +114,7 @@ const app = Vue.createApp({
             </div>
             <div class="info">
               <label for="setpwd">設定密碼<span class="required-icon">*</span></label>
-              <input type="password" id="passetpwdsword" required="required" placeholder="請輸入6-10位含大小寫英數字">
+              <input type="password" id="setpwd" required="required" placeholder="請輸入6-10位含大小寫英數字">
             </div>
             <div class="info">
               <label for="confirmpwd">確認密碼<span class="required-icon">*</span></label>
@@ -161,6 +161,10 @@ app.mount('#app');
 $(function () {
   //ladnding page
   const $landing = document.querySelector('#landing')
+  const $account = document.querySelector('.user-account')
+  const $goup = $('.gotop');
+  const $tab = $('.tab-item');
+
   if ($landing) {
     $(window).on('mousewheel', function (e) {
       if (e) {
@@ -184,7 +188,6 @@ $(function () {
   }
 
   //account hover效果
-  const $account = document.querySelector('.user-account')
   if (!$account) return;
   $account.addEventListener('mouseenter', e => {
     $account.classList.add('-active')
@@ -195,8 +198,7 @@ $(function () {
     $account.classList.add('-leave')
   });
 
-  //顯示GO TO TOP
-  const $goup = $('.gotop');
+  //顯示go to top btn
   $(window).on('scroll', function () {
     let scrollHeight = 300
     if ($(window).scrollTop() > scrollHeight) {
@@ -213,4 +215,13 @@ $(function () {
       scrollTop: 0
     }, 500);
   })
+
+  $tab.on('click', function (e) {
+   console.log(e.target.id, $(e), $(this).siblings())
+   $(this).addClass('active')
+   $(this).siblings().removeClass('active')
+   $(`.div[data-id='${e.target.id}']`).siblings().addClass('hide')
+   $(`.div[data-id='${e.target.id}']`).removeClass('hide')
+  })
+
 });
