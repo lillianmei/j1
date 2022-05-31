@@ -89,7 +89,7 @@ const app = Vue.createApp({
               </div>
             </div>
             <div class="info submmitbtn">
-              <button>LOGIN</button>
+              <button type="submit">LOGIN</button>
               <a href="#regist" class="xs-font">尚未申請帳號！馬上註冊!</a>
             </div>
           </form>
@@ -128,8 +128,8 @@ const app = Vue.createApp({
               </label>
             </div>
             <div class="info submmitbtn">
-              <button>REGISTER</button>
-              <a href="#login" class="xs-font">已有帳號！馬上登入</a>
+              <button type="submit">REGISTER</button>
+              <a href="#login" class="xs-font">已有帳號！馬上登入!</a>
             </div>
           </form>
         </div>

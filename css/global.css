@@ -609,10 +609,10 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   padding: 4px 0;
   margin-bottom: 5px;
 }
-.sidebar .menu .dropdown-menu li:nth-of-type(1) {
+.sidebar .menu .dropdown-menu li:nth-of-type(odd) {
   background-color: #C53932;
 }
-.sidebar .menu .dropdown-menu li:nth-of-type(2) {
+.sidebar .menu .dropdown-menu li:nth-of-type(even) {
   background-color: #818181;
 }
 .sidebar .menu .dropdown-menu li a {
@@ -743,16 +743,16 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   opacity: 1;
 }
 .sidebar .user-account.-active .account-sub a:nth-of-type(1) {
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+.sidebar .user-account.-active .account-sub a:nth-of-type(2) {
   -webkit-transition-delay: 0.8s;
           transition-delay: 0.8s;
 }
-.sidebar .user-account.-active .account-sub a:nth-of-type(2) {
+.sidebar .user-account.-active .account-sub a:nth-of-type(3) {
   -webkit-transition-delay: 1s;
           transition-delay: 1s;
-}
-.sidebar .user-account.-active .account-sub a:nth-of-type(3) {
-  -webkit-transition-delay: 1.2s;
-          transition-delay: 1.2s;
 }
 .sidebar .user-account.-leave {
   background-color: transparent;
@@ -1040,9 +1040,8 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   cursor: pointer;
   border: 1px solid #FCC900;
   color: #FCC900;
-  padding: 5px 0;
+  padding: 10px 3em;
   text-align: center;
-  width: 8em;
   margin-right: 20px;
 }
 .section-box .section .actions .actions-btn.active {
@@ -1150,7 +1149,6 @@ footer > div a img {
   z-index: 20;
 }
 
-/*content :D*/
 .modal-content {
   position: fixed;
   top: 10%;
@@ -1311,10 +1309,6 @@ footer > div a img {
 
 .hide {
   display: none;
-}
-
-.show {
-  display: block;
 }
 
 .s-font {
