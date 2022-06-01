@@ -28,31 +28,49 @@
           <button class="tab-item actions-btn active" id="tab1">帳號設定</button>
           <button class="tab-item actions-btn" id="tab2">修改密碼</button>
         </div>
-        <div class="tab-content">
-          <div data-id="tab1">
+        <div class="tab-container">
+          <div class="tab-content"  data-id="tab1">
             <div class="content-row">
             <div class="row-right row-5">
-              <div class="info">
+              <div class="row">
                 <label for="loginid">帳號（電子郵件信箱）</label>
                 <input type="text" id="loginid" placeholder="aaabbb@gmail.com">
               </div>
             </div>
           </div>
         </div>
-          <div data-id="tab2">
+          <div class="tab-content" data-id="tab2">
             <div class="content-row">
-              <div class="row-right row-5">
-                <div class="info">
-                  <label for="sdf">帳號ss（電子郵件信箱）</label>
-                  <input type="text" id="sdf" placeholder="aaabbb@gmail.com">
-                </div>
-              </div>
+              <form action="">
+                      <div class="row icon-row">
+                        <label for="currentpwd">目前密碼</label>
+                        <span class="material-icons pwd-eye pwd-on">
+                          visibility
+                        </span>
+                        <input type="text" id="currentpwd" placeholder="0123456789">
+                      </div>
+                      <div class="row icon-row">
+                        <label for="changepwd">變更密碼</label>
+                        <span class="material-icons pwd-eye">
+                          visibility_off
+                        </span>
+                        <input type="password" id="changepwd" placeholder="請輸入6-10位含大小寫英數字">
+                      </div>
+                      <div class="row icon-row">
+                        <label for="reconfirmpwd">確認新密碼</label>
+                        <span class="material-icons pwd-eye">visibility_off
+                        </span>
+                        <input type="password" id="reconfirmpwd" placeholder="請輸入6-10位含大小寫英數字">
+                      </div>
+                      <div class="row submmitbtn">
+                        <button type="submit">儲存修改密碼</button>
+                      </div>
+              </form>
             </div>
           </div>
         </div>
-   
     </section>
-  </div>
+  </main>
   <!-- main container -->
   
   <div class="gotop"><span class="material-icons">arrow_drop_up</span></div>

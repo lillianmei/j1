@@ -36,7 +36,7 @@ const app = Vue.createApp({
             <li><a class="menu-link" href="#" title="關於影城">關於影城</a></li>
           </ul>
           <!-- login/logout style user-account toggle class 'isUser'/none   -->
-          <div class="user-account isUser">
+          <div class="user-account">
             <div class="user">
               HELLO! <span class="user-name">Yick</span><span class="material-icons"> person </span><span
                 class="material-icons"> menu </span>
@@ -64,21 +64,21 @@ const app = Vue.createApp({
         <h2>WELCOME TO BROADWAY!</h2>
         <div class="modal-info">
           <form action="">
-            <div class="info">
+            <div class="row" >
               <label for="loginid">帳號（電子郵件信箱）</label>
               <input type="text" id="loginid" placeholder="aaabbb@gmail.com">
             </div>
-            <div class="info">
+            <div class="row">
               <label for="loginpassword">登入密碼 <a href="" class="forgetpwd">
                   <span class="material-icons">error</span> FORGOT PASSWORD</a></label>
-              <input type="password" id="loginpassword" placeholder="PASSWORD">
+              <input type="text" id="loginpassword" placeholder="PASSWORD">
               <label for="lockpwd" class="xs-font container-checkbox lockpwd">
                 記住密碼
                 <input type="checkbox" name="lockpwd" id="lockpwd">
                 <span class="checkmark"></span>
               </label>
             </div>
-            <div class="info safeverify">
+            <div class="row safeverify">
               <label for="">安全驗證</label>
               <div>
                 <input type="text" placeholder=" 請輸入右方驗證碼">
@@ -88,7 +88,7 @@ const app = Vue.createApp({
                 </div>
               </div>
             </div>
-            <div class="info submmitbtn">
+            <div class="row submmitbtn">
               <button type="submit">LOGIN</button>
               <a href="#regist" class="xs-font">尚未申請帳號！馬上註冊!</a>
             </div>
@@ -103,31 +103,31 @@ const app = Vue.createApp({
         <h2>WELCOME TO BROADWAY!JOIN US!</h2>
         <div class="modal-info">
           <form action="">
-            <div class="info">
+            <div class="row">
               <label for="registid">帳號（電子郵件信箱)<span class="required-icon">*</span></label>
               <input type="text" id="registid" required="required" placeholder="aaabbb@gmail.com">
             </div>
-            <div class="info">
+            <div class="row">
               <label for="phone">聯絡電話<span class="required-icon">*<span
                     class="xs-font">將以此帳號作為日後訂單聯繫，請務必填寫正確</span></span></label>
               <input type="number" id="phone" required="required" placeholder="091234567">
             </div>
-            <div class="info">
+            <div class="row">
               <label for="setpwd">設定密碼<span class="required-icon">*</span></label>
-              <input type="password" id="setpwd" required="required" placeholder="請輸入6-10位含大小寫英數字">
+              <input type="text" id="setpwd" required="required" placeholder="請輸入6-10位含大小寫英數字">
             </div>
-            <div class="info">
+            <div class="row">
               <label for="confirmpwd">確認密碼<span class="required-icon">*</span></label>
-              <input type="password" id="confirmpwd" required="required" placeholder="請再次確認密碼">
+              <input type="text" id="confirmpwd" required="required" placeholder="請再次確認密碼">
             </div>
-            <div class="info">
+            <div class="row">
               <label for="confirmrule" class="xs-font container-checkbox">
                 我同意 會員條款｜應用程式使用條款｜個人資料使用條款
                 <input type="checkbox" id="confirmrule" required="required">
                 <span class="checkmark"></span>
               </label>
             </div>
-            <div class="info submmitbtn">
+            <div class="row submmitbtn">
               <button type="submit">REGISTER</button>
               <a href="#login" class="xs-font">已有帳號！馬上登入!</a>
             </div>
@@ -164,6 +164,7 @@ $(function () {
   const $account = document.querySelector('.user-account')
   const $goup = $('.gotop');
   const $tab = $('.tab-item');
+  const $eye = $('.pwd-eye');
 
   if ($landing) {
     $(window).on('mousewheel', function (e) {
@@ -215,13 +216,28 @@ $(function () {
       scrollTop: 0
     }, 500);
   })
-
+  //分頁切換
   $tab.on('click', function (e) {
-   console.log(e.target.id, $(e), $(this).siblings())
    $(this).addClass('active')
    $(this).siblings().removeClass('active')
-   $(`.div[data-id='${e.target.id}']`).siblings().addClass('hide')
-   $(`.div[data-id='${e.target.id}']`).removeClass('hide')
+   $(`.tab-content[data-id='${e.target.id}']`).siblings().addClass('hide')
+   $(`.tab-content[data-id='${e.target.id}']`).removeClass('hide')
+  })
+
+  // show/hide PWD
+  $eye.on('click', function (e) {
+    console.log(e.target.innerText, this)
+    let isHide = e.target.innerText
+    if (isHide === 'visibility'){
+      e.target.innerText = 'visibility_off'
+      e.target.classList.add('pwd-on')
+      $(this).next().attr('type','password')
+    }
+    if (isHide === 'visibility_off') {
+      e.target.innerText = 'visibility'
+      e.target.classList.remove('pwd-on')
+      $(this).next().attr('type', 'text')
+    }
   })
 
 });

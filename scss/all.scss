@@ -452,8 +452,6 @@
 }
 .news-info{
   .actions{
-    display: flex;
-    margin-bottom: 30px;
     align-items: center;
     .back{
       width: 100%;
@@ -470,6 +468,12 @@
   }
   .new-content{
     p{margin-bottom: 20px;}
+  }
+}
+.account{
+  label{
+    color: v.$blue-bg-color;
+    @extend %weight600;
   }
 }
 

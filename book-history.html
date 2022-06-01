@@ -25,82 +25,162 @@
           <div>訂票查詢與取消</div>
         </div>
         <div class="actions">
-          <button class="actions-btn tab-item active">尚未取票</button>
-          <button class="actions-btn tab-item">完成觀看</button>
-          <button class="actions-btn tab-item">已取消</button>
+          <button class="actions-btn tab-item active" id="tab1" >尚未取票</button>
+          <button class="actions-btn tab-item" id="tab2">完成觀看</button>
+          <button class="actions-btn tab-item" id="tab3">已取消</button>
         </div>
-        <div class="tab-content">
-          <div class="content-row item">
-            <div class="row-left row-2">
-              <img src="https://fakeimg.pl/250x350/" alt="movie-name" />
+        <div>
+          <div class="tab-content" data-id="tab1">
+            <div class="content-row item">
+              <div class="row-left row-2">
+                <img src="https://fakeimg.pl/250x350/" alt="movie-name" />
+              </div>
+              <div class="row-right row-8">
+                <div class="ticket-no">取票序號<span>#123456789</span></div>
+                <div class="movie-title">
+                  <h3 class="l-font ellipsis">劫命救護</h3>
+                  <span class="s-font ellipsis">AMBULANCE</span>
+                </div>
+                <div class="booking-list content-row">
+                  <div class="row-5">
+                    <div class="list"><label>觀看影城</label><span>台北公館百老匯</span></div>
+                    <div class="list"><label>觀看時間</label><span>2022.08.08 星期一</span></div>
+                    <div class="list"><label>電影場次</label><span>12:30 標準數位 | 第12聽</span></div>
+                    <div class="list"><label>電影票種</label><span>全票x1,優待票x3,愛心票x1</span></div>
+                    <div class="list"><label>影城座位</label><span>12-07,12-8,12-09,12-11,12-12</span></div>
+                  </div>
+                  <div class="row-5">
+                    <div class="list"><label>票卷數量</label><span>共2張</span></div>
+                    <div class="list"><label>付款金額</label><span>NT$660</span></div>
+                    <div class="list"><label>訂單時間</label><span>2022.12.11 22:25:06</span></div>
+                  </div>
+                </div>
+                <div class="ticket-state">
+                  <div class="state paid">已付款<span class="material-icons">
+                    done
+                  </span></div>
+                  <div class="state getQR">取票碼<span class="material-icons">
+                    qr_code
+                  </span></div>
+                  <div class="state refund">退票<span class="material-icons">
+                    close
+                  </span></div>
+                </div>
+              </div>
             </div>
-            <div class="row-right row-8">
-              <div class="ticket-no">取票序號<span>#123456789</span></div>
-              <div class="movie-title">
-                <h3 class="l-font ellipsis">劫命救護</h3>
-                <span class="s-font ellipsis">AMBULANCE</span>
+            <div class="content-row item">
+              <div class="row-left row-2">
+                <img src="https://fakeimg.pl/250x350/" alt="movie-name" />
               </div>
-              <div class="booking-list content-row">
-                <div class="row-5">
-                  <div class="list"><label>觀看影城</label><span>台北公館百老匯</span></div>
-                  <div class="list"><label>觀看時間</label><span>2022.08.08 星期一</span></div>
-                  <div class="list"><label>電影場次</label><span>12:30 標準數位 | 第12聽</span></div>
-                  <div class="list"><label>電影票種</label><span>全票x1,優待票x3,愛心票x1</span></div>
-                  <div class="list"><label>影城座位</label><span>12-07,12-8,12-09,12-11,12-12</span></div>
+              <div class="row-right row-8">
+                <div class="ticket-no">取票序號<span>#123456789</span></div>
+                <div class="movie-title">
+                  <h3 class="l-font ellipsis">劫命救護</h3>
+                  <span class="s-font ellipsis">AMBULANCE</span>
                 </div>
-                <div class="row-5">
-                  <div class="list"><label>票卷數量</label><span>共2張</span></div>
-                  <div class="list"><label>付款金額</label><span>NT$660</span></div>
-                  <div class="list"><label>訂單時間</label><span>2022.12.11 22:25:06</span></div>
+                <div class="booking-list content-row">
+                  <div class="row-5">
+                    <div class="list"><label>觀看影城</label><span>台北公館百老匯</span></div>
+                    <div class="list"><label>觀看時間</label><span>2022.08.08 星期一</span></div>
+                    <div class="list"><label>電影場次</label><span>12:30 標準數位 | 第12聽</span></div>
+                    <div class="list"><label>電影票種</label><span>全票x1,優待票x3,愛心票x1</span></div>
+                    <div class="list"><label>影城座位</label><span>12-07,12-8,12-09,12-11,12-12</span></div>
+                  </div>
+                  <div class="row-5">
+                    <div class="list"><label>票卷數量</label><span>共2張</span></div>
+                    <div class="list"><label>付款金額</label><span>NT$660</span></div>
+                    <div class="list"><label>訂單時間</label><span>2022.12.11 22:25:06</span></div>
+                  </div>
                 </div>
-              </div>
-              <div class="ticket-state">
-                <div class="state paid">已付款<span class="material-icons">
-                  done
-                </span></div>
-                <div class="state getQR">取票碼<span class="material-icons">
-                  qr_code
-                </span></div>
-                <div class="state refund">退票<span class="material-icons">
-                  close
-                </span></div>
+                <div class="ticket-state">
+                  <div class="state paid">已付款<span class="material-icons">
+                      done
+                    </span></div>
+                  <div class="state getQR">取票碼<span class="material-icons">
+                      qr_code
+                    </span></div>
+                  <div class="state refund">退票<span class="material-icons">
+                      close
+                    </span></div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="content-row item">
-            <div class="row-left row-2">
-              <img src="https://fakeimg.pl/250x350/" alt="movie-name" />
+          <div class="tab-content hide" data-id="tab2">
+            <div class="content-row item">
+              <div class="row-left row-2">
+                <img src="https://fakeimg.pl/250x350/" alt="movie-name" />
+              </div>
+              <div class="row-right row-8">
+                <div class="ticket-no">取票序號<span>#789456123</span></div>
+                <div class="movie-title">
+                  <h3 class="l-font ellipsis">劫命救護</h3>
+                  <span class="s-font ellipsis">AMBULANCE</span>
+                </div>
+                <div class="booking-list content-row">
+                  <div class="row-5">
+                    <div class="list"><label>觀看影城</label><span>台北公館百老匯</span></div>
+                    <div class="list"><label>觀看時間</label><span>2022.08.08 星期一</span></div>
+                    <div class="list"><label>電影場次</label><span>12:30 標準數位 | 第12聽</span></div>
+                    <div class="list"><label>電影票種</label><span>全票x1,優待票x3,愛心票x1</span></div>
+                    <div class="list"><label>影城座位</label><span>12-07,12-8,12-09,12-11,12-12</span></div>
+                  </div>
+                  <div class="row-5">
+                    <div class="list"><label>票卷數量</label><span>共2張</span></div>
+                    <div class="list"><label>付款金額</label><span>NT$660</span></div>
+                    <div class="list"><label>訂單時間</label><span>2022.12.11 22:25:06</span></div>
+                  </div>
+                </div>
+                <div class="ticket-state">
+                  <div class="state paid">已付款<span class="material-icons">
+                      done
+                    </span></div>
+                  <div class="state getQR">取票碼<span class="material-icons">
+                      qr_code
+                    </span></div>
+                  <div class="state refund">退票<span class="material-icons">
+                      close
+                    </span></div>
+                </div>
+              </div>
             </div>
-            <div class="row-right row-8">
-              <div class="ticket-no">取票序號<span>#123456789</span></div>
-              <div class="movie-title">
-                <h3 class="l-font ellipsis">劫命救護</h3>
-                <span class="s-font ellipsis">AMBULANCE</span>
+          </div>
+          <div class="tab-content hide" data-id="tab3">
+            <div class="content-row item">
+              <div class="row-left row-2">
+                <img src="https://fakeimg.pl/250x350/" alt="movie-name" />
               </div>
-              <div class="booking-list content-row">
-                <div class="row-5">
-                  <div class="list"><label>觀看影城</label><span>台北公館百老匯</span></div>
-                  <div class="list"><label>觀看時間</label><span>2022.08.08 星期一</span></div>
-                  <div class="list"><label>電影場次</label><span>12:30 標準數位 | 第12聽</span></div>
-                  <div class="list"><label>電影票種</label><span>全票x1,優待票x3,愛心票x1</span></div>
-                  <div class="list"><label>影城座位</label><span>12-07,12-8,12-09,12-11,12-12</span></div>
+              <div class="row-right row-8">
+                <div class="ticket-no">取票序號<span>#456123789</span></div>
+                <div class="movie-title">
+                  <h3 class="l-font ellipsis">劫命救護</h3>
+                  <span class="s-font ellipsis">AMBULANCE</span>
                 </div>
-                <div class="row-5">
-                  <div class="list"><label>票卷數量</label><span>共2張</span></div>
-                  <div class="list"><label>付款金額</label><span>NT$660</span></div>
-                  <div class="list"><label>訂單時間</label><span>2022.12.11 22:25:06</span></div>
+                <div class="booking-list content-row">
+                  <div class="row-5">
+                    <div class="list"><label>觀看影城</label><span>台北公館百老匯</span></div>
+                    <div class="list"><label>觀看時間</label><span>2022.08.08 星期一</span></div>
+                    <div class="list"><label>電影場次</label><span>12:30 標準數位 | 第12聽</span></div>
+                    <div class="list"><label>電影票種</label><span>全票x1,優待票x3,愛心票x1</span></div>
+                    <div class="list"><label>影城座位</label><span>12-07,12-8,12-09,12-11,12-12</span></div>
+                  </div>
+                  <div class="row-5">
+                    <div class="list"><label>票卷數量</label><span>共2張</span></div>
+                    <div class="list"><label>付款金額</label><span>NT$660</span></div>
+                    <div class="list"><label>訂單時間</label><span>2022.12.11 22:25:06</span></div>
+                  </div>
                 </div>
-              </div>
-              <div class="ticket-state">
-                <div class="state paid">已付款<span class="material-icons">
-                    done
-                  </span></div>
-                <div class="state getQR">取票碼<span class="material-icons">
-                    qr_code
-                  </span></div>
-                <div class="state refund">退票<span class="material-icons">
-                    close
-                  </span></div>
+                <div class="ticket-state">
+                  <div class="state paid">已付款<span class="material-icons">
+                      done
+                    </span></div>
+                  <div class="state getQR">取票碼<span class="material-icons">
+                      qr_code
+                    </span></div>
+                  <div class="state refund">退票<span class="material-icons">
+                      close
+                    </span></div>
+                </div>
               </div>
             </div>
           </div>
