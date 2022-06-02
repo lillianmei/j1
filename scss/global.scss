@@ -11,13 +11,14 @@ html {
   letter-spacing: 1.5px;
   margin: 0;
   padding: 0;
-  -webkit-font-smoothing:antialiased;
+  -webkit-font-smoothing: antialiased;
   font-size: 15px;
   position: relative;
   background-color: v.$bg-color;
   line-height: 1.6;
   font-family: Microsoft JhengHei, Arial, sans-serif;
   font-style: normal;
+
   &.no-scroll {
     overflow: hidden;
   }
@@ -111,10 +112,14 @@ textarea {
 
 input[type='text'],
 input[type='password'],
-input[type='number'] {
+input[type='number'],
+select,
+option,
+input[type="email"],
+input[type="date"] {
   width: 100%;
   height: 45px;
-  padding: 0 10px;
+  padding: 0 20px;
   border-radius: 5px;
   border: 1px solid v.$font-secondary;
   background: #ebebeb18;
@@ -174,21 +179,31 @@ input[type='number'] {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-form{width: 100%;}
+
+form {
+  width: 100%;
+}
+
 select {
   -moz-appearance: none;
   /* Firefox */
   -webkit-appearance: none;
   /* Safari and Chrome */
   appearance: none;
-  background: transparent;
   background-image: url('data:image/svg+xml;utf8,<svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.3315 0.284188C11.5154 0.102129 11.7637 0 12.0224 0C12.2812 0 12.5295 0.102129 12.7134 0.284188C12.8041 0.373589 12.8762 0.480154 12.9255 0.597679C12.9747 0.715204 13 0.841342 13 0.968754C13 1.09617 12.9747 1.2223 12.9255 1.33983C12.8762 1.45735 12.8041 1.56392 12.7134 1.65332L7.19163 7.06485C7.00734 7.24666 6.75888 7.34859 6.5 7.34859C6.24112 7.34859 5.99266 7.24666 5.80837 7.06485L0.286631 1.65332C0.195851 1.56392 0.123758 1.45735 0.0745498 1.33983C0.0253414 1.2223 0 1.09617 0 0.968754C0 0.841342 0.0253414 0.715204 0.0745498 0.597679C0.123758 0.480154 0.195851 0.373589 0.286631 0.284188C0.470502 0.102129 0.718801 0 0.977555 0C1.23631 0 1.48461 0.102129 1.66848 0.284188L6.50212 4.72221L11.3315 0.284188Z" fill="white"/></svg>');
   background-repeat: no-repeat;
   background-position: 95% center;
   cursor: pointer;
   border-radius: 5px;
   padding: 0 15px;
-  border: 1px solid v.$font-secondary;
+  width: 100%;
+  color: v.$font-primary;
+
+  option {
+    background: #3a3a3a;
+    color: v.$font-primary;
+    border: 1px solid v.$font-secondary;
+  }
 }
 
 button,
@@ -341,6 +356,87 @@ li {
     opacity: 1;
     height: 123px;
   }
+}
+
+/* other share */
+:focus {
+  outline-width: 0px;
+  box-shadow: 0 0 2px 2px #81818156;
+}
+
+::placeholder {
+  color: #ffffff7a;
+}
+
+.hide {
+  display: none;
+}
+
+.s-font {
+  font-size: 0.9rem;
+}
+
+.xs-font {
+  font-size: 0.8rem;
+}
+
+.l-font {
+  font-size: 1.4rem;
+}
+
+.material-icons {
+  vertical-align: sub;
+}
+
+.hr-line {
+  width: 50px;
+  margin-left: 0;
+  height: 1px;
+  background-color: v.$primary;
+  border: none;
+  margin: 1.3em 0;
+}
+
+.mul-ellipsis-4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-inline-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.mul-ellipsis-3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.y12 {
+  background-color: v.$yellow-bg-color;
+}
+
+.y15 {
+  background-color: v.$orange-bg-color;
+}
+
+.R {
+  background-color: v.$red-bg-color;
+}
+
+.yp {
+  background-color: v.$blue-bg-color;
+}
+
+.yn {
+  background-color: v.$green-bg-color;
 }
 
 /* nav */
@@ -500,7 +596,7 @@ nav {
     flex-shrink: 1;
     flex-grow: 1;
 
-  .dropdown-menu {
+    .dropdown-menu {
       width: 100%;
       height: fit-content;
       position: absolute;
@@ -509,7 +605,7 @@ nav {
       flex-direction: column;
       overflow: hidden;
       visibility: hidden;
-      transition:visibility 0.5s linear ;
+      transition: visibility 0.5s linear;
 
       @include v.phone-width {
         position: static;
@@ -520,15 +616,15 @@ nav {
         padding: 4px 0;
         margin-bottom: 5px;
         transform: translateY(-150px);
-        transition: transform .5s cubic-bezier(.74,-0.23,.4,.88);
-      
+        transition: transform .5s cubic-bezier(.74, -0.23, .4, .88);
+
         &:nth-of-type(odd) {
           background-color: v.$primary;
         }
 
         &:nth-of-type(even) {
           background-color: v.$font-secondary;
-        } 
+        }
 
         a {
           color: v.$font-primary;
@@ -548,8 +644,9 @@ nav {
 
       &:hover {
         & .dropdown-menu {
-          visibility:visible;
-          li{
+          visibility: visible;
+
+          li {
             transform: translateY(0);
             opacity: 1;
           }
@@ -638,7 +735,7 @@ nav {
         height: 0;
         overflow: hidden;
         width: 100%;
-        transition: height 0.3s cubic-bezier(.6,-0.3,.4,.88);
+        transition: height 0.3s cubic-bezier(.6, -0.3, .4, .88);
 
         hr {
           width: 85%;
@@ -713,7 +810,7 @@ nav {
       background-color: transparent;
 
       .account-sub {
-        transition: height 0.3s cubic-bezier(.6,-0.3,.4,.88) 1s;
+        transition: height 0.3s cubic-bezier(.6, -0.3, .4, .88) 1s;
         height: 0;
 
         hr {
@@ -823,7 +920,7 @@ nav {
     }
   }
 
-  .sub-title{
+  .sub-title {
     margin-bottom: 15px;
     font-size: 1.1rem;
     @extend %weight600;
@@ -866,32 +963,39 @@ nav {
       display: flex;
       flex-wrap: wrap;
 
-      .row{width: 100%;margin-bottom: 15px;}
-      .icon-row{
+      .row {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+
+      .icon-row {
         position: relative;
-        input{
+
+        input {
           padding-left: 60px;
           color: v.$font-primary;
         }
-        .material-icons{
+
+        .material-icons {
           position: absolute;
           left: 15px;
           top: 35px;
-          color:v.$bg-color;
+          color: v.$bg-color;
           font-size: 30px;
           cursor: pointer;
-          &.pwd-on{
+
+          &.pwd-on {
             color: #C7BA9B;
           }
         }
       }
-      
+
 
       .row-1 {
         @include v.row-width(10%);
 
         @include v.pad-width {
-          flex-basis: 50%; 
+          flex-basis: 50%;
         }
 
         @include v.phone-width {
@@ -929,6 +1033,7 @@ nav {
           flex-basis: 100%;
         }
       }
+
       .row-3-1 {
         @include v.row-width(33.33%);
 
@@ -981,6 +1086,7 @@ nav {
         @include v.row-width(80%);
       }
 
+
       .row-9 {
         @include v.row-width(90%);
       }
@@ -991,16 +1097,16 @@ nav {
       display: inline-flex;
       margin-bottom: 30px;
 
-      .actions-btn{
+      .actions-btn {
         border-radius: 5px;
         cursor: pointer;
         border: 1px solid v.$yellow-bg-color;
         color: v.$yellow-bg-color;
-        padding: 10px 3em; 
+        padding: 10px 3em;
         text-align: center;
         margin-right: 20px;
-        
-      
+
+
         &.active {
           @extend %weight600;
           color: v.$secondary;
@@ -1011,11 +1117,27 @@ nav {
   }
 }
 
+.actionbtn {
+  text-align: center;
+  margin-top: 50px;
+
+  button,div{
+    width: 100%; 
+    padding: 10px 30px;
+    color: #fff;
+    @extend %weight600;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
 footer {
   background-color: #0f0f0f;
   color: v.$font-primary;
 
-  img{flex: 0;}
+  img {
+    flex: 0;
+  }
 
   &>div {
     max-width: v.$max-width;
@@ -1113,10 +1235,15 @@ footer {
     @extend %weight600;
   }
 
-  input{background: #e2e2e2;color: v.$secondary;}
+  input {
+    background: #e2e2e2;
+    color: v.$secondary;
+    padding: 0 10px;
+  }
 
   .modal-info {
     padding: 25px 4vw;
+
     .row:not(:last-of-type) {
       margin-bottom: 15px;
 
@@ -1133,26 +1260,20 @@ footer {
       }
     }
 
-    .submmitbtn {
-      text-align: center;
-      margin-top: 80px;
-
+    .actionbtn {
       button {
-        width: 100%;
-        padding: 10px 0;
         background-color: #006EBD;
-        color: #fff;
-        @extend %weight600;
         border: 1px solid #125578;
-        border-radius: 5px;
       }
-
       a {
         color: v.$primary;
       }
     }
   }
 
+  ::placeholder {
+    color: v.$font-secondary;
+  }
 }
 
 /*closing*/
@@ -1254,66 +1375,9 @@ footer {
 
 
 
-/* other share */
-:focus{outline-width: 0px;}
-::placeholder{color: #8181817a;}
-.hide{display: none;}
-.s-font{font-size: 0.9rem;}
-.xs-font{font-size: 0.8rem;}
-.l-font {
-  font-size: 1.4rem;
-}  
-.material-icons {
-  vertical-align: sub;
-}
-.hr-line {
-  width: 50px;
-  margin-left: 0;
-  height: 1px;
-  background-color: v.$primary;
-  border: none;
-  margin: 1.3em 0;
-}
-.mul-ellipsis-4 {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-inline-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-}
-.mul-ellipsis-3 {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-}
 
-.ellipsis {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
 
-.y12 {
-  background-color: v.$yellow-bg-color;
-}
 
-.y15 {
-  background-color: v.$orange-bg-color;
-}
-
-.R {
-  background-color: v.$red-bg-color;
-}
-
-.yp {
-  background-color: v.$blue-bg-color;
-}
-
-.yn {
-  background-color: v.$green-bg-color;
-}
 
 //for youtube rwd
 @include v.pad-width {

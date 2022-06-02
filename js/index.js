@@ -88,7 +88,7 @@ const app = Vue.createApp({
                 </div>
               </div>
             </div>
-            <div class="row submmitbtn">
+            <div class="row actionbtn">
               <button type="submit">LOGIN</button>
               <a href="#regist" class="xs-font">尚未申請帳號！馬上註冊!</a>
             </div>
@@ -127,7 +127,7 @@ const app = Vue.createApp({
                 <span class="checkmark"></span>
               </label>
             </div>
-            <div class="row submmitbtn">
+            <div class="row actionbtn">
               <button type="submit">REGISTER</button>
               <a href="#login" class="xs-font">已有帳號！馬上登入!</a>
             </div>
@@ -226,7 +226,6 @@ $(function () {
 
   // show/hide PWD
   $eye.on('click', function (e) {
-    console.log(e.target.innerText, this)
     let isHide = e.target.innerText
     if (isHide === 'visibility'){
       e.target.innerText = 'visibility_off'

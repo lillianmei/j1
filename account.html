@@ -29,42 +29,83 @@
           <button class="tab-item actions-btn" id="tab2">修改密碼</button>
         </div>
         <div class="tab-container">
-          <div class="tab-content"  data-id="tab1">
-            <div class="content-row">
-            <div class="row-right row-5">
-              <div class="row">
-                <label for="loginid">帳號（電子郵件信箱）</label>
-                <input type="text" id="loginid" placeholder="aaabbb@gmail.com">
+          <div class="tab-content" data-id="tab1">
+            <form action="">
+              <div class="content-row">
+                <div class="row-left row-5">
+                  <div class="row">
+                    <label for="username">會員姓名</label>
+                    <input type="text" id="username">
+                  </div>
+                  <div class="row">
+                    <label for="gender">會員性別</label>
+                    <select required>
+                      <option value="none" selected>SELECT YOUR GENDER</option>
+                      <option value="man">男</option>
+                      <option value="female">女</option>
+                    </select>
+                  </div>
+                  <div class="row">
+                    <label for="email">電子信箱</label>
+                    <input type="email" id="email" placeholder="welcometobroadway@gmail.com">
+                  </div>
+                  <div class="row">
+                    <label for="phone">行動電話</label>
+                    <input type="number" id="phone" placeholder="09123456789">
+                  </div>
+                </div>
+                <div class="row-right row-5">
+                  <div class="row">
+                    <label for="nickname">使用者暱稱</label>
+                    <input type="text" id="nickname">
+                  </div>
+                  <div class="row">
+                    <label for="gender">出生日期</label>
+                    <input type="date">
+                  </div>
+                  <div class="row actionbtn">
+                    <button type="button">儲存修改密</button>
+                    <div>儲存修改密碼 <span class="material-icons">
+                            lock_outline
+                          </span></div>
+                  </div>
+                  <div class="row actionbtn">
+                    <button type="submit">儲存修改密碼 <span class="material-icons">
+                        lock_outline
+                      </span></button>
+                  </div>
+                </div>
               </div>
-            </div>
+            </form>
           </div>
-        </div>
-          <div class="tab-content" data-id="tab2">
+          <div class="tab-content hide" data-id="tab2">
             <div class="content-row">
               <form action="">
-                      <div class="row icon-row">
-                        <label for="currentpwd">目前密碼</label>
-                        <span class="material-icons pwd-eye pwd-on">
-                          visibility
-                        </span>
-                        <input type="text" id="currentpwd" placeholder="0123456789">
-                      </div>
-                      <div class="row icon-row">
-                        <label for="changepwd">變更密碼</label>
-                        <span class="material-icons pwd-eye">
-                          visibility_off
-                        </span>
-                        <input type="password" id="changepwd" placeholder="請輸入6-10位含大小寫英數字">
-                      </div>
-                      <div class="row icon-row">
-                        <label for="reconfirmpwd">確認新密碼</label>
-                        <span class="material-icons pwd-eye">visibility_off
-                        </span>
-                        <input type="password" id="reconfirmpwd" placeholder="請輸入6-10位含大小寫英數字">
-                      </div>
-                      <div class="row submmitbtn">
-                        <button type="submit">儲存修改密碼</button>
-                      </div>
+                <div class="row icon-row">
+                  <label for="currentpwd">目前密碼</label>
+                  <span class="material-icons pwd-eye pwd-on">
+                    visibility
+                  </span>
+                  <input type="text" id="currentpwd" placeholder="0123456789">
+                </div>
+                <div class="row icon-row">
+                  <label for="changepwd">變更密碼</label>
+                  <span class="material-icons pwd-eye">
+                    visibility_off
+                  </span>
+                  <input type="password" id="changepwd" placeholder="請輸入6-10位含大小寫英數字">
+                </div>
+                <div class="row icon-row">
+                  <label for="reconfirmpwd">確認新密碼</label>
+                  <span class="material-icons pwd-eye">visibility_off
+                  </span>
+                  <input type="password" id="reconfirmpwd" placeholder="請輸入6-10位含大小寫英數字">
+                </div>
+                <div class="row actionbtn">
+                  <button type="submit">儲存修改密碼 <span class="material-icons">
+                      lock_outline
+                    </span></button>
+                </div>
               </form>
             </div>
           </div>
@@ -72,9 +113,9 @@
     </section>
   </main>
   <!-- main container -->
-  
+
   <div class="gotop"><span class="material-icons">arrow_drop_up</span></div>
-  
+
   <!-- footer -->
   <bottom-footer></bottom-footer>
 
@@ -84,4 +125,5 @@
   <script src="js/index.js"></script>
 
 </body>
+
 </html>
