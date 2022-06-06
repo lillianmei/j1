@@ -36,7 +36,7 @@ const app = Vue.createApp({
             <li><a class="menu-link" href="#" title="關於影城">關於影城</a></li>
           </ul>
           <!-- login/logout style user-account toggle class 'isUser'/none   -->
-          <div class="user-account">
+          <div class="user-account isUser">
             <div class="user">
               HELLO! <span class="user-name">Yick</span><span class="material-icons"> person </span><span
                 class="material-icons"> menu </span>
@@ -160,7 +160,7 @@ app.mount('#app');
 
 $(function () {
   //ladnding page
-  const $landing = document.querySelector('#landing')
+  const $landing = document.querySelector('.landing')
   const $account = document.querySelector('.user-account')
   const $goup = $('.gotop');
   const $tab = $('.tab-item');
@@ -172,19 +172,24 @@ $(function () {
         $('body').addClass('start-scroll')
         setTimeout(function () {
           $('body').removeClass('no-scroll')
-          $('#landing .landing-page').css('display', 'none')
-        }, 1500);
+          $('.landing .landing-page').css('display', 'none')
+        }, 1800);
       }
     });
-    // $('#landing').on('click', function () {
-    //     $('body').addClass('start-scroll')
-    //     setTimeout(function () {
-    //       $('body').removeClass('no-scroll')
-    //       $('#landing h1').css('display', 'none')
-    //       $('#landing .welcome').css('display', 'none')
-    //     }, 800);
-    // })
-  } else {
+    $('.landing').on('click', function () {
+       $('body').addClass('start-scroll')
+       setTimeout(function () {
+         $('body').removeClass('no-scroll')
+         $('.landing .landing-page').css('display', 'none')
+       }, 1800);
+    })
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      $('body').removeClass('no-scroll')
+      setTimeout(function () { $('body').addClass('start-scroll')}, 2500);
+      setTimeout(function () { $('.landing .landing-page').css('display', 'none')}, 4000);
+    }
+  }
+  if (!$landing) {
     $('body').removeClass('no-scroll')
   }
 

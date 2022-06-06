@@ -135,7 +135,7 @@ option,
 input[type=email],
 input[type=date] {
   width: 100%;
-  height: 45px;
+  height: 50px;
   padding: 0 20px;
   border-radius: 5px;
   border: 1px solid #818181;
@@ -400,28 +400,36 @@ li {
 /* other share */
 :focus {
   outline-width: 0px;
+}
+
+input:focus, select:focus {
   -webkit-box-shadow: 0 0 2px 2px rgba(129, 129, 129, 0.337254902);
           box-shadow: 0 0 2px 2px rgba(129, 129, 129, 0.337254902);
 }
 
+input:-internal-autofill-selected {
+  -webkit-box-shadow: 0 0 0px 100px #3a3a3a inset;
+  -webkit-text-fill-color: #Fff;
+}
+
 ::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.4784313725);
+  color: rgba(255, 255, 255, 0.2392156863);
 }
 
 ::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.4784313725);
+  color: rgba(255, 255, 255, 0.2392156863);
 }
 
 :-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.4784313725);
+  color: rgba(255, 255, 255, 0.2392156863);
 }
 
 ::-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.4784313725);
+  color: rgba(255, 255, 255, 0.2392156863);
 }
 
 ::placeholder {
-  color: rgba(255, 255, 255, 0.4784313725);
+  color: rgba(255, 255, 255, 0.2392156863);
 }
 
 .hide {
@@ -498,7 +506,7 @@ li {
 /* nav */
 nav {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   top: 0;
   left: 0;
@@ -991,11 +999,11 @@ nav .input-toggler:checked ~ .sidebar-overlay {
 }
 .section-box .section {
   color: #fff;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 50px auto 50px auto;
 }
 .section-box .section:last-of-type {
-  margin-bottom: 150px;
+  margin-bottom: 200px;
 }
 .section-box .section .content {
   margin: 30px 0;
@@ -1021,7 +1029,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
 .section-box .section .content-row .icon-row .material-icons {
   position: absolute;
   left: 15px;
-  top: 35px;
+  top: 42px;
   color: #282828;
   font-size: 30px;
   cursor: pointer;
@@ -1208,7 +1216,7 @@ footer img {
           flex: 0;
 }
 footer > div {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1319,12 +1327,13 @@ footer > div a img {
 }
 .modal-content label {
   display: block;
-  margin: 3px 0;
+  margin: 0 0 4px 0;
 }
 .modal-content input {
   background: #e2e2e2;
   color: #000;
   padding: 0 10px;
+  height: 45px;
 }
 .modal-content .modal-info {
   padding: 25px 4vw;

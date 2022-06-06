@@ -93,10 +93,10 @@
 </head>
 
 <body class="no-scroll" id="app">
-  <!-- <div id="landing">
+  <div class="landing">
     <div class="landing-page">
       <h1>
-        BROADWAY
+        <span>BROADWAY</span>
         <span>CINEMAS</span>
       </h1>
     </div>
@@ -107,7 +107,7 @@
         <div class="scroller"></div>
       </div>
     </div>
-  </div> -->
+  </div>
   <!-- header -->
   <nav-header></nav-header>
 
@@ -274,7 +274,7 @@
                 <p class="sub-title">
                   看指定電影送限定海報看指定電影送限定海報看指定電影送限定海報看指定電影送限定海報
                 </p>
-                <p class="s-font">
+                <p class="s-font mul-ellipsis-3">
                   訂票觀看蝙蝠俠電影，就能獲的限定套組海報，數量有限請手刀前往。訂票觀看蝙蝠俠電影，就能獲的限定套組海報，數量有限請手刀前往。訂票觀看蝙蝠俠電影，就能獲的限定套組海報，數量有限請手刀前往。訂票觀看蝙蝠俠電影，就能獲的限定套組海報，數量有限請手刀前往。
                 </p>
                 <hr class="hr-line" />
@@ -288,7 +288,7 @@
                 <p class="sub-title">
                   看指定電影送限定海報看指定電影送限定海報看指定電影送限定海報看指定電影送限定海報
                 </p>
-                <p class="s-font">
+                <p class="s-font mul-ellipsis-3">
                   訂票觀看蝙蝠俠電影，就能獲的限定套組海報，數量有限請手刀前往。訂票觀看蝙蝠俠電影，就能獲的限定套組海報，數量有限請手刀前往。訂票觀看蝙蝠俠電影，就能獲的限定套組海報，數量有限請手刀前往。訂票觀看蝙蝠俠電影，就能獲的限定套組海報，數量有限請手刀前往。
                 </p>
                 <hr class="hr-line" />
@@ -320,6 +320,10 @@
       pagination: {
         el: ".dot",
         clickable: true,
+      },
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
       },
       navigation: {
         nextEl: ".swiper-button-next",
