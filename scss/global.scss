@@ -334,7 +334,29 @@ li {
   list-style: none;
 }
 
-@keyframes fadeIn {
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-o-keyframes fadeIn {
   from {
     opacity: 0;
     transform: translate3d(0, -100%, 0);
@@ -491,6 +513,9 @@ nav {
       background: v.$primary;
       margin: 0 0 8px 0px;
       position: relative;
+      -webkit-transition: all 0.35s ease-out;
+      -moz-transition: all 0.35s ease-out;
+      -o-transition: all 0.35s ease-out;
       transition: all 0.35s ease-out;
     }
   }
@@ -524,7 +549,10 @@ nav {
       bottom: 0;
       opacity: 0;
       display: none;
-      transition: all 0.45s ease-out;
+      -webkit-transition: all 0.45s ease-out;
+      -moz-transition: all 0.45s ease-out;
+      -o-transition: all 0.45s ease-out;
+      transition: all 0.45s ease-out; 
       z-index: 999;
     }
 
@@ -610,7 +638,7 @@ nav {
       flex-direction: column;
       overflow: hidden;
       visibility: hidden;
-      transition: visibility 0.5s linear;
+      transition: visibility 0.5s linear; 
 
       @include v.phone-width {
         position: static;

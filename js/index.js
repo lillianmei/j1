@@ -234,12 +234,12 @@ $(function () {
     let isHide = e.target.innerText
     if (isHide === 'visibility'){
       e.target.innerText = 'visibility_off'
-      e.target.classList.add('pwd-on')
+      e.target.classList.remove('pwd-on')
       $(this).next().attr('type','password')
     }
     if (isHide === 'visibility_off') {
       e.target.innerText = 'visibility'
-      e.target.classList.remove('pwd-on')
+      e.target.classList.add('pwd-on')
       $(this).next().attr('type', 'text')
     }
   })
