@@ -58,17 +58,26 @@
 .landing h1 span {
   display: block;
 }
-.landing h1 span:first-of-type {
-  -webkit-animation: fontSlideY 1s cubic-bezier(0.74, -0.23, 0.4, 0.88);
-          animation: fontSlideY 1s cubic-bezier(0.74, -0.23, 0.4, 0.88);
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+.landing h1 .block-reveal {
+  --t: calc(var(--td) + var(--d));
+  color: transparent;
+  padding: 4px;
+  position: relative;
+  overflow: hidden;
+  -webkit-animation: revealBlock 0s var(--t) forwards;
+          animation: revealBlock 0s var(--t) forwards;
 }
-.landing h1 span:nth-of-type(2) {
-  -webkit-animation: fontSlideY2 1s cubic-bezier(0.74, -0.23, 0.4, 0.88);
-          animation: fontSlideY2 1s cubic-bezier(0.74, -0.23, 0.4, 0.88);
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+.landing h1 .block-reveal::after {
+  content: "";
+  width: 0%;
+  height: 100%;
+  padding-bottom: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--bc);
+  -webkit-animation: revealingIn var(--td) var(--d) forwards, revealingOut var(--td) var(--t) forwards;
+          animation: revealingIn var(--td) var(--d) forwards, revealingOut var(--td) var(--t) forwards;
 }
 .landing .welcome {
   width: 224px;
@@ -78,8 +87,8 @@
   bottom: 13vh;
   left: 13vw;
   opacity: 0;
-  -webkit-animation: opacity 1.5s linear;
-          animation: opacity 1.5s linear;
+  -webkit-animation: opacity 1.5s linear 1s;
+          animation: opacity 1.5s linear 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -155,22 +164,16 @@
   -webkit-transform: translate3d(0, -100%, 0);
           transform: translate3d(0, -100%, 0);
   opacity: 0;
-  -webkit-transition: opacity 0.5s linear 1.2s, -webkit-transform 1s cubic-bezier(0.87, -0.01, 0.68, 0.85) 0.3s;
-  transition: opacity 0.5s linear 1.2s, -webkit-transform 1s cubic-bezier(0.87, -0.01, 0.68, 0.85) 0.3s;
-  transition: transform 1s cubic-bezier(0.87, -0.01, 0.68, 0.85) 0.3s, opacity 0.5s linear 1.2s;
-  transition: transform 1s cubic-bezier(0.87, -0.01, 0.68, 0.85) 0.3s, opacity 0.5s linear 1.2s, -webkit-transform 1s cubic-bezier(0.87, -0.01, 0.68, 0.85) 0.3s;
+  -webkit-transition: opacity 0.5s linear 1s, -webkit-transform 1s cubic-bezier(0.87, -0.01, 0.68, 0.85) 0.3s;
+  transition: opacity 0.5s linear 1s, -webkit-transform 1s cubic-bezier(0.87, -0.01, 0.68, 0.85) 0.3s;
+  transition: transform 1s cubic-bezier(0.87, -0.01, 0.68, 0.85) 0.3s, opacity 0.5s linear 1s;
+  transition: transform 1s cubic-bezier(0.87, -0.01, 0.68, 0.85) 0.3s, opacity 0.5s linear 1s, -webkit-transform 1s cubic-bezier(0.87, -0.01, 0.68, 0.85) 0.3s;
   -webkit-transform-origin: top center;
           transform-origin: top center;
 }
-.start-scroll .landing h1 span:first-of-type {
-  -webkit-animation: fontSlideYR 0.8s cubic-bezier(0.74, -0.23, 0.4, 0.88);
-          animation: fontSlideYR 0.8s cubic-bezier(0.74, -0.23, 0.4, 0.88);
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-.start-scroll .landing h1 span:nth-of-type(2) {
-  -webkit-animation: fontSlideY2R 0.8s cubic-bezier(0.74, -0.23, 0.4, 0.88);
-          animation: fontSlideY2R 0.8s cubic-bezier(0.74, -0.23, 0.4, 0.88);
+.start-scroll .landing h1 {
+  -webkit-animation: opacityR 0.8s cubic-bezier(0.74, -0.23, 0.4, 0.88);
+          animation: opacityR 0.8s cubic-bezier(0.74, -0.23, 0.4, 0.88);
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -728,5 +731,51 @@
   }
   100% {
     opacity: 0;
+  }
+}
+@-webkit-keyframes revealBlock {
+  100% {
+    color: #fff;
+  }
+}
+@keyframes revealBlock {
+  100% {
+    color: #fff;
+  }
+}
+@-webkit-keyframes revealingIn {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes revealingIn {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-webkit-keyframes revealingOut {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+@keyframes revealingOut {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
   }
 }

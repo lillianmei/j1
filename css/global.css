@@ -351,38 +351,7 @@ ul,
 li {
   list-style: none;
 }
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-            transform: translate3d(0, -100%, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-  }
-}
-@-webkit-keyframes boxHeight {
-  from {
-    opacity: 0;
-    height: 0;
-  }
-  to {
-    opacity: 1;
-    height: 123px;
-  }
-}
-@keyframes boxHeight {
-  from {
-    opacity: 0;
-    height: 0;
-  }
-  to {
-    opacity: 1;
-    height: 123px;
-  }
-}
+
 /* other share */
 :focus {
   outline-width: 0px;

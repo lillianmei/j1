@@ -89,15 +89,16 @@
     .swiper-lazy-preloader-white {
       opacity: 0.5;
     }
+
   </style>
 </head>
 
 <body class="no-scroll" id="app">
   <div class="landing">
     <div class="landing-page">
-      <h1>
-        <span>BROADWAY</span>
-        <span>CINEMAS</span>
+      <h1 style="--td: 1.2s">
+        <span class="block-reveal" style="--bc: #C53932; --d: .1s">BROADWAY</span>
+        <span class="block-reveal" style="--bc: #000; --d: .5s">CINEMAS</span>
       </h1>
     </div>
 
@@ -320,10 +321,6 @@
       pagination: {
         el: ".dot",
         clickable: true,
-      },
-      autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
       },
       navigation: {
         nextEl: ".swiper-button-next",
