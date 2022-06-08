@@ -185,8 +185,8 @@ $(function () {
     })
     if (window.matchMedia("(max-width: 768px)").matches) {
       $('body').removeClass('no-scroll')
-      setTimeout(function () { $('body').addClass('start-scroll')}, 2500);
-      setTimeout(function () { $('.landing .landing-page').css('display', 'none')}, 4000);
+      setTimeout(function () { $('body').addClass('start-scroll')}, 3000);
+      setTimeout(function () { $('.landing .landing-page').css('display', 'none')}, 5000);
     }
   }
   if (!$landing) {
