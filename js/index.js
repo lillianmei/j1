@@ -168,7 +168,7 @@ $(function () {
   const $eye = $('.pwd-eye');
 
   if ($landing) {
-    $(window).on('mousewheel', function (e) {
+    $(window).on('mousewheel DOMMouseScroll', function (e) {
       if (e) {
         $body.classList.add('start-scroll')
 
@@ -178,19 +178,11 @@ $(function () {
         }, 1500);
       }
     });
-    $(window).on('click', function () {
-        $body.classList.add('start-scroll')
-
-       setTimeout(function () {
-          $body.classList.remove('no-scroll')
-         $landing.style.display = 'none'
-       }, 1500);
-    })
     if (window.matchMedia("(max-width: 768px)").matches) {
       $body.classList.add('start-scroll')
-      
+
       setTimeout(function () {
-            $body.classList.add('start-scroll')
+            $body.classList.remove('start-scroll')
       }, 3000);
       setTimeout(function () {
         $landing.style.display = 'none'

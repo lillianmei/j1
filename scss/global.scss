@@ -235,13 +235,15 @@ button::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
+  box-shadow: 0 0 2px 2px #81818156;
 }
 
 button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
+  outline: 0px dotted ButtonText;
+  box-shadow: 0 0 2px 2px #81818156;
 }
 
 fieldset {
@@ -337,6 +339,9 @@ li {
 /* other share */
 :focus {
   outline-width: 0px;
+} 
+:-moz-focusring {
+  outline: 2px dotted #81818156;
 }
 input:focus,select:focus{
   box-shadow: 0 0 2px 2px #81818156;
