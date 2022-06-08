@@ -5,9 +5,8 @@
   width: 100%;
   z-index: 99999;
   position: fixed;
-  transform: translateY(0);
-  transition: transform 1s ease 0.8s;
-
+  opacity: 1;
+  transition: opacity 1s ease 0.8s;
 
   .landing-page {
     height: 100vh;
@@ -15,7 +14,7 @@
     display: flex;
     align-items: center;
     background-color: #000;
-    background-image: url(https://picsum.photos/1920/500);
+    // background-image: url(https://picsum.photos/1920/500);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -154,7 +153,8 @@
 //for index landing animation
 .start-scroll {
   .landing {
-    transform: translateY(-100%);
+    opacity: 0.1;
+
     .landing-page {
       // transform: translate3d(0, -100%, 0);
       // transition: transform 1s cubic-bezier(0.87, -0.01, 0.68, 0.85) 0.3s;
@@ -700,22 +700,22 @@
 
 @keyframes revealingIn {
 
-  0% {
+  from {
     width: 0;
   }
 
-  100% {
+  to {
     width: 100%;
   }
 }
 
 @keyframes revealingOut {
 
-  0% {
+  from{
     transform: translateX(0);
   }
 
-  100% {
+  to {
     transform: translateX(100%);
   }
 }

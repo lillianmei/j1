@@ -14,12 +14,9 @@
   width: 100%;
   z-index: 99999;
   position: fixed;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  -webkit-transition: -webkit-transform 1s ease 0.8s;
-  transition: -webkit-transform 1s ease 0.8s;
-  transition: transform 1s ease 0.8s;
-  transition: transform 1s ease 0.8s, -webkit-transform 1s ease 0.8s;
+  opacity: 1;
+  -webkit-transition: opacity 1s ease 0.8s;
+  transition: opacity 1s ease 0.8s;
 }
 .landing .landing-page {
   height: 100vh;
@@ -31,7 +28,6 @@
       -ms-flex-align: center;
           align-items: center;
   background-color: #000;
-  background-image: url(https://picsum.photos/1920/500);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -164,8 +160,7 @@
 }
 
 .start-scroll .landing {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  opacity: 0.1;
 }
 .start-scroll .landing h1 {
   -webkit-animation: opacityR 0.8s cubic-bezier(0.74, -0.23, 0.4, 0.88);
@@ -740,37 +735,37 @@
   }
 }
 @-webkit-keyframes revealingIn {
-  0% {
+  from {
     width: 0;
   }
-  100% {
+  to {
     width: 100%;
   }
 }
 @keyframes revealingIn {
-  0% {
+  from {
     width: 0;
   }
-  100% {
+  to {
     width: 100%;
   }
 }
 @-webkit-keyframes revealingOut {
-  0% {
+  from {
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
-  100% {
+  to {
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
   }
 }
 @keyframes revealingOut {
-  0% {
+  from {
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
-  100% {
+  to {
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
   }

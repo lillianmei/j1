@@ -177,7 +177,7 @@ $(function () {
         }, 1800);
       }
     });
-    $('.landing').on('click', function () {
+    $(window).on('click', function () {
        $('body').addClass('start-scroll')
        setTimeout(function () {
          $('body').removeClass('no-scroll')
