@@ -162,6 +162,7 @@ $(function () {
   //ladnding page
   const $landing = document.querySelector('.landing')
   const $account = document.querySelector('.user-account')
+  const $body = document.querySelector('body')
   const $goup = $('.gotop');
   const $tab = $('.tab-item');
   const $eye = $('.pwd-eye');
@@ -169,25 +170,31 @@ $(function () {
   if ($landing) {
     $(window).on('mousewheel', function (e) {
       if (e) {
-        $('body').addClass('start-scroll')
-        $landing
+        $body.classList.add('start-scroll')
+
         setTimeout(function () {
-          $('body').removeClass('no-scroll')
-          // $('.landing .landing-page').css('display', 'none')
-        }, 1800);
+          $body.classList.remove('no-scroll')
+          $landing.style.display = 'none'
+        }, 1500);
       }
     });
     $(window).on('click', function () {
-       $('body').addClass('start-scroll')
+        $body.classList.add('start-scroll')
+
        setTimeout(function () {
-         $('body').removeClass('no-scroll')
-         $('.landing .landing-page').css('display', 'none')
-       }, 1800);
+          $body.classList.remove('no-scroll')
+         $landing.style.display = 'none'
+       }, 1500);
     })
     if (window.matchMedia("(max-width: 768px)").matches) {
-      $('body').removeClass('no-scroll')
-      setTimeout(function () { $('body').addClass('start-scroll')}, 3000);
-      // setTimeout(function () { $('.landing .landing-page').css('display', 'none')}, 5000);
+      $body.classList.add('start-scroll')
+      
+      setTimeout(function () {
+            $body.classList.add('start-scroll')
+      }, 3000);
+      setTimeout(function () {
+        $landing.style.display = 'none'
+      }, 5000);
     }
   }
   if (!$landing) {
