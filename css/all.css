@@ -14,6 +14,9 @@
   width: 100%;
   z-index: 99999;
   position: fixed;
+  opacity: 1;
+  -webkit-transition: opacity 1s ease 0.8s;
+  transition: opacity 1s ease 0.8s;
 }
 .landing .landing-page {
   height: 100vh;
@@ -160,15 +163,8 @@
   }
 }
 
-.start-scroll .landing .landing-page {
-  -webkit-transform: translate3d(0, -100%, 0);
-          transform: translate3d(0, -100%, 0);
-  -webkit-transition: -webkit-transform 1s cubic-bezier(0.87, -0.01, 0.68, 0.85) 0.3s;
-  transition: -webkit-transform 1s cubic-bezier(0.87, -0.01, 0.68, 0.85) 0.3s;
-  transition: transform 1s cubic-bezier(0.87, -0.01, 0.68, 0.85) 0.3s;
-  transition: transform 1s cubic-bezier(0.87, -0.01, 0.68, 0.85) 0.3s, -webkit-transform 1s cubic-bezier(0.87, -0.01, 0.68, 0.85) 0.3s;
-  -webkit-transform-origin: top center;
-          transform-origin: top center;
+.start-scroll .landing {
+  opacity: 0;
 }
 .start-scroll .landing h1 {
   -webkit-animation: opacityR 0.8s cubic-bezier(0.74, -0.23, 0.4, 0.88);
