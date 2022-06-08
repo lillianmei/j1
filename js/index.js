@@ -168,29 +168,24 @@ $(function () {
   const $eye = $('.pwd-eye');
 
   if ($landing) {
-    $(window).on('mousewheel wheel', function (e) {
+    $(window).on('mousewheel', function (e) {
       if (e) {
         $body.classList.add('start-scroll')
 
         setTimeout(function () {
           $body.classList.remove('no-scroll')
           $landing.style.display = 'none'
-        }, 1500);
+        }, 2000);
       }
     });
     if (window.matchMedia("(max-width: 768px)").matches) {
-      $body.classList.add('start-scroll')
-
-      setTimeout(function () {
-            $body.classList.remove('start-scroll')
-      }, 3000);
-      setTimeout(function () {
-        $landing.style.display = 'none'
-      }, 5000);
+      setTimeout(function () {$body.classList.add('start-scroll')},3000)
+      setTimeout(function () {$body.classList.remove('no-scroll')}, 4000);
+      setTimeout(function () {$landing.style.display = 'none'}, 5000);
     }
   }
   if (!$landing) {
-    $('body').removeClass('no-scroll')
+    $body.classList.remove('no-scroll')
   }
 
   //account hover效果
@@ -229,7 +224,7 @@ $(function () {
    $(`.tab-content[data-id='${e.target.id}']`).removeClass('hide')
   })
 
-  // show/hide PWD
+  // show or hide PWD
   $eye.on('click', function (e) {
     let isHide = e.target.innerText
     if (isHide === 'visibility'){

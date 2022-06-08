@@ -14,9 +14,6 @@
   width: 100%;
   z-index: 99999;
   position: fixed;
-  opacity: 1;
-  -webkit-transition: opacity 1s ease 0.8s;
-  transition: opacity 1s ease 0.8s;
 }
 .landing .landing-page {
   height: 100vh;
@@ -160,17 +157,21 @@
 }
 
 .start-scroll .landing {
-  opacity: 0.1;
+  -webkit-animation: opacityR 1s linear 1.2s;
+          animation: opacityR 1s linear 1.2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 .start-scroll .landing h1 {
-  -webkit-animation: opacityR 0.8s cubic-bezier(0.74, -0.23, 0.4, 0.88);
-          animation: opacityR 0.8s cubic-bezier(0.74, -0.23, 0.4, 0.88);
+  -webkit-animation: opacityR 1s linear;
+          animation: opacityR 1s linear;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 .start-scroll .landing .welcome {
-  -webkit-animation: opacityR 0.8s cubic-bezier(0.74, -0.23, 0.4, 0.88);
-          animation: opacityR 0.8s cubic-bezier(0.74, -0.23, 0.4, 0.88);
+  opacity: 1;
+  -webkit-animation: opacityR 1s linear;
+          animation: opacityR 1s linear;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -597,34 +598,34 @@
   }
 }
 @-webkit-keyframes opacity {
-  0% {
+  from {
     opacity: 0;
   }
-  100% {
+  to {
     opacity: 1;
   }
 }
 @keyframes opacity {
-  0% {
+  from {
     opacity: 0;
   }
-  100% {
+  to {
     opacity: 1;
   }
 }
 @-webkit-keyframes opacityR {
-  0% {
+  from {
     opacity: 1;
   }
-  100% {
+  to {
     opacity: 0;
   }
 }
 @keyframes opacityR {
-  0% {
+  from {
     opacity: 1;
   }
-  100% {
+  to {
     opacity: 0;
   }
 }

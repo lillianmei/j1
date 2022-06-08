@@ -5,8 +5,6 @@
   width: 100%;
   z-index: 99999;
   position: fixed;
-  opacity: 1;
-  transition: opacity 1s ease 0.8s;
 
   .landing-page {
     height: 100vh;
@@ -139,15 +137,17 @@
 //for homepage landing animation
 .start-scroll {
   .landing {
-    opacity: 0.1;
+    animation: opacityR 1s linear 1.2s;
+    animation-fill-mode: forwards;
 
-    h1 {
-      animation: opacityR 0.8s cubic-bezier(.74, -0.23, .4, .88);
+    h1{
+      animation: opacityR 1s linear;
       animation-fill-mode: forwards;
     }
-
+  
     .welcome {
-      animation: opacityR 0.8s cubic-bezier(.74, -0.23, .4, .88);
+      opacity: 1;
+      animation: opacityR 1s linear;
       animation-fill-mode: forwards;
     }
   }
@@ -604,21 +604,21 @@
 }
 
 @keyframes opacity {
-  0% {
+  from {
     opacity: 0;
   }
 
-  100% {
+  to {
     opacity: 1;
   }
 }
 
 @keyframes opacityR {
-  0% {
+  from {
     opacity: 1;
   }
 
-  100% {
+  to {
     opacity: 0;
   }
 }
