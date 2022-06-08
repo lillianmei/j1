@@ -14,9 +14,12 @@
   width: 100%;
   z-index: 99999;
   position: fixed;
-  opacity: 1;
-  -webkit-transition: opacity 1s ease 0.8s;
-  transition: opacity 1s ease 0.8s;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: -webkit-transform 1s ease 0.8s;
+  transition: -webkit-transform 1s ease 0.8s;
+  transition: transform 1s ease 0.8s;
+  transition: transform 1s ease 0.8s, -webkit-transform 1s ease 0.8s;
 }
 .landing .landing-page {
   height: 100vh;
@@ -57,9 +60,6 @@
   .landing h1 {
     font-size: 2rem;
   }
-}
-.landing h1 span {
-  display: block;
 }
 .landing h1 .block-reveal {
   --t: calc(var(--td) + var(--d));
@@ -164,7 +164,8 @@
 }
 
 .start-scroll .landing {
-  opacity: 0;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 .start-scroll .landing h1 {
   -webkit-animation: opacityR 0.8s cubic-bezier(0.74, -0.23, 0.4, 0.88);

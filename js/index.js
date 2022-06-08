@@ -170,6 +170,7 @@ $(function () {
     $(window).on('mousewheel', function (e) {
       if (e) {
         $('body').addClass('start-scroll')
+        $landing
         setTimeout(function () {
           $('body').removeClass('no-scroll')
           // $('.landing .landing-page').css('display', 'none')
