@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>BROADWAY CINEMAS - 百老匯影城</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="css/global.min.css" />
+  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/all.min.css" />
+  <style>
+    .block-effect {
+  font-size: calc(8px + 6vw);
+}
+
+.block-reveal {
+  --t: calc(var(--td) + var(--d));
+
+  color: transparent;
+  padding: 4px;
+
+  position: relative;
+  overflow: hidden;
+
+  animation: revealBlock 0s var(--t) forwards;
+}
+
+.block-reveal::after {
+  content: '';
+
+  width: 0%;
+  height: 100%;
+  padding-bottom: 4px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background: var(--bc);
+  animation: revealingIn var(--td) var(--d) forwards, revealingOut var(--td) var(--t) forwards;
+}
+
+
+/* animations */
+@keyframes revealBlock {
+  100% {
+    color: #0f0f0f;
+  }
+}
+
+@keyframes revealingIn {
+
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes revealingOut {
+
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+
+}
+  </style>
+</head>
+
+<body class="no-scroll" id="app">
+  
+  <h1 class="block-effect" style="--td: 1.2s">
+    <div class="block-reveal" style="--bc: #4040bf; --d: .1s">Block</div>
+    <div class="block-reveal" style="--bc: #bf4060; --d: .5s">Revealing Effect</div>
+  </h1>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/vue.js"></script>
+  <script src="js/index.js"></script>
+  <script>
+    const slideSwiper = new Swiper(".s-swiper", {
+      lazy: {
+        loadPrevNext: true,
+      },
+      preloadImages: false,
+      pagination: {
+        el: ".dot",
+        clickable: true,
+      },
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        992: {
+          slidesPerView: "auto",
+          spaceBetween: 10,
+        },
+      },
+    });
+  </script>
+
+</body>
+
+</html>
