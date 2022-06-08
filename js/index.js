@@ -168,7 +168,7 @@ $(function () {
   const $eye = $('.pwd-eye');
 
   if ($landing) {
-    $(window).on('mousewheel DOMMouseScroll', function (e) {
+    $(window).on('mousewheel wheel', function (e) {
       if (e) {
         $body.classList.add('start-scroll')
 
