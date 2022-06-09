@@ -168,7 +168,7 @@ $(function () {
   const $tab = $('.tab-item');
   const $eye = $('.pwd-eye');
   const $time = $('.time');
-  const $weektime = $('.booktime')
+  const $datetime = $('.booktime')
 
   //ladnding page animation
   if ($landing) {
@@ -261,7 +261,7 @@ $(function () {
   }
 
   // 選取時刻表效果
-  $weektime.on('click', function () {
+  $datetime.on('click', function () {
     $(this).siblings().removeClass('active')
     $(this).addClass('active')
   })

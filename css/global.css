@@ -23,7 +23,7 @@ html {
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
-  font-size: 15px;
+  font-size: 14px;
   position: relative;
   background-color: #282828;
   line-height: 1.6;
@@ -43,7 +43,7 @@ html {
 @media all and (min-width: 769px) and (max-width: 991px) {
   body,
 html {
-    display: 16px;
+    display: 15px;
   }
 }
 
@@ -1002,7 +1002,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   font-size: 1.1rem;
 }
 .section-box .movie-title {
-  margin-top: 15px;
+  margin-top: 10px;
   width: 100%;
 }
 .section-box .movie-title span {

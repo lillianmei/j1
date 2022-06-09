@@ -12,7 +12,7 @@ html {
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
-  font-size: 15px;
+  font-size: 14px;
   position: relative;
   background-color: v.$bg-color;
   line-height: 1.6;
@@ -28,7 +28,7 @@ html {
   }
 
   @include v.pad-width {
-    display: 16px;
+    display: 15px;
   }
 }
 
@@ -967,7 +967,7 @@ nav {
   }
 
   .movie-title {
-    margin-top: 15px;
+    margin-top: 10px;
     @extend %weight600;
     width: 100%;
 

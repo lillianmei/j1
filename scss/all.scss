@@ -287,7 +287,6 @@
   .up-date {
     margin: 5px 0 30px 0;
     color: v.$primary;
-    @extend %weight300;
   }
 
   .movie-level {
@@ -316,7 +315,7 @@
 
 
       span {
-        @extend %weight300;
+        font-weight: normal;
         border-left: 1px solid #fff;
         padding-left: 10px;
         margin-left: 10px;
@@ -391,6 +390,7 @@
   }
 
   .movie-title {
+    width: 80%;
     p {
       color: v.$blue-bg-color;
       line-height: 1.3;
@@ -640,7 +640,7 @@
   .timetable{
     display: flex;
     text-align: center;
-    justify-content: space-between;
+    justify-content:flex-start;
     color: #fff;
     flex-wrap: wrap;
     .time{
@@ -650,6 +650,10 @@
       border-radius: 5px;
       cursor: pointer;
       margin-bottom: 15px;
+      margin-right: 13px;
+      &:nth-of-type(5n){
+        margin-right: 0;
+      }
       &.active{ 
         color: v.$secondary;
         border: 1px solid v.$yellow-bg-color;
