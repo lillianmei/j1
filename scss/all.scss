@@ -137,7 +137,7 @@
 //for homepage landing animation
 .start-scroll {
   .landing {
-    animation: opacityR 1s linear 1.2s;
+    animation: opacityR 1s linear 1s;
     animation-fill-mode: forwards;
 
     h1{
@@ -272,7 +272,7 @@
 
 .movie-item {
   &:first-of-type {
-    padding-right: 40px;
+    padding-right: 20px;
 
     @include v.phone-width {
       margin-right: 0;
@@ -285,7 +285,7 @@
   }
 
   .up-date {
-    margin: 10px 0 30px 0;
+    margin: 5px 0 30px 0;
     color: v.$primary;
     @extend %weight300;
   }
@@ -324,7 +324,7 @@
       }
     }
 
-    .list-2 {
+    .list-row {
       width: 100%;
       display: -webkit-inline-box;
 
@@ -575,6 +575,90 @@
     option {
       &[value="none"] {
         color: rgba(255, 255, 255, 0.452);
+      }
+    }
+  }
+}
+
+.booking{
+  .content-row{
+    margin-bottom: 80px;
+  }
+  .row-left{
+    display: flex;
+    padding-right: 15px;
+  }
+  .movie-title{
+    h3{
+      color: v.$blue-bg-color;
+    }
+    span{
+      color: #fff;
+      word-break: break-word;
+    }
+  }
+  .up-date{
+    color: #fff;
+  }
+  .list-row{
+    max-width: 85%;
+  }
+  .weektable{
+    display: flex;
+    justify-content: space-between;
+    .booktime{
+      cursor: pointer;
+      @extend %weight600;
+      span{
+        font-weight: normal;
+        display: block;
+      }
+      &.active{
+        color: v.$yellow-bg-color;
+      }
+    }
+  }
+  .cinema{
+        position: relative;
+        margin: 20px 0;
+    &::after{
+      content: "";
+      display: inline-block;
+      height: 1px;
+      width: 75%;
+      background-color: v.$font-secondary;
+      position: absolute;
+      right: 0;
+      top: 18px;
+    }
+    .material-icons{
+      font-size: 40px;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+  }
+  .timetable{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    color: #fff;
+    flex-wrap: wrap;
+    .time{
+      width: 18%;
+      padding: 5px 0;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-bottom: 15px;
+      &.active{ 
+        color: v.$secondary;
+        border: 1px solid v.$yellow-bg-color;
+        background-color: v.$yellow-bg-color;
+      }
+       &.disable{
+        cursor: not-allowed;
+        color: v.$font-secondary;
+        border: 1px solid v.$font-secondary;
       }
     }
   }

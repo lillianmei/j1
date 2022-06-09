@@ -6,7 +6,7 @@
   font-weight: 400;
 }
 
-.movie-item .list-item > div, .booking-history .ticket-no, .account label, .account .actionbtn button span {
+.movie-item .list-item > div, .booking-history .ticket-no, .account label, .account .actionbtn button span, .booking .weektable .booktime {
   font-weight: 600;
 }
 
@@ -157,8 +157,8 @@
 }
 
 .start-scroll .landing {
-  -webkit-animation: opacityR 1s linear 1.2s;
-          animation: opacityR 1s linear 1.2s;
+  -webkit-animation: opacityR 1s linear 1s;
+          animation: opacityR 1s linear 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -287,7 +287,7 @@
 }
 
 .movie-item:first-of-type {
-  padding-right: 40px;
+  padding-right: 20px;
 }
 @media all and (max-width: 768px) {
   .movie-item:first-of-type {
@@ -299,7 +299,7 @@
   width: 100%;
 }
 .movie-item .up-date {
-  margin: 10px 0 30px 0;
+  margin: 5px 0 30px 0;
   color: #C53932;
 }
 .movie-item .movie-level {
@@ -326,11 +326,11 @@
   margin-left: 10px;
   display: inline-block;
 }
-.movie-item .list-item .list-2 {
+.movie-item .list-item .list-row {
   width: 100%;
   display: -webkit-inline-box;
 }
-.movie-item .list-item .list-2 div {
+.movie-item .list-item .list-row div {
   max-width: 95%;
 }
 
@@ -550,6 +550,96 @@
 }
 .account select option[value=none] {
   color: rgba(255, 255, 255, 0.452);
+}
+
+.booking .content-row {
+  margin-bottom: 80px;
+}
+.booking .row-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 15px;
+}
+.booking .movie-title h3 {
+  color: #00ABF2;
+}
+.booking .movie-title span {
+  color: #fff;
+  word-break: break-word;
+}
+.booking .up-date {
+  color: #fff;
+}
+.booking .list-row {
+  max-width: 85%;
+}
+.booking .weektable {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.booking .weektable .booktime {
+  cursor: pointer;
+}
+.booking .weektable .booktime span {
+  font-weight: normal;
+  display: block;
+}
+.booking .weektable .booktime.active {
+  color: #FCC900;
+}
+.booking .cinema {
+  position: relative;
+  margin: 20px 0;
+}
+.booking .cinema::after {
+  content: "";
+  display: inline-block;
+  height: 1px;
+  width: 75%;
+  background-color: #818181;
+  position: absolute;
+  right: 0;
+  top: 18px;
+}
+.booking .cinema .material-icons {
+  font-size: 40px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.booking .timetable {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #fff;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.booking .timetable .time {
+  width: 18%;
+  padding: 5px 0;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+.booking .timetable .time.active {
+  color: #000;
+  border: 1px solid #FCC900;
+  background-color: #FCC900;
+}
+.booking .timetable .time.disable {
+  cursor: not-allowed;
+  color: #818181;
+  border: 1px solid #818181;
 }
 
 @-webkit-keyframes rotate {

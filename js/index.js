@@ -18,7 +18,7 @@ const app = Vue.createApp({
         <div class="forpc">
           <ul class="menu">
             <li>
-              <a class="menu-link" href="#" title="線上訂票">線上訂票</a>
+              <a class="menu-link" href="book.html" title="線上訂票">線上訂票</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#" title="公館場次查詢">公館場次查詢</a></li>
                 <li><a class="dropdown-item" href="#" title="新竹場次查詢">新竹場次查詢</a></li>
@@ -159,15 +159,18 @@ const app = Vue.createApp({
 app.mount('#app');
 
 $(function () {
-  
+
   const $landing = document.querySelector('.landing')
   const $account = document.querySelector('.user-account')
   const $body = document.querySelector('body')
+  const $datePicker = document.querySelector('#datepicker')
   const $goup = $('.gotop');
   const $tab = $('.tab-item');
   const $eye = $('.pwd-eye');
+  const $time = $('.time');
+  const $weektime = $('.booktime')
 
-  //ladnding page
+  //ladnding page animation
   if ($landing) {
     $(window).on('wheel', function (e) {
       if (e) {
@@ -176,13 +179,19 @@ $(function () {
         setTimeout(function () {
           $body.classList.remove('no-scroll')
           $landing.style.display = 'none'
-        }, 2000);
+        }, 1800);
       }
     });
     if (window.matchMedia("(max-width: 768px)").matches) {
-      setTimeout(function () {$body.classList.add('start-scroll')},3000)
-      setTimeout(function () {$body.classList.remove('no-scroll')}, 4000);
-      setTimeout(function () {$landing.style.display = 'none'}, 5000);
+      setTimeout(function () {
+        $body.classList.add('start-scroll')
+      }, 3000)
+      setTimeout(function () {
+        $body.classList.remove('no-scroll')
+      }, 4000);
+      setTimeout(function () {
+        $landing.style.display = 'none'
+      }, 5500);
     }
   }
   if (!$landing) {
@@ -217,21 +226,22 @@ $(function () {
       scrollTop: 0
     }, 500);
   })
+
   //分頁切換
   $tab.on('click', function (e) {
-   $(this).addClass('active')
-   $(this).siblings().removeClass('active')
-   $(`.tab-content[data-id='${e.target.id}']`).siblings().addClass('hide')
-   $(`.tab-content[data-id='${e.target.id}']`).removeClass('hide')
+    $(this).addClass('active')
+    $(this).siblings().removeClass('active')
+    $(`.tab-content[data-id='${e.target.id}']`).siblings().addClass('hide')
+    $(`.tab-content[data-id='${e.target.id}']`).removeClass('hide')
   })
 
   // show or hide PWD
   $eye.on('click', function (e) {
     let isHide = e.target.innerText
-    if (isHide === 'visibility'){
+    if (isHide === 'visibility') {
       e.target.innerText = 'visibility_off'
       e.target.classList.remove('pwd-on')
-      $(this).next().attr('type','password')
+      $(this).next().attr('type', 'password')
     }
     if (isHide === 'visibility_off') {
       e.target.innerText = 'visibility'
@@ -241,13 +251,25 @@ $(function () {
   })
 
   // jQ datepicker
-  $("#datepicker").datepicker({
-    dateFormat: "yy-mm-dd",
-    changeMonth: true,
-    changeYear: true,
-    yearRange: "1942:2023",
-    autoSize: true
-  });
+  if ($datePicker) {
+    $("#datepicker").datepicker({
+      dateFormat: "yy-mm-dd",
+      changeMonth: true,
+      changeYear: true,
+      yearRange: "1942:2023",
+    });
+  }
+
+  // 選取時刻表效果
+  $weektime.on('click', function () {
+    $(this).siblings().removeClass('active')
+    $(this).addClass('active')
+  })
+  $time.on('click',function () {
+    $(this).siblings().removeClass('active')
+    $(this).addClass('active')
+  })
+
 
 
 });
