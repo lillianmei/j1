@@ -6,8 +6,9 @@
   <title>BROADWAY CINEMAS - 百老匯影城</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  <link rel="stylesheet" href="css/global.min.css" />
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
   <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/global.min.css" />
   <link rel="stylesheet" href="css/all.min.css" />
 
 </head>
@@ -61,8 +62,8 @@
                   </div>
                   <div class="row">
                     <label for="gender">出生日期</label>
-                    <input type="date">
-                  </div>
+                    <input type="text" id="datepicker" placeholder="YYYY/MM/DD" autocomplete="off">
+                  </div> 
                   <div class="row actionbtn">
                     <button type="button">信件尚未驗證 <span>點此發送驗證郵件</span></button>
                     <div>驗證成功 <span class="material-icons">
@@ -119,8 +120,9 @@
   <!-- footer -->
   <bottom-footer></bottom-footer>
 
-
+ 
   <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
   <script src="js/vue.js"></script>
   <script src="js/index.js"></script>
 

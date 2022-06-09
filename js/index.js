@@ -159,7 +159,7 @@ const app = Vue.createApp({
 app.mount('#app');
 
 $(function () {
-  //ladnding page
+  
   const $landing = document.querySelector('.landing')
   const $account = document.querySelector('.user-account')
   const $body = document.querySelector('body')
@@ -167,8 +167,9 @@ $(function () {
   const $tab = $('.tab-item');
   const $eye = $('.pwd-eye');
 
+  //ladnding page
   if ($landing) {
-    $(window).on('mousewheel', function (e) {
+    $(window).on('wheel', function (e) {
       if (e) {
         $body.classList.add('start-scroll')
 
@@ -238,5 +239,15 @@ $(function () {
       $(this).next().attr('type', 'text')
     }
   })
+
+  // jQ datepicker
+  $("#datepicker").datepicker({
+    dateFormat: "yy-mm-dd",
+    changeMonth: true,
+    changeYear: true,
+    yearRange: "1942:2023",
+    autoSize: true
+  });
+
 
 });

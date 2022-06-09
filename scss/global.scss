@@ -425,6 +425,54 @@ input:-internal-autofill-selected{
   background-color: v.$green-bg-color;
 }
 
+// JQ datepicker
+.ui-datepicker-month,.ui-datepicker-year{
+  height: fit-content;
+  border:none;
+  background-color: #3a3a3a;
+}
+.ui-widget-header{
+  background: #3a3a3a;
+}
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next{
+  top: 3px;
+}
+.ui-widget-header .ui-icon{
+  background-image: url('data:image/svg+xml;utf8,<svg width="10" height="13" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.286023 7.03462L8.95386 12.8845C9.05389 12.952 9.17095 12.9915 9.29236 12.9988C9.41377 13.006 9.53492 12.9808 9.64267 12.9258C9.75042 12.8707 9.84067 12.788 9.90365 12.6866C9.96664 12.5851 9.99996 12.4688 10 12.3502V0.65042C10.0001 0.531782 9.96685 0.415385 9.90391 0.313844C9.84098 0.212302 9.75073 0.12949 9.64296 0.074381C9.53519 0.019272 9.414 -0.00603138 9.29253 0.00121319C9.17106 0.00845776 9.05394 0.0479739 8.95386 0.115479L0.286023 5.96538C0.197717 6.02546 0.125599 6.10544 0.0758019 6.19852C0.0260045 6.2916 0 6.39502 0 6.5C0 6.60498 0.0260045 6.7084 0.0758019 6.80148C0.125599 6.89456 0.197717 6.97454 0.286023 7.03462V7.03462Z" fill="white"/></svg>');
+  
+}
+.ui-icon-circle-triangle-e{
+  background-position: 0px 2px;
+  transform: rotate(180deg);
+}
+.ui-icon-circle-triangle-w{
+  background-position: 0px 2px;
+}
+.ui-datepicker-next-hover,.ui-datepicker-prev-hover{
+  background: transparent!important;
+  border:1px solid transparent!important;
+  right: 3px;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{
+  border: 1px solid transparent;
+  background:transparent;
+}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{
+  border: 1px solid #fcc90054;
+  background:#fcc90054;
+  color: #000;
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover{
+    border: 1px solid v.$red-bg-color;
+    background: v.$red-bg-color;
+    color: #fff;
+}
+
+.ui-datepicker td span, .ui-datepicker td a{
+  text-align: center;
+}
+
+
 /* nav */
 nav {
   // position: fixed;
