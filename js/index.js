@@ -182,17 +182,21 @@ $(function () {
         }, 1800);
       }
     });
-    if (window.matchMedia("(max-width: 768px)").matches) {
-      setTimeout(function () {
-        $body.classList.add('start-scroll')
-      }, 3000)
-      setTimeout(function () {
-        $body.classList.remove('no-scroll')
-      }, 4000);
-      setTimeout(function () {
-        $landing.style.display = 'none'
-      }, 5500);
-    }
+    $('.landing').on('click', function () {
+      // $body.classList.add('start-scroll')
+      $('.landing').fadeOut()
+    })
+    // if (window.matchMedia("(max-width: 768px)").matches) {
+    //   setTimeout(function () {
+    //     $body.classList.add('start-scroll')
+    //   }, 3000)
+    //   setTimeout(function () {
+    //     $body.classList.remove('no-scroll')
+    //   }, 4000);
+    //   setTimeout(function () {
+    //     $landing.style.display = 'none'
+    //   }, 5500);
+    // }
   }
   if (!$landing) {
     $body.classList.remove('no-scroll')
