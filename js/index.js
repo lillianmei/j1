@@ -1,6 +1,6 @@
 const app = Vue.createApp({
   components: {
-    'nav-header': {
+    "nav-header": {
       template: `<header>
     <nav id="nav">
       <input type="checkbox" id="toggle" class="input-toggler" />
@@ -136,9 +136,9 @@ const app = Vue.createApp({
         <a href="#" class="close-modal"><span class="material-icons">close</span></a>
       </div>
     </div>
-  </header>`
+  </header>`,
     },
-    'bottom-footer': {
+    "bottom-footer": {
       template: `<footer><div class="footer"><img src="https://fakeimg.pl/250x100/" />
 <div>
   <a href=""><img class="fb" src="image/svg/dashicons_facebook-alt.svg" /></a>
@@ -152,107 +152,96 @@ const app = Vue.createApp({
     Copyright© 2022 Broadway Cinemas All Rights Reserved.
   </div>
 </div></div>
-  </footer>`
-    }
-  }
+  </footer>`,
+    },
+  },
 });
-app.mount('#app');
+app.mount("#app");
 
 $(function () {
-
-  const $landing = document.querySelector('.landing')
-  const $account = document.querySelector('.user-account')
-  const $body = document.querySelector('body')
-  const $datePicker = document.querySelector('#datepicker')
-  const $goup = $('.gotop');
-  const $tab = $('.tab-item');
-  const $eye = $('.pwd-eye');
-  const $time = $('.time');
-  const $datetime = $('.booktime')
+  const $account = document.querySelector(".user-account");
+  const $body = document.querySelector("body");
+  const $datePicker = document.querySelector("#datepicker");
+  const $landing = $(".landing");
+  const $goup = $(".gotop");
+  const $tab = $(".tab-item");
+  const $eye = $(".pwd-eye");
+  const $time = $(".time");
+  const $datetime = $(".booktime");
 
   //ladnding page animation
   if ($landing) {
-    $(window).on('wheel', function (e) {
+    $(window).on("wheel click", function (e) {
       if (e) {
-        $body.classList.add('start-scroll')
-
-        setTimeout(function () {
-          $body.classList.remove('no-scroll')
-          $landing.style.display = 'none'
-        }, 1800);
+        $landing.fadeOut();
+        $body.classList.remove("no-scroll");
       }
     });
-    $('.landing').on('click', function () {
-      // $body.classList.add('start-scroll')
-      $('.landing').fadeOut()
-    })
-    // if (window.matchMedia("(max-width: 768px)").matches) {
-    //   setTimeout(function () {
-    //     $body.classList.add('start-scroll')
-    //   }, 3000)
-    //   setTimeout(function () {
-    //     $body.classList.remove('no-scroll')
-    //   }, 4000);
-    //   setTimeout(function () {
-    //     $landing.style.display = 'none'
-    //   }, 5500);
-    // }
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      setTimeout(function () {
+        $landing.fadeOut();
+        $body.classList.remove("no-scroll");
+      }, 4000);
+    }
   }
   if (!$landing) {
-    $body.classList.remove('no-scroll')
+    $body.classList.remove("no-scroll");
   }
 
   //account hover效果
   if (!$account) return;
-  $account.addEventListener('mouseenter', e => {
-    $account.classList.add('-active')
-    $account.classList.remove('-leave')
-  })
-  $account.addEventListener('mouseleave', e => {
-    $account.classList.remove('-active')
-    $account.classList.add('-leave')
+  $account.addEventListener("mouseenter", (e) => {
+    $account.classList.add("-active");
+    $account.classList.remove("-leave");
+  });
+  $account.addEventListener("mouseleave", (e) => {
+    $account.classList.remove("-active");
+    $account.classList.add("-leave");
   });
 
   //顯示go to top btn
-  $(window).on('scroll', function () {
-    let scrollHeight = 300
+  $(window).on("scroll", function () {
+    let scrollHeight = 300;
     if ($(window).scrollTop() > scrollHeight) {
-      $goup.addClass('show')
+      $goup.addClass("show");
       // $nav.addClass('mini');
     } else {
-      $goup.removeClass('show')
+      $goup.removeClass("show");
       // $nav.removeClass('mini');
     }
-  })
+  });
   //go top
-  $goup.on('click', function () {
-    $('html,body').animate({
-      scrollTop: 0
-    }, 500);
-  })
+  $goup.on("click", function () {
+    $("html,body").animate(
+      {
+        scrollTop: 0,
+      },
+      500
+    );
+  });
 
   //分頁切換
-  $tab.on('click', function (e) {
-    $(this).addClass('active')
-    $(this).siblings().removeClass('active')
-    $(`.tab-content[data-id='${e.target.id}']`).siblings().addClass('hide')
-    $(`.tab-content[data-id='${e.target.id}']`).removeClass('hide')
-  })
+  $tab.on("click", function (e) {
+    $(this).addClass("active");
+    $(this).siblings().removeClass("active");
+    $(`.tab-content[data-id='${e.target.id}']`).siblings().addClass("hide");
+    $(`.tab-content[data-id='${e.target.id}']`).removeClass("hide");
+  });
 
   // show or hide PWD
-  $eye.on('click', function (e) {
-    let isHide = e.target.innerText
-    if (isHide === 'visibility') {
-      e.target.innerText = 'visibility_off'
-      e.target.classList.remove('pwd-on')
-      $(this).next().attr('type', 'password')
+  $eye.on("click", function (e) {
+    let isHide = e.target.innerText;
+    if (isHide === "visibility") {
+      e.target.innerText = "visibility_off";
+      e.target.classList.remove("pwd-on");
+      $(this).next().attr("type", "password");
     }
-    if (isHide === 'visibility_off') {
-      e.target.innerText = 'visibility'
-      e.target.classList.add('pwd-on')
-      $(this).next().attr('type', 'text')
+    if (isHide === "visibility_off") {
+      e.target.innerText = "visibility";
+      e.target.classList.add("pwd-on");
+      $(this).next().attr("type", "text");
     }
-  })
+  });
 
   // jQ datepicker
   if ($datePicker) {
@@ -265,15 +254,12 @@ $(function () {
   }
 
   // 選取時刻表效果
-  $datetime.on('click', function () {
-    $(this).siblings().removeClass('active')
-    $(this).addClass('active')
-  })
-  $time.on('click',function () {
-    $(this).siblings().removeClass('active')
-    $(this).addClass('active')
-  })
-
-
-
+  $datetime.on("click", function () {
+    $(this).siblings().removeClass("active");
+    $(this).addClass("active");
+  });
+  $time.on("click", function () {
+    $(this).siblings().removeClass("active");
+    $(this).addClass("active");
+  });
 });
