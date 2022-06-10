@@ -32,10 +32,12 @@
 
     @include v.phone-width {
       font-size: 3rem;
+      margin-bottom: 60px;
     }
 
     @include v.mini-width {
       font-size: 2rem;
+      margin-bottom: 30px;
     }
 
     .block-reveal {
@@ -134,25 +136,6 @@
   }
 }
 
-//for homepage landing animation
-.start-scroll {
-  .landing {
-    animation: opacityR 1s linear 1s;
-    animation-fill-mode: forwards;
-
-    h1 {
-      animation: opacityR 1s linear;
-      animation-fill-mode: forwards;
-    }
-
-    .welcome {
-      opacity: 1;
-      animation: opacityR 1s linear;
-      animation-fill-mode: forwards;
-    }
-  }
-}
-
 //page style
 .section {
   .showing-list {
@@ -160,7 +143,7 @@
     margin-bottom: 20px;
     position: relative;
     padding: 0 5px;
-
+ 
     a {
       >div {
         @include v.mini-width {

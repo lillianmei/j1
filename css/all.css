@@ -47,11 +47,13 @@
 @media all and (max-width: 768px) {
   .landing h1 {
     font-size: 3rem;
+    margin-bottom: 60px;
   }
 }
 @media all and (max-width: 320px) {
   .landing h1 {
     font-size: 2rem;
+    margin-bottom: 30px;
   }
 }
 .landing h1 .block-reveal {
@@ -154,26 +156,6 @@
   .landing .welcome .mouse .scroller {
     left: 11px;
   }
-}
-
-.start-scroll .landing {
-  -webkit-animation: opacityR 1s linear 1s;
-          animation: opacityR 1s linear 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-.start-scroll .landing h1 {
-  -webkit-animation: opacityR 1s linear;
-          animation: opacityR 1s linear;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-.start-scroll .landing .welcome {
-  opacity: 1;
-  -webkit-animation: opacityR 1s linear;
-          animation: opacityR 1s linear;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
 }
 
 .section .showing-list {
