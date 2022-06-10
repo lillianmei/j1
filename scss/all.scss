@@ -140,11 +140,11 @@
     animation: opacityR 1s linear 1s;
     animation-fill-mode: forwards;
 
-    h1{
+    h1 {
       animation: opacityR 1s linear;
       animation-fill-mode: forwards;
     }
-  
+
     .welcome {
       opacity: 1;
       animation: opacityR 1s linear;
@@ -154,519 +154,742 @@
 }
 
 //page style
-.showing-list {
-  text-align: center;
-  margin-bottom: 20px;
-  position: relative;
-  padding: 0 5px;
+.section {
+  .showing-list {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    padding: 0 5px;
 
-  a {
-    >div {
-      @include v.mini-width {
+    a {
+      >div {
+        @include v.mini-width {
+          padding-right: 0;
+        }
+      }
+    }
+
+    .poster {
+      img {
+        border-radius: 10px;
+        width: 100%;
+      }
+    }
+
+    .movie-level {
+      margin-right: 10px;
+    }
+
+    .state {
+      position: absolute;
+      top: 15px;
+      padding: 5px 10px;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      @extend %weight400;
+
+      &.recommand {
+        @include v.bg-opacity(v.$green-bg-color, 0.8);
+      }
+
+      &.newin {
+        @include v.bg-opacity(v.$red-bg-color, 0.8);
+      }
+
+      &.hottest {
+        @include v.bg-opacity(v.$yellow-bg-color, 0.8);
+      }
+    }
+  }
+
+  .onlinebook {
+    .select-box {
+      padding-right: 7vw;
+
+      div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+
+      .material-icons {
+        color: v.$primary;
+        font-size: 30px;
+      }
+
+      select {
+        width: 100%;
+        height: 60px;
+        margin-left: 10px;
+      }
+
+      @include v.phone-width {
         padding-right: 0;
       }
     }
   }
 
-  .poster {
+  .lastestnew {
+    .news-box {
+      width: 100%;
+
+      a {
+        width: 100%;
+        position: relative;
+        display: flex;
+        margin-bottom: 20px;
+
+        @include v.phone-width {
+          flex-direction: column;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: fit-content;
+      }
+
+      .new-info {
+        width: 50%;
+        margin-left: 20px;
+        padding-right: 15px;
+        text-align: left;
+
+        @include v.phone-width {
+          margin-left: 0px;
+          margin-top: 15px;
+          width: 100%;
+        }
+      }
+
+      .sub-title {
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .movie-item {
+
+
     img {
-      border-radius: 10px;
       width: 100%;
     }
-  }
 
-  .movie-level {
-    margin-right: 10px;
-  }
-
-  .state {
-    position: absolute;
-    top: 15px;
-    padding: 5px 10px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    @extend %weight400;
-
-    &.recommand {
-      @include v.bg-opacity(v.$green-bg-color, 0.8);
-    }
-
-    &.newin {
-      @include v.bg-opacity(v.$red-bg-color, 0.8);
-    }
-
-    &.hottest {
-      @include v.bg-opacity(v.$yellow-bg-color, 0.8);
-    }
-  }
-}
-
-.onlinebook {
-  .select-box {
-    padding-right: 7vw;
-
-    div {
-      display: flex;
-      align-items: center;
-      margin-bottom: 30px;
-    }
-
-    .material-icons {
+    .up-date {
+      margin: 5px 0 30px 0;
       color: v.$primary;
-      font-size: 30px;
     }
 
-    select {
-      width: 100%;
-      height: 60px;
-      margin-left: 10px;
+    .movie-level {
+      margin-top: 0;
     }
 
-    @include v.phone-width {
-      padding-right: 0;
-    }
-  }
-}
-
-.lastestnew {
-  .news-box {
-    width: 100%;
-
-    a {
-      width: 100%;
-      position: relative;
-      display: flex;
-      margin-bottom: 20px;
-
-      @include v.phone-width {
-        flex-direction: column;
-      }
-    }
-
-    img {
-      width: 40%;
-      height: fit-content;
-    }
-
-    .new-info {
-      max-width: 50%;
-      width: 50%;
-      margin-left: 20px;
-      padding-right: 15px;
-      text-align: left;
-
-      @include v.phone-width {
-        margin-left: 0px;
-        margin-top: 15px;
-      }
-    }
-
-    .sub-title {
-      width: 100%;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-  }
-}
-
-.movie-item {
-  &:first-of-type {
-    padding-right: 20px;
-
-    @include v.phone-width {
-      margin-right: 0;
-      margin-bottom: 15px;
-    }
-  }
-
-  img {
-    width: 100%;
-  }
-
-  .up-date {
-    margin: 5px 0 30px 0;
-    color: v.$primary;
-  }
-
-  .movie-level {
-    margin-top: 0;
-  }
-
-  .book-btn {
-    display: inline-block;
-    padding: 8px 25px;
-    background-color: #5a98c0;
-    border-radius: 5px;
-    margin-bottom: 30px;
-    color: v.$font-primary;
-    cursor: pointer;
-    @extend %weight400;
-
-    .material-icons {
-      margin-right: 10px;
-    }
-  }
-
-  .list-item {
-    >div {
-      margin-bottom: 15px;
-      @extend %weight600;
-
-
-      span {
-        font-weight: normal;
-        border-left: 1px solid #fff;
-        padding-left: 10px;
-        margin-left: 10px;
-        display: inline-block;
-      }
-    }
-
-    .list-row {
-      width: 100%;
-      display: -webkit-inline-box;
-
-      div {
-        max-width: 95%;
-      }
-    }
-  }
-}
-
-.introduction {
-  line-height: 1.8;
-  @extend %weight300;
-}
-
-.trailer {
-  background-color: rgba(73, 73, 73, 0.596);
-  padding: 2rem;
-  text-align: center;
-  margin-top: 50px;
-
-  @include v.phone-width {
-    padding: 10px;
-  }
-}
-
-.booking-history {
-  .item {
-    border-top: 1px solid v.$font-secondary;
-    padding: 40px 5em 0 5em;
-    margin-bottom: 40px;
-
-    @include v.other-width {
-      padding: 20px 0 0 0;
-      justify-content: center;
-    }
-  }
-
-  .row-left {
-    img {
-      width: 100%;
-    }
-  }
-
-  .row-right {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-content: center;
-    padding-left: 20px;
-  }
-
-  .ticket-no {
-    width: fit-content;
-    background-color: v.$green-bg-color;
-    padding: 5px 15px;
-
-    span {
-      margin-left: 5px
-    }
-
-    @extend %weight600;
-  }
-
-  .movie-title {
-    width: 80%;
-    p {
-      color: v.$blue-bg-color;
-      line-height: 1.3;
-    }
-
-    span {
+    .book-btn {
+      display: inline-block;
+      padding: 8px 25px;
+      background-color: #5a98c0;
+      border-radius: 5px;
+      margin-bottom: 30px;
       color: v.$font-primary;
-    }
-
-  }
-
-  .booking-list {
-
-    .list {
-      display: flex;
-      margin-bottom: 5px;
-
-      &:last-of-type {
-        margin-bottom: 0;
-      }
-
-      label {
-        width: 90px;
-        min-width: 90px;
-        color: v.$font-secondary;
-      }
-
-    }
-  }
-
-  .ticket-state {
-    position: absolute;
-    right: 0;
-
-    .state {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 10px;
-      color: v.$font-primary;
-      padding: 5px 25px;
-      border-radius: 3px;
       cursor: pointer;
-
-      &.paid {
-        @include v.bg-opacity(v.$blue-bg-color, 0.8)
-      }
-
-      &.getQR {
-        background-color: v.$blue-bg-color;
-      }
-
-      &.refund {
-        border: 1px solid v.$primary;
-      }
+      @extend %weight400;
 
       .material-icons {
-        margin-left: 3px;
+        margin-right: 10px;
       }
     }
-  }
-}
 
-.news {
-  .event {
-    padding: 0 10px;
-    margin-bottom: 40px;
+    .list-item {
+      >div {
+        margin-bottom: 15px;
+        @extend %weight600;
 
-    .sub-title {
-      margin-top: 20px;
-      margin-bottom: 0;
-    }
 
-    img {
-      width: 100%;
-      border-radius: 5px;
-    }
-  }
-}
-
-.news-info {
-  .actions {
-    align-items: center;
-
-    .back {
-      width: 100%;
-      height: fit-content;
-      color: v.$yellow-bg-color;
-    }
-  }
-
-  .row-left {
-    padding-right: 40px;
-
-    img {
-      border-radius: 5px;
-    }
-  }
-
-  .hr-line {
-    width: 100px;
-  }
-
-  .new-content {
-    p {
-      margin-bottom: 20px;
-    }
-  }
-}
-
-.account {
-  label {
-    display: block;
-    color: v.$blue-bg-color;
-    margin: 0 0 4px 0;
-    @extend %weight600;
-  }
-
-  .row-left {
-    padding-right: 15px;
-  }
-
-  .row-right {
-    padding-left: 15px;
-  }
-
-  .actionbtn {
-    display: inline-flex;
-    margin-top: 0;
-    align-items: flex-end;
-    height: 82px;
-    max-height: 82px;
-    justify-content: space-between;
-
-    button {
-      font-weight: normal;
-      flex-basis: 49%;
-      color: v.$secondary;
-      height: 50px;
-      padding: 10px 0;
-      background-color: v.$blue-bg-color;
-
-      &[type="submit"] {
-        flex-basis: 49%;
-        background-color: v.$btn-primary;
+        span {
+          font-weight: normal;
+          border-left: 1px solid #fff;
+          padding-left: 10px;
+          margin-left: 10px;
+          display: inline-block;
+        }
       }
 
-      span {
-        @extend %weight600
-      }
+      .list-row {
+        width: 100%;
+        display: -webkit-inline-box;
 
-    }
-
-    div {
-      font-weight: normal;
-      flex-basis: 49%;
-      background-color: v.$green-bg-color;
-      color: v.$font-primary;
-      height: 50px;
-      padding: 10px 0;
-    }
-
-    &.fit-center {
-      justify-content: center;
-
-      button {
-        padding: 10px 30px;
-
-        &[type="submit"] {
-          flex-basis: fit-content;
+        div {
+          max-width: 95%;
         }
       }
     }
   }
 
-  select {
-    color: #fff;
+  .movie-info {
+    .row-3 {
+      @include v.pad-width {
+        flex-basis: 100%;
+      }
 
-    &:invalid {
-      color: rgba(255, 255, 255, 0.452);
-    }
-
-    option {
-      &[value="none"] {
-        color: rgba(255, 255, 255, 0.452);
+      @include v.phone-width {
+        flex-basis: 100%;
       }
     }
   }
-}
 
-.booking{
-  .content-row{
-    margin-bottom: 80px;
+  .introduction {
+    line-height: 1.8;
+    @extend %weight300;
   }
-  .row-left{
-    display: flex;
-    padding-right: 15px;
-  }
-  .movie-title{
-    h3{
-      color: v.$blue-bg-color;
-    }
-    span{
-      color: #fff;
-      word-break: break-word;
+
+  .trailer {
+    background-color: rgba(73, 73, 73, 0.596);
+    padding: 2rem;
+    text-align: center;
+    margin-top: 50px;
+
+    @include v.phone-width {
+      padding: 10px;
     }
   }
-  .up-date{
-    color: #fff;
-  }
-  .list-row{
-    max-width: 85%;
-  }
-  .weektable{
-    display: flex;
-    justify-content: space-between;
-    .booktime{
-      cursor: pointer;
+
+  .booking-history {
+    .actions-btn {
+      width: 12em;
+    }
+
+    .item {
+      border-top: 1px solid v.$font-secondary;
+      padding: 40px 5em 0 5em;
+      margin-bottom: 40px;
+
+      @include v.other-width {
+        padding: 20px 0 0 0;
+        justify-content: center;
+      }
+    }
+
+    .row-left {
+      @include v.pad-width {
+        margin-bottom: 40px;
+      }
+
+      @include v.phone-width {
+        margin-bottom: 40px;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .row-right {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-content: center;
+      padding-left: 20px;
+
+      @include v.pad-width {
+        padding-left: 0px;
+      }
+
+      @include v.phone-width {
+        padding-left: 0px;
+        align-items: center;
+      }
+    }
+
+    .ticket-no {
+      width: fit-content;
+      background-color: v.$green-bg-color;
+      padding: 5px 15px;
+
+      span {
+        margin-left: 5px
+      }
+
       @extend %weight600;
-      span{
-        font-weight: normal;
-        display: block;
+    }
+
+    .movie-title {
+      width: 80%;
+
+      @include v.phone-width {
+        width: 100%;
+        text-align: center;
       }
-      &.active{
-        color: v.$yellow-bg-color;
+
+      p {
+        color: v.$blue-bg-color;
+        line-height: 1.3;
+      }
+
+      span {
+        color: v.$font-primary;
+      }
+
+    }
+
+    .booking-list {
+      width: 80%;
+      margin-top: 10px;
+
+      @include v.phone-width {
+        width: 100%;
+      }
+
+      .list {
+        display: flex;
+        margin-bottom: 5px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        label {
+          width: 90px;
+          min-width: 90px;
+          color: v.$font-secondary;
+        }
+
       }
     }
-  }
-  .cinema{
-        position: relative;
-        margin: 20px 0;
-    &::after{
-      content: "";
-      display: inline-block;
-      height: 1px;
-      width: 75%;
-      background-color: v.$font-secondary;
+
+    .ticket-state {
       position: absolute;
       right: 0;
-      top: 18px;
-    }
-    .material-icons{
-      font-size: 40px;
-      vertical-align: middle;
-      margin-right: 10px;
+
+
+      @include v.phone-width {
+        position: static;
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .state {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        color: v.$font-primary;
+        padding: 5px 25px;
+        border-radius: 3px;
+
+        @include v.phone-width {
+          width: 130px;
+          margin-right: 10px;
+        }
+
+        &.paid {
+          @include v.bg-opacity(v.$blue-bg-color, 0.8)
+        }
+
+        &.getQR {
+          background-color: v.$blue-bg-color;
+        }
+
+        &.refund {
+          border: 1px solid v.$primary;
+        }
+
+        .material-icons {
+          margin-left: 3px;
+        }
+      }
     }
   }
-  .timetable{
-    display: flex;
-    text-align: center;
-    justify-content:flex-start;
-    color: #fff;
-    flex-wrap: wrap;
-    .time{
-      width: 18%;
-      padding: 5px 0;
-      border: 1px solid #fff;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-bottom: 15px;
-      margin-right: 13px;
-      &:nth-of-type(5n){
-        margin-right: 0;
+
+  .news {
+    .event {
+      padding: 0 10px;
+      margin-bottom: 40px;
+
+      .sub-title {
+        margin-top: 20px;
+        margin-bottom: 0;
       }
-      &.active{ 
+
+      img {
+        width: 100%;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  .news-info {
+    .actions {
+      align-items: center;
+      justify-content: flex-start;
+
+      .actions-btn {
+        margin-right: 20px;
+      }
+
+      .back {
+        width: 100%;
+        height: fit-content;
+        color: v.$yellow-bg-color;
+        padding: 10px 30px;
+      }
+    }
+
+    .row-left {
+      padding-right: 40px;
+
+      @include v.pad-width {
+        padding-right: 0px;
+      }
+
+      @include v.phone-width {
+        padding-right: 0px;
+      }
+
+      img {
+        border-radius: 5px;
+      }
+    }
+
+    .sub-title {
+      @include v.pad-width {
+        margin-top: 20px;
+      }
+
+      @include v.phone-width {
+        margin-top: 20px;
+
+      }
+    }
+
+    .hr-line {
+      width: 100px;
+    }
+
+    .new-content {
+      p {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .account {
+    label {
+      display: block;
+      color: v.$blue-bg-color;
+      margin: 0 0 4px 0;
+      @extend %weight600;
+    }
+
+    .row-left {
+      padding-right: 15px;
+
+      @include v.pad-width {
+        padding-right: 0;
+      }
+
+      @include v.phone-width {
+        padding-right: 0;
+      }
+    }
+
+    .row-right {
+      padding-left: 15px;
+
+      @include v.pad-width {
+        padding-left: 0;
+      }
+
+      @include v.phone-width {
+        padding-left: 0;
+      }
+    }
+
+    .actionbtn {
+      display: inline-flex;
+      margin-top: 0;
+      align-items: flex-end;
+      height: 82px;
+      max-height: 82px;
+      justify-content: space-between;
+
+      @include v.phone-width {
+        flex-direction: column;
+      }
+
+      &:last-of-type {
+        @include v.phone-width {
+          margin-top: 15px;
+        }
+      }
+
+      button {
+        font-weight: normal;
+        flex-basis: 49%;
         color: v.$secondary;
-        border: 1px solid v.$yellow-bg-color;
-        background-color: v.$yellow-bg-color;
+        height: 50px;
+        padding: 10px 0;
+        background-color: v.$blue-bg-color;
+
+        @include v.phone-width {
+          margin-bottom: 15px;
+        }
+
+        &[type="submit"] {
+          flex-basis: 49%;
+          background-color: v.$btn-primary;
+        }
+
+        span {
+          @extend %weight600
+        }
+
       }
-       &.disable{
-        cursor: not-allowed;
-        color: v.$font-secondary;
-        border: 1px solid v.$font-secondary;
+
+      div {
+        font-weight: normal;
+        flex-basis: 49%;
+        background-color: v.$green-bg-color;
+        color: v.$font-primary;
+        height: 50px;
+        padding: 10px 0;
+      }
+
+      &.fit-center {
+        justify-content: center;
+
+        button {
+          padding: 10px 30px;
+
+          &[type="submit"] {
+            flex-basis: fit-content;
+          }
+        }
+      }
+    }
+
+    select {
+      color: #fff;
+
+      &:invalid {
+        color: rgba(255, 255, 255, 0.452);
+      }
+
+      option {
+        &[value="none"] {
+          color: rgba(255, 255, 255, 0.452);
+        }
       }
     }
   }
-}
+
+  .booking {
+    .content-row {
+      margin-bottom: 80px;
+    }
+
+    .row-left {
+      display: flex;
+      padding-right: 15px;
+      flex-wrap: wrap;
+
+      @include v.pad-width {
+        padding-right: 0;
+        margin-bottom: 20px;
+      }
+
+      @include v.phone-width {
+        padding-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+
+    .movie-item {
+      &:first-of-type {
+        padding-right: 20px;
+
+        @include v.pad-width {
+          padding-right: 0;
+          margin-bottom: 20px;
+        }
+
+        @include v.phone-width {
+          padding-right: 0;
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    .movie-title {
+      p {
+        color: v.$blue-bg-color;
+      }
+
+      span {
+        color: #fff;
+        word-break: break-word;
+      }
+    }
+
+    .up-date {
+      color: #fff;
+    }
+
+    .list-row {
+      max-width: 85%;
+    }
+
+    .weektable {
+      display: flex;
+      justify-content: space-between;
+
+      .booktime {
+        cursor: pointer;
+        @extend %weight600;
+
+        span {
+          font-weight: normal;
+          display: block;
+        }
+
+        &.active {
+          color: v.$yellow-bg-color;
+        }
+      }
+    }
+
+    .cinema {
+      position: relative;
+      margin: 20px 0;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        height: 1px;
+        width: 75%;
+        background-color: v.$font-secondary;
+        position: absolute;
+        right: 0;
+        top: 18px;
+      }
+
+      .material-icons {
+        font-size: 40px;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+    }
+
+    .timetable {
+      display: flex;
+      text-align: center;
+      justify-content: flex-start;
+      color: #fff;
+      flex-wrap: wrap;
+
+      .time {
+        width: 18%;
+        padding: 5px 0;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 15px;
+        margin-right: 10px;
+
+        @include v.phone-width {
+          width: 22%;
+        }
+
+        &.active {
+          color: v.$secondary;
+          border: 1px solid v.$yellow-bg-color;
+          background-color: v.$yellow-bg-color;
+        }
+
+        &.disable {
+          cursor: not-allowed;
+          color: v.$font-secondary;
+          border: 1px solid v.$font-secondary;
+        }
+      }
+    }
+  }
+
+  .booking-s1 {
+    .row-left {
+      img {
+        width: 80%;
+      }
+    }
+
+    .row-min {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 30px;
+      background-color: rgba(0, 0, 0, 0.247);
+      border-radius: 10px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      .movie-item {
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+
+        .movie-title {
+          margin-top: 0;
+          width: 80%;
+
+        }
+
+        .movie-level {
+          margin-bottom: 0;
+          height: fit-content;
+          margin-right: 20px;
+        }
+      }
+
+      .movie-detail {
+        .material-icons {
+          font-size: 35px;
+          margin-right: 10px;
+          color: v.$red-bg-color;
+        }
+
+        .detail {
+          margin-bottom: 30px;
+
+          &.disable {
+            color: #818181;
+
+            .material-icons {
+              color: inherit
+            }
+          }
+        }
+
+      }
+    }
+    .row-right {
+      padding: 30px;
+      background-color: rgba(0, 0, 0, 0.247);
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      border-left: 3px dashed rgba(255, 255, 255, 0.062);;
+      .summary{
+        color: #A18978;
+        text-align: right;
+        .material-icons {
+          font-size: 30px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+} 
 
 // animate
 @keyframes rotate {
@@ -730,7 +953,7 @@
 
 @keyframes revealingOut {
 
-  from{
+  from {
     transform: translateX(0);
   }
 

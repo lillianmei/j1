@@ -38,13 +38,14 @@ main {
 
 h1,
 h2,
-h3,
+p,
 h4,
 h5,
 h6,
-p {
+span {
   margin: 0;
   padding: 0;
+  text-rendering: optimizeLegibility;
 }
 
 hr {
@@ -62,6 +63,7 @@ a {
   background-color: transparent;
   text-decoration: none;
   color: v.$font-primary;
+  text-rendering: optimizeLegibility;
 }
 
 abbr[title] {
@@ -371,7 +373,7 @@ input:-internal-autofill-selected{
 }
 
 .material-icons {
-  vertical-align: sub;
+  vertical-align: middle;
 }
 
 .hr-line {
@@ -380,7 +382,7 @@ input:-internal-autofill-selected{
   height: 1px;
   background-color: v.$primary;
   border: none;
-  margin: 1.3em 0;
+  margin: 1.1em 0;
 }
 
 .mul-ellipsis-4 {
@@ -918,7 +920,7 @@ nav {
 /* share style */
 .section-box {
   padding: 0 15px;
-
+}
   .main-title {
     width: 100%;
     margin-bottom: 30px;
@@ -961,7 +963,7 @@ nav {
   }
 
   .sub-title {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     font-size: 1.1rem;
     @extend %weight600;
   }
@@ -987,22 +989,9 @@ nav {
     @extend %weight600;
   }
 
-  .section {
-    color: v.$font-primary;
-    max-width: v.$max-width;
-    margin: 50px auto 50px auto;
-
-    &:last-of-type {
-      margin-bottom: 200px;
-    }
-
-    .content {
-      margin: 30px 0;
-    }
-
-    .content-row {
-      display: flex;
-      flex-wrap: wrap;
+  .content-row {
+    display: flex;
+    flex-wrap: wrap;
 
       .row {
         width: 100%;
@@ -1030,9 +1019,8 @@ nav {
           }
         }
       }
-
-
-      .row-1 {
+    }
+    .row-1 {
         @include v.row-width(10%);
 
         @include v.pad-width {
@@ -1091,10 +1079,12 @@ nav {
         @include v.row-width(40%);
         @include v.pad-width {
           flex-basis: 100%;
+          width: 100%;
         }
 
         @include v.phone-width {
           flex-basis: 100%;
+          width: 100%;
         }
       }
 
@@ -1141,6 +1131,15 @@ nav {
 
       .row-8 {
         @include v.row-width(80%);
+         @include v.pad-width {
+          flex: 100%;
+          width: 100%;
+        }
+
+        @include v.phone-width {
+          flex: 100%;
+          width: 100%;
+        }
       }
 
 
@@ -1148,21 +1147,50 @@ nav {
         @include v.row-width(90%);
       }
 
+  .section {
+    color: v.$font-primary;
+    max-width: v.$max-width;
+    margin: 50px auto 50px auto;
+
+    &:last-of-type {
+      margin-bottom: 200px;
+      @include v.pad-width{
+        margin-bottom: 100px;
+      }
+      @include v.phone-width{
+        margin-bottom: 50px;
+      }
+    }
+
+    .content {
+      margin: 30px 0;
     }
 
     .actions {
       display: inline-flex;
       margin-bottom: 40px;
+      width: 100%;
+      
+      @include v.pad-width{
+        justify-content: center;
+      }
+      @include v.phone-width{
+        justify-content: center;
+      }
 
       .actions-btn {
         border-radius: 5px;
         cursor: pointer;
         border: 1px solid v.$yellow-bg-color;
         color: v.$yellow-bg-color;
-        padding: 10px 3em;
+        padding: 10px 5px;
         text-align: center;
         margin-right: 20px;
+        width: 12em;
 
+        &:last-of-type{
+          margin-right: 0
+        }
 
         &.active {
           @extend %weight600;
@@ -1172,7 +1200,7 @@ nav {
       }
     }
   }
-}
+
 
 .actionbtn {
   text-align: center;
@@ -1417,8 +1445,8 @@ footer {
   border: 1px solid v.$font-primary;
   border-radius: 100%;
   position: fixed;
-  bottom: 80px;
-  right: 40px;
+  bottom: 50px;
+  right: 30px;
   cursor: pointer;
   visibility: hidden;
   z-index: 1;
