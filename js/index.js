@@ -173,15 +173,15 @@ $(function () {
   if ($landing) {
     $(window).on("wheel click", function (e) {
       if (e) {
-        $landing.fadeOut(1000);
+        $landing.fadeOut(1500);
         $body.classList.remove("no-scroll");
       }
     });
     if (window.matchMedia("(max-width: 768px)").matches) {
       setTimeout(function () {
-        // $landing.fadeOut(1000);
+        $landing.fadeOut(1500);
         $body.classList.remove("no-scroll");
-      }, 3000);
+      }, 2500);
     }
   }
   if (!$landing) {
