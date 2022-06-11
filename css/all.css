@@ -85,8 +85,8 @@
   bottom: 13vh;
   left: 13vw;
   opacity: 0;
-  -webkit-animation: opacity 1.5s linear 1s;
-          animation: opacity 1.5s linear 1s;
+  -webkit-animation: opacity 1s linear 1.8s;
+          animation: opacity 1s linear 1.8s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -160,8 +160,20 @@
 
 .section .showing-list {
   text-align: center;
-  margin-bottom: 20px;
   position: relative;
+}
+@media all and (min-width: 769px) and (max-width: 991px) {
+  .section .showing-list {
+    margin-bottom: 20px;
+  }
+}
+@media all and (max-width: 768px) {
+  .section .showing-list {
+    margin-bottom: 20px;
+  }
+}
+.section .showing-list a {
+  display: block;
   padding: 0 5px;
 }
 @media all and (max-width: 320px) {
@@ -179,6 +191,7 @@
 .section .showing-list .state {
   position: absolute;
   top: 15px;
+  left: 5px;
   padding: 5px 10px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -196,7 +209,7 @@
   background-color: rgba(252, 201, 0, 0.8);
 }
 .section .onlinebook .select-box {
-  padding-right: 7vw;
+  padding-right: 2vw;
 }
 .section .onlinebook .select-box div {
   display: -webkit-box;
@@ -288,7 +301,10 @@
   margin-right: 10px;
 }
 .section .movie-item .list-item > div {
-  margin-bottom: 15px;
+  margin-bottom: 5px;
+}
+.section .movie-item .list-item > div:last-of-type {
+  margin-bottom: 0;
 }
 .section .movie-item .list-item > div span {
   font-weight: normal;
@@ -303,6 +319,21 @@
 }
 .section .movie-item .list-item .list-row div {
   max-width: 95%;
+}
+.section .movie-info .movie-item:first-of-type {
+  padding-right: 20px;
+}
+@media all and (min-width: 769px) and (max-width: 991px) {
+  .section .movie-info .movie-item:first-of-type {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+}
+@media all and (max-width: 768px) {
+  .section .movie-info .movie-item:first-of-type {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
   .section .movie-info .row-3 {
@@ -484,11 +515,19 @@
   margin-left: 3px;
 }
 .section .news .event {
-  padding: 0 10px;
   margin-bottom: 40px;
 }
+@media all and (max-width: 768px) {
+  .section .news .event {
+    padding: 0;
+  }
+}
+.section .news .event a {
+  display: block;
+  padding: 0 5px;
+}
 .section .news .event .sub-title {
-  margin-top: 20px;
+  margin-top: 15px;
   margin-bottom: 0;
 }
 .section .news .event img {
@@ -660,7 +699,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-right: 15px;
+  padding-right: 10px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }

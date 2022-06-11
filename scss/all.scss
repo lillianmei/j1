@@ -70,7 +70,7 @@
     bottom: 13vh;
     left: 13vw;
     opacity: 0;
-    animation: opacity 1.5s linear 1s;
+    animation: opacity 1s linear 1.8s;
     animation-fill-mode: forwards;
 
     @include v.pad-width {
@@ -140,11 +140,17 @@
 .section {
   .showing-list {
     text-align: center;
-    margin-bottom: 20px;
     position: relative;
-    padding: 0 5px;
- 
+    @include v.pad-width {
+      margin-bottom: 20px;
+    }
+
+    @include v.phone-width {
+      margin-bottom: 20px;
+    }
     a {
+      display: block;
+      padding: 0 5px;
       >div {
         @include v.mini-width {
           padding-right: 0;
@@ -166,6 +172,7 @@
     .state {
       position: absolute;
       top: 15px;
+      left: 5px;
       padding: 5px 10px;
       border-top-right-radius: 20px;
       border-bottom-right-radius: 20px;
@@ -187,7 +194,7 @@
 
   .onlinebook {
     .select-box {
-      padding-right: 7vw;
+      padding-right: 2vw;
 
       div {
         display: flex;
@@ -287,9 +294,11 @@
 
     .list-item {
       >div {
-        margin-bottom: 15px;
+        margin-bottom: 5px;
         @extend %weight600;
-
+        &:last-of-type{
+          margin-bottom: 0;
+        }
 
         span {
           font-weight: normal;
@@ -312,6 +321,21 @@
   }
 
   .movie-info {
+    .movie-item{
+      &:first-of-type{
+        padding-right: 20px;
+        @include v.pad-width {
+          padding-right: 0;
+          margin-bottom: 20px;
+        }
+  
+        @include v.phone-width {
+          padding-right: 0;
+          margin-bottom: 20px;
+
+        }
+      }
+    }
     .row-3 {
       @include v.pad-width {
         flex-basis: 100%;
@@ -489,11 +513,16 @@
 
   .news {
     .event {
-      padding: 0 10px;
       margin-bottom: 40px;
-
+      @include v.phone-width {
+        padding: 0;
+      }
+      a{
+        display: block;
+        padding: 0 5px;
+      }
       .sub-title {
-        margin-top: 20px;
+        margin-top: 15px;
         margin-bottom: 0;
       }
 
@@ -676,7 +705,7 @@
 
     .row-left {
       display: flex;
-      padding-right: 15px;
+      padding-right: 10px;
       flex-wrap: wrap;
 
       @include v.pad-width {

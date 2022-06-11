@@ -170,26 +170,23 @@ $(function () {
   const $datetime = $(".booktime");
 
   //ladnding page animation
-  if ($landing) {
-    $(window).on("wheel click", function (e) {
-      if (e) {
-        $landing.fadeOut(1500);
-        $body.classList.remove("no-scroll");
-      }
+  if ($landing.length === 1) {
+    $body.classList.add('no-scroll') //禁止在背景下滑動
+    $(window).on("wheel click", function () {
+        $landing.fadeOut(1000);
+        setTimeout(function () {
+          $body.classList.remove('no-scroll')
+        }, 1300);
     });
     if (window.matchMedia("(max-width: 768px)").matches) {
+      $body.classList.remove('no-scroll')
       setTimeout(function () {
-        $landing.fadeOut(1500);
-        $body.classList.remove("no-scroll");
+        $landing.fadeOut(1000);
       }, 2500);
     }
   }
-  if (!$landing) {
-    $body.classList.remove("no-scroll");
-  }
 
   //account hover效果
-  if (!$account) return;
   $account.addEventListener("mouseenter", (e) => {
     $account.classList.add("-active");
     $account.classList.remove("-leave");
@@ -242,16 +239,6 @@ $(function () {
       $(this).next().attr("type", "text");
     }
   });
-
-  // jQ datepicker
-  if ($datePicker) {
-    $("#datepicker").datepicker({
-      dateFormat: "yy-mm-dd",
-      changeMonth: true,
-      changeYear: true,
-      yearRange: "1942:2023",
-    });
-  }
 
   // 選取時刻表效果
   $datetime.on("click", function () {

@@ -408,7 +408,7 @@ input:-internal-autofill-selected {
 }
 
 .l-font {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 .material-icons {
@@ -526,7 +526,7 @@ input:-internal-autofill-selected {
 /* nav */
 nav {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   top: 0;
   left: 0;
@@ -1018,7 +1018,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
 }
 
 .movie-level {
-  margin: 15px 0;
+  margin: 10px 0;
   padding: 2px 10px;
   display: inline-block;
   color: #000;
@@ -1247,7 +1247,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
 
 .section {
   color: #fff;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 50px auto 50px auto;
 }
 .section:last-of-type {
@@ -1264,7 +1264,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   }
 }
 .section .content {
-  margin: 30px 0;
+  margin-bottom: 40px;
 }
 .section .actions {
   display: -webkit-inline-box;
@@ -1278,6 +1278,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-bottom: 20px;
   }
 }
 @media all and (max-width: 768px) {
@@ -1285,6 +1286,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-bottom: 20px;
   }
 }
 .section .actions .actions-btn {
@@ -1307,7 +1309,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
 
 .actionbtn {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 .actionbtn button, .actionbtn div {
   width: 100%;
@@ -1327,7 +1329,7 @@ footer img {
           flex: 0;
 }
 footer > div {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;

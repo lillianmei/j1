@@ -13,7 +13,7 @@
 
 </head>
 
-<body class="no-scroll" id="app">
+<body   id="app">
   <!-- header -->
   <nav-header></nav-header>
 
@@ -126,6 +126,14 @@
   <script src="js/jquery-ui.min.js"></script>
   <script src="js/vue.js"></script>
   <script src="js/index.js"></script>
+  <script>
+      $("#datepicker").datepicker({
+      dateFormat: "yy-mm-dd",
+      changeMonth: true,
+      changeYear: true,
+      yearRange: "1942:2023",
+    });
+  </script>
 
 </body>
 
