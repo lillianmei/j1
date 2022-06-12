@@ -8,7 +8,7 @@
 body,
 html {
   -webkit-text-size-adjust: 100%;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.3px;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
@@ -18,13 +18,13 @@ html {
   line-height: 1.6;
   font-family: Microsoft JhengHei, Arial, sans-serif;
   font-style: normal;
-
+ 
   &.no-scroll {
     overflow: hidden;
   }
 
   @include v.pc-width {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   @include v.pad-width {

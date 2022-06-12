@@ -706,13 +706,13 @@
 @media all and (min-width: 769px) and (max-width: 991px) {
   .section .booking .row-left {
     padding-right: 0;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 }
 @media all and (max-width: 768px) {
   .section .booking .row-left {
     padding-right: 0;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 }
 .section .booking .movie-item:first-of-type {
@@ -864,6 +864,9 @@
 .section .booking-s1 .row-min .movie-detail .detail {
   margin-bottom: 30px;
 }
+.section .booking-s1 .row-min .movie-detail .detail.mb-0 {
+  margin-bottom: 0;
+}
 .section .booking-s1 .row-min .movie-detail .detail.disable {
   color: #818181;
 }
@@ -876,6 +879,16 @@
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   border-left: 3px dashed rgba(255, 255, 255, 0.062);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .section .booking-s1 .row-right .summary {
   color: #A18978;
@@ -884,6 +897,46 @@
 .section .booking-s1 .row-right .summary .material-icons {
   font-size: 30px;
   margin-right: 10px;
+}
+.section .booking-s1 .row-right .summary-detail {
+  height: 100%;
+  padding-top: 10px;
+}
+.section .booking-s1 .row-right .summary-detail li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 10px;
+}
+.section .booking-s1 .row-right .summary-detail .ticket-name {
+  width: 100%;
+}
+.section .booking-s1 .row-right .summary-detail .ticket-number {
+  width: 80px;
+  text-align: right;
+  margin-right: 5px;
+}
+.section .booking-s1 .row-right .summary-detail .ticket-sum {
+  width: 50%;
+  text-align: right;
+  margin-left: 5px;
+}
+.section .booking-s1 .row-right .summary-total {
+  background-color: rgba(129, 129, 129, 0.3254901961);
+  padding: 5px 10px;
+}
+.section .booking-s1 .row-right .summary-total li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.section .booking-s1 .row-right .summary-total .ticket-name {
+  width: 100%;
+}
+.section .booking-s1 .row-right .summary-total .ticket-sum {
+  width: 40%;
+  text-align: right;
+  margin-left: 5px;
 }
 
 @-webkit-keyframes rotate {

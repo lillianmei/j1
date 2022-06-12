@@ -19,7 +19,7 @@
 body,
 html {
   -webkit-text-size-adjust: 100%;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.3px;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
@@ -37,7 +37,7 @@ html.no-scroll {
 @media all and (min-width: 992px) {
   body,
 html {
-    font-size: 17px;
+    font-size: 16px;
   }
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
