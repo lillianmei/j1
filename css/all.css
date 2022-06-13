@@ -2,11 +2,11 @@
   font-weight: 300;
 }
 
-.section .showing-list .state, .section .movie-item .book-btn {
+.section .showing-list .state, .section .movie-item .book-btn, .section .tickets-package .package-content .ticket-set .table-td div {
   font-weight: 400;
 }
 
-.section .movie-item .list-item > div, .section .booking-history .ticket-no, .section .account label, .section .account .actionbtn button span, .section .booking .weektable .booktime {
+.section .movie-item .list-item > div, .section .booking-history .ticket-no, .section .account label, .section .account .actionbtn button span, .section .booking .weektable .booktime, .section .tickets-package .package-content .ticket-set .type, .section .tickets-package .package-content .ticket-sheet span, .section .tickets-package .row-right .note {
   font-weight: 600;
 }
 
@@ -222,7 +222,7 @@
 }
 .section .onlinebook .select-box .material-icons {
   color: #C53932;
-  font-size: 30px;
+  font-size: 2.5rem;
 }
 .section .onlinebook .select-box select {
   width: 100%;
@@ -321,7 +321,7 @@
   max-width: 95%;
 }
 .section .movie-info .movie-item:first-of-type {
-  padding-right: 20px;
+  padding-right: 2vw;
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
   .section .movie-info .movie-item:first-of-type {
@@ -776,7 +776,7 @@
   top: 18px;
 }
 .section .booking .cinema .material-icons {
-  font-size: 40px;
+  font-size: 3rem;
   vertical-align: middle;
   margin-right: 10px;
 }
@@ -816,10 +816,16 @@
   color: #818181;
   border: 1px solid #818181;
 }
-.section .booking-s1 .row-left img {
-  width: 80%;
+.section .book-tickets .row-left {
+  padding-right: 2vw;
 }
-.section .booking-s1 .row-min {
+@media all and (max-width: 768px) {
+  .section .book-tickets .row-left {
+    padding-right: 0;
+    margin: 0 auto 2vw auto;
+  }
+}
+.section .book-tickets .row-min {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -836,7 +842,14 @@
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.section .booking-s1 .row-min .movie-item {
+@media all and (min-width: 769px) and (max-width: 991px) {
+  .section .book-tickets .row-min {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 20px;
+  }
+}
+.section .book-tickets .row-min .movie-item {
   width: 100%;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -845,35 +858,57 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.section .booking-s1 .row-min .movie-item .movie-title {
+@media all and (max-width: 768px) {
+  .section .book-tickets .row-min .movie-item {
+    margin-bottom: 10px;
+  }
+}
+.section .book-tickets .row-min .movie-item .movie-title {
   margin-top: 0;
   width: 80%;
 }
-.section .booking-s1 .row-min .movie-item .movie-level {
+.section .book-tickets .row-min .movie-item .movie-level {
+  width: 80px;
   margin-bottom: 0;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   margin-right: 20px;
 }
-.section .booking-s1 .row-min .movie-detail .material-icons {
-  font-size: 35px;
+.section .book-tickets .row-min .movie-detail .material-icons {
+  font-size: 2rem;
   margin-right: 10px;
   color: #DD362B;
 }
-.section .booking-s1 .row-min .movie-detail .detail {
+.section .book-tickets .row-min .movie-detail .detail {
   margin-bottom: 30px;
 }
-.section .booking-s1 .row-min .movie-detail .detail.mb-0 {
+@media all and (max-width: 768px) {
+  .section .book-tickets .row-min .movie-detail .detail {
+    margin-bottom: 10px;
+  }
+}
+.section .book-tickets .row-min .movie-detail .detail.mb-0 {
   margin-bottom: 0;
 }
-.section .booking-s1 .row-min .movie-detail .detail.disable {
+@media all and (max-width: 768px) {
+  .section .book-tickets .row-min .movie-detail .detail.mb-0 {
+    margin-bottom: 10px;
+  }
+}
+.section .book-tickets .row-min .movie-detail .detail.disable {
   color: #818181;
 }
-.section .booking-s1 .row-min .movie-detail .detail.disable .material-icons {
+.section .book-tickets .row-min .movie-detail .detail.disable .material-icons {
   color: inherit;
 }
-.section .booking-s1 .row-right {
+.section .book-tickets .row-min .movie-detail .start-time {
+  padding: 2px 5px;
+  border: 1px solid #818181;
+  border-radius: 3px;
+  margin-right: 4px;
+}
+.section .book-tickets .row-right {
   padding: 30px;
   background-color: rgba(0, 0, 0, 0.247);
   border-top-right-radius: 10px;
@@ -890,53 +925,270 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.section .booking-s1 .row-right .summary {
+@media all and (min-width: 769px) and (max-width: 991px) {
+  .section .book-tickets .row-right {
+    border-radius: 10px;
+    border-left: none;
+    margin-top: 2vw;
+    padding: 20px;
+  }
+}
+@media all and (max-width: 768px) {
+  .section .book-tickets .row-right {
+    border-left: none;
+    margin-top: 2vw;
+  }
+}
+.section .book-tickets .row-right .summary {
   color: #A18978;
   text-align: right;
 }
-.section .booking-s1 .row-right .summary .material-icons {
-  font-size: 30px;
+@media all and (min-width: 769px) and (max-width: 991px) {
+  .section .book-tickets .row-right .summary {
+    text-align: left;
+  }
+}
+@media all and (max-width: 768px) {
+  .section .book-tickets .row-right .summary {
+    text-align: left;
+  }
+}
+.section .book-tickets .row-right .summary .material-icons {
+  font-size: 2rem;
   margin-right: 10px;
 }
-.section .booking-s1 .row-right .summary-detail {
+.section .book-tickets .row-right .summary-detail {
   height: 100%;
-  padding-top: 10px;
+  padding: 10px 0;
 }
-.section .booking-s1 .row-right .summary-detail li {
+.section .book-tickets .row-right .summary-detail li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 0 10px;
 }
-.section .booking-s1 .row-right .summary-detail .ticket-name {
+.section .book-tickets .row-right .summary-detail .ticket-name {
   width: 100%;
 }
-.section .booking-s1 .row-right .summary-detail .ticket-number {
+.section .book-tickets .row-right .summary-detail .ticket-number {
   width: 80px;
   text-align: right;
   margin-right: 5px;
 }
-.section .booking-s1 .row-right .summary-detail .ticket-sum {
+.section .book-tickets .row-right .summary-detail .ticket-sum {
   width: 50%;
   text-align: right;
   margin-left: 5px;
 }
-.section .booking-s1 .row-right .summary-total {
+.section .book-tickets .row-right .summary-total {
   background-color: rgba(129, 129, 129, 0.3254901961);
   padding: 5px 10px;
 }
-.section .booking-s1 .row-right .summary-total li {
+.section .book-tickets .row-right .summary-total li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.section .booking-s1 .row-right .summary-total .ticket-name {
+.section .book-tickets .row-right .summary-total .ticket-name {
   width: 100%;
 }
-.section .booking-s1 .row-right .summary-total .ticket-sum {
+.section .book-tickets .row-right .summary-total .ticket-sum {
   width: 40%;
   text-align: right;
   margin-left: 5px;
+}
+@media all and (min-width: 769px) and (max-width: 991px) {
+  .section .book-tickets .row-5 {
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+    width: 50%;
+  }
+}
+@media all and (max-width: 768px) {
+  .section .book-tickets .row-5 {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+    width: 100%;
+  }
+}
+@media all and (min-width: 769px) and (max-width: 991px) {
+  .section .book-tickets .row-3 {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+    width: 100%;
+  }
+}
+@media all and (max-width: 768px) {
+  .section .book-tickets .row-3 {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+    width: 100%;
+  }
+}
+.section .tickets-package .row-left {
+  padding-right: 2vw;
+}
+@media all and (min-width: 769px) and (max-width: 991px) {
+  .section .tickets-package .row-left {
+    padding-right: 0;
+  }
+}
+@media all and (max-width: 768px) {
+  .section .tickets-package .row-left {
+    padding-right: 0;
+  }
+}
+.section .tickets-package .row-left .package {
+  margin-bottom: 30px;
+}
+.section .tickets-package .main-title div:nth-of-type(1)::before {
+  background-color: #00ABF2;
+}
+.section .tickets-package .main-title div:nth-of-type(2) {
+  color: #00ABF2;
+}
+.section .tickets-package .package-title .table-th {
+  background-color: #036EB7;
+  padding: 5px 5px 5px 10px;
+  text-align: left;
+}
+.section .tickets-package .package-title .sale {
+  background-color: #00ABF2;
+  background-color: rgba(0, 171, 242, 0.8);
+}
+.section .tickets-package .package-title .material-icons {
+  margin-right: 10px;
+}
+.section .tickets-package .package-content {
+  margin-top: 5px;
+  background-color: #ccc;
+  padding: 15px 20px;
+}
+@media all and (max-width: 768px) {
+  .section .tickets-package .package-content {
+    padding: 10px;
+    overflow-x: auto;
+  }
+}
+.section .tickets-package .package-content .table-th:first-of-type {
+  text-align: left;
+  padding-left: 10px;
+}
+.section .tickets-package .package-content .ticket-set .table-td {
+  color: #DD362B;
+  padding: 10px;
+}
+.section .tickets-package .package-content .ticket-set .table-td div {
+  color: #000;
+}
+.section .tickets-package .package-content .ticket-set .table-td:first-of-type {
+  width: 45%;
+  text-align: left;
+}
+.section .tickets-package .package-content .ticket-set .table-td:nth-of-type(2) {
+  width: 10%;
+  max-width: 10%;
+}
+.section .tickets-package .package-content .ticket-set .table-td:nth-of-type(4) {
+  width: 20%;
+}
+.section .tickets-package .package-content .ticket-sheet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.section .tickets-package .package-content .ticket-sheet span {
+  display: inline-block;
+  text-align: center;
+  font-size: 25px;
+  width: 50px;
+  cursor: pointer;
+}
+.section .tickets-package .package-content .ticket-sheet span.minus {
+  color: #818181;
+}
+.section .tickets-package .package-content .ticket-sheet input {
+  color: #000;
+  width: 80%;
+  height: 30px;
+  padding: 0;
+  text-align: center;
+  border-color: rgba(129, 129, 129, 0.3254901961);
+}
+.section .tickets-package .row-right {
+  border: 1px solid #818181;
+  border-radius: 10px;
+  padding: 20px 30px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.section .tickets-package .row-right > .material-icons {
+  width: 100%;
+  text-align: right;
+  color: #FCC900;
+}
+.section .tickets-package .row-right .note {
+  margin-bottom: 5px;
+}
+.section .tickets-package .row-right .note .material-icons {
+  font-size: 2rem;
+  margin-right: 5px;
+  vertical-align: bottom;
+}
+.section .tickets-package .row-right ul {
+  margin-left: 40px;
+}
+.section .tickets-package .row-right li {
+  list-style: decimal-leading-zero;
+}
+.section .tickets-package .row-right li:last-of-type {
+  margin-bottom: 20px;
+}
+.section .tickets-package .actionbtn {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.section .tickets-package .actionbtn button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.section .tickets-package .actionbtn button.next {
+  background-color: #D26759;
+  margin-left: 10px;
+}
+.section .tickets-package .actionbtn button.next .material-icons {
+  margin-left: 10px;
+}
+.section .tickets-package .actionbtn button.back {
+  background-color: #00ABF2;
+  background-color: rgba(0, 171, 242, 0.8);
+  margin-right: 10px;
+}
+.section .tickets-package .actionbtn button.back .material-icons {
+  margin-right: 10px;
 }
 
 @-webkit-keyframes rotate {

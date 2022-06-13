@@ -12,7 +12,7 @@ html {
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
-  font-size: 14px;
+  font-size: 15px;
   position: relative;
   background-color: v.$bg-color;
   line-height: 1.6;
@@ -28,7 +28,7 @@ html {
   }
 
   @include v.pad-width {
-    display: 15px;
+    font-size: 15px;
   }
 }
 
@@ -365,7 +365,7 @@ input:-internal-autofill-selected{
 }
 
 .xs-font {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
 .l-font {
@@ -938,8 +938,8 @@ nav {
           height: 6px;
           border-radius: 50%;
           background-color: v.$primary;
-          margin-right: 5px;
-          margin-bottom: 2px;
+          margin-right: 10px;
+          margin-bottom: 3px;
         }
       }
 
@@ -986,6 +986,7 @@ nav {
     padding: 2px 10px;
     display: inline-block;
     color: v.$secondary;
+    text-align: center;
     @extend %weight600;
     
   }
@@ -1164,7 +1165,7 @@ nav {
     }
 
     .content {
-      margin-bottom: 40px;
+      margin-bottom: 80px;
     }
 
     .actions {
@@ -1464,6 +1465,11 @@ footer {
     opacity: 1;
   }
 }
+
+.table {display: table;border-collapse: collapse;width: 100%;}
+.table-tr {display: table-row;width: 100%;}
+.table-th {display: table-cell;height: 100%;text-align: center;vertical-align: middle;background-color:#818181;}
+.table-td {display: table-cell; height: 100%; text-align: center;vertical-align: middle;}
 
 
 //for youtube rwd
