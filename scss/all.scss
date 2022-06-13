@@ -56,7 +56,7 @@
       padding-bottom: 4px;
       position: absolute;
       top: 0;
-      left: 0;
+      left: 1px;
       background: var(--bc);
       animation: revealingIn var(--td) var(--d) forwards, revealingOut var(--td) var(--t) forwards;
     }
@@ -897,7 +897,7 @@
         }
 
         .detail {
-          margin-bottom: 30px;
+          margin-bottom: 20px;
 
           @include v.phone-width {
             margin-bottom: 10px;

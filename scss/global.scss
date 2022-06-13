@@ -1011,7 +1011,7 @@ nav {
         .material-icons {
           position: absolute;
           left: 15px;
-          top: 42px;
+          top: 40px;
           color: v.$bg-color;
           font-size: 30px;
           cursor: pointer;
@@ -1019,7 +1019,7 @@ nav {
           &.pwd-on {
             color: #C7BA9B;
           }
-        }
+        } 
       }
     }
     .row-1 {
@@ -1174,12 +1174,10 @@ nav {
       width: 100%;
       
       @include v.pad-width{
-        justify-content: center;
         margin-bottom: 20px;
 
       }
       @include v.phone-width{
-        justify-content: center;
         margin-bottom: 20px;
 
       }
@@ -1193,6 +1191,15 @@ nav {
         text-align: center;
         margin-right: 20px;
         width: 12em;
+
+        @include v.pad-width{
+          width: 8em;
+        }
+        @include v.phone-width{
+          width: auto;
+          padding: 10px;
+  
+        }
 
         &:last-of-type{
           margin-right: 0

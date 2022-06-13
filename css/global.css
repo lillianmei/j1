@@ -1046,7 +1046,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
 .content-row .icon-row .material-icons {
   position: absolute;
   left: 15px;
-  top: 42px;
+  top: 40px;
   color: #282828;
   font-size: 30px;
   cursor: pointer;
@@ -1276,17 +1276,11 @@ nav .input-toggler:checked ~ .sidebar-overlay {
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
   .section .actions {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     margin-bottom: 20px;
   }
 }
 @media all and (max-width: 768px) {
   .section .actions {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     margin-bottom: 20px;
   }
 }
@@ -1299,6 +1293,17 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   text-align: center;
   margin-right: 20px;
   width: 12em;
+}
+@media all and (min-width: 769px) and (max-width: 991px) {
+  .section .actions .actions-btn {
+    width: 8em;
+  }
+}
+@media all and (max-width: 768px) {
+  .section .actions .actions-btn {
+    width: auto;
+    padding: 10px;
+  }
 }
 .section .actions .actions-btn:last-of-type {
   margin-right: 0;
