@@ -24,6 +24,14 @@
           <div class="s-font">ONLINE TICKET</div>
           <div>線上訂票</div>
         </div>
+        <div class="step-bar">
+          <ul class="progress">
+            <li class="active">選擇票種</li>
+            <li>選擇座位</li>
+            <li>確認訂單與付款</li>
+            <li>訂單完成</li>
+          </ul>
+        </div>
         <div class="content-row">
           <div class="row-left row-2">
             <img src="https://fakeimg.pl/250x350/" alt="movie-name" />
@@ -75,83 +83,87 @@
         </div>
         <div class="content-row">
           <div class="row-left row-6">
-                  <div class="table package">
-                    <div class="table-tr package-title l-font">
-                      <div class="table-th sale"><span class="material-icons"> featured_play_list </span>優惠套票</div>
+            <div class="package">
+              <div class="table">
+                <div class="table-tr package-title l-font">
+                  <div class="table-th sale"><span class="material-icons"> featured_play_list </span>優惠套票</div>
+                </div>
+                <div class="package-content">
+                  <div class="table-tr s-font">
+                    <div class="table-th">票種</div>
+                    <div class="table-th">單價</div>
+                    <div class="table-th">數量</div>
+                    <div class="table-th">小計</div>
+                  </div>
+                  <div class="table-tr ticket-set">
+                    <div class="table-td type">雙人電影套票<div class="s-font">電影票 X2、中爆米花 X1、中可樂 X1</div>
                     </div>
-                    <div class="package-content">
-                      <div class="table-tr s-font">
-                        <div class="table-th">票種</div>
-                        <div class="table-th">單價</div>
-                        <div class="table-th">數量</div>
-                        <div class="table-th">小計</div>
-                      </div>
-                      <div class="table-tr ticket-set">
-                        <div class="table-td type">雙人電影套票<div class="s-font">電影票 X2、中爆米花 X1、中可樂 X1</div>
-                        </div>
-                        <div class="table-td">NT$777</div>
-                        <div class="table-td ticket-sheet">
-                          <span class="minus">-</span>
-                          <input type="number">
-                          <span class="plus">+</span>
-                        </div>
-                        <div class="table-td">NT$7777</div>
-                      </div>
-                      <div class="table-tr ticket-set">
-                        <div class="table-td type">單人電影套票<div class="s-font">電影票 X1、中爆米花 X1、中可樂 X1</div>
-                        </div>
-                        <div class="table-td">NT$333</div>
-                        <div class="table-td ticket-sheet">
-                          <span class="minus">-</span>
-                          <input type="number">
-                          <span class="plus">+</span>
-                        </div>
-                        <div class="table-td">NT$3333</div>
-                      </div>
+                    <div class="table-td">NT$777</div>
+                    <div class="table-td ticket-sheet">
+                      <span class="minus">-</span>
+                      <input type="number">
+                      <span class="plus">+</span>
                     </div>
-                  </div>        
-            <div class="table package">
-              <div class="table-tr package-title l-font">
-                <div class="table-th"><span class="material-icons"> featured_play_list </span>一般票種</div>
+                    <div class="table-td">NT$7777</div>
+                  </div>
+                  <div class="table-tr ticket-set">
+                    <div class="table-td type">單人電影套票<div class="s-font">電影票 X1、中爆米花 X1、中可樂 X1</div>
+                    </div>
+                    <div class="table-td">NT$333</div>
+                    <div class="table-td ticket-sheet">
+                      <span class="minus">-</span>
+                      <input type="number">
+                      <span class="plus">+</span>
+                    </div>
+                    <div class="table-td">NT$3333</div>
+                  </div>
+                </div>
               </div>
-              <div class="package-content">
-                <div class="table-tr s-font">
-                  <div class="table-th">票種</div>
-                  <div class="table-th">單價</div>
-                  <div class="table-th">數量</div>
-                  <div class="table-th">小計</div>
+            </div>
+            <div class="package">
+              <div class="table">
+                <div class="table-tr package-title l-font">
+                  <div class="table-th"><span class="material-icons"> featured_play_list </span>一般票種</div>
                 </div>
-                <div class="table-tr ticket-set">
-                  <div class="table-td type">全票</div>
-                  <div class="table-td">NT$300</div>
-                  <div class="table-td ticket-sheet">
-                    <span class="minus">-</span>
-                    <input type="number">
-                    <span class="plus">+</span>
+                <div class="package-content">
+                  <div class="table-tr s-font">
+                    <div class="table-th">票種</div>
+                    <div class="table-th">單價</div>
+                    <div class="table-th">數量</div>
+                    <div class="table-th">小計</div>
                   </div>
-                  <div class="table-td">NT$3000</div>
-                </div>
-                <div class="table-tr ticket-set">
-                  <div class="table-td type">優待票(學生/軍警)<div class="xs-font">【取票時須出示相關證件，以便核對】</div>
+                  <div class="table-tr ticket-set">
+                    <div class="table-td type">全票</div>
+                    <div class="table-td">NT$300</div>
+                    <div class="table-td ticket-sheet">
+                      <span class="minus">-</span>
+                      <input type="number">
+                      <span class="plus">+</span>
+                    </div>
+                    <div class="table-td">NT$3000</div>
                   </div>
-                  <div class="table-td">NT$270</div>
-                  <div class="table-td ticket-sheet">
-                    <span class="minus">-</span>
-                    <input type="number">
-                    <span class="plus">+</span>
+                  <div class="table-tr ticket-set">
+                    <div class="table-td type">優待票(學生/軍警)<div class="xs-font">【取票時須出示相關證件，以便核對】</div>
+                    </div>
+                    <div class="table-td">NT$270</div>
+                    <div class="table-td ticket-sheet">
+                      <span class="minus">-</span>
+                      <input type="number">
+                      <span class="plus">+</span>
+                    </div>
+                    <div class="table-td">NT$3333</div>
                   </div>
-                  <div class="table-td">NT$3333</div>
-                </div>
-                <div class="table-tr ticket-set">
-                  <div class="table-td type">愛心/敬老票<div class="xs-font">【取票時須出示相關證件，以便核對】</div>
+                  <div class="table-tr ticket-set">
+                    <div class="table-td type">愛心/敬老票<div class="xs-font">【取票時須出示相關證件，以便核對】</div>
+                    </div>
+                    <div class="table-td">NT$160</div>
+                    <div class="table-td ticket-sheet">
+                      <span class="minus">-</span>
+                      <input type="number">
+                      <span class="plus">+</span>
+                    </div>
+                    <div class="table-td">NT$3333</div>
                   </div>
-                  <div class="table-td">NT$160</div>
-                  <div class="table-td ticket-sheet">
-                    <span class="minus">-</span>
-                    <input type="number">
-                    <span class="plus">+</span>
-                  </div>
-                  <div class="table-td">NT$3333</div>
                 </div>
               </div>
             </div>
@@ -187,15 +199,16 @@
                 訂票張數限制訂票張數限制訂票。
               </li>
               <li>
-                訂票張數限制訂票張數限制訂票Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum excepturi optio voluptatum doloribus q。
+                訂票張數限制訂票張數限制訂票Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum excepturi optio
+                voluptatum doloribus q。
               </li>
             </ul>
           </div>
-          <div class="actionbtn">
+          <div class="actionbtn book-step-btn">
             <button type="button" class="back"><span class="material-icons">
-              west
-            </span>BACK</button>
-              <button type="button" class="next">NEXT<span class="material-icons">
+                west
+              </span>BACK</button>
+            <button type="button" class="next">NEXT<span class="material-icons">
                 east
               </span></button>
           </div>

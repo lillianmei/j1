@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .main-title div:nth-of-type(1), .movie-title span, .modal-content .modal-info .row:not(:last-of-type) .forgetpwd, .modal-content .modal-info .row:not(:last-of-type) .lockpwd, #regist label[for=confirmrule] {
   font-weight: 300;
 }
@@ -6,7 +7,7 @@
   font-weight: 400;
 }
 
-.sidebar .menu > li:hover .menu-link, .sidebar .menu .menu-link.active, .main-title div:nth-of-type(2), .sub-title, .movie-title, .movie-level, .section .actions .actions-btn.active, .actionbtn button, .actionbtn div, .modal-content h2, .modal-content label {
+.sidebar .menu > li:hover .menu-link, .sidebar .menu .menu-link.active, .main-title div:nth-of-type(2), .sub-title, .movie-title, .movie-level, .section .actions .actions-btn.active, .actionbtn button, .actionbtn div, .modal-content h2, .modal-content label, .step-bar .progress li.active, .step-bar .progress li.finished {
   font-weight: 600;
 }
 
@@ -993,7 +994,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
 }
 
 .primary-title {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .primary-title:after {
   content: "|";
@@ -1046,7 +1047,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
 .content-row .icon-row .material-icons {
   position: absolute;
   left: 15px;
-  top: 40px;
+  top: 39px;
   color: #282828;
   font-size: 30px;
   cursor: pointer;
@@ -1296,13 +1297,12 @@ nav .input-toggler:checked ~ .sidebar-overlay {
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
   .section .actions .actions-btn {
-    width: 8em;
+    width: 50%;
   }
 }
 @media all and (max-width: 768px) {
   .section .actions .actions-btn {
-    width: auto;
-    padding: 10px;
+    width: 50%;
   }
 }
 .section .actions .actions-btn:last-of-type {
@@ -1616,6 +1616,92 @@ footer > div a img {
   height: 100%;
   text-align: center;
   vertical-align: middle;
+}
+
+.step-bar {
+  width: 100%;
+  margin: 80px 0;
+}
+.step-bar .progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  counter-reset: step;
+}
+.step-bar .progress li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 20%;
+      -ms-flex: 20%;
+          flex: 20%;
+  position: relative;
+  z-index: 0;
+  text-align: center;
+}
+@media all and (max-width: 768px) {
+  .step-bar .progress li {
+    font-size: 0.9em;
+  }
+}
+.step-bar .progress li::before {
+  content: counter(step);
+  counter-increment: step;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #818181;
+  border-radius: 100%;
+  text-align: center;
+  background-color: #282828;
+  margin-bottom: 10px;
+  color: #818181;
+}
+@media all and (max-width: 768px) {
+  .step-bar .progress li::before {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+}
+.step-bar .progress li::after {
+  content: "";
+  position: absolute;
+  width: 65%;
+  height: 1px;
+  background-color: #818181;
+  top: 16px;
+  right: -33%;
+  z-index: -1;
+}
+.step-bar .progress li:last-child::after {
+  content: none;
+}
+.step-bar .progress li.active {
+  color: #FCC900;
+}
+.step-bar .progress li.active::before {
+  border: 1px solid #FCC900;
+  background-color: #FCC900;
+  color: #000;
+}
+.step-bar .progress li.finished {
+  color: #FCC900;
+}
+.step-bar .progress li.finished::before {
+  content: "√";
+  border: 1px solid #FCC900;
+  background-color: #FCC900;
+  color: #000;
 }
 
 @media all and (min-width: 769px) and (max-width: 991px) {

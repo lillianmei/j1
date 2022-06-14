@@ -161,7 +161,6 @@ app.mount("#app");
 $(function () {
   const $account = document.querySelector(".user-account");
   const $body = document.querySelector("body");
-  const $datePicker = document.querySelector("#datepicker");
   const $landing = $(".landing");
   const $goup = $(".gotop");
   const $tab = $(".tab-item");
@@ -191,15 +190,16 @@ $(function () {
     $account.classList.add("-active");
     $account.classList.remove("-leave");
   });
-  $account.addEventListener("mouseleave", (e) => {
+  $account.addEventListener("mouseleave", () => {
     $account.classList.remove("-active");
     $account.classList.add("-leave");
   });
 
   //顯示go to top btn
   $(window).on("scroll", function () {
-    let scrollHeight = 300;
-    if ($(window).scrollTop() > scrollHeight) {
+    let $scrollHeight = 300;
+    let $windowTop = $(window).scrollTop()
+    if ($windowTop > $scrollHeight) {
       $goup.addClass("show");
       // $nav.addClass('mini');
     } else {
@@ -219,8 +219,9 @@ $(function () {
 
   //分頁切換
   $tab.on("click", function (e) {
-    $(this).addClass("active");
-    $(this).siblings().removeClass("active");
+    let $this = $(this)
+    $this.addClass("active");
+    $this.siblings().removeClass("active");
     $(`.tab-content[data-id='${e.target.id}']`).siblings().addClass("hide");
     $(`.tab-content[data-id='${e.target.id}']`).removeClass("hide");
   });
@@ -242,11 +243,16 @@ $(function () {
 
   // 選取時刻表效果
   $datetime.on("click", function () {
-    $(this).siblings().removeClass("active");
-    $(this).addClass("active");
+     let $this = $(this)
+    $this.siblings().removeClass("active");
+    $this.addClass("active");
   });
-  $time.on("click", function () {
-    $(this).siblings().removeClass("active");
-    $(this).addClass("active");
+  $time.on("click", function (e) {
+    let $this = $(this)
+    // e.preventDefault();
+    if ($this.hasClass('disable') === false) {
+      $this.siblings().removeClass("active");
+      $this.addClass("active");
+    }
   });
 });

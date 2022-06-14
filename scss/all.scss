@@ -196,6 +196,14 @@
   }
 
   .onlinebook {
+    @include v.pad-width {
+      margin-bottom: 40px;
+    }
+
+    @include v.phone-width {
+      margin-bottom: 40px;
+    }
+
     .select-box {
       padding-right: 2vw;
 
@@ -297,7 +305,7 @@
 
     .list-item {
       >div {
-        margin-bottom: 5px;
+        margin-bottom: 10px;
         @extend %weight600;
 
         &:last-of-type {
@@ -376,7 +384,7 @@
 
     .item {
       border-top: 1px solid v.$font-secondary;
-      padding: 40px 5em 0 5em;
+      padding: 40px 2em 0 2em;
       margin-bottom: 40px;
 
       @include v.other-width {
@@ -431,6 +439,7 @@
 
     .movie-title {
       width: 80%;
+      margin: 15px 0;
 
       @include v.phone-width {
         width: 100%;
@@ -450,7 +459,6 @@
 
     .booking-list {
       width: 80%;
-      margin-top: 10px;
 
       @include v.phone-width {
         width: 100%;
@@ -480,7 +488,7 @@
 
       @include v.phone-width {
         position: static;
-        margin-top: 20px;
+        margin-top: 40px;
         display: flex;
         flex-wrap: wrap;
       }
@@ -790,11 +798,11 @@
         content: "";
         display: inline-block;
         height: 1px;
-        width: 75%;
+        width: 70%;
         background-color: v.$font-secondary;
         position: absolute;
         right: 0;
-        top: 18px;
+        top: 20px;
       }
 
       .material-icons {
@@ -812,29 +820,46 @@
       flex-wrap: wrap;
 
       .time {
-        width: 18%;
-        padding: 5px 0;
-        border: 1px solid #fff;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-bottom: 15px;
-        margin-right: 10px;
+        width: 20%;
+
+        @include v.pad-width {
+          width: 16.6%;
+        }
 
         @include v.phone-width {
-          width: 22%;
+          width: 33.33%;
+        }
+
+        a {
+          display: block;
+          padding: 5px 10px;
+          border: 1px solid #fff;
+          border-radius: 5px;
+          margin: 5px;
+
         }
 
         &.active {
-          color: v.$secondary;
-          border: 1px solid v.$yellow-bg-color;
-          background-color: v.$yellow-bg-color;
+          a {
+            color: v.$secondary;
+            border: 1px solid v.$yellow-bg-color;
+            background-color: v.$yellow-bg-color;
+          }
+
         }
 
         &.disable {
-          cursor: not-allowed;
-          color: v.$font-secondary;
-          border: 1px solid v.$font-secondary;
+          a {
+            cursor: not-allowed;
+            pointer-events: none;
+            color: v.$font-secondary;
+            border: 1px solid v.$font-secondary;
+          }
+
         }
+
+
+
       }
     }
   }
@@ -860,6 +885,12 @@
       border-bottom-right-radius: 0;
 
       @include v.pad-width {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding: 20px;
+      }
+
+      @include v.phone-width {
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
         padding: 20px;
@@ -948,13 +979,16 @@
       }
 
       @include v.phone-width {
+        border-radius: 10px;
         border-left: none;
         margin-top: 2vw;
+        padding: 20px;
       }
 
       .summary {
         color: #A18978;
         text-align: right;
+        letter-spacing: 0px;
 
         @include v.pad-width {
           text-align: left;
@@ -1054,12 +1088,23 @@
       @include v.phone-width {
         padding-right: 0;
       }
-
-
-      .package {
-        margin-bottom: 30px
-      }
     }
+
+
+    .package {
+      margin-bottom: 30px;
+      overflow-x: auto;
+      width: 100%;
+    }
+
+    .table {
+      @include v.phone-width {
+        max-width: 800px;
+        width: 800px;
+      }
+
+    }
+
 
     .main-title div:nth-of-type(1)::before {
       background-color: v.$blue-bg-color;
@@ -1071,14 +1116,21 @@
 
 
     .package-title {
+      @include v.phone-width {
+        display: flex;
+      }
+
       .table-th {
         background-color: #036EB7;
         padding: 5px 5px 5px 10px;
         text-align: left;
+        width: 100%;
       }
 
       .sale {
+
         @include v.bg-opacity(v.$blue-bg-color, 0.8);
+
       }
 
       .material-icons {
@@ -1093,9 +1145,6 @@
 
       @include v.phone-width {
         padding: 10px;
-        
-        
-        overflow-x: auto;
       }
 
       .table-th:first-of-type {
@@ -1199,34 +1248,34 @@
         }
       }
     }
+  }
 
-    .actionbtn {
-      width: 100%;
+  .book-step-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    button {
+      width: fit-content;
+      color: #000;
       display: flex;
-      justify-content: center;
+      align-items: center;
 
-      button {
-        width: fit-content;
-        color: #000;
-        display: flex;
-        align-items: center;
+      &.next {
+        background-color: v.$btn-primary;
+        margin-left: 10px;
 
-        &.next {
-          background-color: v.$btn-primary;
-          margin-left: 10px;
-
-          .material-icons {
-            margin-left: 10px
-          }
+        .material-icons {
+          margin-left: 10px
         }
+      }
 
-        &.back {
-          @include v.bg-opacity(v.$blue-bg-color, 0.8);
-          margin-right: 10px;
+      &.back {
+        @include v.bg-opacity(v.$blue-bg-color, 0.8);
+        margin-right: 10px;
 
-          .material-icons {
-            margin-right: 10px
-          }
+        .material-icons {
+          margin-right: 10px
         }
       }
     }
