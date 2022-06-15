@@ -167,6 +167,7 @@ $(function () {
   const $eye = $(".pwd-eye");
   const $time = $(".time");
   const $datetime = $(".booktime");
+  const $seatSelect = $(".seat");
 
   //ladnding page animation
   if ($landing.length === 1) {
@@ -250,9 +251,20 @@ $(function () {
   $time.on("click", function (e) {
     let $this = $(this)
     // e.preventDefault();
-    if ($this.hasClass('disable') === false) {
+    if ($this.is('.disable') === false) {
       $this.siblings().removeClass("active");
       $this.addClass("active");
+    }
+  });
+
+  //座位表選取效果
+  $seatSelect.on("click", function (e) {
+    let $this = $(this)
+    let $parentDiv = $this.parent()
+    if ($parentDiv.is('.disable') || $parentDiv.is('.soldout')) {
+      return;
+    }else{
+      $parentDiv.toggleClass("booked");
     }
   });
 });

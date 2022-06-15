@@ -1280,6 +1280,76 @@
       }
     }
   }
+
+  .seat-table {
+    width: 80%;
+    max-width: 80%;
+    margin: 0 auto;
+    overflow-x: auto;
+
+     .screen{
+        color: #000;
+        text-align: center;
+        vertical-align: middle;
+        width: 100%;
+        height: 50px;
+        background-image: url(../image/svg/screen.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        padding-top: 5px;
+        margin: 20px auto 40px auto;
+      }
+
+    .table-tr {
+      height: 40px;
+    }
+
+    .table-td {
+      .td-block {
+        width: 45px;
+        padding: 2px 0;
+        margin: 0 auto;
+      }
+      .seat {
+        cursor: pointer;
+        border: 1px solid #fff;
+        border-radius: 5px;
+
+        .material-icons {
+          font-size: 22px;
+          vertical-align: text-top;
+        }
+      }
+      .accessibility {
+        border-color: #E75514;
+        color: #E75514;
+      }
+      &.soldout{
+        .seat {
+          border-color: #818181;
+          cursor: not-allowed;
+          background-color: v.$red-bg-color;
+        }
+      }
+      &.booked {
+        .seat {
+          border-color: #818181;
+          background-color: v.$green-bg-color;
+        }
+      }
+      &.disable{
+         .seat {
+            cursor: not-allowed;
+            pointer-events: none; 
+            background-color: #81818153;
+            color: #818181;
+            border-color: #818181;
+         }
+      }
+     
+    }
+  }
 }
 
 // animate
