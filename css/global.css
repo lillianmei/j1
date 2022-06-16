@@ -223,6 +223,9 @@ select option {
   color: #fff;
   border: 1px solid #818181;
 }
+select option :hover {
+  background-color: transparent;
+}
 
 button,
 input {
@@ -834,6 +837,8 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   transition: height 0.3s cubic-bezier(0.6, -0.3, 0.4, 0.88);
 }
 .sidebar .user-account div.account-sub hr {
+  border-color: #fff;
+  background-color: #fff;
   width: 85%;
   margin: 30px auto 20px auto;
   -webkit-transform: scaleX(0);
@@ -1315,7 +1320,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
 
 .actionbtn {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 80px;
 }
 .actionbtn button, .actionbtn div {
   width: 100%;
@@ -1453,6 +1458,9 @@ footer > div a img {
   color: #000;
   padding: 0 10px;
   height: 45px;
+}
+.modal-content input#confirmrule, .modal-content input#lockpwd {
+  height: auto;
 }
 .modal-content .modal-info {
   padding: 25px 4vw;

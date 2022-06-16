@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>BROADWAY CINEMAS - 百老匯影城</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/global.min.css" />
+  <link rel="stylesheet" href="css/all.min.css" />
+
+</head>
+
+<body id="app">
+  <!-- header -->
+  <nav-header></nav-header>
+
+  <!-- main container -->
+  <main class="section-box">
+    <section class="section">
+      <div class="content book-tickets">
+        <div class="main-title l-font">
+          <div class="s-font">ONLINE TICKET</div>
+          <div>線上訂票</div>
+        </div>
+        <div class="step-bar">
+          <ul class="progress">
+            <li class="finished">選擇票種</li>
+            <li class="finished">選擇座位</li>
+            <li class="active">確認訂單與付款</li>
+            <li>訂單完成</li>
+          </ul>
+        </div>
+        <div class="content-row">
+          <div class="row-left row-2">
+            <img src="https://fakeimg.pl/250x350/" alt="movie-name" />
+          </div>
+          <div class="row-min row-5">
+            <div class="movie-item">
+              <div class="movie-level y12">護6級</div>
+              <div class="movie-title">
+                <p class="l-font">劫命救護</p>
+                <span class="s-font">AMBULANCE</span>
+              </div>
+            </div>
+            <div class="content-row movie-detail">
+              <div class="row-5 detail"><span class="material-icons"> location_on </span>台北公館百老匯影城</div>
+              <div class="row-5 detail"><span class="material-icons">videocam</span><span
+                  class="start-time">21:30</span>標準數位 | 12聽</div>
+              <div class="row-5 detail mb-0"><span class="material-icons"> calendar_month </span>2022.08.08 星期一</div>
+              <div class="row-5 detail mb-0 s-font"><span class="material-icons">chair</span>12-07,12-08,12-09,12-11,12-12</div>
+            </div>
+          </div>
+          <div class="row-right row-3 ">
+            <div class="summary l-font">
+              <span class="material-icons"> featured_play_list </span>ORDER SUMMARY
+            </div>
+            <div class="summary-detail">
+              <li><span class="ticket-name">全票</span>X<span class="ticket-number">8</span>=<span
+                  class="ticket-sum">$3000</span></li>
+              <li><span class="ticket-name">優待票</span>X<span class="ticket-number">1</span>=<span
+                  class="ticket-sum">$3000</span></li>
+              <li><span class="ticket-name">愛心票</span>X<span class="ticket-number">1</span>=<span
+                  class="ticket-sum">$3000</span></li>
+              <li><span class="ticket-name">網路訂票手續費</span>X<span class="ticket-number">10</span>=<span
+                  class="ticket-sum">$200</span>
+              </li>
+            </div>
+            <div class="summary-total">
+              <li><span class="ticket-name">TICKETS TOTAL</span>NT$<span class="ticket-sum">$777</span>
+              </li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="content book-tickets-3">
+        <div class="main-title l-font">
+          <div class="s-font">CHECK INFORMATION</div>
+          <div>請確認購票人資訊</div>
+        </div>
+        <div class="check-info">
+          <label>請確認購票人資訊：</label>
+          <div class="info-item">
+            <label>會員姓名</label>
+            <input type="text" value="陳奕迅 Yick Shun Chen">
+          </div>
+          <div class="info-item">
+            <label>手機號碼</label>
+            <input type="text" value="09123456789">
+          </div>
+          <div class="info-item">
+            <label>電子信箱</label>
+            <input type="text" value="aaadddccc@gmail.com">
+          </div>
+          <label for="">請選擇電子發票開立方式：</label>
+          <div class="precautions s-font"><span class="material-icons"> info_outline </span>電影票票價內含娛樂稅，不另開統一發票。訂單含餐點之套餐，餐點部分統一發票將由影城於取票時一併交付；平台手續費將另行開立電子發票。</div>
+          <div class="info-item">
+            <label>電子發票處理方式</label>
+            <select>
+              <option value="value1">個人載具</option>
+              <option value="value2">Value 2</option>
+              <option value="value3">Value 3</option>
+            </select>
+          </div>
+          <div class="info-item">
+            <label>請輸入載具手機條碼</label>
+            <input type="text" value="/VL12354">
+          </div>
+          <label for="permissionRule" class="container-checkbox">
+            我已經閱讀並同意<a href="">線上訂票須知</a>及<a href="">電影分級制度說明</a>
+            <input type="checkbox" name="permissionRule" id="permissionRule">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+ 
+        <div class="actionbtn book-step-btn">
+          <button type="button" class="back"><span class="material-icons">
+              west
+            </span>BACK</button>
+          <button type="button" class="next">CHECKOUT<span class="material-icons">
+            attach_money
+          </span></button>
+        </div>
+       
+      </div>
+    </section>
+  </main>
+  <!-- main container -->
+
+  <div class="gotop"><span class="material-icons">arrow_drop_up</span></div>
+
+  <!-- footer -->
+  <bottom-footer></bottom-footer>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/vue.js"></script>
+  <script src="js/index.js"></script>
+
+</body>
+
+</html>

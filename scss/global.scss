@@ -200,12 +200,15 @@ select {
   padding: 0 15px;
   width: 100%;
   color: v.$font-primary;
-
-  option {
+    option {
     background: #3a3a3a;
     color: v.$font-primary;
     border: 1px solid v.$font-secondary;
+   :hover{
+    background-color: transparent;
+   }
   }
+  
 }
 
 button,
@@ -780,6 +783,8 @@ nav {
         transition: height 0.3s cubic-bezier(.6, -0.3, .4, .88);
 
         hr {
+          border-color: #fff;
+          background-color: #fff;
           width: 85%;
           margin: 30px auto 20px auto;
           transform: scaleX(0);
@@ -1215,7 +1220,7 @@ nav {
 
 .actionbtn {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 80px;
 
   button,div{
     width: 100%; 
@@ -1336,7 +1341,11 @@ footer {
     color: v.$secondary;
     padding: 0 10px;
     height: 45px;
+    &#confirmrule,&#lockpwd{
+      height: auto;
+    }
   }
+
 
   .modal-info {
     padding: 25px 4vw;

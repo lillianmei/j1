@@ -164,7 +164,6 @@
     .poster {
       img {
         border-radius: 10px;
-        width: 100%;
       }
     }
 
@@ -246,7 +245,6 @@
       }
 
       img {
-        width: 100%;
         height: fit-content;
       }
 
@@ -273,11 +271,6 @@
   }
 
   .movie-item {
-
-
-    img {
-      width: 100%;
-    }
 
     .up-date {
       margin: 5px 0 30px 0;
@@ -400,10 +393,6 @@
 
       @include v.phone-width {
         margin-bottom: 40px;
-      }
-
-      img {
-        width: 100%;
       }
     }
 
@@ -544,7 +533,6 @@
       }
 
       img {
-        width: 100%;
         border-radius: 5px;
       }
     }
@@ -960,7 +948,6 @@
       }
     }
 
-
     .row-right {
       padding: 30px;
       background-color: rgba(0, 0, 0, 0.247);
@@ -1281,75 +1268,260 @@
     }
   }
 
-  .seat-table {
-    width: 80%;
-    max-width: 80%;
-    margin: 0 auto;
-    overflow-x: auto;
+  .book-tickets-2 {
+    position: relative;
 
-     .screen{
+    .main-title div:nth-of-type(2) {
+      color: v.$blue-bg-color
+    }
+
+    .main-title div:nth-of-type(1)::before {
+      background-color: v.$blue-bg-color;
+    }
+
+    .seat-table {
+      // width: fit-content;
+      min-width: 60%;
+      max-width: 80%;
+      margin: 0 auto 80px auto;
+      overflow-x: auto;
+      padding-bottom: 20px;
+
+      @include v.phone-width {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .seat-mark {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+        flex-wrap: wrap;
+
+        @include v.phone-width {
+          margin-top: 10px;
+        }
+
+        .mark {
+          margin: 0 15px;
+          @extend %weight600;
+
+          @include v.phone-width {
+            margin: 0;
+            margin-bottom: 5px;
+            width: 50%;
+          }
+
+          span {
+            border: 1px solid #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-right: 10px;
+            display: inline-block;
+
+            @include v.phone-width {
+              padding: 2px 5px;
+            }
+          }
+        }
+
+        .selected {
+          span {
+            background-color: v.$green-bg-color;
+          }
+        }
+
+        .sell {
+          span {
+            background-color: v.$red-bg-color;
+          }
+        }
+
+        .wheelchair {
+          span {
+            border-color: #E75514;
+            color: #E75514;
+            font-size: 23px;
+          }
+        }
+
+      }
+
+      .screen {
+        display: block;
         color: #000;
         text-align: center;
         vertical-align: middle;
-        width: 100%;
-        height: 50px;
-        background-image: url(../image/svg/screen.svg);
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
         padding-top: 5px;
         margin: 20px auto 40px auto;
-      }
+        width: 800px;
 
-    .table-tr {
-      height: 40px;
-    }
+        img {
+          width: 600px;
 
-    .table-td {
-      .td-block {
-        width: 45px;
-        padding: 2px 0;
-        margin: 0 auto;
-      }
-      .seat {
-        cursor: pointer;
-        border: 1px solid #fff;
-        border-radius: 5px;
+          @include v.phone-width {
+            width: 400px
+          }
+        }
 
-        .material-icons {
-          font-size: 22px;
-          vertical-align: text-top;
+        @include v.phone-width {
+          width: 663px
         }
       }
-      .accessibility {
-        border-color: #E75514;
-        color: #E75514;
+
+      .table-tr {
+        height: 40px;
+
+        @include v.phone-width {
+          height: 30px;
+        }
       }
-      &.soldout{
+
+      .table-td {
+        .td-block {
+          width: 45px;
+          padding: 2px 0;
+          margin: 0 3px;
+
+          @include v.pad-width {
+            width: 40px;
+            font-size: 0.9rem;
+          }
+
+          @include v.phone-width {
+            width: 35px;
+            margin: 0 2px;
+            font-size: 0.8rem;
+          }
+        }
+
         .seat {
-          border-color: #818181;
-          cursor: not-allowed;
-          background-color: v.$red-bg-color;
+          cursor: pointer;
+          border: 1px solid #fff;
+          border-radius: 5px;
+
+          .material-icons {
+            font-size: 22px;
+            vertical-align: text-top;
+
+            @include v.phone-width {
+              font-size: 18px;
+            }
+          }
         }
-      }
-      &.booked {
-        .seat {
-          border-color: #818181;
-          background-color: v.$green-bg-color;
+
+        .accessibility {
+          border-color: #E75514;
+          color: #E75514;
         }
-      }
-      &.disable{
-         .seat {
+
+        &.soldout {
+          .seat {
+            border-color: #818181;
             cursor: not-allowed;
-            pointer-events: none; 
+            background-color: v.$red-bg-color;
+          }
+        }
+
+        &.booked {
+          .seat {
+            border-color: #818181;
+            background-color: v.$green-bg-color;
+          }
+        }
+
+        &.disable {
+          .seat {
+            cursor: not-allowed;
+            pointer-events: none;
             background-color: #81818153;
             color: #818181;
             border-color: #818181;
-         }
+          }
+        }
+
+      }
+    }
+
+    .condition {
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      @include v.phone-width {
+        position: static;
+        width: fit-content;
+      }
+
+      >div {
+        padding: 5px 10px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+
+        span {
+          margin: 0 10px;
+          @extend %weight600;
+
+          &.material-icons {
+            margin: 0 10px 0 0;
+          }
+        }
+
+        margin-bottom: 10px;
+      }
+
+      .countdown {
+        background-color: v.$blue-bg-color;
+      }
+
+      .how-many-seat {
+        background-color: v.$yellow-bg-color;
+        color: #000;
+      }
+    }
+  }
+  .book-tickets-3{
+     .main-title div:nth-of-type(2) {
+      color: v.$blue-bg-color
+    }
+
+    .main-title div:nth-of-type(1)::before {
+      background-color: v.$blue-bg-color;
+    }
+    .check-info{
+      input,select{
+        border-color: transparent;
+      }
+      label{display:block;width: 100%;@extend %weight600;margin-bottom: 10px;}
+      .info-item{
+        display: inline-block;
+        width: 30%;
+        margin: 0 30px 30px 0;
+        label{color: v.$yellow-bg-color;margin-bottom: 5px;}
+      }
+      .precautions{
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        span{
+          margin-right: 5px;
+          color: v.$green-bg-color;
+        }
+      }
+      .container-checkbox{
+        font-weight: normal;
+        width: fit-content;
+       a{@extend %weight600;margin: 0 5px;}
+        .checkmark{
+        top: 5px;
+      }
       }
      
     }
   }
+
 }
 
 // animate
