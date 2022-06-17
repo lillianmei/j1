@@ -7,7 +7,8 @@
   font-weight: 400;
 }
 
-.sidebar .menu > li:hover .menu-link, .sidebar .menu .menu-link.active, .main-title div:nth-of-type(2), .sub-title, .movie-title, .movie-level, .section .actions .actions-btn.active, .actionbtn button, .actionbtn div, .modal-content h2, .modal-content label, .step-bar .progress li.active, .step-bar .progress li.finished {
+.sidebar .menu > li:hover .menu-link, .sidebar .menu .menu-link.active, .main-title div:nth-of-type(2), .sub-title, .movie-title, .movie-level, .section .actions .actions-btn.active, .section .attention .note, .actionbtn button,
+.actionbtn div, .modal-content h2, .modal-content label, .step-bar .progress li.active, .step-bar .progress li.finished {
   font-weight: 600;
 }
 
@@ -369,7 +370,8 @@ li {
   outline: 2px dotted rgba(129, 129, 129, 0.337254902);
 }
 
-input:focus, select:focus {
+input:focus,
+select:focus {
   -webkit-box-shadow: 0 0 2px 2px rgba(129, 129, 129, 0.337254902);
           box-shadow: 0 0 2px 2px rgba(129, 129, 129, 0.337254902);
 }
@@ -425,7 +427,7 @@ input:-internal-autofill-selected {
   height: 1px;
   background-color: #C53932;
   border: none;
-  margin: 1.1em 0;
+  margin: 1.4em 0;
 }
 
 .mul-ellipsis-4 {
@@ -470,7 +472,8 @@ input:-internal-autofill-selected {
   background-color: #73C044;
 }
 
-.ui-datepicker-month, .ui-datepicker-year {
+.ui-datepicker-month,
+.ui-datepicker-year {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -482,7 +485,8 @@ input:-internal-autofill-selected {
   background: #3a3a3a;
 }
 
-.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
   top: 3px;
 }
 
@@ -500,30 +504,44 @@ input:-internal-autofill-selected {
   background-position: 0px 2px;
 }
 
-.ui-datepicker-next-hover, .ui-datepicker-prev-hover {
+.ui-datepicker-next-hover,
+.ui-datepicker-prev-hover {
   background: transparent !important;
   border: 1px solid transparent !important;
   right: 3px;
 }
 
-.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
   border: 1px solid transparent;
   background: transparent;
 }
 
-.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
   border: 1px solid rgba(252, 201, 0, 0.3294117647);
   background: rgba(252, 201, 0, 0.3294117647);
   color: #000;
 }
 
-.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
   border: 1px solid #DD362B;
   background: #DD362B;
   color: #fff;
 }
 
-.ui-datepicker td span, .ui-datepicker td a {
+.ui-datepicker td span,
+.ui-datepicker td a {
   text-align: center;
 }
 
@@ -973,7 +991,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
 
 /* share style */
 .section-box {
-  padding: 0 15px;
+  padding: 0 10px;
 }
 
 .main-title {
@@ -1258,11 +1276,11 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   margin: 50px auto 50px auto;
 }
 .section:last-of-type {
-  margin-bottom: 200px;
+  margin-bottom: 150px;
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
   .section:last-of-type {
-    margin-bottom: 100px;
+    margin-bottom: 90px;
   }
 }
 @media all and (max-width: 768px) {
@@ -1273,12 +1291,18 @@ nav .input-toggler:checked ~ .sidebar-overlay {
 .section .content {
   margin-bottom: 80px;
 }
+.section .content:last-of-type {
+  margin-bottom: 0;
+}
 .section .actions {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  margin-bottom: 40px;
+  margin: 40px 0;
   width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
   .section .actions {
@@ -1299,15 +1323,20 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   text-align: center;
   margin-right: 20px;
   width: 12em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
   .section .actions .actions-btn {
     width: 50%;
+    margin-right: 10px;
   }
 }
 @media all and (max-width: 768px) {
   .section .actions .actions-btn {
     width: 50%;
+    margin-right: 10px;
   }
 }
 .section .actions .actions-btn:last-of-type {
@@ -1317,12 +1346,37 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   color: #000;
   background-color: #FCC900;
 }
+.section .attention {
+  border: 1px solid #818181;
+  border-radius: 10px;
+  padding: 20px 30px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.section .attention .note {
+  margin-bottom: 10px;
+}
+.section .attention .note .material-icons {
+  font-size: 1.5rem;
+  margin-right: 5px;
+}
+.section .attention ul {
+  margin-left: 40px;
+}
+.section .attention li {
+  list-style: decimal-leading-zero;
+}
+.section .attention li:last-of-type {
+  margin-bottom: 20px;
+}
 
 .actionbtn {
   text-align: center;
   margin-top: 80px;
 }
-.actionbtn button, .actionbtn div {
+.actionbtn button,
+.actionbtn div {
   width: 100%;
   padding: 10px 30px;
   color: #fff;
@@ -1703,18 +1757,24 @@ footer > div a img {
   color: #FCC900;
 }
 .step-bar .progress li.active::before {
-  border: 1px solid #FCC900;
+  border-color: #FCC900;
   background-color: #FCC900;
   color: #000;
+}
+.step-bar .progress li.active:after {
+  background-color: #FCC900;
 }
 .step-bar .progress li.finished {
   color: #FCC900;
 }
 .step-bar .progress li.finished::before {
   content: "✓";
-  border: 1px solid #FCC900;
+  border-color: #FCC900;
   background-color: #FCC900;
   color: #000;
+}
+.step-bar .progress li.finished:after {
+  background-color: #FCC900;
 }
 
 @media all and (min-width: 769px) and (max-width: 991px) {

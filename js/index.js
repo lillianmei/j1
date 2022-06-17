@@ -25,7 +25,7 @@ const app = Vue.createApp({
               </ul>
             </li>
             <li>
-              <a class="menu-link" href="#" title="電影介紹">電影介紹</a>
+              <a class="menu-link" href="movies.html" title="電影介紹">電影介紹</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#" title="現正熱映">現正熱映</a></li>
                 <li><a class="dropdown-item" href="#" title="即將上映">即將上映</a></li>
@@ -33,7 +33,7 @@ const app = Vue.createApp({
             </li>
             <li><a class="menu-link" href="news.html" title="最新消息">最新消息</a></li>
             <li><a class="menu-link" href="group-ticket.html" title="業務專區">業務專區</a></li>
-            <li><a class="menu-link" href="#" title="關於影城">關於影城</a></li>
+            <li><a class="menu-link" href="about.html" title="關於影城">關於影城</a></li>
           </ul>
           <!-- login/logout style user-account toggle class 'isUser'/none   -->
           <div class="user-account">
