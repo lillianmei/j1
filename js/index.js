@@ -66,7 +66,7 @@ const app = Vue.createApp({
           <form action="">
             <div class="row" >
               <label for="loginid">帳號（電子郵件信箱）</label>
-              <input type="text" id="loginid" placeholder="aaabbb@gmail.com">
+              <input type="email" id="loginid" placeholder="aaabbb@gmail.com">
             </div>
             <div class="row">
               <label for="loginpassword">登入密碼 <a href="" class="forgetpwd">
@@ -105,12 +105,12 @@ const app = Vue.createApp({
           <form action="">
             <div class="row">
               <label for="registid">帳號（電子郵件信箱)<span class="required-icon">*</span></label>
-              <input type="text" id="registid" required="required" placeholder="aaabbb@gmail.com">
+              <input type="email" id="registid" required="required" placeholder="aaabbb@gmail.com">
             </div>
             <div class="row">
               <label for="phone">聯絡電話<span class="required-icon">*<span
                     class="xs-font">將以此帳號作為日後訂單聯繫，請務必填寫正確</span></span></label>
-              <input type="number" id="phone" required="required" placeholder="091234567">
+              <input type="tel" id="phone" required="required" placeholder="091234567">
             </div>
             <div class="row">
               <label for="setpwd">設定密碼<span class="required-icon">*</span></label>

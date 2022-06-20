@@ -775,6 +775,7 @@
       display: flex;
       padding-right: 10px;
       flex-wrap: wrap;
+      position: relative;
 
       @include v.pad-width {
         padding-right: 0;
@@ -788,15 +789,21 @@
     }
 
     .movie-item {
+
       &:first-of-type {
         padding-right: 20px;
-
+        
         @include v.pad-width {
+          flex-basis: 30%;
+          margin: 0 auto;
           padding-right: 0;
           margin-bottom: 20px;
         }
 
         @include v.phone-width {
+          position: absolute;
+          width: 130px;
+          right: 0;
           padding-right: 0;
           margin-bottom: 20px;
         }
@@ -921,7 +928,8 @@
 
       @include v.phone-width {
         padding-right: 0;
-        margin: 0 auto 2vw auto;
+        flex-basis: 40%;
+        margin: 0 auto 20px auto;
       }
     }
 
@@ -1128,6 +1136,7 @@
   }
 
   .tickets-package {
+
     .row-left {
       padding-right: 2vw;
 
@@ -1166,6 +1175,13 @@
 
 
     .package-title {
+      small{
+          display: none;
+          margin-left: 10px;
+          @include v.phone-width {
+          display: inline-block;
+       }
+      }
       @include v.phone-width {
         display: flex;
       }
@@ -1180,7 +1196,7 @@
       .sale {
 
         @include v.bg-opacity(v.$blue-bg-color, 0.8);
-
+        
       }
 
       .material-icons {
@@ -1536,9 +1552,15 @@
       .info-item{
         display: inline-block;
         width: 30%;
-        margin: 0 30px 40px 0;
+        margin: 5px 0 50px 0;
+        padding-right: 20px;
         label{color: v.$yellow-bg-color;margin-bottom: 5px;}
-      }
+        @include v.phone-width {
+         width: 50%;
+         padding-right: 10px;
+         margin-bottom: 20px;
+        }
+      } 
       .precautions{
         display: flex;
         align-items: center;

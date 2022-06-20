@@ -136,6 +136,7 @@ input[type=password],
 input[type=number],
 select,
 option,
+input[type=tel],
 input[type=email],
 input[type=date] {
   width: 100%;
@@ -410,7 +411,7 @@ input:-internal-autofill-selected {
 }
 
 .xs-font {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 
 .l-font {
