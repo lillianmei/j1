@@ -209,7 +209,7 @@
       div {
         display: flex;
         align-items: center;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
       }
 
       .material-icons {
@@ -251,7 +251,7 @@
       .new-info {
         width: 50%;
         margin-left: 20px;
-        padding-right: 15px;
+        padding-right: 5px;
         text-align: left;
 
         @include v.phone-width {

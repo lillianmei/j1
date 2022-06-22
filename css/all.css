@@ -227,7 +227,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .section .onlinebook .select-box .material-icons {
   color: #C53932;
@@ -270,7 +270,7 @@
 .section .lastestnew .news-box .new-info {
   width: 50%;
   margin-left: 20px;
-  padding-right: 15px;
+  padding-right: 5px;
   text-align: left;
 }
 @media all and (max-width: 768px) {
