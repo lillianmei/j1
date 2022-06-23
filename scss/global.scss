@@ -417,7 +417,7 @@ input:-internal-autofill-selected {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-
+// 電影分級表背景色
 .y12 {
   background-color: v.$yellow-bg-color;
 }
@@ -544,11 +544,7 @@ nav {
     flex-direction: column;
     cursor: pointer;
 
-    @include v.pad-width {
-      display: flex;
-    }
-
-    @include v.phone-width {
+    @include v.under-pad-width {
       display: flex;
     }
 
@@ -567,21 +563,12 @@ nav {
 
   .input-toggler {
     &~.sidebar .menu {
-      @include v.pad-width {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: -300px;
-        width: 300px;
-        z-index: 999;
-      }
-
-      @include v.phone-width {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: -300px;
-        width: 300px;
+      @include v.under-pad-width {
+        // position: absolute;
+        // top: 0;
+        // bottom: 0;
+        // left: -300px;
+        // width: 300px;
         z-index: 999;
       }
     }
@@ -636,30 +623,17 @@ nav {
   padding: 0 10px;
   margin: 0 auto;
 
-  .forpc {
+  .nav-menu {
     display: flex;
     width: 100%;
     justify-content: space-between;
 
-    @include v.pad-width {
-      display: none;
+    @include v.under-pad-width {
+      // display: none;
     }
 
-    @include v.other-width {}
-
-
-    @include v.phone-width {
-      display: none;
-    }
   }
 
-  .formobile {
-    @include v.pc-width {
-      display: none;
-    }
-
-    display: block;
-  }
 
   .nav-brand {
     padding: 20px;
@@ -749,7 +723,7 @@ nav {
       }
     }
   }
-
+  // 電腦版會員
   .user-account {
     cursor: pointer;
     border: 1px solid v.$primary;
@@ -759,11 +733,7 @@ nav {
     flex-shrink: 0;
 
 
-    @include v.pad-width {
-      display: none;
-    }
-
-    @include v.phone-width {
+    @include v.under-pad-width {
       display: none;
     }
 
@@ -952,6 +922,25 @@ nav {
     &:hover {
       background-color: transparent;
     }
+  }
+  // 手機版會員
+  .user-account-mobile{
+    @include v.pc-width {
+      display: none;
+    }
+  
+    @include v.under-pad-width {
+      display: block;
+      .user,.account-sub{display: none;}
+      .user-login,.user-regist{display: block;}
+      &.isUser{
+      .user{display: block;}
+      .user-login{display: none;}
+      .user-regist{display: none;}
+    }
+    }
+   
+  
   }
 }
 
@@ -1393,11 +1382,17 @@ footer {
   position: fixed;
   top: 10%;
   width: 570px;
-  max-width: 570px;
   height: fit-content;
   border-radius: 10px;
   color: black;
   background: #EBEBEB;
+  @include v.pad-width {
+        width: 85%;
+      }
+
+      @include v.phone-width {
+        width: 95%;
+      }
 
   h2 {
     background-color: v.$yellow-bg-color;

@@ -155,8 +155,8 @@
       padding: 0 5px;
 
       >div {
-        @include v.mini-width {
-          padding-right: 0;
+        @include v.phone-width {
+          padding: 0;
         }
       }
     }

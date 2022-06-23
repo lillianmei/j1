@@ -70,3 +70,9 @@ $other-media: 1200px;
     @content;
   }
 }
+//其他
+@mixin under-pad-width() {
+  @media all and (max-width: $pcs-media) {
+    @content;
+  }
+}

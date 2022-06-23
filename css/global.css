@@ -582,14 +582,7 @@ nav .menu-toggler {
           flex-direction: column;
   cursor: pointer;
 }
-@media all and (min-width: 769px) and (max-width: 991px) {
-  nav .menu-toggler {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-@media all and (max-width: 768px) {
+@media all and (max-width: 991px) {
   nav .menu-toggler {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -605,23 +598,8 @@ nav .menu-toggler .menu-toggler-line {
   -webkit-transition: all 0.35s ease-out;
   transition: all 0.35s ease-out;
 }
-@media all and (min-width: 769px) and (max-width: 991px) {
+@media all and (max-width: 991px) {
   nav .input-toggler ~ .sidebar .menu {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -300px;
-    width: 300px;
-    z-index: 999;
-  }
-}
-@media all and (max-width: 768px) {
-  nav .input-toggler ~ .sidebar .menu {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -300px;
-    width: 300px;
     z-index: 999;
   }
 }
@@ -672,7 +650,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   padding: 0 10px;
   margin: 0 auto;
 }
-.sidebar .forpc {
+.sidebar .nav-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -680,24 +658,6 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-@media all and (min-width: 769px) and (max-width: 991px) {
-  .sidebar .forpc {
-    display: none;
-  }
-}
-@media all and (max-width: 768px) {
-  .sidebar .forpc {
-    display: none;
-  }
-}
-.sidebar .formobile {
-  display: block;
-}
-@media all and (min-width: 992px) {
-  .sidebar .formobile {
-    display: none;
-  }
 }
 .sidebar .nav-brand {
   padding: 20px;
@@ -800,12 +760,7 @@ nav .input-toggler:checked ~ .sidebar-overlay {
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
-@media all and (min-width: 769px) and (max-width: 991px) {
-  .sidebar .user-account {
-    display: none;
-  }
-}
-@media all and (max-width: 768px) {
+@media all and (max-width: 991px) {
   .sidebar .user-account {
     display: none;
   }
@@ -988,6 +943,31 @@ nav .input-toggler:checked ~ .sidebar-overlay {
 }
 .sidebar .user-account:hover {
   background-color: transparent;
+}
+@media all and (min-width: 992px) {
+  .sidebar .user-account-mobile {
+    display: none;
+  }
+}
+@media all and (max-width: 991px) {
+  .sidebar .user-account-mobile {
+    display: block;
+  }
+  .sidebar .user-account-mobile .user, .sidebar .user-account-mobile .account-sub {
+    display: none;
+  }
+  .sidebar .user-account-mobile .user-login, .sidebar .user-account-mobile .user-regist {
+    display: block;
+  }
+  .sidebar .user-account-mobile.isUser .user {
+    display: block;
+  }
+  .sidebar .user-account-mobile.isUser .user-login {
+    display: none;
+  }
+  .sidebar .user-account-mobile.isUser .user-regist {
+    display: none;
+  }
 }
 
 /* share style */
@@ -1489,13 +1469,22 @@ footer > div a img {
   position: fixed;
   top: 10%;
   width: 570px;
-  max-width: 570px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   border-radius: 10px;
   color: black;
   background: #EBEBEB;
+}
+@media all and (min-width: 769px) and (max-width: 991px) {
+  .modal-content {
+    width: 85%;
+  }
+}
+@media all and (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+  }
 }
 .modal-content h2 {
   background-color: #FCC900;

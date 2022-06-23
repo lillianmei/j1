@@ -35,7 +35,7 @@ const app = Vue.createApp({
             <li><a class="menu-link" href="group-ticket.html" title="業務專區">業務專區</a></li>
             <li><a class="menu-link" href="about.html" title="關於影城">關於影城</a></li>
           </ul>
-          <!-- login/logout style user-account toggle class 'isUser'/none   -->
+          <!-- login/logout style user-account toggle class 'isUser'   -->
           <div class="user-account">
             <div class="user">
               HELLO! <span class="user-name">Yick</span><span class="material-icons"> person </span><span
@@ -53,7 +53,6 @@ const app = Vue.createApp({
             <div class="user-regist">
               <a href="#regist" title="加入會員">加入會員</a>
             </div>
-
           </div>
         </div>
       </div>
@@ -178,6 +177,7 @@ $(function () {
           $body.classList.remove('no-scroll')
         }, 1300);
     });
+    
     if (window.matchMedia("(max-width: 768px)").matches) {
       $body.classList.remove('no-scroll')
       setTimeout(function () {
