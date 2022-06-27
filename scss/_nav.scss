@@ -1,0 +1,478 @@
+/* nav */
+nav {
+  // position: fixed;
+  width: 100%;
+  max-width: v.$max-width;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  padding: 70px 0;
+  // transition: all 0.5s;
+  z-index: 5;
+  @include v.under-pad-width {
+    padding:0;
+  }
+
+  &.mini {
+    padding: 10px 0;
+  }
+
+  .input-toggler {
+    display: none;
+  }
+
+  .menu-toggler {
+    position: absolute;
+    right: 30px;
+    top: 29px;
+    width: 35px;
+    height: 50px;
+    z-index: 1000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+
+    @include v.under-pad-width {
+      display: flex;
+    }
+
+    .menu-toggler-line {
+      width: 100%;
+      height: 2px;
+      background: v.$primary;
+      margin: 0 0 8px 0px;
+      position: relative;
+      -webkit-transition: all 0.35s ease-out;
+      -moz-transition: all 0.35s ease-out;
+      -o-transition: all 0.35s ease-out;
+      transition: all 0.35s ease-out;
+    }
+  }
+
+  .input-toggler {
+    &~.sidebar{
+       @include v.under-pad-width {
+         flex-direction: column;
+
+        }
+      .nav-menu{
+         @include v.under-pad-width {
+          flex-direction: column;
+          align-items: center;
+         }
+      }
+      .user-account{
+        
+        @include v.under-pad-width {
+          display: none;
+          margin-bottom: 10px;
+          width: fit-content;
+          order: -1;
+        }
+        .account-sub{
+          @include v.under-pad-width {
+          transition: none;
+          height: fit-content;
+          position: static;
+          transform: none;
+          }
+          hr{
+            @include v.under-pad-width {
+              transition: none;
+              transform:none;
+              margin: 0 auto 20px auto;
+            }
+          }
+          a{
+            @include v.under-pad-width {
+              transition: none;
+              transform: none;
+              opacity: 1;
+              padding: 0 0 10px 0;
+            }
+          }
+        }
+      }
+    }
+    &~.sidebar .menu {
+      @include v.under-pad-width {
+        width: 100%;
+        z-index: 999;
+        display: none; 
+      }
+    }
+
+    &~.sidebar-overlay {
+      position: absolute;
+      background-color: #000;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+      opacity: 0;
+      display: none;
+      -webkit-transition: all 0.45s ease-out;
+      -moz-transition: all 0.45s ease-out;
+      -o-transition: all 0.45s ease-out;
+      transition: all 0.45s ease-out;
+      z-index: 99;
+    }
+
+    &:checked {
+      &~.sidebar .menu {
+      @include v.under-pad-width {
+        z-index: 999;
+        display: block; 
+      }
+    }
+      &~.sidebar .nav-menu {
+      @include v.under-pad-width {
+        height: 100vh;
+        overflow-y: auto;
+        padding-bottom: 100px;
+        padding-left: -15px;
+      }
+    }
+    &~.sidebar .user-account {
+      @include v.under-pad-width {
+        z-index: 999;
+        display: block; 
+      }
+    }
+      &~.menu-toggler .menu-toggler-line {
+        top: 5px;
+        transform: translateY(100px);
+        transform: rotate(45deg);
+      }
+
+      &~.menu-toggler .menu-toggler-line:nth-child(2) {
+        display: none;
+      }
+
+      &~.menu-toggler .menu-toggler-line:nth-child(3) {
+        top: -5px;
+        transform: translateY(10);
+        transform: rotate(135deg);
+      }
+
+      &~.sidebar-overlay {
+        display: block;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.sidebar {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  margin: 0 auto;
+
+  .nav-menu {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  .nav-brand {
+    padding: 20px;
+  }
+
+  .menu {
+    // transition: all 0.35s ease-out;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 1;
+    flex-grow: 1;
+
+    .dropdown-menu {
+      width: 100%;
+      height: fit-content;
+      position: absolute;
+      top: 45px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      visibility: hidden;
+      transition: visibility 0.5s linear;
+
+      @include v.under-pad-width {
+        position: static;
+        visibility:visible;
+        overflow:unset;
+        transition: none;
+      }
+
+      li {
+        padding: 4px 0;
+        margin-bottom: 5px;
+        transform: translateY(-150px);
+        transition: transform .5s cubic-bezier(.74, -0.23, .4, .88);
+        @include v.under-pad-width {
+          transform:none;
+          transition: none;
+        }
+        &:nth-of-type(odd) {
+          background-color: v.$primary;
+           @include v.under-pad-width {
+            background-color: transparent;
+          }
+        }
+
+        &:nth-of-type(even) {
+          background-color: v.$font-secondary;
+          @include v.under-pad-width {
+            background-color: transparent;
+          }
+        }
+        &:first-of-type {
+           @include v.under-pad-width {
+            border-top: 1px solid v.$primary;
+          }
+        }
+
+        a {
+          color: v.$font-primary;
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    >li {
+      width: 16%;
+      text-align: center;
+      position: relative;
+      @include v.under-pad-width {
+        width:100px;
+        margin: 0 auto 10px auto;
+      }
+      &:hover {
+        & .dropdown-menu {
+          visibility: visible;
+
+          li {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+        .menu-link {
+          @extend %weight600;
+        }
+      }
+    }
+
+    .menu-link {
+      position: relative;
+      display: inline-block;
+      text-align: center;
+      padding: 10px 0;
+      color: v.$font-primary;
+      transition: color 0.4s ease, font-weight 0.4s ease;
+
+      &.active {
+        @extend %weight600;
+      }
+    }
+  }
+
+  .user-account {
+    cursor: pointer;
+    border: 1px solid v.$primary;
+    border-radius: 25px;
+    z-index: 2;
+    position: relative;
+    flex-shrink: 0;
+
+    div {
+      display: inline-block;
+
+      &.user {
+        padding: 0.8em 1.2em;
+        border-radius: 22px;
+        color: v.$font-primary;
+        display: none;
+
+        .user-name {
+          display: inline-flex;
+          max-width: 80px;
+          width: 80px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: clip;
+          margin-right: 2px;
+        }
+      }
+
+      &.user-login {
+        display: inline-block;
+      }
+
+      &.user-regist {
+        display: inline-block;
+
+        a {
+          background-color: transparent;
+          padding: 10px 20px 10px 10px;
+        }
+      }
+
+      a {
+        display: inline-block;
+        padding: 10px 25px;
+        background-color: v.$primary;
+        border-radius: 22px;
+      }
+
+      &.account-sub {
+        display: none;
+        text-align: center;
+        height: 0;
+        overflow: hidden;
+        width: 100%;
+        transition: height 0.3s cubic-bezier(.6, -0.3, .4, .88);
+
+        hr {
+          border-color: #fff;
+          background-color: #fff;
+          width: 85%;
+          margin: 30px auto 20px auto;
+          transform: scaleX(0);
+          transition: transform 0.4s ease;
+        }
+
+        a {
+          display: block;
+          background-color: transparent;
+          opacity: 0;
+          overflow: hidden;
+          transform: translate(0px, -5px);
+          transition: transform 0.4s linear,
+            opacity 0.4s linear;
+          padding: 0 0 15px 0;
+
+          &::before {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            margin-right: 5px;
+          }
+
+          &:hover {
+            &::before {
+              border-radius: 100%;
+              margin-right: 5px;
+              margin-bottom: 3px;
+              background-color: v.$blue-bg-color;
+            }
+          }
+
+        }
+      }
+    }
+
+    &.-active {
+      background-color: v.$primary;
+
+      .account-sub {
+        height: 190px;
+
+        hr {
+          transform: scaleX(1);
+          transform-origin: left;
+          transition-delay: 0.3s;
+        }
+
+        a {
+          transform: translate(0px, 0px);
+          opacity: 1;
+
+          &:nth-of-type(1) {
+            transition-delay: 0.4s;
+          }
+
+          &:nth-of-type(2) {
+            transition-delay: 0.6s;
+          }
+
+          &:nth-of-type(3) {
+            transition-delay: 0.8s;
+          }
+        }
+      }
+    }
+
+    &.-leave {
+      background-color: transparent;
+
+      .account-sub {
+        transition: height 0.3s cubic-bezier(.6, -0.3, .4, .88) 1s;
+        height: 0;
+
+        hr {
+          transition: transform 0.4s ease 0.9s;
+          transform: scaleX(0);
+          transform-origin: right;
+        }
+
+        a {
+          transition: transform 0.3s linear,
+            opacity 0.5s linear;
+          transform: translate(0px, -5px);
+          opacity: 0;
+
+          &:nth-of-type(1) {
+            transition-delay: 0.7s;
+          }
+
+          &:nth-of-type(2) {
+            transition-delay: 0.5s;
+          }
+
+          &:nth-of-type(3) {
+            transition-delay: 0.2s;
+          }
+        }
+      }
+    }
+
+    &.isUser {
+      background-color: v.$primary;
+      border: none;
+
+
+      .account-sub {
+        position: absolute;
+        top: 25px;
+        display: block;
+        z-index: -2;
+        background-color: v.$primary;
+        border-bottom-left-radius: 22px;
+        border-bottom-right-radius: 22px;
+      }
+
+      .user {
+        display: block;
+      }
+
+      .user-login,
+      .user-regist {
+        display: none;
+      }
+
+      &:hover {
+        background-color: v.$primary;
+      }
+    }
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}

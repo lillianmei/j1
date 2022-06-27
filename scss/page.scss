@@ -16,7 +16,7 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-
+ 
   h1 {
     color: v.$font-primary;
     font-size: 8rem;
@@ -165,10 +165,6 @@
       img {
         border-radius: 10px;
       }
-    }
-
-    .movie-level {
-      margin-right: 10px;
     }
 
     .state {
@@ -644,6 +640,20 @@
   }
 
   .about{
+    .info{
+      .main-title div:nth-of-type(1)::before{
+        content: url('data:image/svg+xml;utf8,<svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 0H2C0.9 0 0 0.9 0 2V18L7 15L14 18V2C14 0.9 13.1 0 12 0Z" fill="black"/></svg>');
+        background-color: transparent;
+        margin-right: 15px;
+      }
+      li{
+        &:before{
+          content: url("data:image/svg+xml,%3Csvg width='12' height='16' viewBox='0 0 12 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.2857 0H1.71429C0.771429 0 0 0.771429 0 1.71429V15.4286L6 12.8571L12 15.4286V1.71429C12 0.771429 11.2286 0 10.2857 0Z' fill='%23C53932'/%3E%3C/svg%3E ");
+          margin-right: 10px;
+              vertical-align: sub;
+        }
+      }
+    }
     .actions{
       justify-content: flex-start;
     }
