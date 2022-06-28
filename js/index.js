@@ -170,6 +170,7 @@ $(function () {
   const $landing = $(".landing");
   const $goup = $(".gotop");
   const $tab = $(".tab-item");
+  const $collapse = $('.collapse')
   const $eye = $(".pwd-eye");
   const $time = $(".time");
   const $datetime = $(".booktime");
@@ -257,6 +258,14 @@ $(function () {
       $(this).next().attr("type", "text");
     }
   });
+
+  //訂票查詢訂單開啟/收起效果
+  $collapse.on("click", function () {
+    let $this = $(this)
+    let $parentDiv = $this.parent()
+    console.log($parentDiv.next())
+    
+  })
 
   // 選取時刻表效果
   $datetime.on("click", function () {

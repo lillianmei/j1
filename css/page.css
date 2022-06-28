@@ -382,9 +382,9 @@
           justify-content: flex-start;
 }
 .section .booking-history .item {
+  position: relative;
   border-top: 1px solid #818181;
   padding: 40px 2em 0 2em;
-  margin-bottom: 40px;
 }
 @media all and (max-width: 1200px) {
   .section .booking-history .item {
@@ -484,7 +484,8 @@
 }
 .section .booking-history .ticket-state {
   position: absolute;
-  right: 0;
+  right: 2em;
+  top: 40px;
 }
 @media all and (max-width: 768px) {
   .section .booking-history .ticket-state {
@@ -506,8 +507,9 @@
           justify-content: space-between;
   margin-bottom: 10px;
   color: #fff;
-  padding: 5px 25px;
+  padding: 5px 15px;
   border-radius: 3px;
+  cursor: pointer;
 }
 @media all and (max-width: 768px) {
   .section .booking-history .ticket-state .state {
@@ -515,18 +517,50 @@
     margin-right: 10px;
   }
 }
-.section .booking-history .ticket-state .state.paid {
+.section .booking-history .ticket-state .state.collapse {
   background-color: #00ABF2;
   background-color: rgba(0, 171, 242, 0.8);
-}
-.section .booking-history .ticket-state .state.getQR {
-  background-color: #00ABF2;
 }
 .section .booking-history .ticket-state .state.refund {
   border: 1px solid #C53932;
 }
 .section .booking-history .ticket-state .state .material-icons {
   margin-left: 3px;
+}
+.section .booking-history .ticket-info {
+  width: 100%;
+  border-top: 1px solid #818181;
+  border-bottom: 1px dotted #818181;
+  padding: 2em 0;
+  margin: 2em 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.section .booking-history .ticket-info .ticket-state {
+  top: 0;
+}
+.section .booking-history .ticket-info:last-of-type {
+  border-bottom: none;
+}
+.section .booking-history .ticket-info .row-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.section .booking-history .ticket-info .row-left span {
+  width: 80px;
+  text-align: center;
+  display: inline-block;
+  padding: 2px 10px;
+  border: 1px solid #fff;
+  border-radius: 12px;
 }
 .section .news .hr-line {
   margin: 1.1em 0;
