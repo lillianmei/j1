@@ -263,8 +263,7 @@ $(function () {
   $collapse.on("click", function () {
     let $this = $(this)
     let $parentDiv = $this.parent()
-    console.log($parentDiv.next())
-    
+    $parentDiv.next().slideToggle()    
   })
 
   // 選取時刻表效果

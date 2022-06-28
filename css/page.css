@@ -388,7 +388,7 @@
 }
 @media all and (max-width: 1200px) {
   .section .booking-history .item {
-    padding: 20px 0 0 0;
+    padding: 20px 0;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -484,8 +484,8 @@
 }
 .section .booking-history .ticket-state {
   position: absolute;
-  right: 2em;
-  top: 40px;
+  right: 0;
+  top: 20px;
 }
 @media all and (max-width: 768px) {
   .section .booking-history .ticket-state {
@@ -530,15 +530,20 @@
 .section .booking-history .ticket-info {
   width: 100%;
   border-top: 1px solid #818181;
+  margin-top: 20px;
+  position: relative;
+  display: none;
+}
+.section .booking-history .ticket-info .info-item {
   border-bottom: 1px dotted #818181;
-  padding: 2em 0;
-  margin: 2em 0 0 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  padding: 1em 0;
+}
+.section .booking-history .ticket-info .info-item:last-of-type {
+  border-bottom: 0;
 }
 .section .booking-history .ticket-info .ticket-state {
   top: 0;
+  right: 0;
 }
 .section .booking-history .ticket-info:last-of-type {
   border-bottom: none;
@@ -555,7 +560,7 @@
           justify-content: center;
 }
 .section .booking-history .ticket-info .row-left span {
-  width: 80px;
+  width: 100px;
   text-align: center;
   display: inline-block;
   padding: 2px 10px;
