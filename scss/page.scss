@@ -196,6 +196,7 @@
        }
     }
   }
+
   .movie-info {
     .movie-item {
       &:first-of-type {
@@ -223,9 +224,8 @@
         flex-basis: 100%;
       }
     }
-  }
+  } 
 
-  
   .introduction {
     line-height: 1.8;
     @extend %weight300;
@@ -1126,14 +1126,6 @@
       overflow-x: auto;
     }
 
-    .table {
-      @include v.phone-width {
-        max-width: 800px;
-        width: 800px;
-      }
-
-    }
-
 
     .main-title div:nth-of-type(1)::before {
       background-color: v.$blue-bg-color;
@@ -1178,6 +1170,7 @@
       margin-top: 5px;
       background-color: #ccc;
       padding: 15px 20px;
+      min-width: 800px;
 
       @include v.phone-width {
         padding: 10px;
@@ -1205,6 +1198,10 @@
 
           &:nth-of-type(2) {
             width: 10%;
+            max-width: 10%;
+          }
+          &:nth-of-type(3) {
+            width: 15%;
             max-width: 10%;
           }
 
