@@ -1260,7 +1260,6 @@
 .section .tickets-package .package {
   margin-bottom: 30px;
   overflow-x: auto;
-  width: 100%;
 }
 @media all and (max-width: 768px) {
   .section .tickets-package .table {

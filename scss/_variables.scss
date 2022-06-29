@@ -27,6 +27,7 @@ $max-width: 1200px;
   background-color: rgba($color, $opacity);
 }
 @mixin row-width($width){
+    width: $width;
     flex-basis: $width;
 }
 

@@ -42,7 +42,7 @@ const app = Vue.createApp({
           </li>
         </ul>
         <!-- class 'isUser' trigger login/out layout -->
-        <div class="user-account">
+        <div class="user-account isUser">
           <div class="user">
             HELLO! <span class="user-name">Yick</span><span class="material-icons"> person </span><span
               class="material-icons"> menu </span>
