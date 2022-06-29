@@ -175,6 +175,13 @@ $(function () {
   const $time = $(".time");
   const $datetime = $(".booktime");
   const $seatSelect = $(".seat");
+  
+  //偵測是否為手機裝置
+  function isMobileDevice() {
+    const mobileDevice = ['Android', 'webOS', 'iPhone', 'iPad', 'iPod', 'BlackBerry', 'Windows Phone']
+    let isMobileDevice = mobileDevice.some(e => navigator.userAgent.match(e))
+    return isMobileDevice
+  }
 
   //ladnding page animation
   if ($landing.length === 1) {
@@ -186,20 +193,22 @@ $(function () {
         }, 1300);
     });
     
-    if (window.matchMedia("(max-width: 768px)").matches) {
+    if (isMobileDevice()) {
       $body.classList.remove('no-scroll')
       setTimeout(function () {
         $landing.fadeOut(1000);
-      }, 2500);
+      }, 2000);
     }
   }
 
   // 限制手機版選單開啟時背景滑動
   $hamberger.on("click", function (e) {
     let isCheck = e.target.checked
-    $body.classList.remove('no-scroll')
-    if (isCheck) {
-       $body.classList.add('no-scroll')
+    if (isMobileDevice()){
+      $body.classList.remove('no-scroll')
+      if (isCheck) {
+        $body.classList.add('no-scroll')
+      }
     }
   })
 

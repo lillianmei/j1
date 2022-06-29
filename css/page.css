@@ -384,7 +384,7 @@
 .section .booking-history .item {
   position: relative;
   border-top: 1px solid #818181;
-  padding: 40px 2em 0 2em;
+  padding: 40px 2em;
 }
 @media all and (max-width: 1200px) {
   .section .booking-history .item {
@@ -393,6 +393,12 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
+}
+.section .booking-history .item > .content-row {
+  padding-bottom: 20px;
+}
+.section .booking-history .item .content-row:last-of-type {
+  border-bottom: none;
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
   .section .booking-history .row-left {
@@ -484,12 +490,12 @@
 }
 .section .booking-history .ticket-state {
   position: absolute;
-  right: 0;
-  top: 20px;
+  right: 2em;
+  top: 40px;
 }
 @media all and (max-width: 768px) {
   .section .booking-history .ticket-state {
-    position: static;
+    position: unset;
     margin-top: 40px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -507,7 +513,7 @@
           justify-content: space-between;
   margin-bottom: 10px;
   color: #fff;
-  padding: 5px 15px;
+  padding: 5px 10px;
   border-radius: 3px;
   cursor: pointer;
 }
@@ -529,13 +535,11 @@
 }
 .section .booking-history .ticket-info {
   width: 100%;
-  border-top: 1px solid #818181;
-  margin-top: 20px;
   position: relative;
   display: none;
 }
 .section .booking-history .ticket-info .info-item {
-  border-bottom: 1px dotted #818181;
+  border-bottom: 1px dashed #818181;
   padding: 1em 0;
 }
 .section .booking-history .ticket-info .info-item:last-of-type {
@@ -560,7 +564,7 @@
           justify-content: center;
 }
 .section .booking-history .ticket-info .row-left span {
-  width: 100px;
+  width: 120px;
   text-align: center;
   display: inline-block;
   padding: 2px 10px;
@@ -678,15 +682,82 @@
 .section .group-ticket .new-content p {
   margin-bottom: 20px;
 }
+.section .about .row-left {
+  padding-right: 1vw;
+}
+@media all and (min-width: 769px) and (max-width: 991px) {
+  .section .about .row-left {
+    padding-right: 0;
+    margin-bottom: 15px;
+  }
+}
+@media all and (max-width: 768px) {
+  .section .about .row-left {
+    padding-right: 0;
+    margin-bottom: 15px;
+  }
+}
+.section .about .row-right {
+  padding-left: 1vw;
+}
+@media all and (min-width: 769px) and (max-width: 991px) {
+  .section .about .row-right {
+    padding-left: 0;
+  }
+}
+@media all and (max-width: 768px) {
+  .section .about .row-right {
+    padding-left: 0;
+  }
+}
+.section .about img {
+  border-radius: 10px;
+}
+.section .about .info {
+  margin-top: 40px;
+}
 .section .about .info .main-title div:nth-of-type(1)::before {
   content: url('data:image/svg+xml;utf8,<svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 0H2C0.9 0 0 0.9 0 2V18L7 15L14 18V2C14 0.9 13.1 0 12 0Z" fill="black"/></svg>');
   background-color: transparent;
   margin-right: 15px;
 }
-.section .about .info li:before {
+.section .about .info .info-container {
+  padding-left: 20px;
+}
+.section .about .info .info-container.facility {
+  overflow-x: auto;
+  padding-bottom: 20px;
+}
+.section .about .info .info-container li:first-of-type {
+  margin-top: 20px;
+}
+.section .about .info .info-container li:before {
   content: url("data:image/svg+xml,%3Csvg width='12' height='16' viewBox='0 0 12 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.2857 0H1.71429C0.771429 0 0 0.771429 0 1.71429V15.4286L6 12.8571L12 15.4286V1.71429C12 0.771429 11.2286 0 10.2857 0Z' fill='%23C53932'/%3E%3C/svg%3E ");
   margin-right: 10px;
   vertical-align: sub;
+}
+.section .about .info .info-container .table {
+  min-width: 1000px;
+  border-collapse: initial;
+}
+.section .about .info .info-container .table .table-th {
+  width: 80px;
+  padding: 5px 0;
+  border: 1px solid #4a4a4a;
+  background-color: rgba(255, 255, 255, 0.253);
+}
+.section .about .info .info-container .table .table-th:first-of-type {
+  border-radius: 5px 0 0 0;
+  border: none;
+  width: 120px;
+}
+.section .about .info .info-container .table .table-th:last-of-type {
+  border-radius: 0 5px 0 0;
+  border: none;
+}
+.section .about .info .info-container .table .table-td {
+  padding: 5px 0;
+  border: 1px solid #4a4a4a;
 }
 .section .about .actions {
   -webkit-box-pack: start;
@@ -1265,20 +1336,13 @@
   width: 20%;
 }
 .section .tickets-package .package-content .ticket-sheet {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  white-space: nowrap;
 }
 .section .tickets-package .package-content .ticket-sheet span {
   display: inline-block;
   text-align: center;
   font-size: 25px;
-  width: 50px;
+  width: 30px;
   cursor: pointer;
 }
 .section .tickets-package .package-content .ticket-sheet span.minus {
@@ -1286,7 +1350,7 @@
 }
 .section .tickets-package .package-content .ticket-sheet input {
   color: #000;
-  width: 80%;
+  width: 60px;
   height: 30px;
   padding: 0;
   text-align: center;
@@ -1450,8 +1514,9 @@
 }
 .section .book-tickets-2 .seat-table .table-td .seat {
   cursor: pointer;
-  border: 1px solid #fff;
   border-radius: 5px;
+  -webkit-box-shadow: 1px 0 #fff, -1px 0 #fff, 0 -1px #fff, 0 1px #fff;
+          box-shadow: 1px 0 #fff, -1px 0 #fff, 0 -1px #fff, 0 1px #fff;
 }
 .section .book-tickets-2 .seat-table .table-td .seat .material-icons {
   font-size: 22px;
@@ -1489,7 +1554,7 @@
 }
 @media all and (max-width: 768px) {
   .section .book-tickets-2 .condition {
-    position: static;
+    position: unset;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;

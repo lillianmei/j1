@@ -1,142 +1,6 @@
 @use "variables"as v;
+@import "_landing";
 
-//landing for homepage
-.landing {
-  width: 100%;
-  z-index: 99999;
-  position: fixed;
-
-  .landing-page {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    background-color: #000;
-    // background-image: url(https://picsum.photos/1920/500);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
- 
-  h1 {
-    color: v.$font-primary;
-    font-size: 8rem;
-    text-align: right;
-    width: min-content;
-    line-height: 1.3;
-    margin: 0 auto;
-    overflow-y: hidden;
-
-    @include v.pad-width {
-      font-size: 6rem;
-    }
-
-    @include v.phone-width {
-      font-size: 3rem;
-      margin-bottom: 60px;
-    }
-
-    @include v.mini-width {
-      font-size: 2rem;
-      margin-bottom: 30px;
-    }
-
-    .block-reveal {
-      --t: calc(var(--td) + var(--d));
-      color: transparent;
-      padding: 4px;
-      position: relative;
-      overflow: hidden;
-      animation: revealBlock 0s var(--t) forwards;
-    }
-
-    .block-reveal::after {
-      content: '';
-      width: 0%;
-      height: 100%;
-      padding-bottom: 4px;
-      position: absolute;
-      top: 0;
-      left: 1px;
-      background: var(--bc);
-      animation: revealingIn var(--td) var(--d) forwards, revealingOut var(--td) var(--t) forwards;
-    }
-  }
-
-  .welcome {
-    width: 224px;
-    height: 224px;
-    cursor: pointer;
-    position: absolute;
-    bottom: 13vh;
-    left: 13vw;
-    opacity: 0;
-    animation: opacity 1s linear 1.8s;
-    animation-fill-mode: forwards;
-
-    @include v.pad-width {
-      width: 180px;
-      height: 180px;
-      bottom: 8vh;
-      left: 9vw;
-    }
-
-    @include v.phone-width {
-      display: none;
-    }
-
-    .text-round {
-      width: 100%;
-      height: 100%;
-      background: url(../image/svg/welcome-round.svg);
-      background-repeat: no-repeat;
-      background-size: contain;
-      animation: rotate 10s infinite linear;
-    }
-
-    .mouse {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 34px;
-      height: 53px;
-      background: url(../image/svg/mouse.svg);
-      background-repeat: no-repeat;
-      background-size: contain;
-
-      @include v.pad-width {
-        width: calc(34px - 5px);
-        height: calc(53px - 5px);
-      }
-
-      @include v.phone-width {
-        width: calc(34px - 8px);
-        height: calc(53px - 8px);
-      }
-
-      .scroller {
-        width: 5px;
-        height: 8px;
-        border: 1px solid v.$font-primary;
-        border-radius: 25%;
-        position: absolute;
-        top: 13px;
-        left: 15px;
-        animation: scroll 1.3s ease-in infinite;
-
-        @include v.pad-width {
-          left: 12px;
-        }
-
-        @include v.phone-width {
-          left: 11px;
-        }
-      }
-    }
-  }
-}
-
-//page style
 .section {
   .showing-list {
     text-align: center;
@@ -386,11 +250,19 @@
     .item {
       position: relative;
       border-top: 1px solid v.$font-secondary;
-      padding: 40px 2em 0 2em;
+      padding: 40px 2em;
 
       @include v.other-width {
         padding: 20px 0;
         justify-content: center;
+      }
+      >.content-row{
+        padding-bottom: 20px;
+      }
+      .content-row{
+        &:last-of-type{
+          border-bottom: none;
+        }
       }
     }
 
@@ -480,11 +352,11 @@
 
     .ticket-state {
       position: absolute;
-      right: 0;
-      top: 20px;
+      right: 2em;
+      top: 40px;
 
       @include v.phone-width {
-        position: static;
+        position: unset;
         margin-top: 40px;
         display: flex;
         flex-wrap: wrap;
@@ -495,7 +367,7 @@
         justify-content: space-between;
         margin-bottom: 10px;
         color: v.$font-primary;
-        padding: 5px 15px;
+        padding: 5px 10px;
         border-radius: 3px;
         cursor: pointer;
 
@@ -519,12 +391,10 @@
     }
     .ticket-info{
       width: 100%;
-      border-top: 1px solid v.$font-secondary;
-      margin-top: 20px;
       position: relative;
       display: none;
       .info-item{
-        border-bottom: 1px dotted v.$font-secondary;
+        border-bottom: 1px dashed v.$font-secondary;
         padding: 1em 0;
         &:last-of-type{
           border-bottom: 0;
@@ -542,7 +412,7 @@
         align-items: center; 
         justify-content: center;
         span{
-          width: 100px;
+          width: 120px;
           text-align: center;
           display: inline-block;
           padding: 2px 10px;
@@ -673,18 +543,76 @@
   }
 
   .about{
+     
+    .row-left{
+      padding-right: 1vw;
+       @include v.pad-width {
+        padding-right: 0;
+        margin-bottom: 15px;
+      }
+
+      @include v.phone-width {
+        padding-right: 0;
+        margin-bottom: 15px;
+      }
+    }
+    .row-right{
+      padding-left: 1vw;
+       @include v.pad-width {
+        padding-left: 0;
+
+      }
+
+      @include v.phone-width {
+        padding-left: 0;
+      }
+    }
+    img{border-radius: 10px;}
     .info{
+      margin-top: 40px;
       .main-title div:nth-of-type(1)::before{
         content: url('data:image/svg+xml;utf8,<svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 0H2C0.9 0 0 0.9 0 2V18L7 15L14 18V2C14 0.9 13.1 0 12 0Z" fill="black"/></svg>');
         background-color: transparent;
         margin-right: 15px;
       }
-      li{
+      
+      .info-container{
+        padding-left: 20px;
+        &.facility{
+          overflow-x: auto;
+          padding-bottom: 20px;
+        }
+        li{
+        &:first-of-type{margin-top: 20px;}
         &:before{
           content: url("data:image/svg+xml,%3Csvg width='12' height='16' viewBox='0 0 12 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.2857 0H1.71429C0.771429 0 0 0.771429 0 1.71429V15.4286L6 12.8571L12 15.4286V1.71429C12 0.771429 11.2286 0 10.2857 0Z' fill='%23C53932'/%3E%3C/svg%3E ");
           margin-right: 10px;
               vertical-align: sub;
         }
+       }
+       .table{
+        min-width: 1000px;
+        border-collapse: initial;
+        .table-th{
+          width: 80px;
+          padding:5px 0;
+          border: 1px solid #4a4a4a;
+          background-color: rgba(255, 255, 255, 0.253);
+          &:first-of-type{
+            border-radius: 5px 0 0 0; 
+            border:none;
+            width: 120px;
+          }
+          &:last-of-type{
+            border-radius: 0 5px 0 0;
+            border:none
+          }
+        }
+        .table-td{
+          padding:5px 0;
+          border: 1px solid #4a4a4a;
+        }
+       }
       }
     }
     .actions{
@@ -1281,12 +1209,10 @@
             max-width: 10%;
           }
 
-          &:nth-of-type(3) {}
-
           &:nth-of-type(4) {
             width: 20%;
           }
-        }
+        } 
 
         .type {
           @extend %weight600;
@@ -1295,15 +1221,13 @@
       }
 
       .ticket-sheet {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
+        white-space: nowrap;
 
         span {
           display: inline-block;
           text-align: center;
           font-size: 25px;
-          width: 50px;
+          width: 30px;
           cursor: pointer;
           @extend %weight600;
 
@@ -1314,7 +1238,7 @@
 
         input {
           color: #000;
-          width: 80%;
+          width: 60px;
           height: 30px;
           padding: 0;
           text-align: center;
@@ -1495,9 +1419,9 @@
 
         .seat {
           cursor: pointer;
-          border: 1px solid #fff;
+          // background-color: #000;
           border-radius: 5px;
-
+          @include v.step3v2( 1px, #fff, #fff );
           .material-icons {
             font-size: 22px;
             vertical-align: text-top;
@@ -1547,7 +1471,7 @@
       top: 0;
 
       @include v.phone-width {
-        position: static;
+        position: unset;
         width: fit-content;
       }
 

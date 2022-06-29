@@ -1,7 +1,8 @@
 @use "variables"as v;
 @import "_normalize";
-@import "_jqdatepicker";
 @import "_nav"; 
+@import "_jqdatepicker";
+
 
 * {
   box-sizing: border-box;
@@ -14,7 +15,7 @@ html {
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
-  font-size: 15px;
+  font-size: 14px;
   position: relative;
   background-color: v.$bg-color;
   line-height: 1.6;
@@ -408,17 +409,14 @@ input:-internal-autofill-selected {
 
   @include v.pad-width {
     flex-basis: 33.33%;
-    width: 33.33%;
   }
 
   @include v.phone-width {
     flex-basis: 50%;
-    width: 50%;
   }
 
   @include v.mini-width {
     flex-basis: 100%;
-    width: 100%;
   }
 }
 
@@ -451,12 +449,10 @@ input:-internal-autofill-selected {
 
   @include v.pad-width {
     flex-basis: 100%;
-    width: 100%;
   }
 
   @include v.phone-width {
     flex-basis: 100%;
-    width: 100%;
   }
 }
 
@@ -465,12 +461,10 @@ input:-internal-autofill-selected {
 
   @include v.pad-width {
     flex-basis: 100%;
-    width: 100%;
   }
 
   @include v.phone-width {
     flex-basis: 100%;
-    width: 100%;
   }
 }
 
@@ -479,12 +473,10 @@ input:-internal-autofill-selected {
 
   @include v.pad-width {
     flex-basis: 100%;
-    width: 100%;
   }
 
   @include v.phone-width {
     flex-basis: 100%;
-    width: 100%;
   }
 }
 
@@ -492,13 +484,11 @@ input:-internal-autofill-selected {
   @include v.row-width(50%);
 
   @include v.pad-width {
-    flex: 100%;
-    width: 100%;
+    flex-basis: 100%;
   }
 
   @include v.phone-width {
-    flex: 100%;
-    width: 100%;
+    flex-basis: 100%;
   }
 }
 
@@ -506,13 +496,11 @@ input:-internal-autofill-selected {
   @include v.row-width(80%);
 
   @include v.pad-width {
-    flex: 100%;
-    width: 100%;
+    flex-basis: 100%;
   }
 
   @include v.phone-width {
-    flex: 100%;
-    width: 100%;
+    flex-basis: 100%;
   }
 }
 
@@ -627,7 +615,9 @@ input:-internal-autofill-selected {
 .actionbtn {
   text-align: center;
   margin-top: 80px;
-
+  @include v.phone-width {
+    margin-top: 20px;
+  }
   button,
   div {
     width: 100%;
@@ -722,23 +712,22 @@ footer {
   position: fixed;
   top: 10%;
   width: 570px;
-  height: fit-content;
   border-radius: 10px;
   color: black;
   background: #EBEBEB;
   @include v.pad-width {
-        width: 85%;
-      }
-
-      @include v.phone-width {
-        width: 95%;
-      }
+    width: 85%;
+  }
+  @include v.phone-width {
+    width: 90%;
+    top: 20px;
+  }
 
   h2 {
     background-color: v.$yellow-bg-color;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    padding: 10px 10px 10px 20px;
+    padding: 10px 20px;
     font-size: 1em;
     @extend %weight600;
   }
@@ -754,6 +743,9 @@ footer {
     color: v.$secondary;
     padding: 0 10px;
     height: 45px;
+     @include v.phone-width {
+        height: 35px;
+      }
 
     &#confirmrule,
     &#lockpwd {
@@ -810,6 +802,14 @@ footer {
 }
 
 #login {
+  .modal-content{
+    @include v.under-pad-width {
+      overflow-y: auto
+    }
+    @include v.under-pad-width {
+      
+    }
+  }
   .nobr {
     display: inline-block;
     @extend %weight400;
@@ -862,6 +862,14 @@ footer {
 }
 
 #regist {
+  .modal-content{
+    @include v.under-pad-width {
+      overflow-y: auto;
+    }
+    @include v.mini-height{
+      height: 80%;
+    }
+  }
   label[for="confirmrule"] {
     @extend %weight300;
   }

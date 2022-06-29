@@ -28,7 +28,6 @@ $max-width: 1200px;
 }
 @mixin row-width($width){
     flex-basis: $width;
-    width:$width;
 }
 
 $pc-media: 992px;
@@ -37,6 +36,7 @@ $phone-media: 768px;
 $phones-media: 769px;
 $mini-media: 320px;
 $other-media: 1200px;
+$mini-height: 700px;
 
 //電腦
 @mixin pc-width() {
@@ -70,9 +70,23 @@ $other-media: 1200px;
     @content;
   }
 }
-//其他
+//針對nav
 @mixin under-pad-width() {
   @media all and (max-width: $pcs-media) {
     @content;
   }
+}
+//手機版MENU
+@mixin mini-height() {
+  @media all and (max-height: $mini-height) {
+    @content;
+  }
+}
+
+@mixin step3v2( $width, $color, $bgcolor ) {
+  box-shadow:
+    $width 0 $bgcolor,
+    -$width 0 $bgcolor,
+    0 (-$width) $bgcolor,
+    0 $width $bgcolor
 }
