@@ -19,24 +19,25 @@ const app = Vue.createApp({
       <div class="nav-menu">
         <ul class="menu">
           <li>
-            <a class="menu-link" href="book.html" title="線上訂票">線上訂票</a>
+            <div class="menu-link">線上訂票</div>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#" title="公館場次查詢">公館場次查詢</a></li>
+              <li><a class="dropdown-item" href="book.html" title="公館場次查詢">公館場次查詢</a></li>
               <li><a class="dropdown-item" href="#" title="新竹場次查詢">新竹場次查詢</a></li>
             </ul>
           </li>
           <li>
-            <a class="menu-link" href="movies.html" title="電影介紹">電影介紹</a>
+            <div class="menu-link">電影介紹</div>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#" title="現正熱映">現正熱映</a></li>
+              <li><a class="dropdown-item" href="movies.html" title="現正熱映">現正熱映</a></li>
               <li><a class="dropdown-item" href="#" title="即將上映">即將上映</a></li>
             </ul>
           </li>
           <li><a class="menu-link" href="news.html" title="最新消息">最新消息</a></li>
           <li><a class="menu-link" href="group-ticket.html" title="業務專區">業務專區</a></li>
           <li>
-          <a class="menu-link" href="about.html" title="關於影城">關於影城</a>
+          <div class="menu-link" >關於影城</div>
           <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="about.html" title="影城介紹">影城介紹</a></li>
               <li><a class="dropdown-item" href="contact.html" title="聯繫我們">聯繫我們</a></li>
             </ul>
           </li>
@@ -185,19 +186,18 @@ $(function () {
 
   //ladnding page animation
   if ($landing.length === 1) {
+    console.log(isMobileDevice())
     $body.classList.add('no-scroll') //禁止在背景下滑動
-    $landing.on("wheel click", function () {
-        $landing.fadeOut(1000);
-        setTimeout(function () {
-          $body.classList.remove('no-scroll')
-        }, 1300);
-    });
-    
+    if (!isMobileDevice()){
+      $landing.on("wheel", function () {
+         $landing.fadeOut(1000);
+         setTimeout(function () {$body.classList.remove('no-scroll')}, 1100);
+      });
+    }    
     if (isMobileDevice()) {
       $body.classList.remove('no-scroll')
-      setTimeout(function () {
-        $landing.fadeOut(1000);
-      }, 2000);
+      $('.welcome').css('display','none')
+      setTimeout(function () {$landing.fadeOut(1500);}, 3000);
     }
   }
 

@@ -1,12 +1,10 @@
 nav {
-  // position: fixed;
   width: 100%;
   max-width: v.$max-width;
   margin: 0 auto;
   top: 0;
   left: 0;
   padding: 70px 0;
-  // transition: all 0.5s;
   z-index: 5;
   @include v.under-pad-width {
     padding:0;
@@ -132,6 +130,7 @@ nav {
       width: 16%;
       text-align: center;
       position: relative;
+      cursor:default;
       @include v.under-pad-width {
         width:100px;
         margin: 0 auto 10px auto;
@@ -177,7 +176,7 @@ nav {
       display: inline-block;
 
       &.user {
-        padding: 0.8em 1.2em;
+        padding: 0.6em 1.2em;
         border-radius: 22px;
         color: v.$font-primary;
         display: none;
@@ -454,7 +453,7 @@ nav {
       &~.sidebar .nav-menu {
       @include v.under-pad-width {
         height: 100vh;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
       }
     }
     &~.sidebar .user-account {
