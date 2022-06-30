@@ -57,6 +57,10 @@
       @include v.phone-width {
         margin: 0;
         margin-bottom: 10px;
+        width: 33.33%;
+        text-align: left;
+      }
+      @include v.mini-width {
         width: 50%;
       }
 
@@ -120,14 +124,6 @@
     }
   }
 
-  .table-tr {
-    height: 40px;
-
-    @include v.phone-width {
-      height: 30px;
-    }
-  }
-
   .table-td {
     .td-block {
       width: 40px;
@@ -135,14 +131,14 @@
       margin: 0 auto;
 
       @include v.pad-width {
-        margin: 0 4px;
+        margin:4px;
         width: 35px;
         font-size: 0.9rem;
       }
 
       @include v.phone-width {
         width: 30px;
-        margin: 0 3px;
+        margin:3px;
         font-size: 0.8rem;
       }
     }
