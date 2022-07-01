@@ -52,7 +52,7 @@ const app = Vue.createApp({
             <hr />
             <a href="book-history.html" title="訂票查詢與取消">訂票查詢與取消</a>
             <a href="account.html" title="會員資料">會員資料</a>
-            <a href="" title="會員優惠PLUS">會員優惠PLUS</a>
+            <a href="discount.html" title="會員優惠PLUS">會員優惠PLUS</a>
           </div>
           <div class="user-login">
             <a href="#login" title="會員登入">會員登入</a>
@@ -197,7 +197,7 @@ $(function () {
     if (isMobileDevice()) {
       $body.classList.remove('no-scroll')
       $('.welcome').css('display','none')
-      setTimeout(function () {$landing.fadeOut(1500);}, 3000);
+      setTimeout(function () {$landing.fadeOut(1200);}, 2300);
     }
   }
 

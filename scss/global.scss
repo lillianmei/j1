@@ -26,7 +26,7 @@ html {
   }
 
   @include v.pc-width {
-    font-size: 16px;
+    font-size: 16.5px;
   }
 
   @include v.pad-width {
@@ -401,11 +401,11 @@ input:-internal-autofill-selected {
   @include v.row-width(10%);
 
   @include v.pad-width {
-    flex-basis: 50%;
+    width: 50%;
   }
 
   @include v.phone-width {
-    flex-basis: 100%;
+    width: 100%;
   }
 }
 
@@ -413,15 +413,15 @@ input:-internal-autofill-selected {
   @include v.row-width(20%);
 
   @include v.pad-width {
-    flex-basis: 33.33%;
+    width: 33.33%;
   }
 
   @include v.phone-width {
-    flex-basis: 50%;
+    width: 50%;
   }
 
   @include v.mini-width {
-    flex-basis: 100%;
+    width: 100%;
   }
 }
 
@@ -429,11 +429,11 @@ input:-internal-autofill-selected {
   @include v.row-width(30%);
 
   @include v.pad-width {
-    flex-basis: 50%;
+    width: 50%;
   }
 
   @include v.phone-width {
-    flex-basis: 100%;
+    width: 100%;
   }
 }
 
@@ -441,11 +441,11 @@ input:-internal-autofill-selected {
   @include v.row-width(33.33%);
 
   @include v.pad-width {
-    flex-basis: 50%;
+    width: 50%;
   }
 
   @include v.phone-width {
-    flex-basis: 100%;
+    width: 100%;
   }
 }
 
@@ -453,11 +453,11 @@ input:-internal-autofill-selected {
   @include v.row-width(40%);
 
   @include v.pad-width {
-    flex-basis: 100%;
+    width: 100%;
   }
 
   @include v.phone-width {
-    flex-basis: 100%;
+    width: 100%;
   }
 }
 
@@ -465,11 +465,11 @@ input:-internal-autofill-selected {
   @include v.row-width(70%);
 
   @include v.pad-width {
-    flex-basis: 100%;
+    width: 100%;
   }
 
   @include v.phone-width {
-    flex-basis: 100%;
+    width: 100%;
   }
 }
 
@@ -477,11 +477,11 @@ input:-internal-autofill-selected {
   @include v.row-width(60%);
 
   @include v.pad-width {
-    flex-basis: 100%;
+    width: 100%;
   }
 
   @include v.phone-width {
-    flex-basis: 100%;
+    width: 100%;
   }
 }
 
@@ -489,11 +489,11 @@ input:-internal-autofill-selected {
   @include v.row-width(50%);
 
   @include v.pad-width {
-    flex-basis: 100%;
+    width: 100%;
   }
 
   @include v.phone-width {
-    flex-basis: 100%;
+    width: 100%;
   }
 }
 
@@ -501,11 +501,11 @@ input:-internal-autofill-selected {
   @include v.row-width(80%);
 
   @include v.pad-width {
-    flex-basis: 100%;
+    width: 100%;
   }
 
   @include v.phone-width {
-    flex-basis: 100%;
+    width: 100%;
   }
 }
 
@@ -541,7 +541,7 @@ input:-internal-autofill-selected {
 
   .actions {
     display: inline-flex;
-    margin: 40px 0;
+    margin: 30px 0;
     width: 100%;
     justify-content: center;
 
@@ -559,7 +559,7 @@ input:-internal-autofill-selected {
       cursor: pointer;
       border: 1px solid v.$yellow-bg-color;
       color: v.$yellow-bg-color;
-      padding: 10px 5px;
+      padding: 10px;
       text-align: center;
       margin-right: 20px;
       width: 12em;

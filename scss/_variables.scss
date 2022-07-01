@@ -27,7 +27,8 @@ $max-width: 1200px;
   background-color: rgba($color, $opacity);
 }
 @mixin row-width($width){
-    flex-basis: $width;
+    flex: 0 0 auto;
+    width: $width;
 }
 
 $pc-media: 992px;

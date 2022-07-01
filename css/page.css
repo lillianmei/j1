@@ -6,7 +6,7 @@
   font-weight: 400;
 }
 
-.seat-table .seat-mark .mark, .section .movie-item .list-item > div, .section .booking-history .ticket-no, .section .account label, .section .account .actionbtn, .section .account .actionbtn button span, .section .booking .row-right .actions button span:first-of-type, .section .booking .weektable .booktime, .section .tickets-package .package-content .ticket-set .type, .section .tickets-package .package-content .ticket-sheet span, .section .actions button.next, .section .actions button.back, .section .book-tickets-2 .condition > div span, .section .book-tickets-3 .check-info label, .section .book-tickets-3 .check-info .container-checkbox a, .section .book-tickets-4 .book-done {
+.seat-table .seat-mark .mark, .section .movie-item .list-item > div, .section .booking-history .ticket-no, .section .about .info .main-title div:nth-of-type(1), .section .account label, .section .account .actionbtn, .section .account .actionbtn button span, .section .booking .row-right .actions button span:first-of-type, .section .booking .weektable .booktime, .section .tickets-package .package-content .ticket-set .type, .section .tickets-package .package-content .ticket-sheet span, .section .actions button.next, .section .actions button.back, .section .book-tickets-2 .condition > div span, .section .book-tickets-3 .check-info label, .section .book-tickets-3 .check-info .container-checkbox a, .section .book-tickets-4 .book-done, .section .contact .info li span, .discount .discount-info .info {
   font-weight: 600;
 }
 
@@ -170,7 +170,7 @@
   font-weight: 400;
 }
 
-.section .book-tickets-4 .book-done, .section .book-tickets-3 .check-info .container-checkbox a, .section .book-tickets-3 .check-info label, .section .book-tickets-2 .condition > div span, .section .actions button.back, .section .actions button.next, .section .tickets-package .package-content .ticket-sheet span, .section .tickets-package .package-content .ticket-set .type, .section .booking .weektable .booktime, .section .booking .row-right .actions button span:first-of-type, .section .account .actionbtn button span, .section .account .actionbtn, .section .account label, .section .booking-history .ticket-no, .section .movie-item .list-item > div, .seat-table .seat-mark .mark {
+.discount .discount-info .info, .section .contact .info li span, .section .book-tickets-4 .book-done, .section .book-tickets-3 .check-info .container-checkbox a, .section .book-tickets-3 .check-info label, .section .book-tickets-2 .condition > div span, .section .actions button.back, .section .actions button.next, .section .tickets-package .package-content .ticket-sheet span, .section .tickets-package .package-content .ticket-set .type, .section .booking .weektable .booktime, .section .booking .row-right .actions button span:first-of-type, .section .account .actionbtn button span, .section .account .actionbtn, .section .account label, .section .about .info .main-title div:nth-of-type(1), .section .booking-history .ticket-no, .section .movie-item .list-item > div, .seat-table .seat-mark .mark {
   font-weight: 600;
 }
 
@@ -306,7 +306,7 @@
 .seat-table .table-td .td-block {
   width: 40px;
   padding: 2px 0;
-  margin: 0 auto;
+  margin: 4px auto;
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
   .seat-table .table-td .td-block {
@@ -569,14 +569,12 @@
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
   .section .movie-info .row-3 {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    width: 100%;
   }
 }
 @media all and (max-width: 768px) {
   .section .movie-info .row-3 {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    width: 100%;
   }
 }
 .section .introduction {
@@ -795,8 +793,7 @@
 }
 @media all and (max-width: 768px) {
   .section .booking-history .ticket-info .row-left {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    width: 100%;
   }
 }
 .section .booking-history .ticket-info .row-left span {
@@ -1065,8 +1062,7 @@
 }
 .section .account .actionbtn button {
   font-weight: normal;
-  -ms-flex-preferred-size: 49%;
-      flex-basis: 49%;
+  width: 49%;
   color: #000;
   height: 50px;
   padding: 10px 0;
@@ -1075,21 +1071,24 @@
 @media all and (max-width: 768px) {
   .section .account .actionbtn button {
     margin-bottom: 15px;
+    width: 100%;
   }
 }
 .section .account .actionbtn button[type=submit] {
-  -ms-flex-preferred-size: 49%;
-      flex-basis: 49%;
   background-color: #D26759;
 }
 .section .account .actionbtn div {
   font-weight: normal;
-  -ms-flex-preferred-size: 49%;
-      flex-basis: 49%;
+  width: 49%;
   background-color: #73C044;
   color: #fff;
   height: 50px;
   padding: 10px 0;
+}
+@media all and (max-width: 768px) {
+  .section .account .actionbtn div {
+    width: 100%;
+  }
 }
 .section .account .actionbtn.fit-center {
   -webkit-box-pack: center;
@@ -1100,8 +1099,9 @@
   padding: 10px 30px;
 }
 .section .account .actionbtn.fit-center button[type=submit] {
-  -ms-flex-preferred-size: fit-content;
-      flex-basis: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .section .account select {
   color: #fff;
@@ -1192,8 +1192,7 @@
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
   .section .booking .movie-item:first-of-type {
-    -ms-flex-preferred-size: 30%;
-        flex-basis: 30%;
+    width: 30%;
     margin: 0 auto;
     padding-right: 0;
     margin-bottom: 20px;
@@ -1307,8 +1306,7 @@
 @media all and (max-width: 768px) {
   .section .book-tickets .row-left {
     padding-right: 0;
-    -ms-flex-preferred-size: 40%;
-        flex-basis: 40%;
+    width: 40%;
     margin: 0 auto 20px auto;
   }
 }
@@ -1528,7 +1526,6 @@
 }
 .section .tickets-package .row-left {
   padding-right: 2vw;
-  width: 100%;
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
   .section .tickets-package .row-left {
@@ -1726,7 +1723,8 @@
 .section .book-tickets-3 .main-title div:nth-of-type(1)::before {
   background-color: #00ABF2;
 }
-.section .book-tickets-3 .check-info input, .section .book-tickets-3 .check-info select {
+.section .book-tickets-3 .check-info input,
+.section .book-tickets-3 .check-info select {
   border-color: transparent;
 }
 .section .book-tickets-3 .check-info label {
@@ -1835,6 +1833,140 @@
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
+.section .contact .info {
+  margin: 0;
+  padding-right: 10px;
+}
+@media all and (max-width: 768px) {
+  .section .contact .info {
+    padding-left: 0;
+  }
+}
+.section .contact .info li::before {
+  content: url("data:image/svg+xml,%3Csvg width='12' height='16' viewBox='0 0 12 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.2857 0H1.71429C0.771429 0 0 0.771429 0 1.71429V15.4286L6 12.8571L12 15.4286V1.71429C12 0.771429 11.2286 0 10.2857 0Z' fill='%23C53932'/%3E%3C/svg%3E ");
+  margin-right: 10px;
+}
+.section .contact .info li:nth-of-type(4) label {
+  display: block;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+.section .contact .info li:nth-of-type(4) label:before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #00ABF2;
+  margin-right: 10px;
+  margin-bottom: 3px;
+}
+.section .contact .info li:nth-of-type(4) label div {
+  padding-left: 15px;
+}
+.section .contact .info li:nth-of-type(5) label {
+  display: block;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+.section .contact .info li span {
+  display: inline-block;
+  margin: 0 20px 10px 0;
+}
+.section .contact .row-right .actions {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.section .contact .row-right .actions .actions-btn {
+  border-color: #fff;
+  color: #fff;
+}
+@media all and (min-width: 769px) and (max-width: 991px) {
+  .section .contact .row-right .actions .actions-btn {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+@media all and (max-width: 768px) {
+  .section .contact .row-right .actions .actions-btn {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+
+.discount {
+  padding: 0;
+}
+.discount .section:nth-of-type(2) {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+.discount .section .content {
+  padding: 0 15px;
+}
+@media all and (max-width: 768px) {
+  .discount .section .content {
+    padding: 0 10px;
+  }
+}
+.discount .discount-info {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 80px;
+}
+@media all and (min-width: 769px) and (max-width: 991px) {
+  .discount .discount-info .row-3 {
+    padding: 0 10px;
+    margin-bottom: 20px;
+  }
+}
+@media all and (max-width: 768px) {
+  .discount .discount-info .row-3 {
+    padding: 0;
+    margin-bottom: 15px;
+  }
+}
+.discount .discount-info .info {
+  position: relative;
+  background-color: #FCC900;
+  color: #000;
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.discount .discount-info .info .star {
+  position: absolute;
+  top: -10px;
+  left: 35px;
+  width: 50px;
+  height: 50px;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.6364 2L11.0909 38L38 11.8526L2 17.1579L38 31.9368L17.6364 2Z' stroke='%23C53932' stroke-width='3' stroke-linejoin='round'/%3E%3C/svg%3E ");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.discount .discount-info li {
+  width: 90%;
+  margin: 0 auto 10px auto;
+  margin-bottom: 10px;
+}
+.discount .discount-info li::before {
+  content: "";
+  position: relative;
+  top: 20px;
+  height: 0px;
+  width: 0px;
+  border-color: #FCC900 transparent transparent transparent;
+  border-style: solid solid solid solid;
+  border-width: 15px 15px 0px 0px;
+  margin-right: 10px;
+}
+
 @-webkit-keyframes rotate {
   0% {
     -webkit-transform: rotate(0);
@@ -1845,6 +1977,7 @@
             transform: rotate(360deg);
   }
 }
+
 @keyframes rotate {
   0% {
     -webkit-transform: rotate(0);
