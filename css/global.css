@@ -3,11 +3,11 @@
   font-weight: 300;
 }
 
-#login .nobr {
+.movie-item .book-btn, #login .nobr {
   font-weight: 400;
 }
 
-nav .sidebar .menu > li:hover .menu-link, nav .sidebar .menu .menu-link.active, .main-title div:nth-of-type(2), .sub-title, .movie-title, .movie-level, .section .actions .actions-btn.active, .section .attention .note, .actionbtn button,
+nav .sidebar .menu > li:hover .menu-link, nav .sidebar .menu .menu-link.active, .main-title div:nth-of-type(2), .sub-title, .movie-item .list-item > div, .movie-title, .movie-level, .section .actions .actions-btn.active, .section .attention .note, .actionbtn button,
 .actionbtn div, .modal-content h2, .modal-content label, .step-bar .progress li.active, .step-bar .progress li.finished {
   font-weight: 600;
 }
@@ -1300,6 +1300,51 @@ input:-internal-autofill-selected {
 .sub-title {
   margin-bottom: 20px;
   font-size: 1.1rem;
+}
+
+.movie-item .up-date {
+  margin: 5px 0 30px 0;
+  color: #C53932;
+}
+.movie-item .movie-level {
+  margin-top: 0;
+}
+.movie-item .book-btn {
+  display: inline-block;
+  padding: 8px 25px;
+  background-color: #5a98c0;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+.movie-item .book-btn .material-icons {
+  margin-right: 10px;
+}
+.movie-item .list-item > div {
+  margin-bottom: 10px;
+}
+.movie-item .list-item > div:last-of-type {
+  margin-bottom: 0;
+}
+.movie-item .list-item > div span {
+  font-weight: normal;
+  border-left: 1px solid #fff;
+  padding-left: 10px;
+  margin-left: 10px;
+  display: inline-block;
+}
+.movie-item .list-item .list-row {
+  width: 100%;
+  display: -webkit-inline-box;
+}
+.movie-item .list-item .list-row div {
+  max-width: 93%;
+}
+@media all and (max-width: 320px) {
+  .movie-item .list-item .list-row div {
+    max-width: 90%;
+  }
 }
 
 .movie-title {

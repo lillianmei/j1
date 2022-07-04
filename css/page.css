@@ -2,11 +2,11 @@
   font-weight: 300;
 }
 
-.section .showing-list .state, .section .movie-item .book-btn, .section .tickets-package .package-content .ticket-set .table-td div {
+.section .showing-list .state, .section .tickets-package .package-content .ticket-set .table-td div {
   font-weight: 400;
 }
 
-.seat-table .seat-mark .mark, .section .movie-item .list-item > div, .section .booking-history .ticket-no, .section .about .info .main-title div:nth-of-type(1), .section .account label, .section .account .actionbtn, .section .account .actionbtn button span, .section .booking .row-right .actions button span:first-of-type, .section .booking .weektable .booktime, .section .tickets-package .package-content .ticket-set .type, .section .tickets-package .package-content .ticket-sheet span, .section .actions .actions-btn.next, .section .actions .actions-btn.back, .section .book-tickets-2 .condition > div span, .section .book-tickets-3 .check-info label, .section .book-tickets-3 .check-info .container-checkbox a, .section .book-tickets-4 .book-done, .section .contact .info li span, .discount .discount-info .info {
+.seat-table .seat-mark .mark, .section .booking-history .ticket-no, .section .about .info .main-title div:nth-of-type(1), .section .account label, .section .account .actionbtn, .section .account .actionbtn button span, .section .booking .row-right .actions button span:first-of-type, .section .booking .weektable .booktime, .section .tickets-package .package-content .ticket-set .type, .section .tickets-package .package-content .ticket-sheet span, .section .actions .actions-btn.next, .section .actions .actions-btn.back, .section .book-tickets-2 .condition > div span, .section .book-tickets-3 .check-info label, .section .book-tickets-3 .check-info .container-checkbox a, .section .book-tickets-4 .book-done, .section .contact .info li span, .discount .discount-info .info {
   font-weight: 600;
 }
 
@@ -166,11 +166,11 @@
   font-weight: 300;
 }
 
-.section .tickets-package .package-content .ticket-set .table-td div, .section .movie-item .book-btn, .section .showing-list .state {
+.section .tickets-package .package-content .ticket-set .table-td div, .section .showing-list .state {
   font-weight: 400;
 }
 
-.discount .discount-info .info, .section .contact .info li span, .section .book-tickets-4 .book-done, .section .book-tickets-3 .check-info .container-checkbox a, .section .book-tickets-3 .check-info label, .section .book-tickets-2 .condition > div span, .section .actions .actions-btn.back, .section .actions .actions-btn.next, .section .tickets-package .package-content .ticket-sheet span, .section .tickets-package .package-content .ticket-set .type, .section .booking .weektable .booktime, .section .booking .row-right .actions button span:first-of-type, .section .account .actionbtn button span, .section .account .actionbtn, .section .account label, .section .about .info .main-title div:nth-of-type(1), .section .booking-history .ticket-no, .section .movie-item .list-item > div, .seat-table .seat-mark .mark {
+.discount .discount-info .info, .section .contact .info li span, .section .book-tickets-4 .book-done, .section .book-tickets-3 .check-info .container-checkbox a, .section .book-tickets-3 .check-info label, .section .book-tickets-2 .condition > div span, .section .actions .actions-btn.back, .section .actions .actions-btn.next, .section .tickets-package .package-content .ticket-sheet span, .section .tickets-package .package-content .ticket-set .type, .section .booking .weektable .booktime, .section .booking .row-right .actions button span:first-of-type, .section .account .actionbtn button span, .section .account .actionbtn, .section .account label, .section .about .info .main-title div:nth-of-type(1), .section .booking-history .ticket-no, .seat-table .seat-mark .mark {
   font-weight: 600;
 }
 
@@ -495,50 +495,6 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.section .movie-item .up-date {
-  margin: 5px 0 30px 0;
-  color: #C53932;
-}
-.section .movie-item .movie-level {
-  margin-top: 0;
-}
-.section .movie-item .book-btn {
-  display: inline-block;
-  padding: 8px 25px;
-  background-color: #5a98c0;
-  border-radius: 5px;
-  margin-bottom: 30px;
-  color: #fff;
-  cursor: pointer;
-}
-.section .movie-item .book-btn .material-icons {
-  margin-right: 10px;
-}
-.section .movie-item .list-item > div {
-  margin-bottom: 10px;
-}
-.section .movie-item .list-item > div:last-of-type {
-  margin-bottom: 0;
-}
-.section .movie-item .list-item > div span {
-  font-weight: normal;
-  border-left: 1px solid #fff;
-  padding-left: 10px;
-  margin-left: 10px;
-  display: inline-block;
-}
-.section .movie-item .list-item .list-row {
-  width: 100%;
-  display: -webkit-inline-box;
-}
-.section .movie-item .list-item .list-row div {
-  max-width: 93%;
-}
-@media all and (max-width: 320px) {
-  .section .movie-item .list-item .list-row div {
-    max-width: 90%;
-  }
-}
 .section .movies .actions {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
@@ -558,23 +514,15 @@
 @media all and (min-width: 769px) and (max-width: 991px) {
   .section .movie-info .movie-item:first-of-type {
     padding-right: 0;
-    margin-bottom: 20px;
+    width: 50%;
+    margin: 0 auto 20px auto;
   }
 }
 @media all and (max-width: 768px) {
   .section .movie-info .movie-item:first-of-type {
     padding-right: 0;
-    margin-bottom: 20px;
-  }
-}
-@media all and (min-width: 769px) and (max-width: 991px) {
-  .section .movie-info .row-3 {
-    width: 100%;
-  }
-}
-@media all and (max-width: 768px) {
-  .section .movie-info .row-3 {
-    width: 100%;
+    width: 50%;
+    margin: 0 auto 20px auto;
   }
 }
 .section .introduction {
