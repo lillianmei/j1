@@ -170,7 +170,6 @@
     }
 
     &.soldout {
-
       .seat,
       .td-seat {
         box-shadow: none;
@@ -180,14 +179,14 @@
     }
 
     &.booked {
-      .seat.td-seat {
+      .seat,.td-seat {
         box-shadow: none;
         background-color: v.$green-bg-color;
       }
     }
 
     &.disable {
-      .seat.td-seat {
+      .seat,.td-seat {
         cursor: not-allowed;
         pointer-events: none;
         background-color: #81818153;

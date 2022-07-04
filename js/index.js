@@ -186,7 +186,6 @@ $(function () {
 
   //ladnding page animation
   if ($landing.length === 1) {
-    console.log(isMobileDevice())
     $body.classList.add('no-scroll') //禁止在背景下滑動
     if (!isMobileDevice()){
       $landing.on("wheel", function () {

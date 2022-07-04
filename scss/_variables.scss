@@ -83,11 +83,3 @@ $mini-height: 700px;
     @content;
   }
 }
-
-@mixin step3v2( $width, $color, $bgcolor ) {
-  box-shadow:
-    $width 0 $bgcolor,
-    -$width 0 $bgcolor,
-    0 (-$width) $bgcolor,
-    0 $width $bgcolor
-}

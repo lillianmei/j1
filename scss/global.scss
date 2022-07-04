@@ -385,7 +385,7 @@ input:-internal-autofill-selected {
     .material-icons {
       position: absolute;
       left: 15px;
-      top: 39px;
+      top: 40px;
       color: v.$bg-color;
       font-size: 30px;
       cursor: pointer;
@@ -592,6 +592,10 @@ input:-internal-autofill-selected {
     border-radius: 10px;
     padding: 20px 30px;
     height: fit-content;
+
+    @include v.phone-width {
+      padding: 10px;
+    }
 
     .note {
       margin-bottom: 10px;
@@ -1056,18 +1060,20 @@ footer {
     height: 100%;
   }
 }
+
 //google map RWD
 .iframe-rwd {
-position: relative;
-padding-bottom: 50%;
-padding-top: 30px;
-height: 0;
-overflow: hidden;
+  position: relative;
+  padding-bottom: 50%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
 }
+
 .iframe-rwd iframe {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
 }

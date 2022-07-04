@@ -6,7 +6,7 @@
   font-weight: 400;
 }
 
-.seat-table .seat-mark .mark, .section .movie-item .list-item > div, .section .booking-history .ticket-no, .section .about .info .main-title div:nth-of-type(1), .section .account label, .section .account .actionbtn, .section .account .actionbtn button span, .section .booking .row-right .actions button span:first-of-type, .section .booking .weektable .booktime, .section .tickets-package .package-content .ticket-set .type, .section .tickets-package .package-content .ticket-sheet span, .section .actions button.next, .section .actions button.back, .section .book-tickets-2 .condition > div span, .section .book-tickets-3 .check-info label, .section .book-tickets-3 .check-info .container-checkbox a, .section .book-tickets-4 .book-done, .section .contact .info li span, .discount .discount-info .info {
+.seat-table .seat-mark .mark, .section .movie-item .list-item > div, .section .booking-history .ticket-no, .section .about .info .main-title div:nth-of-type(1), .section .account label, .section .account .actionbtn, .section .account .actionbtn button span, .section .booking .row-right .actions button span:first-of-type, .section .booking .weektable .booktime, .section .tickets-package .package-content .ticket-set .type, .section .tickets-package .package-content .ticket-sheet span, .section .actions .actions-btn.next, .section .actions .actions-btn.back, .section .book-tickets-2 .condition > div span, .section .book-tickets-3 .check-info label, .section .book-tickets-3 .check-info .container-checkbox a, .section .book-tickets-4 .book-done, .section .contact .info li span, .discount .discount-info .info {
   font-weight: 600;
 }
 
@@ -170,7 +170,7 @@
   font-weight: 400;
 }
 
-.discount .discount-info .info, .section .contact .info li span, .section .book-tickets-4 .book-done, .section .book-tickets-3 .check-info .container-checkbox a, .section .book-tickets-3 .check-info label, .section .book-tickets-2 .condition > div span, .section .actions button.back, .section .actions button.next, .section .tickets-package .package-content .ticket-sheet span, .section .tickets-package .package-content .ticket-set .type, .section .booking .weektable .booktime, .section .booking .row-right .actions button span:first-of-type, .section .account .actionbtn button span, .section .account .actionbtn, .section .account label, .section .about .info .main-title div:nth-of-type(1), .section .booking-history .ticket-no, .section .movie-item .list-item > div, .seat-table .seat-mark .mark {
+.discount .discount-info .info, .section .contact .info li span, .section .book-tickets-4 .book-done, .section .book-tickets-3 .check-info .container-checkbox a, .section .book-tickets-3 .check-info label, .section .book-tickets-2 .condition > div span, .section .actions .actions-btn.back, .section .actions .actions-btn.next, .section .tickets-package .package-content .ticket-sheet span, .section .tickets-package .package-content .ticket-set .type, .section .booking .weektable .booktime, .section .booking .row-right .actions button span:first-of-type, .section .account .actionbtn button span, .section .account .actionbtn, .section .account label, .section .about .info .main-title div:nth-of-type(1), .section .booking-history .ticket-no, .section .movie-item .list-item > div, .seat-table .seat-mark .mark {
   font-weight: 600;
 }
 
@@ -356,12 +356,12 @@
   cursor: not-allowed;
   background-color: #DD362B;
 }
-.seat-table .table-td.booked .seat.td-seat {
+.seat-table .table-td.booked .seat, .seat-table .table-td.booked .td-seat {
   -webkit-box-shadow: none;
           box-shadow: none;
   background-color: #73C044;
 }
-.seat-table .table-td.disable .seat.td-seat {
+.seat-table .table-td.disable .seat, .seat-table .table-td.disable .td-seat {
   cursor: not-allowed;
   pointer-events: none;
   background-color: rgba(129, 129, 129, 0.3254901961);
@@ -620,12 +620,14 @@
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
   .section .booking-history .row-left {
-    margin-bottom: 40px;
+    width: 50%;
+    margin-bottom: 20px;
   }
 }
 @media all and (max-width: 768px) {
   .section .booking-history .row-left {
-    margin-bottom: 40px;
+    width: 50%;
+    margin-bottom: 20px;
   }
 }
 .section .booking-history .row-right {
@@ -1165,6 +1167,11 @@
       -ms-flex-align: center;
           align-items: center;
 }
+@media all and (max-width: 768px) {
+  .section .booking .row-right .actions button a {
+    padding: 8px;
+  }
+}
 .section .booking .row-right .actions button span:first-of-type {
   text-align: left;
   display: inline-block;
@@ -1201,10 +1208,16 @@
 @media all and (max-width: 768px) {
   .section .booking .movie-item:first-of-type {
     position: absolute;
-    width: 130px;
+    width: 100px;
     right: 0;
     padding-right: 0;
     margin-bottom: 20px;
+  }
+}
+@media all and (max-width: 768px) {
+  .section .booking .movie-title {
+    width: calc(100% - 110px);
+    padding-right: 10px;
   }
 }
 .section .booking .movie-title p {
@@ -1231,6 +1244,11 @@
 .section .booking .weektable .booktime {
   cursor: pointer;
 }
+@media all and (max-width: 320px) {
+  .section .booking .weektable .booktime {
+    font-size: 0.8rem;
+  }
+}
 .section .booking .weektable .booktime span {
   font-weight: normal;
   display: block;
@@ -1251,6 +1269,11 @@
   position: absolute;
   right: 0;
   top: 20px;
+}
+@media all and (max-width: 768px) {
+  .section .booking .cinema::after {
+    width: 60%;
+  }
 }
 .section .booking .cinema .material-icons {
   font-size: 3rem;
@@ -1279,6 +1302,11 @@
 }
 @media all and (max-width: 768px) {
   .section .booking .timetable .time {
+    width: 25%;
+  }
+}
+@media all and (max-width: 320px) {
+  .section .booking .timetable .time {
     width: 33.33%;
   }
 }
@@ -1306,7 +1334,7 @@
 @media all and (max-width: 768px) {
   .section .book-tickets .row-left {
     padding-right: 0;
-    width: 40%;
+    width: 50%;
     margin: 0 auto 20px auto;
   }
 }
@@ -1604,6 +1632,9 @@
   min-width: 200px;
   text-align: left;
 }
+.section .tickets-package .package-content .ticket-set .table-td:nth-of-type(2) {
+  min-width: 100px;
+}
 .section .tickets-package .package-content .ticket-sheet {
   white-space: nowrap;
 }
@@ -1642,11 +1673,7 @@
   text-align: right;
   color: #FCC900;
 }
-.section .actions button {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  color: #000;
+.section .actions .actions-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1654,21 +1681,21 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.section .actions button.next {
+.section .actions .actions-btn.next {
   background-color: #D26759;
   border-color: #D26759;
   color: #282828;
 }
-.section .actions button.next .material-icons {
+.section .actions .actions-btn.next .material-icons {
   margin-left: 10px;
 }
-.section .actions button.back {
+.section .actions .actions-btn.back {
   background-color: #00ABF2;
   background-color: rgba(0, 171, 242, 0.8);
   border-color: rgba(0, 171, 242, 0.8);
   color: #282828;
 }
-.section .actions button.back .material-icons {
+.section .actions .actions-btn.back .material-icons {
   margin-right: 10px;
 }
 .section .book-tickets-2 {

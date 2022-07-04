@@ -417,7 +417,7 @@ nav .sidebar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 10px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 nav .sidebar .nav-menu {
@@ -454,6 +454,7 @@ nav .sidebar .menu {
 }
 nav .sidebar .menu .dropdown-menu {
   width: 100%;
+  font-size: 0.9rem;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -530,7 +531,7 @@ nav .sidebar .menu > li {
 }
 @media all and (max-width: 991px) {
   nav .sidebar .menu > li {
-    width: 100px;
+    width: 150px;
     margin: 0 auto 10px auto;
   }
 }
@@ -1340,7 +1341,7 @@ input:-internal-autofill-selected {
 .content-row .icon-row .material-icons {
   position: absolute;
   left: 15px;
-  top: 39px;
+  top: 40px;
   color: #282828;
   font-size: 30px;
   cursor: pointer;
@@ -1597,6 +1598,11 @@ input:-internal-autofill-selected {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+}
+@media all and (max-width: 768px) {
+  .section .attention {
+    padding: 10px;
+  }
 }
 .section .attention .note {
   margin-bottom: 10px;
