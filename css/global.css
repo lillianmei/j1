@@ -955,7 +955,7 @@ a.ui-button:active,
   text-align: center;
 }
 
-* {
+*, *::before, *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }

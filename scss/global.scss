@@ -3,7 +3,7 @@
 @import "_nav";
 @import "_jqdatepicker";
 
-* {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 

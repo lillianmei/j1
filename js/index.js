@@ -43,7 +43,7 @@ const app = Vue.createApp({
           </li>
         </ul>
         <!-- class 'isUser' trigger login/out layout -->
-        <div class="user-account isUser">
+        <div class="user-account">
           <div class="user">
             HELLO! <span class="user-name">Yick</span><span class="material-icons"> person </span><span
               class="material-icons"> menu </span>
@@ -95,7 +95,7 @@ const app = Vue.createApp({
             </div>
           </div>
           <div class="row actionbtn">
-            <button type="submit">LOGIN</button>
+            <button type="submit" class="login">LOGIN</button>
             <a href="#regist" class="xs-font">尚未申請帳號！馬上註冊!</a>
           </div>
         </form>
@@ -134,7 +134,7 @@ const app = Vue.createApp({
             </label>
           </div>
           <div class="row actionbtn">
-            <button type="submit">REGISTER</button>
+            <button type="submit" class="regist">REGISTER</button>
             <a href="#login" class="xs-font">已有帳號！馬上登入!</a>
           </div>
         </form>
@@ -210,7 +210,6 @@ $(function () {
       }
     }
   })
-
   // account hover效果
   $account.addEventListener("mouseenter", () => {
     $account.classList.add("-active");
