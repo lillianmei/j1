@@ -6,7 +6,7 @@
   font-weight: 400;
 }
 
-.seat-table .seat-mark .mark, .section .booking-history .ticket-no, .section .about .info .main-title div:nth-of-type(1), .section .account label, .section .account .actionbtn, .section .account .actionbtn button span, .section .booking .row-right .actions button span:first-of-type, .section .booking .weektable .booktime, .section .tickets-package .package-content .ticket-set .type, .section .tickets-package .package-content .ticket-sheet span, .section .actions .actions-btn.next, .section .actions .actions-btn.back, .section .book-tickets-2 .condition > div span, .section .book-tickets-3 .check-info label, .section .book-tickets-3 .check-info .container-checkbox a, .section .book-tickets-4 .book-done, .section .contact .info li span, .discount .discount-info .info {
+.seat-table .seat-mark .mark, .section .booking-history .ticket-no, .section .about .info .main-title div:nth-of-type(1), .section .account label, .section .account .actionbtn, .section .account .actionbtn button span, .section .booking .row-right .actions button span:first-of-type, .section .booking .weektable .booktime, .section .tickets-package .package-content .ticket-set .type, .section .tickets-package .package-content .ticket-sheet span, .section .book-tickets-2 .condition > div span, .section .book-tickets-3 .check-info label, .section .book-tickets-3 .check-info .container-checkbox a, .section .book-tickets-4 .book-done, .section .contact .info li span, .discount .discount-info .info {
   font-weight: 600;
 }
 
@@ -170,7 +170,7 @@
   font-weight: 400;
 }
 
-.discount .discount-info .info, .section .contact .info li span, .section .book-tickets-4 .book-done, .section .book-tickets-3 .check-info .container-checkbox a, .section .book-tickets-3 .check-info label, .section .book-tickets-2 .condition > div span, .section .actions .actions-btn.back, .section .actions .actions-btn.next, .section .tickets-package .package-content .ticket-sheet span, .section .tickets-package .package-content .ticket-set .type, .section .booking .weektable .booktime, .section .booking .row-right .actions button span:first-of-type, .section .account .actionbtn button span, .section .account .actionbtn, .section .account label, .section .about .info .main-title div:nth-of-type(1), .section .booking-history .ticket-no, .seat-table .seat-mark .mark {
+.discount .discount-info .info, .section .contact .info li span, .section .book-tickets-4 .book-done, .section .book-tickets-3 .check-info .container-checkbox a, .section .book-tickets-3 .check-info label, .section .book-tickets-2 .condition > div span, .section .tickets-package .package-content .ticket-sheet span, .section .tickets-package .package-content .ticket-set .type, .section .booking .weektable .booktime, .section .booking .row-right .actions button span:first-of-type, .section .account .actionbtn button span, .section .account .actionbtn, .section .account label, .section .about .info .main-title div:nth-of-type(1), .section .booking-history .ticket-no, .seat-table .seat-mark .mark {
   font-weight: 600;
 }
 
@@ -786,14 +786,6 @@
 }
 .section .news-info .actions .actions-btn {
   margin-right: 20px;
-}
-.section .news-info .actions .back {
-  width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  color: #FCC900;
-  padding: 10px 30px;
 }
 .section .news-info .row-left {
   padding-right: 40px;
@@ -1621,31 +1613,6 @@
   text-align: right;
   color: #FCC900;
 }
-.section .actions .actions-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.section .actions .actions-btn.next {
-  background-color: #D26759;
-  border-color: #D26759;
-  color: #282828;
-}
-.section .actions .actions-btn.next .material-icons {
-  margin-left: 10px;
-}
-.section .actions .actions-btn.back {
-  background-color: #00ABF2;
-  background-color: rgba(0, 171, 242, 0.8);
-  border-color: rgba(0, 171, 242, 0.8);
-  color: #282828;
-}
-.section .actions .actions-btn.back .material-icons {
-  margin-right: 10px;
-}
 .section .book-tickets-2 {
   position: relative;
 }
@@ -2001,22 +1968,6 @@
   }
   to {
     opacity: 1;
-  }
-}
-@-webkit-keyframes opacityR {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-@keyframes opacityR {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
   }
 }
 @-webkit-keyframes revealBlock {

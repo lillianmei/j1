@@ -2,7 +2,6 @@
 @import "_landing";
 @import "_table";
 
-
 .section {
 
   .showing-list {
@@ -425,12 +424,7 @@
         margin-right: 20px;
       }
 
-      .back {
-        width: 100%;
-        height: fit-content;
-        color: v.$yellow-bg-color;
-        padding: 10px 30px;
-      }
+     
     }
 
     .row-left {
@@ -1345,36 +1339,6 @@
     }
   }
 
-  .actions {
-    .actions-btn {
-      display: flex;
-      align-items: center;
-
-
-      &.next {
-        background-color: v.$btn-primary;
-        border-color: v.$btn-primary;
-        color: #282828;
-        @extend %weight600;
-
-        .material-icons {
-          margin-left: 10px
-        }
-      }
-
-      &.back {
-        @include v.bg-opacity(v.$blue-bg-color, 0.8);
-        border-color: #00abf2cc;
-        color: #282828;
-        @extend %weight600;
-
-        .material-icons {
-          margin-right: 10px
-        }
-      }
-    }
-  }
-
   .book-tickets-2 {
     position: relative;
 
@@ -1547,7 +1511,6 @@
     }
 
   }
-
   .contact {
     .actions {
       justify-content: flex-start;
@@ -1637,7 +1600,6 @@
       }
     }
   }
-
 }
 
 //會員優惠
@@ -1748,16 +1710,6 @@
 
   to {
     opacity: 1;
-  }
-}
-
-@keyframes opacityR {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
   }
 }
 
