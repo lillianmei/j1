@@ -9,13 +9,14 @@
     display: flex;
     align-items: center;
     background-color: #000;
-    // background-image: url(https://picsum.photos/1920/500);
+    background-image: url("../image/00_loading_01_bg.png");
     background-repeat: no-repeat;
     background-size: cover;
-  }
+  } 
  
   h1 {
     color: v.$font-primary;
+    font-family: 'Broadway Regular';
     font-size: 8rem;
     text-align: right;
     width: min-content;
