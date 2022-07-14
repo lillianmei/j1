@@ -195,7 +195,7 @@ $(function () {
   const $landing = $(".landing");
   const $goup = $(".gotop");
   const $tab = $(".tab-item");
-  const $collapse = $('.collapse')
+  const $collapse = $('.collapse .collapse-btn')
   const $eye = $(".pwd-eye");
   const $time = $(".time");
   const $datetime = $(".booktime");
@@ -293,8 +293,10 @@ $(function () {
   //訂票查詢訂單開啟/收起效果
   $collapse.on("click", function () {
     let $this = $(this)
-    let $parentDiv = $this.parent()
+    let $parentDiv = $this.closest('.ticket-state')
     $parentDiv.next().slideToggle()
+    $this.siblings().removeClass("hide");
+    $this.addClass("hide");
   })
 
   // 選取時刻表效果

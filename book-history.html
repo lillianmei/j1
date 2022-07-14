@@ -47,20 +47,23 @@
             <div>訂票查詢與取消</div>
           </div>
           <div class="actions">
-            <button class="actions-btn tab-item active" id="tab1">
+            <button class="actions-btn tab-item active">
               尚未取票
             </button>
-            <button class="actions-btn tab-item" id="tab2">完成觀看</button>
-            <button class="actions-btn tab-item" id="tab3">已取消</button>
+            <button class="actions-btn tab-item">完成觀看</button>
+            <button class="actions-btn tab-item">已取消</button>
           </div>
             <div class="tab-content">
               <div class="item">
                 <div class="content-row">
                   <div class="row-left row-2">
-                    <img src="https://fakeimg.pl/250x350/" alt="movie-name" />
+                    <img src="https://picsum.photos/240/340" alt="movie-name" />
                   </div>
                   <div class="row-right row-8">
-                    <div class="ticket-no">取票序號<span>#123456789</span></div>
+                    <div class="tickets">
+                      <div class="ticket-no">取票序號<span>#123456789</span></div>
+                      <div class="ticket-total">2<span class="svg-icons i-ticket"></span></div>
+                    </div>
                     <div class="movie-title">
                       <p class="l-font">劫命救護</p>
                       <span class="s-font ">AMBULANCE</span>
@@ -99,10 +102,15 @@
                 </div>
                 <div class="ticket-state">
                   <div class="state collapse">
-                    訂單收起<span class="material-icons"> remove </span>
+                    <div class="collapse-btn">
+                      訂單展開<span class="svg-icons i-plus"></span>
+                    </div>
+                    <div class="collapse-btn hide">
+                      訂單收起<span class="svg-icons i-minus"></span>
+                    </div>
                   </div>
                   <div class="state refund">
-                    整筆退票<span class="material-icons"> close </span>
+                    整筆退票<span class="svg-icons i-close"></span>
                   </div>
                 </div>
                 <div class="ticket-info">
@@ -126,7 +134,7 @@
                       </div>
                       <div class="ticket-state">
                         <div class="state refund">
-                          單筆退票<span class="material-icons"> close </span>
+                          單筆退票<span class="svg-icons i-close"></span>
                         </div>
                       </div>
                     </div>
@@ -151,7 +159,7 @@
                       </div>
                       <div class="ticket-state">
                         <div class="state refund">
-                          單筆退票<span class="material-icons"> close </span>
+                          單筆退票<span class="svg-icons i-close"></span>
                         </div>
                       </div>
                     </div>
@@ -176,7 +184,7 @@
                       </div>
                       <div class="ticket-state">
                         <div class="state refund">
-                          單筆退票<span class="material-icons"> close </span>
+                          單筆退票<span class="svg-icons i-close"></span>
                         </div>
                       </div>
                     </div>
@@ -186,10 +194,13 @@
               <div class="item">
                 <div class="content-row">
                   <div class="row-left row-2">
-                    <img src="https://fakeimg.pl/250x350/" alt="movie-name" />
+                    <img src="https://fakeimg.pl/240x340/" alt="movie-name" />
                   </div>
                   <div class="row-right row-8">
-                    <div class="ticket-no">取票序號<span>#123456789</span></div>
+                    <div class="tickets">
+                      <div class="ticket-no">取票序號<span>#123456789</span></div>
+                      <div class="ticket-total">2<span class="svg-icons i-ticket"></span></div>
+                    </div>
                     <div class="movie-title">
                       <p class="l-font">
                         30歳まで童貞だと魔法使いになれるらしい
@@ -228,10 +239,15 @@
                 </div>
                 <div class="ticket-state">
                   <div class="state collapse">
-                    訂單收起<span class="material-icons"> remove </span>
+                    <div class="collapse-btn">
+                      訂單展開<span class="svg-icons i-plus"></span>
+                    </div>
+                    <div class="collapse-btn hide">
+                      訂單收起<span class="svg-icons i-minus"></span>
+                    </div>
                   </div>
                   <div class="state refund">
-                    整筆退票<span class="material-icons"> close </span>
+                    整筆退票<span class="svg-icons i-close"></span>
                   </div>
                 </div>
                 <div class="ticket-info">
@@ -255,7 +271,7 @@
                       </div>
                       <div class="ticket-state">
                         <div class="state refund">
-                          單筆退票<span class="material-icons"> close </span>
+                          單筆退票<span class="svg-icons i-close"></span>
                         </div>
                       </div>
                     </div>
@@ -280,7 +296,7 @@
                       </div>
                       <div class="ticket-state">
                         <div class="state refund">
-                          單筆退票<span class="material-icons"> close </span>
+                          單筆退票<span class="svg-icons i-close"></span>
                         </div>
                       </div>
                     </div>
@@ -305,7 +321,7 @@
                       </div>
                       <div class="ticket-state">
                         <div class="state refund">
-                          單筆退票<span class="material-icons"> close </span>
+                          單筆退票<span class="svg-icons i-close"></span>
                         </div>
                       </div>
                     </div>
