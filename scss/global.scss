@@ -427,9 +427,7 @@ input:-internal-autofill-selected {
 
 .movie-level {
   margin: 10px 0;
-  width: 75px;
-  max-width: 75px;
-  padding: 5px 10px 2px 10px;
+  padding: 5px 10px;
   display: inline-block;
   color: v.$secondary;
   text-align: center;
@@ -442,7 +440,10 @@ input:-internal-autofill-selected {
 
   .row {
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 45px;
+    @include v.under-pad-width{
+      margin-bottom: 15px;
+    } 
   }
 
   .icon-row {
@@ -616,12 +617,12 @@ input:-internal-autofill-selected {
     justify-content: center;
 
     @include v.pad-width {
-      margin-bottom: 20px;
+      margin-bottom: 40px;
 
     }
 
     @include v.phone-width {
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
 
     .actions-btn {
@@ -632,7 +633,7 @@ input:-internal-autofill-selected {
       padding: 10px;
       text-align: center;
       margin-right: 20px;
-      width: 12em;
+      width: 20em;
       justify-content: center;
 
       @include v.pad-width {
@@ -752,8 +753,8 @@ footer {
 
   img {
     width: 200px;
-    @include v.pad-width {margin-bottom: 20px;}
-    @include v.phone-width {width: 120px;margin-bottom: 20px;}
+    @include v.pad-width {margin-bottom: 30px;}
+    @include v.phone-width {width: 180px;margin-bottom: 30px;}
   }
 
   &>div {
