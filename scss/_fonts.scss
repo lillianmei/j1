@@ -4,6 +4,13 @@
     src: local('Broadway Regular'),url('../fonts/Broadway Regular.ttf') format("truetype"),
 }
 @font-face {
+    font-family: 'EurostileBold';
+    font-display: swap;
+    unicode-range:U+0000-U+007F;
+    src: local('EurostileBold'), 
+         url('../fonts/EurostileBold.ttf') format("truetype"),    
+} 
+@font-face {
     font-family: 'Eurostile Extended';
     font-display: swap;
     src: local('Eurostile Extended'), 
