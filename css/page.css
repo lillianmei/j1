@@ -324,7 +324,7 @@
 .seat-table .table-td .td-block {
   width: 40px;
   height: 30px;
-  padding: 2px 0;
+  padding: 5px 0 2px 0;
   margin: 4px auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -355,17 +355,6 @@
   -webkit-box-shadow: 1px 0 #fff, -1px 0 #fff, 0 -1px #fff, 0 1px #fff;
           box-shadow: 1px 0 #fff, -1px 0 #fff, 0 -1px #fff, 0 1px #fff;
 }
-.seat-table .table-td .seat .material-icons,
-.seat-table .table-td .td-seat .material-icons {
-  font-size: 22px;
-  vertical-align: text-top;
-}
-@media all and (max-width: 768px) {
-  .seat-table .table-td .seat .material-icons,
-.seat-table .table-td .td-seat .material-icons {
-    font-size: 18px;
-  }
-}
 .seat-table .table-td .td-seat {
   cursor: default;
 }
@@ -373,6 +362,10 @@
   -webkit-box-shadow: 1px 0 #E75514, -1px 0 #E75514, 0 -1px #E75514, 0 1px #E75514;
           box-shadow: 1px 0 #E75514, -1px 0 #E75514, 0 -1px #E75514, 0 1px #E75514;
   color: #E75514;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2px;
 }
 .seat-table .table-td.soldout .seat,
 .seat-table .table-td.soldout .td-seat {
@@ -722,7 +715,6 @@
   background-size: contain;
 }
 .section .booking-history .movie-title {
-  width: calc(100% - 160px);
   margin: 30px 0 35px 0;
 }
 @media all and (max-width: 768px) {
@@ -1501,7 +1493,7 @@
 }
 .section .booking .timetable .time span {
   display: block;
-  padding: 5px 10px;
+  padding: 8px 10px 5px 10px;
   border: 1px solid #fff;
   border-radius: 5px;
   margin: 5px;

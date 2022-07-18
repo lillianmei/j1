@@ -136,7 +136,7 @@
     .td-block {
       width: 40px;
       height: 30px;
-      padding: 2px 0;
+      padding: 5px 0 2px 0;
       margin: 4px auto;
       display: flex;
       justify-content: center;
@@ -161,15 +161,6 @@
       border-top-right-radius: 10px;
       border-top-left-radius: 10px;
       box-shadow: 1px 0 #fff, -1px 0 #fff, 0 -1px #fff, 0 1px #fff;
-
-      .material-icons {
-        font-size: 22px;
-        vertical-align: text-top;
-
-        @include v.phone-width {
-          font-size: 18px;
-        }
-      }
     }
 
     .td-seat {
@@ -179,6 +170,9 @@
     .accessibility {
       box-shadow: 1px 0 #E75514, -1px 0 #E75514, 0 -1px #E75514, 0 1px #E75514;
       color: #E75514;
+      align-items: center;
+      padding: 2px;
+
     }
 
     &.soldout {
