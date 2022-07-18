@@ -1699,9 +1699,6 @@ input:-internal-autofill-selected {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
   .section .actions .actions-btn {
@@ -1800,6 +1797,10 @@ input:-internal-autofill-selected {
   display: inline-block;
 }
 .actions .actions-btn.next {
+  font-size: 1.2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #EC9B85;
   border-color: transparent;
   color: #282828;
@@ -1809,15 +1810,19 @@ input:-internal-autofill-selected {
 }
 .actions .actions-btn.next .i-next {
   margin-left: 10px;
-  width: 28px;
-  height: 28px;
+  width: 25px;
+  height: 25px;
 }
 .actions .actions-btn.next:hover {
   background-color: #D26759;
 }
 .actions .actions-btn.back {
+  font-size: 1.2rem;
   background-color: #5E76B1;
   border-color: transparent;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #282828;
   font-family: "EurostileBold", Microsoft JhengHei, Arial, sans-serif;
   -webkit-transition: background-color 0.35s linear;
@@ -1825,16 +1830,20 @@ input:-internal-autofill-selected {
 }
 .actions .actions-btn.back .i-back {
   margin-right: 10px;
-  width: 28px;
-  height: 28px;
+  width: 25px;
+  height: 25px;
 }
 .actions .actions-btn.back:hover {
   background-color: #1E6EB9;
 }
 .actions .actions-btn.prev {
+  font-size: 1.2rem;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #FCC900;
   font-family: "EurostileBold", Microsoft JhengHei, Arial, sans-serif;
 }

@@ -646,7 +646,6 @@ input:-internal-autofill-selected {
       margin-right: 20px;
       width: 20em;
       justify-content: center;
-      align-items: center;
 
       @include v.pad-width {
         width: 50%;
@@ -747,6 +746,8 @@ input:-internal-autofill-selected {
 
     .svg-icons{display: inline-block;}
     &.next {
+      font-size: 1.2rem;
+      align-items: center;
       background-color: #EC9B85;
       border-color: transparent;
       color: #282828;
@@ -754,7 +755,7 @@ input:-internal-autofill-selected {
       transition: background-color 0.35s linear;
       .i-next{
         margin-left: 10px;
-        width:28px;height: 28px;
+        width:25px;height: 25px;
       }
      &:hover{
       background-color: #D26759;
@@ -762,14 +763,16 @@ input:-internal-autofill-selected {
     }
 
     &.back {
+      font-size: 1.2rem; 
       background-color: #5E76B1;
       border-color: transparent;
+      align-items: center;
       color: #282828;
       font-family: 'EurostileBold',Microsoft JhengHei, Arial, sans-serif;
       transition: background-color 0.35s linear;
       .i-back{
         margin-right: 10px;
-        width:28px;height: 28px;
+        width:25px;height: 25px;
       }
       &:hover{
         background-color: #1E6EB9;
@@ -777,7 +780,9 @@ input:-internal-autofill-selected {
     }
 
     &.prev {
+      font-size: 1.2rem;
       height: fit-content;
+      align-items: center;
       color: v.$yellow-bg-color;
       font-family: 'EurostileBold',Microsoft JhengHei, Arial, sans-serif;
     }
