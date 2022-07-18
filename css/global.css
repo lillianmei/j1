@@ -1775,7 +1775,7 @@ input:-internal-autofill-selected {
 
 .actionbtn {
   text-align: center;
-  margin-top: 80px;
+  margin-top: 40px;
 }
 @media all and (max-width: 768px) {
   .actionbtn {
@@ -1982,7 +1982,7 @@ footer > div a:hover.email path {
 
 .modal-content {
   position: fixed;
-  top: 10%;
+  top: 5%;
   width: 570px;
   border-radius: 10px;
   color: black;
@@ -2160,11 +2160,6 @@ footer > div a:hover.email path {
 @media all and (max-width: 991px) {
   #regist .modal-content {
     overflow-y: auto;
-  }
-}
-@media all and (max-height: 700px) {
-  #regist .modal-content {
-    height: 80%;
   }
 }
 #regist .required-icon {
