@@ -320,7 +320,6 @@
     }
 
     .movie-title {
-      width: calc(100% - 160px);
       margin: 30px 0 35px 0;
 
       @include v.phone-width {

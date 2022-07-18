@@ -67,7 +67,7 @@ const app = Vue.createApp({
 </header>`,
     },
     "bottom-footer": {
-      template: `<footer><div class="footer"><img src="../image/01_index_01_logo.png" alt="百老匯影城LOGO" />
+      template: `<footer><div class="footer"><img src="image/01_index_01_logo.png" alt="百老匯影城LOGO" />
 <div>
   <a href="" class="fb">
   <svg width="9" height="20" viewBox="0 0 9 20" fill="none" xmlns="http://www.w3.org/2000/svg">
