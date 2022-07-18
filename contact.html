@@ -30,15 +30,21 @@
   <link rel="apple-touch-icon" sizes="180x180" href="image/favicon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="image/favicon.png">
   <link rel="icon" type="image/png" sizes="16x16" href="image/favicon.png">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  
   <link rel="stylesheet" href="css/global.min.css" />
   <link rel="stylesheet" href="css/page.min.css" />
+  <style>
+    .svg-icons{display: inline-block;margin-right: 10px;width: 23px;height: 23px;} 
+    .i-pointer{ background: url("data:image/svg+xml,%3Csvg width='23' height='23' viewBox='0 0 23 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.6774 21.1183C11.2774 22.8983 12.3974 22.9584 13.1874 21.2684L22.1874 1.95835C22.9874 0.258348 22.2474 -0.471651 20.5474 0.318349L1.22744 9.32835C-0.462559 10.1183 -0.402559 11.2383 1.37744 11.8383L8.37744 14.1583L10.6774 21.1183Z' fill='white'/%3E%3C/svg%3E%0A") no-repeat center;
+            background-size: contain;}
+  </style>
 </head>
 
 <body id="app">
   <!-- header -->
   <nav-header></nav-header>
-
+  <!-- modal -->
+  <modal></modal>
   <!-- main container -->
   <main class="section-box">
     <section class="section">
@@ -58,8 +64,7 @@
                 <li><span class="l-font">影城位置</span>台北市文山區羅斯福路四段200號</li>
                 <li><span class="l-font">聯繫電話</span>02-8663-6128</li>
                 <li><span class="l-font">聯繫信箱</span>borad.way200@msa.hinet.net</li>
-                <li>
-                  <span class="l-font">交通方式</span>
+                <li><span class="l-font">交通方式</span></li>
                   <label>捷運
                     <div>新店綠線公館站二號出口徒步十分鐘</div>
                   </label>
@@ -71,31 +76,22 @@
                       esse repellendus minus, aliquid optio in quasi natus laboriosam, similique fugiat ipsam sed quod
                       vitae error tempore?</div>
                   </label>
-                </li>
-                <li>
-                  <span class="l-font">停車資訊</span>
-                  <label>
+                <li><span class="l-font">停車資訊</span></li>
+                   <label>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, tenetur.
                   </label>
-                </li>
               </ul>
             </div>
             <div class="row-right row-5">
               <div class="iframe-rwd">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.6848890979186!2d121.5345993150057!3d25.010821183983172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9f5598a583d%3A0x546b6469753aa4d!2z55m-6ICB5Yyv5b2x5Z-O!5e0!3m2!1szh-TW!2stw!4v1656583143387!5m2!1szh-TW!2stw"
-                  width="600" height="300" style="border:0;" allowfullscreen=""
-                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.6847459730475!2d121.53459931537832!3d25.010826045373214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9f5598a583d%3A0x546b6469753aa4d!2z55m-6ICB5Yyv5b2x5Z-O!5e0!3m2!1szh-TW!2stw!4v1658115452450!5m2!1szh-TW!2stw" width="780" height="780" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
               <div class="actions">
                 <a href="https://goo.gl/maps/iwQehSV4vAyBZF2w7" target="_blank" rel="noopener noreferrer">
                   <button type="button" class="googlemap actions-btn">
-                    <span class="material-icons">
-                      near_me
-                    </span>GOOGLE MAP
+                    <span class="svg-icons i-pointer"></span>GOOGLE MAP
                   </button>
                 </a>
-
               </div>
             </div>
           </div>
@@ -105,7 +101,7 @@
   </main>
   <!-- main container -->
 
-  <div class="gotop"><span class="material-icons">arrow_drop_up</span></div>
+  <div class="gotop"><span class="svg-icons i-arrow-up"></span></div>
 
   <!-- footer -->
   <bottom-footer></bottom-footer>

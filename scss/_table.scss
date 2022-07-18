@@ -93,10 +93,18 @@
     }
 
     .wheelchair {
+      display: flex;
+      align-items: center;
       span {
+        width: 40px;
+        height: 37px;
         box-shadow: 1px 0 #E75514, -1px 0 #E75514, 0 -1px #E75514, 0 1px #E75514;
         color: #E75514;
-        font-size: 23px;
+        background-size: 45%;
+        @include v.phone-width {
+          width: 30px;
+          height: 28px;
+        }
       }
     }
 
@@ -127,8 +135,12 @@
   .table-td {
     .td-block {
       width: 40px;
+      height: 30px;
       padding: 2px 0;
       margin: 4px auto;
+      display: flex;
+      justify-content: center;
+
 
       @include v.pad-width {
         margin:4px;

@@ -30,16 +30,22 @@
 <link rel="apple-touch-icon" sizes="180x180" href="image/favicon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="image/favicon.png">
 <link rel="icon" type="image/png" sizes="16x16" href="image/favicon.png">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
 <link rel="stylesheet" href="css/global.min.css" />
 <link rel="stylesheet" href="css/page.min.css" />
-
+<style>
+  .svg-icons{display: inline-block;} 
+  .i-home{ width: 25px;height: 22px;background: url("data:image/svg+xml,%3Csvg width='25' height='22' viewBox='0 0 25 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.21 0.479799L25 9.3198L23.58 11.2098L21.05 9.3098V20.5798C21.05 20.8928 20.9257 21.1929 20.7044 21.4142C20.4831 21.6355 20.183 21.7598 19.87 21.7598H5.13C4.81705 21.7598 4.51691 21.6355 4.29561 21.4142C4.07431 21.1929 3.95 20.8928 3.95 20.5798V9.3098L1.42 11.2098L0 9.3198L11.79 0.479799C11.9939 0.324093 12.2434 0.239746 12.5 0.239746C12.7566 0.239746 13.0061 0.324093 13.21 0.479799Z' fill='%23282828'/%3E%3C/svg%3E ") no-repeat center;
+            background-size: contain;margin-left: 10px;}
+  .i-ticket-white{width: 30px;height: 31px;margin-right: 10px;}
+</style>
 </head>
 
 <body id="app">
   <!-- header -->
   <nav-header></nav-header>
-
+  <!-- modal -->
+  <modal></modal>
   <!-- main container -->
   <main class="section-box">
     <section class="section">
@@ -102,11 +108,11 @@
     <section class="section">
       <div class="content book-tickets-4">
         <div class="book-done l-font">
-          <div class="done"><span class="material-icons"> featured_play_list </span>您已完成訂單</div>
+          <div class="done"><span class="svg-icons i-ticket-white"></span>您已完成訂單</div>
           <div>取票序號 #126677888</div>
         </div>
         <div class="attention">
-          <div class="note"><span class="material-icons">info</span>注意事項</div>
+          <div class="note"><span class="svg-icons i-notice"></span>注意事項</div>
           <ul class="s-font">
             <li>訂票張數限制</li>
             <li>訂票張數限制訂票張數限制訂票張數限制訂票張數限制訂票張數限制訂票張數限制訂票張數限制訂票張數限制訂。</li>
@@ -115,9 +121,7 @@
           </ul>
         </div>
         <div class="actions">
-          <a href="book-history.html" class="actions-btn next">HOME<span class="material-icons">
-            forward
-          </span></a>
+          <a href="book-history.html" class="actions-btn next">HOME<span class="svg-icons i-home"></span></a>
         </div>
 
       </div>
@@ -125,7 +129,7 @@
   </main>
   <!-- main container -->
 
-  <div class="gotop"><span class="material-icons">arrow_drop_up</span></div>
+  <div class="gotop"><span class="svg-icons i-arrow-up"></span></div>
 
   <!-- footer -->
   <bottom-footer></bottom-footer>

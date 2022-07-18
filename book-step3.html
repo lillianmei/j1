@@ -30,16 +30,21 @@
 <link rel="apple-touch-icon" sizes="180x180" href="image/favicon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="image/favicon.png">
 <link rel="icon" type="image/png" sizes="16x16" href="image/favicon.png">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
 <link rel="stylesheet" href="css/global.min.css" />
 <link rel="stylesheet" href="css/page.min.css" />
-
+<style>
+  .svg-icons{display: inline-block;margin-left: 10px;width: 40px;height: 40px;} 
+  .i-checkout{ background: url("data:image/svg+xml,%3Csvg width='40' height='26' viewBox='0 0 40 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.8 9.8V9H19.2V9.81C18.6695 9.81 18.1608 10.0207 17.7857 10.3958C17.4107 10.7709 17.2 11.2796 17.2 11.81C17.2 12.3404 17.4107 12.8491 17.7857 13.2242C18.1608 13.5993 18.6695 13.81 19.2 13.81H20.8699C20.9618 13.8263 21.0451 13.8742 21.1053 13.9455C21.1656 14.0167 21.1991 14.1067 21.2 14.2C21.2 14.3061 21.1578 14.4078 21.0828 14.4828C21.0078 14.5579 20.906 14.6 20.8 14.6H17.6V16.2H19.2V17H20.8V16.19C21.3304 16.19 21.8391 15.9793 22.2142 15.6042C22.5892 15.2291 22.8 14.7204 22.8 14.19C22.8 13.6596 22.5892 13.1509 22.2142 12.7758C21.8391 12.4007 21.3304 12.19 20.8 12.19H19.13C19.0381 12.1737 18.9548 12.1258 18.8946 12.0545C18.8343 11.9833 18.8009 11.8933 18.8 11.8C18.8 11.6939 18.8421 11.5922 18.9171 11.5172C18.9921 11.4421 19.0939 11.4 19.2 11.4H22.3999V9.8H20.8Z' fill='%23282828'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2 0.5H38C38.5304 0.5 39.0391 0.710714 39.4142 1.08579C39.7893 1.46086 40 1.96957 40 2.5V23.5C40 24.0304 39.7893 24.5391 39.4142 24.9142C39.0391 25.2893 38.5304 25.5 38 25.5H2C1.46957 25.5 0.960861 25.2893 0.585785 24.9142C0.210709 24.5391 0 24.0304 0 23.5V2.5C0 1.96957 0.210709 1.46086 0.585785 1.08579C0.960861 0.710714 1.46957 0.5 2 0.5ZM16.111 18.8203C17.2621 19.5895 18.6155 20 20 20C21.8565 20 23.637 19.2625 24.9498 17.9497C26.2625 16.637 27 14.8565 27 13C27 11.6155 26.5894 10.2622 25.8203 9.11101C25.0511 7.95986 23.9579 7.06266 22.6788 6.53284C21.3997 6.00303 19.9922 5.86441 18.6344 6.1345C17.2765 6.4046 16.0292 7.07129 15.0502 8.05025C14.0713 9.02922 13.4046 10.2765 13.1345 11.6344C12.8644 12.9922 13.003 14.3997 13.5328 15.6788C14.0627 16.9579 14.9599 18.0511 16.111 18.8203Z' fill='%23282828'/%3E%3C/svg%3E ") no-repeat center;
+            background-size: contain;}
+</style>
 </head>
 
 <body id="app">
   <!-- header -->
   <nav-header></nav-header>
-
+  <!-- modal -->
+  <modal></modal>
   <!-- main container -->
   <main class="section-box">
     <section class="section">
@@ -141,12 +146,10 @@
         </div>
         <div class="actions">
           <a href="book-step3.html" class="back actions-btn">
-            <span class="material-icons">west</span>BACK
+            <span class="svg-icons i-back"></span>BACK
           </a>
           <a href="book-step4.html" class="next actions-btn">
-            CHECKOUT<span class="material-icons">
-              attach_money
-            </span>
+            CHECKOUT<span class="svg-icons i-checkout"></span>
           </a>
         </div>
       
@@ -155,7 +158,7 @@
   </main>
   <!-- main container -->
 
-  <div class="gotop"><span class="material-icons">arrow_drop_up</span></div>
+  <div class="gotop"><span class="svg-icons i-arrow-up"></span></div>
 
   <!-- footer -->
   <bottom-footer></bottom-footer>

@@ -28,17 +28,36 @@
   <link rel="apple-touch-icon" sizes="180x180" href="image/favicon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="image/favicon.png">
   <link rel="icon" type="image/png" sizes="16x16" href="image/favicon.png">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  
   <link rel="stylesheet" href="css/jquery-ui.min.css">
   <link rel="stylesheet" href="css/global.min.css" />
   <link rel="stylesheet" href="css/page.min.css" />
-
+  <style>
+    .svg-icons{
+      display: inline-block;
+      
+    }
+    .i-success{
+      width: 25px;
+      height: 25px;
+      margin-left: 10px; 
+      background: url("data:image/svg+xml,%3Csvg width='28' height='21' viewBox='0 0 28 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.09 21H0.880005C0.646614 21 0.422783 20.9073 0.257751 20.7423C0.0927195 20.5772 0 20.3534 0 20.12V0.879999C0 0.646609 0.0927195 0.422778 0.257751 0.257746C0.422783 0.0927137 0.646614 1.89721e-09 0.880005 1.89721e-09H27.13C27.2451 -7.5996e-06 27.3591 0.0228236 27.4653 0.0671692C27.5715 0.111515 27.6678 0.176494 27.7487 0.258343C27.8297 0.340192 27.8935 0.437283 27.9367 0.543993C27.9798 0.650703 28.0013 0.76491 28 0.879999V9.62H26.25V2.52447L14.48 11.2099C14.3295 11.321 14.1471 11.3806 13.96 11.3799C13.7763 11.3785 13.5978 11.319 13.45 11.2099L1.75 2.62873V19.25H13.13L13.09 21ZM13.92 9.40992L24.3736 1.75H3.47466L13.92 9.40992Z' fill='white'/%3E%3Cpath d='M19.47 18.9901C19.6347 19.1545 19.8573 19.2478 20.09 19.2501C20.2136 19.2557 20.3371 19.2355 20.4524 19.1908C20.5678 19.146 20.6725 19.0777 20.76 18.9901L26.88 12.8701L25.62 11.6201L20.11 17.1301L18.11 15.1301L16.88 16.3701L19.47 18.9901Z' fill='white'/%3E%3C/svg%3E%0A") no-repeat center/contain;
+    }
+    .i-save{
+      width: 25px;
+      height: 25px;
+      margin-left: 10px; 
+      background: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 0C10.4289 0 7.91544 0.762437 5.7776 2.1909C3.63976 3.61935 1.97351 5.64968 0.989573 8.02512C0.00563413 10.4006 -0.251811 13.0144 0.249797 15.5362C0.751405 18.0579 1.98954 20.3743 3.80763 22.1924C5.62571 24.0105 7.94208 25.2486 10.4638 25.7502C12.9856 26.2518 15.5995 25.9944 17.9749 25.0104C20.3503 24.0265 22.3807 22.3603 23.8091 20.2224C25.2376 18.0846 26 15.5712 26 13C26 9.55219 24.6304 6.24558 22.1924 3.80761C19.7544 1.36964 16.4478 0 13 0ZM17 15.8L13.2 19.47H12.95H12.8C12.7069 19.4568 12.618 19.4226 12.54 19.37L12.39 19.25L8.92001 15.78C8.78275 15.627 8.70794 15.4281 8.71038 15.2226C8.71283 15.0171 8.79235 14.82 8.93321 14.6704C9.07406 14.5207 9.26598 14.4294 9.47096 14.4145C9.67593 14.3996 9.87903 14.4623 10.04 14.59L12.15 16.69V7.32C12.15 7.10252 12.2364 6.89395 12.3902 6.74017C12.544 6.58639 12.7525 6.5 12.97 6.5C13.1875 6.5 13.3961 6.58639 13.5498 6.74017C13.7036 6.89395 13.79 7.10252 13.79 7.32V16.7L15.86 14.63L15.97 14.53C16.1412 14.3963 16.3584 14.3359 16.574 14.3622C16.7896 14.3884 16.9859 14.4991 17.12 14.67C17.1884 14.7548 17.2387 14.8526 17.2679 14.9575C17.2972 15.0624 17.3047 15.1721 17.29 15.28C17.2779 15.3825 17.2451 15.4815 17.1935 15.5709C17.1419 15.6603 17.0727 15.7382 16.99 15.8H17Z' fill='%23282828'/%3E%3C/svg%3E ") no-repeat center/contain;
+    }
+   
+  </style>
 </head>
 
 <body id="app">
   <!-- header -->
   <nav-header></nav-header>
-
+    <!-- modal -->
+  <modal></modal>
   <!-- main container -->
   <main class="section-box">
     <section class="section">
@@ -88,14 +107,10 @@
                   </div> 
                   <div class="row actionbtn">
                     <button type="button">信件尚未驗證 <span>點此發送驗證郵件</span></button>
-                    <div>驗證成功 <span class="material-icons">
-                      mark_email_read
-                    </span></div>
+                    <div>驗證成功 <span class="svg-icons i-success"></span></div>
                   </div>
                   <div class="row actionbtn">
-                    <button type="submit">儲存修改資料 <span class="material-icons">
-                        lock_outline
-                      </span></button>
+                    <button type="submit">儲存修改資料 <span class="svg-icons i-save"></span></button>
                   </div>
                 </div>
               </div>
@@ -106,28 +121,21 @@
               <form action="">
                 <div class="row icon-row">
                   <label for="currentpwd">目前密碼</label>
-                  <span class="material-icons pwd-eye pwd-on">
-                    visibility
-                  </span>
+                  <span class="svg-icons pwd-eye i-eye isText"></span>
                   <input type="text" id="currentpwd" placeholder="0123456789">
                 </div>
                 <div class="row icon-row">
                   <label for="changepwd">變更密碼</label>
-                  <span class="material-icons pwd-eye">
-                    visibility_off
-                  </span>
+                  <span class="svg-icons pwd-eye i-eye"></span>
                   <input type="password" id="changepwd" placeholder="請輸入6-10位含大小寫英數字">
                 </div>
                 <div class="row icon-row">
                   <label for="reconfirmpwd">確認新密碼</label>
-                  <span class="material-icons pwd-eye">visibility_off
-                  </span>
+                  <span class="svg-icons pwd-eye i-eye"></span>
                   <input type="password" id="reconfirmpwd" placeholder="請輸入6-10位含大小寫英數字">
                 </div>
                 <div class="row actionbtn fit-center">
-                  <button type="submit">儲存修改密碼 <span class="material-icons">
-                      lock_outline
-                    </span></button>
+                  <button type="submit">儲存修改密碼 <span class="svg-icons i-save"></span></button>
                 </div>
               </form>
             </div>
@@ -137,7 +145,7 @@
   </main>
   <!-- main container -->
 
-  <div class="gotop"><span class="material-icons">arrow_drop_up</span></div>
+  <div class="gotop"><span class="svg-icons i-arrow-up"></span></div>
 
   <!-- footer -->
   <bottom-footer></bottom-footer>
