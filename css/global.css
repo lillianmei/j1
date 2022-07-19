@@ -2003,6 +2003,13 @@ footer > div a:hover.email path {
   visibility: visible;
   opacity: 1;
   z-index: 1000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: a auto;
 }
 
 .modal-content {
@@ -2012,7 +2019,6 @@ footer > div a:hover.email path {
   border-radius: 10px;
   color: black;
   background: #ebebeb;
-  margin: 0 auto;
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
   .modal-content {

@@ -921,6 +921,9 @@ footer {
   visibility: visible;
   opacity: 1;
   z-index: 1000;
+  display: flex;
+  justify-content: center;
+  margin: a auto;
 }
 
 .modal-content {
@@ -930,7 +933,6 @@ footer {
   border-radius: 10px;
   color: black;
   background: #ebebeb;
-  margin: 0 auto;
 
   @include v.pad-width {
     width: 85%;
