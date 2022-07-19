@@ -355,7 +355,6 @@ template {
 }
 
 header {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -365,6 +364,8 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  -webkit-box-shadow: inset 0px -50px 50px #282828;
+          box-shadow: inset 0px -50px 50px #282828;
 }
 
 nav {
@@ -505,6 +506,7 @@ nav .sidebar .menu .dropdown-menu {
     overflow: unset;
     -webkit-transition: none;
     transition: none;
+    font-size: 1rem;
   }
 }
 nav .sidebar .menu .dropdown-menu li {
@@ -993,7 +995,9 @@ a.ui-button:active,
   text-align: center;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -1065,6 +1069,14 @@ input[type=date] {
   border: 1px solid #818181;
   background: rgba(235, 235, 235, 0.0941176471);
   color: #fff;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  line-height: 1.5;
 }
 
 /* The container */
@@ -1197,7 +1209,7 @@ select:focus {
 
 input:-internal-autofill-selected {
   -webkit-box-shadow: 0 0 0px 100px #3a3a3a inset;
-  -webkit-text-fill-color: #Fff;
+  -webkit-text-fill-color: #fff;
 }
 
 .i-location {
@@ -1434,6 +1446,8 @@ input:-internal-autofill-selected {
   display: flex;
 }
 .movie-item .list-item .list-row span:first-of-type {
+  width: 50px;
+  word-wrap: break-word;
   border-right: 1px solid #fff;
   padding-right: 10px;
   margin-right: 10px;
@@ -1797,11 +1811,11 @@ input:-internal-autofill-selected {
   display: inline-block;
 }
 .actions .actions-btn.next {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #EC9B85;
+  background-color: #ec9b85;
   border-color: transparent;
   color: #282828;
   font-family: "EurostileBold", Microsoft JhengHei, Arial, sans-serif;
@@ -1814,11 +1828,11 @@ input:-internal-autofill-selected {
   height: 25px;
 }
 .actions .actions-btn.next:hover {
-  background-color: #D26759;
+  background-color: #d26759;
 }
 .actions .actions-btn.back {
-  font-size: 1.2rem;
-  background-color: #5E76B1;
+  font-size: 1.15rem;
+  background-color: #5e76b1;
   border-color: transparent;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1834,10 +1848,10 @@ input:-internal-autofill-selected {
   height: 25px;
 }
 .actions .actions-btn.back:hover {
-  background-color: #1E6EB9;
+  background-color: #1e6eb9;
 }
 .actions .actions-btn.prev {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -1928,7 +1942,7 @@ footer > div a {
           justify-content: center;
   width: 40px;
   height: 40px;
-  background-color: #B9B9B9;
+  background-color: #b9b9b9;
   border-radius: 50%;
   text-align: center;
   margin-bottom: 10px;
@@ -1938,7 +1952,7 @@ footer > div a.yt svg {
   width: 25px;
 }
 footer > div a:hover.fb {
-  background-color: #3A589A;
+  background-color: #3a589a;
 }
 footer > div a:hover.fb path {
   fill: #fff;
@@ -1950,13 +1964,13 @@ footer > div a:hover.ig path {
   fill: #fff;
 }
 footer > div a:hover.yt {
-  background-color: #C02025;
+  background-color: #c02025;
 }
 footer > div a:hover.yt path {
   fill: #fff;
 }
 footer > div a:hover.email {
-  background-color: #C53932;
+  background-color: #c53932;
 }
 footer > div a:hover.email path {
   fill: #fff;
@@ -1995,7 +2009,8 @@ footer > div a:hover.email path {
   width: 570px;
   border-radius: 10px;
   color: black;
-  background: #EBEBEB;
+  background: #ebebeb;
+  margin: 0 auto;
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
   .modal-content {
@@ -2014,6 +2029,11 @@ footer > div a:hover.email path {
   border-top-right-radius: 10px;
   padding: 10px 20px;
   font-size: 1em;
+}
+@media all and (max-width: 768px) {
+  .modal-content h2 {
+    padding: 10px 40px;
+  }
 }
 .modal-content label {
   display: block;
@@ -2054,7 +2074,7 @@ footer > div a:hover.email path {
   margin-top: 5px;
 }
 .modal-content .modal-info .actionbtn button {
-  background-color: #006EBD;
+  background-color: #006ebd;
   border: 1px solid #125578;
 }
 .modal-content .modal-info .actionbtn a {
@@ -2308,6 +2328,7 @@ footer > div a:hover.email path {
   border-color: #FCC900;
   background-color: #FCC900;
   color: #000;
+  line-height: 40px;
 }
 .step-bar .progress li.finished:after {
   background-color: #FCC900;

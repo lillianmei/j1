@@ -239,7 +239,7 @@
   }
 }
 .seat-table .seat-mark .mark {
-  margin: 0 15px;
+  margin: 5px 15px 0 15px;
 }
 @media all and (max-width: 768px) {
   .seat-table .seat-mark .mark {
@@ -343,6 +343,7 @@
 @media all and (max-width: 768px) {
   .seat-table .table-td .td-block {
     width: 30px;
+    height: 25px;
     margin: 3px;
     font-size: 0.8rem;
   }
@@ -540,7 +541,7 @@
   }
 }
 .section .movie-info .movie-item:first-of-type {
-  padding-right: 2.5vw;
+  padding-right: 5vw;
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
   .section .movie-info .movie-item:first-of-type {
@@ -552,15 +553,22 @@
 @media all and (max-width: 768px) {
   .section .movie-info .movie-item:first-of-type {
     padding-right: 0;
-    width: 50%;
-    margin: 0 auto 20px auto;
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+@media all and (max-width: 320px) {
+  .section .movie-info .movie-item:first-of-type {
+    padding-right: 0;
+    width: 100%;
+    margin: 0 auto;
   }
 }
 .section .movie-info .movie-item:last-of-type {
   margin-top: 40px;
 }
 .section .movie-info .movie-item .list-row span:last-of-type {
-  width: 90%;
+  width: 75%;
 }
 .section .movie-info .movie-item .book-btn {
   background-color: #5a98c0;
@@ -1008,7 +1016,7 @@
   margin-bottom: 20px;
 }
 .section .about .row-left {
-  padding-right: 1vw;
+  padding-right: 1.5vw;
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
   .section .about .row-left {
@@ -1023,7 +1031,7 @@
   }
 }
 .section .about .row-right {
-  padding-left: 1vw;
+  padding-left: 1.5vw;
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
   .section .about .row-right {
@@ -1057,7 +1065,7 @@
   margin-right: 15px;
 }
 .section .about .info .info-container {
-  padding-left: 20px;
+  padding-left: 47px;
 }
 .section .about .info .info-container.facility {
   overflow-x: auto;
@@ -1142,7 +1150,7 @@
 .section .account .icon-row .svg-icons {
   position: absolute;
   left: 15px;
-  top: 42px;
+  top: 40px;
   cursor: pointer;
   width: 25px;
   height: 25px;
@@ -1323,8 +1331,9 @@
 .section .booking .row-right .actions button small {
   display: block;
   margin-bottom: 2px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
+  line-height: 1;
   font-family: "EuroStyle", Microsoft JhengHei, Arial, sans-serif;
 }
 .section .booking .row-right .actions button.quick-view {
@@ -1354,7 +1363,14 @@
 }
 @media all and (max-width: 768px) {
   .section .booking .movie-item.item-img {
-    width: 50%;
+    width: 60%;
+    margin: 0 auto;
+    padding-right: 0;
+  }
+}
+@media all and (max-width: 320px) {
+  .section .booking .movie-item.item-img {
+    width: 100%;
     margin: 0 auto;
     padding-right: 0;
   }
@@ -1513,15 +1529,28 @@
   padding-right: 2vw;
   text-align: center;
 }
-@media all and (max-width: 768px) {
+@media all and (min-width: 769px) and (max-width: 991px) {
   .section .book-tickets .row-left {
     padding-right: 0;
     width: 30%;
     margin: 0 auto 20px auto;
   }
 }
+@media all and (max-width: 768px) {
+  .section .book-tickets .row-left {
+    padding-right: 0;
+    width: 50%;
+    margin: 0 auto 20px auto;
+  }
+}
+@media all and (max-width: 320px) {
+  .section .book-tickets .row-left {
+    padding-right: 0;
+    width: 100%;
+    margin: 0 auto 20px auto;
+  }
+}
 .section .book-tickets .row-left img {
-  max-width: 240px;
   border-radius: 10px;
 }
 .section .book-tickets .row-min {
@@ -1677,7 +1706,7 @@
   }
 }
 .section .book-tickets .row-right .summary {
-  color: #7A6A56;
+  color: #7a6a56;
   text-align: right;
   letter-spacing: 0px;
   display: -webkit-inline-box;
@@ -1972,10 +2001,6 @@
           align-items: center;
   margin-bottom: 10px;
 }
-.section .book-tickets-3 .check-info .precautions span {
-  margin-right: 5px;
-  color: #73C044;
-}
 .section .book-tickets-3 .check-info .container-checkbox {
   font-weight: normal;
   width: -webkit-fit-content;
@@ -2067,7 +2092,7 @@
 }
 @media all and (max-width: 768px) {
   .section .contact .info {
-    padding-left: 0;
+    padding-right: 0;
   }
 }
 .section .contact .info li {
@@ -2077,10 +2102,14 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .section .contact .info li::before {
-  margin-right: 15px;
+  margin-right: 10px;
+  position: relative;
+  top: 3px;
 }
 .section .contact .info li:first-of-type {
   display: -webkit-box;
@@ -2130,6 +2159,16 @@
   display: inline-block;
   margin-right: 15px;
 }
+@media all and (max-width: 768px) {
+  .section .contact .info li span {
+    width: 80%;
+  }
+}
+@media all and (max-width: 768px) {
+  .section .contact .info li p {
+    padding-left: 40px;
+  }
+}
 .section .contact .info label {
   display: block;
   margin-left: 30px;
@@ -2160,6 +2199,12 @@
   width: -moz-fit-content;
   width: fit-content;
   font-family: "EuroStyle", Microsoft JhengHei, Arial, sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
   .section .contact .row-right .actions .actions-btn {

@@ -51,9 +51,9 @@
     }
 
     .mark {
-      margin: 0 15px;
+      margin: 5px 15px 0 15px;
       @extend %weight600;
-
+ 
       @include v.phone-width {
         margin: 0;
         margin-bottom: 10px;
@@ -150,6 +150,7 @@
 
       @include v.phone-width {
         width: 30px;
+        height: 25px;
         margin:3px;
         font-size: 0.8rem;
       }

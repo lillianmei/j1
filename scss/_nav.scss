@@ -1,5 +1,7 @@
 header{position: sticky;top: 0;z-index: 100;transition:  background-image .3s linear;
-  background-image: url(../image/01_index_02_header.png);background-repeat: no-repeat;background-size: cover;background-position: center center;}
+  background-image: url(../image/01_index_02_header.png);background-repeat: no-repeat;background-size: cover;background-position: center center;
+  box-shadow: inset 0px -50px 50px #282828 ;
+}
 nav {
   width: 100%;
   max-width: v.$max-width;
@@ -103,6 +105,7 @@ nav {
           visibility: visible;
           overflow: unset;
           transition: none;
+          font-size: 1rem;
         }
 
         li {
