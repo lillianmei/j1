@@ -8,7 +8,7 @@
 }
 
 nav .sidebar .menu > li:hover .menu-link, nav .sidebar .menu .menu-link.active, nav .sidebar .user-account div.user, .main-title div:nth-of-type(2), .sub-title, .movie-item .list-item > div, .movie-title, .movie-level, .section .actions .actions-btn.active, .section .attention .note, .actionbtn button,
-.actionbtn div, .modal-content h2, .modal-content label, .step-bar .progress li.active, .step-bar .progress li.finished {
+.actionbtn div, .modal-content label, .step-bar .progress li.active, .step-bar .progress li.finished {
   font-weight: 600;
 }
 
@@ -2028,10 +2028,11 @@ footer > div a:hover.email path {
   border-top-right-radius: 10px;
   padding: 10px 20px;
   font-size: 1em;
+  font-family: "EurostileBold", Microsoft JhengHei, Arial, sans-serif;
 }
 @media all and (max-width: 768px) {
   .modal-content h2 {
-    padding: 10px 40px;
+    padding: 10px 40px 10px 10px;
   }
 }
 .modal-content label {

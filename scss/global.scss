@@ -947,9 +947,10 @@ footer {
     border-top-right-radius: 10px;
     padding: 10px 20px;
     font-size: 1em;
-    @extend %weight600;
+    font-family: "EurostileBold", Microsoft JhengHei, Arial, sans-serif;
+
     @include v.phone-width {
-      padding: 10px 40px;
+      padding: 10px 40px 10px 10px;
     }
   }
 
