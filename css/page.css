@@ -1581,6 +1581,13 @@
   padding: 30px;
   background-color: rgba(0, 0, 0, 0.247);
   border-radius: 10px;
+  position: relative;
+}
+.section .book-tickets .row-min::before {
+  content: url(../image/round-text.png);
+  position: absolute;
+  top: 8px;
+  right: -67px;
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
   .section .book-tickets .row-min {
@@ -1588,6 +1595,7 @@
     border-bottom-right-radius: 10px;
     padding: 20px;
     width: 66%;
+    overflow: hidden;
   }
 }
 @media all and (max-width: 768px) {
@@ -1596,6 +1604,7 @@
     border-bottom-right-radius: 10px;
     padding: 20px;
     width: 100%;
+    overflow: hidden;
   }
 }
 .section .book-tickets .row-min .movie-item {
@@ -1687,9 +1696,9 @@
 }
 .section .book-tickets .row-right {
   padding: 30px;
-  background-color: rgba(0, 0, 0, 0.247);
   border-radius: 10px;
   border-left: 3px dashed rgba(255, 255, 255, 0.062);
+  background-color: rgba(0, 0, 0, 0.247);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

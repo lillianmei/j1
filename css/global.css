@@ -1880,7 +1880,7 @@ footer img {
 }
 @media all and (max-width: 768px) {
   footer img {
-    width: 180px;
+    width: 150px;
     margin-bottom: 30px;
   }
 }

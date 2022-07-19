@@ -1162,12 +1162,20 @@
       padding: 30px;
       background-color: rgba(0, 0, 0, 0.247);
       border-radius: 10px;
+      position: relative;
+      &::before{
+        content: url(../image/round-text.png);
+        position: absolute;
+        top: 8px;
+        right: -67px;
+      }
 
       @include v.pad-width {
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
         padding: 20px;
         width: 66%;
+        overflow: hidden;
       }
 
       @include v.phone-width {
@@ -1175,6 +1183,7 @@
         border-bottom-right-radius: 10px;
         padding: 20px;
         width: 100%;
+        overflow: hidden;
       }
 
       .movie-item {
@@ -1252,9 +1261,9 @@
 
     .row-right {
       padding: 30px;
-      background-color: rgba(0, 0, 0, 0.247);
       border-radius: 10px;
       border-left: 3px dashed rgba(255, 255, 255, 0.062);
+      background-color: rgba(0, 0, 0, 0.247);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
