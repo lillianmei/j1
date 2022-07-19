@@ -25,9 +25,23 @@
       -ms-flex-align: center;
           align-items: center;
   background-color: #000;
-  background-image: url("../image/00_loading_01_bg.png");
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media all and (min-width: 992px) {
+  .landing .landing-page {
+    background-image: url("../image/00_loading_01_bg.png");
+  }
+}
+@media all and (min-width: 769px) and (max-width: 991px) {
+  .landing .landing-page {
+    background-image: url("../image/00_loading_01_bg_900.png");
+  }
+}
+@media all and (max-width: 768px) {
+  .landing .landing-page {
+    background-image: url("../image/00_loading_01_bg_700.png");
+  }
 }
 .landing h1 {
   color: #fff;

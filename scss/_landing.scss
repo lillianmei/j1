@@ -9,9 +9,17 @@
     display: flex;
     align-items: center;
     background-color: #000;
-    background-image: url("../image/00_loading_01_bg.png");
     background-repeat: no-repeat;
     background-size: cover;
+    @include v.pc-width {
+      background-image: url("../image/00_loading_01_bg.png");
+    }
+    @include v.pad-width{
+      background-image: url("../image/00_loading_01_bg_900.png");
+    }
+    @include v.phone-width{
+      background-image: url("../image/00_loading_01_bg_700.png");
+    }
   } 
  
   h1 {
