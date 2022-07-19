@@ -2010,7 +2010,7 @@ footer > div a:hover.email path {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: a auto;
+  margin: 0 auto;
 }
 
 .modal-content {
@@ -2020,7 +2020,7 @@ footer > div a:hover.email path {
   border-radius: 10px;
   color: black;
   background: #ebebeb;
-  margin: a auto;
+  margin: 0 auto;
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
   .modal-content {
