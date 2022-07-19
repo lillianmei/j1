@@ -1037,11 +1037,11 @@ footer {
 }
 
 #login {
-  .modal-content {
-    @include v.under-pad-width {
-      overflow-y: auto;
-    }
-  }
+  // .modal-content {
+  //   @include v.under-pad-width {
+  //     overflow-y: auto;
+  //   }
+  // }
 
   .nobr {
     display: inline-block;
@@ -1103,11 +1103,11 @@ footer {
 }
 
 #regist {
-  .modal-content {
-    @include v.under-pad-width {
-      overflow-y: auto;
-    }
-  }
+  // .modal-content {
+  //   @include v.under-pad-width {
+  //     overflow-y: auto;
+  //   }
+  // }
 
   label[for="confirmrule"] {
     @extend %weight300;
