@@ -1,5 +1,4 @@
 @use "variables" as v;
-@import "_landing";
 @import "_table";
 
 .section {
@@ -21,6 +20,8 @@
     }
 
     .poster {
+      background: url(../image/imgplaceholder.png) no-repeat center;
+      min-height: 300px;
       img {
         border-radius: 10px;
       }

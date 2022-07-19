@@ -30,9 +30,11 @@
   <link rel="apple-touch-icon" sizes="180x180" href="image/favicon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="image/favicon.png">
   <link rel="icon" type="image/png" sizes="16x16" href="image/favicon.png">
+  <!--only for landing page -->
+  <link rel="stylesheet" rel="preload" as="style" href="css/landing.min.css" />
   
+  <link rel="stylesheet" rel="preload" as="style" href="css/global.min.css" />
   <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="css/global.min.css" />
   <link rel="stylesheet" href="css/page.min.css" />
 
   <style>
@@ -156,20 +158,18 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <a href="" aria-label="百老匯影城資訊">
-            <img data-src="https://picsum.photos/1920/740" alt="輪播圖" class="swiper-lazy" />
-            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            <img src="image/123.jpg" alt="輪播圖" />
           </a>
         </div>
         <div class="swiper-slide">
           <a href="" aria-label="百老匯影城資訊">
-            <img data-src="https://picsum.photos/1920/740" alt="輪播圖" class="swiper-lazy" />
-            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            <img src="image/123.jpg" alt="輪播圖" />
+
           </a>
         </div>
         <div class="swiper-slide">
           <a href="" aria-label="百老匯影城資訊">
-            <img data-src="https://picsum.photos/1920/740" alt="輪播圖" class="swiper-lazy" />
-            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            <img src="image/123.jpg" alt="輪播圖" />
           </a>
         </div>
       </div>
@@ -206,7 +206,7 @@
         <div class="showing-list row-2">
           <div class="state s-font newin">最新上映</div>
           <a href="">
-            <div class="poster">
+            <div class="poster ">
               <img src="https://fakeimg.pl/300x425/" alt="movie-name" />
             </div>
             <div class="movie-title l-font mul-ellipsis-1">
@@ -352,10 +352,6 @@
   <script src="js/index.js"></script>
   <script>
     const slideSwiper = new Swiper(".s-swiper", {
-      lazy: {
-        loadPrevNext: true,
-      },
-      preloadImages: false,
       pagination: {
         el: ".dot",
         clickable: true,
@@ -363,6 +359,10 @@
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
+      },
+      autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
       },
       breakpoints: {
         992: {
