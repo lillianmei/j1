@@ -914,6 +914,7 @@ footer {
   justify-content: center;
   background: rgba(0, 0, 0, 0.7);
   transition: all 0.4s;
+  margin: 0 auto;
 }
 
 /*opening it*/
@@ -933,6 +934,7 @@ footer {
   border-radius: 10px;
   color: black;
   background: #ebebeb;
+  margin: a auto;
 
   @include v.pad-width {
     width: 85%;
@@ -940,7 +942,7 @@ footer {
 
   @include v.phone-width {
     width: 90%;
-    top: 20px;
+    top: 5px;
   }
 
   h2 {
