@@ -20,8 +20,6 @@
     }
 
     .poster {
-      background: url(../image/imgplaceholder.png) no-repeat center;
-      min-height: 300px;
       img {
         border-radius: 10px;
       }
@@ -35,7 +33,7 @@
       border-top-right-radius: 20px;
       border-bottom-right-radius: 20px;
       @extend %weight400;
-
+ 
       &.recommand {
         @include v.bg-opacity(v.$green-bg-color, 0.8);
       }
