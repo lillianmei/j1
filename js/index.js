@@ -226,16 +226,6 @@ $(function () {
     }
   }
 
-  // 限制手機版選單開啟時背景滑動
-  $hamberger.on("click", function (e) {
-    let isCheck = e.target.checked
-    if (isMobileDevice()) {
-      $body.classList.remove('no-scroll')
-      if (isCheck) {
-        $body.classList.add('no-scroll')
-      }
-    }
-  })
   // account hover效果
   $account.addEventListener("mouseenter", () => {
     $account.classList.add("-active");

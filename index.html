@@ -60,8 +60,23 @@
 
     .swiper-slide img {
       width: 100%;
-      max-height: 740px;
     }
+    .swiper-slide img.for-mobile {
+         display: block;
+    }
+    .swiper-slide img.for-pc {
+         display: none;
+    }
+
+    @media all and (min-width: 768px) {
+      .swiper-slide img.for-pc {
+         display: block;
+      }
+      .swiper-slide img.for-mobile {
+         display: none;
+      }
+    }
+
 
     .swiper-pagination {
       display: flex;
@@ -158,18 +173,20 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide ">
           <a href="" aria-label="百老匯影城資訊">
-            <img src="image/123.jpg" alt="輪播圖" />
+            <img src="image/123.jpg" alt="輪播圖" class="for-pc"/>
+            <img src="image/123_700.jpg" alt="輪播圖" class="for-mobile"/>
           </a>
         </div>
         <div class="swiper-slide">
           <a href="" aria-label="百老匯影城資訊">
-            <img src="image/123.jpg" alt="輪播圖" />
-
+            <img src="image/123.jpg" alt="輪播圖" class="for-pc"/>
+            <img src="image/123_700.jpg" alt="輪播圖" class="for-mobile"/>
           </a>
         </div>
         <div class="swiper-slide">
           <a href="" aria-label="百老匯影城資訊">
-            <img src="image/123.jpg" alt="輪播圖" />
+            <img src="image/123.jpg" alt="輪播圖" class="for-pc"/>
+            <img src="image/123_700.jpg" alt="輪播圖" class="for-mobile"/>
           </a>
         </div>
       </div>

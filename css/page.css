@@ -253,10 +253,6 @@
   display: block;
   margin: 0 5px;
 }
-.section .showing-list .poster {
-  background: url(../image/imgplaceholder.png) no-repeat center;
-  min-height: 300px;
-}
 .section .showing-list .poster img {
   border-radius: 10px;
 }
