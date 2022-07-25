@@ -193,7 +193,6 @@ app.mount("#app");
 $(function () {
   const $account = document.querySelector(".user-account");
   const $body = document.querySelector("body");
-  const $hamberger = $("#hamberger-menu");
   const $landing = $(".landing");
   const $goup = $(".gotop");
   const $tab = $(".tab-item");
@@ -224,7 +223,7 @@ $(function () {
     if (isMobileDevice()) {
       $body.classList.remove('no-scroll')
       $('.welcome').css('display', 'none').promise().then(function(){
-        $landing.fadeOut(1200);
+        $landing.fadeOut(3000);
       })
     }
   }
@@ -298,7 +297,6 @@ $(function () {
   });
   $time.on("click", function (e) {
     let $this = $(this)
-    // e.preventDefault();
     if ($this.is('.disable') === false) {
       $this.siblings().removeClass("active");
       $this.addClass("active");
