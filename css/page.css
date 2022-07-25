@@ -1416,7 +1416,7 @@
   position: relative;
 }
 .section .book-tickets .row-min::before {
-  content: url(/image/round-text.png);
+  content: url(../image/round-text.png);
   position: absolute;
   top: 0px;
   right: -67px;

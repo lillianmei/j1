@@ -1962,7 +1962,7 @@ footer > div a:hover.fb path {
   fill: #fff;
 }
 footer > div a:hover.ig {
-  background: url(/image/svg/ig-bg.svg) no-repeat center center;
+  background: url(../image/svg/ig-bg.svg) no-repeat center center;
 }
 footer > div a:hover.ig path {
   fill: #fff;
