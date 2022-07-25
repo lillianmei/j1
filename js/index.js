@@ -224,19 +224,19 @@ $(function () {
     $('.welcome').css('display', 'none')
     delay().then(function () { $landing.fadeOut(1000); })
   }
-  function pcLandingAnimation() {
-    $landing.on("wheel", function () {
-      $landing.fadeOut(1000).promise().then(function () {
-        $body.classList.remove('no-scroll')
-      })
-    });
-  }
 
   // ladnding page animation
   if ($landing.length === 1) {
     $body.classList.add('no-scroll') //禁止在背景下滑動
     if (!isMobileDevice()) {
-      isMobileWidth() ? mobileLandingAnimation() : pcLandingAnimation()
+      if (isMobileWidth()) {
+        mobileLandingAnimation()
+      } else {
+        $landing.on("wheel", function () {
+          $landing.fadeOut(1000).promise().then(function () {
+            $body.classList.remove('no-scroll')
+          })
+        });
       }
     }
     if (isMobileDevice()) {
