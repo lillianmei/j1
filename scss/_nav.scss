@@ -1,7 +1,7 @@
 header{
   position: sticky;top: 0;z-index: 100;
   background-image:url(../image/01_index_02_header_700.png);
-  background-repeat: no-repeat;background-size: cover;background-position: center center;
+  background-repeat: no-repeat;background-size: cover;background-position: left center;
   box-shadow: inset 0px -20px 20px #282828 ;
   @include v.pc-width {
   background-image: url(../image/01_index_02_header.png);
@@ -24,7 +24,7 @@ nav {
 
   .input-toggler {
     display: none;
-  }
+  } 
 
   .menu-toggler {
     position: absolute;

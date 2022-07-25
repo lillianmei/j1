@@ -18,17 +18,17 @@
 }
 @media all and (min-width: 992px) {
   .landing .landing-page {
-    background-image: url("../image/00_loading_01_bg.png");
+    background-image: url("/image/00_loading_01_bg.png");
   }
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
   .landing .landing-page {
-    background-image: url("../image/00_loading_01_bg_900.png");
+    background-image: url("/image/00_loading_01_bg_900.png");
   }
 }
 @media all and (max-width: 768px) {
   .landing .landing-page {
-    background-image: url("../image/00_loading_01_bg_700.png");
+    background-image: url("/image/00_loading_01_bg_700.png");
   }
 }
 .landing h1 {
@@ -87,7 +87,7 @@
   cursor: pointer;
   position: absolute;
   bottom: 13vh;
-  left: 13vw;
+  left: 12vw;
   opacity: 0;
   -webkit-animation: opacity 1s linear 1.8s;
           animation: opacity 1s linear 1.8s;
@@ -106,14 +106,14 @@
   .landing .welcome {
     width: 100px;
     height: 100px;
-    bottom: 8vh;
+    bottom: 30vh;
     left: 9vw;
   }
 }
 .landing .welcome .text-round {
   width: 100%;
   height: 100%;
-  background: url(../image/svg/welcome-round.svg);
+  background: url(/image/svg/welcome-round.svg);
   background-repeat: no-repeat;
   background-size: contain;
   -webkit-animation: rotate 10s infinite linear;
@@ -127,7 +127,7 @@
           transform: translate(-50%, -50%);
   width: 34px;
   height: 53px;
-  background: url(../image/svg/mouse.svg);
+  background: url(/image/svg/mouse.svg);
   background-repeat: no-repeat;
   background-size: contain;
 }

@@ -1163,9 +1163,9 @@
       border-radius: 10px;
       position: relative;
       &::before{
-        content: url(../image/round-text.png);
+        content: url(/image/round-text.png);
         position: absolute;
-        top: 8px;
+        top: 0px;
         right: -67px;
       }
 

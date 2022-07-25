@@ -132,7 +132,7 @@ const app = Vue.createApp({
                 <div>
                   <input type="text" placeholder=" 請輸入右方驗證碼">
                   <div class="imgsafe">
-                    <img src="../image/demo.png" alt="">
+                    <img src="image/demo.png" alt="">
                     <a href=""><span class="svg-icons i-fresh"></span></a>
                   </div>
                 </div>
@@ -208,9 +208,14 @@ $(function () {
     let isMobileDevice = mobileDevice.some(e => navigator.userAgent.match(e))
     return isMobileDevice
   }
+  // landing animation delay
+  function delay(){
+    return new Promise(function(resolve, reject){
+      setTimeout(resolve, 2600)
+    })
+  }
 
-
-  //ladnding page animation
+  // ladnding page animation
   if ($landing.length === 1) {
     $body.classList.add('no-scroll') //禁止在背景下滑動
     if (!isMobileDevice()) {
@@ -222,8 +227,9 @@ $(function () {
     }
     if (isMobileDevice()) {
       $body.classList.remove('no-scroll')
-      $('.welcome').css('display', 'none').promise().then(function(){
-        $landing.fadeOut(3000);
+      $('.welcome').css('display', 'none')
+      delay().then(function(){
+        $landing.fadeOut(1000);
       })
     }
   }

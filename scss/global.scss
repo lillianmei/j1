@@ -883,7 +883,7 @@ footer {
           path {
             fill: #fff;
           }
-          background: url(../image/svg/ig-bg.svg) no-repeat center center;
+          background: url(/image/svg/ig-bg.svg) no-repeat center center;
         }
         &.yt {
           path {
@@ -1038,12 +1038,6 @@ footer {
 }
 
 #login {
-  // .modal-content {
-  //   @include v.under-pad-width {
-  //     overflow-y: auto;
-  //   }
-  // }
-
   .nobr {
     display: inline-block;
     @extend %weight400;
@@ -1104,11 +1098,6 @@ footer {
 }
 
 #regist {
-  // .modal-content {
-  //   @include v.under-pad-width {
-  //     overflow-y: auto;
-  //   }
-  // }
 
   label[for="confirmrule"] {
     @extend %weight300;

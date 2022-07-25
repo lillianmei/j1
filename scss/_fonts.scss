@@ -1,36 +1,37 @@
 @font-face {
     font-family: 'Broadway Regular';
     font-display: swap;
-    src: local('Broadway Regular'),url('../fonts/Broadway Regular.ttf') format("truetype"),
+    src: local('Broadway Regular'),url('/fonts/Broadway Regular.ttf') format("truetype");
+    unicode-range:U+0041,U+0042,U+0043,U+0044,U+0045,U+0049,U+004D,U+0043,U+004E,U+0053,U+0052,U+004F,U+0057
 }
 @font-face {
     font-family: '源泉圓體 R';
     font-display: swap;
     src: local('源泉圓體 R'), 
-         url('../fonts/GenSenRoundedTW-R.ttf') format("truetype");
+         url('/fonts/GenSenRoundedTW-R.ttf') format("truetype");
     unicode-range:U+4E00-9FFF,U+3100-312F
 } 
 @font-face { 
     font-family: 'EuroStyle';
     font-display: swap;
     src: local('EuroStyle'), 
-         url('../fonts/EuroStyle Normal.ttf') format("truetype");
+         url('/fonts/EuroStyle Normal.ttf') format("truetype");
     unicode-range: U+00-024F,U+00-02AF
 } 
 @font-face { 
     font-family: 'Eurostile Extended';
     font-display: swap;
     src: local('Eurostile Extended'), 
-         url('../fonts/EurostileExtended-Roman.woff') format("woff"),
-         url('../fonts/EurostileExtended-Roman.woff2') format("woff2"),
-         url('../fonts/EurostileExtended.ttf') format("truetype");
+         url('/fonts/EurostileExtended-Roman.woff') format("woff"),
+         url('/fonts/EurostileExtended-Roman.woff2') format("woff2"),
+         url('/fonts/EurostileExtended.ttf') format("truetype");
     unicode-range: U+00-024F,U+00-02AF
 } 
 @font-face {
     font-family: 'EurostileBold';
     font-display: swap;
     src: local('EurostileBold'), 
-         url('../fonts/EurostileBold.ttf') format("truetype");
+         url('/fonts/EurostileBold.ttf') format("truetype");
     unicode-range: U+00-024F,U+00-02AF
 } 
 
