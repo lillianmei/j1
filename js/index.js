@@ -210,19 +210,22 @@ $(function () {
     return isMobileDevice
   }
 
+
   //ladnding page animation
   if ($landing.length === 1) {
     $body.classList.add('no-scroll') //禁止在背景下滑動
     if (!isMobileDevice()) {
       $landing.on("wheel", function () {
-        $landing.fadeOut(1000);
-        setTimeout(function () { $body.classList.remove('no-scroll') }, 1100);
+        $landing.fadeOut(1000).promise().then(function(){
+          $body.classList.remove('no-scroll')
+        })
       });
     }
     if (isMobileDevice()) {
       $body.classList.remove('no-scroll')
-      $('.welcome').css('display', 'none')
-      setTimeout(function () { $landing.fadeOut(1200); }, 2300);
+      $('.welcome').css('display', 'none').promise().then(function(){
+        $landing.fadeOut(1200);
+      })
     }
   }
 
