@@ -106,8 +106,8 @@ const app = Vue.createApp({
 </div></div>
   </footer>`,
     },
-    "modal":{
-      template:`  <!-- 登入modal -->
+    "modal": {
+      template: `  <!-- 登入modal -->
       <div class="modal" id="login">
         <div class="modal-content">
           <h2>WELCOME TO BROADWAY!</h2>
@@ -208,29 +208,39 @@ $(function () {
     let isMobileDevice = mobileDevice.some(e => navigator.userAgent.match(e))
     return isMobileDevice
   }
+  //偵測螢幕寬度
+  function isMobileWidth() {
+    const MobileWidth = window.matchMedia("(max-width: 992px)").matches
+    return MobileWidth
+  }
   // landing animation delay
-  function delay(){
-    return new Promise(function(resolve, reject){
+  function delay() {
+    return new Promise(function (resolve, reject) {
       setTimeout(resolve, 2600)
     })
+  }
+  function mobileLandingAnimation() {
+    $body.classList.remove('no-scroll')
+    $('.welcome').css('display', 'none')
+    delay().then(function () { $landing.fadeOut(1000); })
+  }
+  function pcLandingAnimation() {
+    $landing.on("wheel", function () {
+      $landing.fadeOut(1000).promise().then(function () {
+        $body.classList.remove('no-scroll')
+      })
+    });
   }
 
   // ladnding page animation
   if ($landing.length === 1) {
     $body.classList.add('no-scroll') //禁止在背景下滑動
     if (!isMobileDevice()) {
-      $landing.on("wheel", function () {
-        $landing.fadeOut(1000).promise().then(function(){
-          $body.classList.remove('no-scroll')
-        })
-      });
+      isMobileWidth() ? mobileLandingAnimation() : pcLandingAnimation()
+      }
     }
     if (isMobileDevice()) {
-      $body.classList.remove('no-scroll')
-      $('.welcome').css('display', 'none')
-      delay().then(function(){
-        $landing.fadeOut(1000);
-      })
+      mobileLandingAnimation()
     }
   }
 
