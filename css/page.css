@@ -387,7 +387,7 @@
   }
 }
 .section .movie-info .movie-item:first-of-type {
-  padding-right: 5vw;
+  padding-right: 3vw;
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
   .section .movie-info .movie-item:first-of-type {
@@ -792,7 +792,7 @@
   margin-right: 20px;
 }
 .section .news-info .row-left {
-  padding-right: 5vw;
+  padding-right: 3vw;
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
   .section .news-info .row-left {
@@ -830,7 +830,7 @@
   background-color: #FCC900;
 }
 .section .group-ticket .row-left {
-  padding-right: 5vw;
+  padding-right: 3vw;
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
   .section .group-ticket .row-left {
@@ -1943,7 +1943,7 @@
 }
 .section .contact .info {
   margin: 0;
-  padding-right: 5vw;
+  padding-right: 3vw;
 }
 @media all and (max-width: 768px) {
   .section .contact .info {
