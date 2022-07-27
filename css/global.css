@@ -376,7 +376,7 @@ header {
 
 nav {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   top: 0;
   left: 0;
@@ -1011,7 +1011,7 @@ html {
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
-  font-size: 16px;
+  font-size: 15px;
   position: relative;
   background-color: #282828;
   line-height: 1.4;
@@ -1024,7 +1024,7 @@ html.no-scroll {
 @media all and (min-width: 992px) {
   body,
 html {
-    font-size: 18px;
+    font-size: 17px;
   }
 }
 @media all and (min-width: 769px) and (max-width: 991px) {
@@ -1662,7 +1662,7 @@ input:-internal-autofill-selected {
 
 .section {
   color: #fff;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 50px auto 50px auto;
 }
 .section:last-of-type {
@@ -1886,7 +1886,7 @@ footer img {
   }
 }
 footer > div {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;

@@ -16,7 +16,7 @@ html {
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
-  font-size: 16px;
+  font-size: 15px;
   position: relative;
   background-color: v.$bg-color;
   line-height: 1.4;
@@ -27,7 +27,7 @@ html {
   }
 
   @include v.pc-width {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   @include v.pad-width {
