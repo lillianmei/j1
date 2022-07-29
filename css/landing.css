@@ -109,8 +109,8 @@
   height: 224px;
   cursor: pointer;
   position: absolute;
-  bottom: 13vh;
-  left: 12vw;
+  bottom: 10vh;
+  left: 10vw;
   opacity: 0;
   -webkit-animation: opacity 1s linear 1.8s;
           animation: opacity 1s linear 1.8s;
