@@ -279,8 +279,6 @@ $(function () {
     let $this = $(this)
     $this.addClass("active");
     $this.siblings().removeClass("active");
-    $(`.tab-content[data-id='${e.target.id}']`).siblings().addClass("hide");
-    $(`.tab-content[data-id='${e.target.id}']`).removeClass("hide");
   });
 
   // show or hide PWD
@@ -310,13 +308,6 @@ $(function () {
     let $this = $(this)
     $this.siblings().removeClass("active");
     $this.addClass("active");
-  });
-  $time.on("click", function (e) {
-    let $this = $(this)
-    if ($this.is('.disable') === false) {
-      $this.siblings().removeClass("active");
-      $this.addClass("active");
-    }
   });
 
   // 座位表選取效果
